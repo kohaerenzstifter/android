@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">WWWidget</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="ok">OK</string>
+    <string name="info">I will now try to obtain a screenshot of the website you entered. Please be patient!</string>
+    <string name="info2">Your screenshot is now ready! Use the green rectangle to select the region of the website you want to show in your widget. When you\'re done, stop touching the screen and wait for a few seconds.</string>
+    <string name="wifi_only">WIFI only</string>
+    <string name="wifi_only2">Only update widget(s) when WIFI ist turnt on.</string>
+    <string name="update_interval">Update Interval</string>
+    <string name="update_interval2">Interval between widget updates in minutes.</string>
+    <string name="base_url">Base URL</string>
+    <string name="base_url2">If not left empty, this will be used as the base URL of the server to contact.</string>
+    <string name="server">Server</string>
+    <string name="server2">If not left empty, the server entered here wil be contacted for screenshots instead of kohaerenzstiftung.org.</string>
+
+</resources>
