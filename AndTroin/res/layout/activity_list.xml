@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent">
+  <LinearLayout android:layout_width="match_parent" android:id="@+id/linearLayout1" android:orientation="vertical" android:layout_height="match_parent">
+      <org.kohaerenzstiftung.ListView android:id="@+id/listview_entries" android:layout_width="match_parent" android:layout_height="0px" android:layout_weight="2"></org.kohaerenzstiftung.ListView>
+      <org.kohaerenzstiftung.ListView android:id="@+id/listView_categories" android:layout_width="match_parent" android:layout_height="0px" android:layout_weight="1"></org.kohaerenzstiftung.ListView>
+      <LinearLayout android:layout_width="match_parent" android:orientation="horizontal" android:layout_height="0px" android:id="@+id/linearlayout_details" android:layout_weight="1">
+          <org.kohaerenzstiftung.ListView android:id="@+id/listview_sourcedetailskeys" android:layout_height="match_parent" android:layout_width="0px" android:layout_weight="50"></org.kohaerenzstiftung.ListView>
+          <org.kohaerenzstiftung.ListView android:id="@+id/listview_targetdetailskeys" android:layout_height="match_parent" android:layout_width="0px" android:layout_weight="50"></org.kohaerenzstiftung.ListView>
+      </LinearLayout>
+            <LinearLayout android:layout_width="match_parent" android:orientation="horizontal" android:layout_height="0px" android:layout_weight="1" android:id="@+id/linearlayout_formkeys">
+          <org.kohaerenzstiftung.ListView android:layout_height="match_parent" android:layout_width="0px" android:layout_weight="50" android:id="@+id/listview_sourceformkeys"></org.kohaerenzstiftung.ListView>
+          <org.kohaerenzstiftung.ListView android:layout_height="match_parent" android:layout_width="0px" android:layout_weight="50" android:id="@+id/listview_targetformkeys"></org.kohaerenzstiftung.ListView>
+      </LinearLayout>
+  </LinearLayout>
+    
+</LinearLayout>

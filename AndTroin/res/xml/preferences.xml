@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <CheckBoxPreference android:defaultValue="true" android:key="prompting_enabled" android:title="@string/exercise" android:summary="@string/exercise2"></CheckBoxPreference>
+    <CheckBoxPreference android:key="help_enabled" android:title="@string/help" android:summary="@string/help2" android:defaultValue="true"></CheckBoxPreference>
+</PreferenceScreen>

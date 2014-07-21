@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/menuitem_sortbysource" android:title="@string/sort_by_source"></item>
+    <item android:id="@+id/menuitem_sortbytarget" android:title="@string/sort_by_target"></item>
+</menu>

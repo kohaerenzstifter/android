@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent" android:orientation="vertical">
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:id="@+id/LinearLayout01" android:layout_height="0px" android:layout_weight="6">
+        <TextView android:layout_height="0px" android:layout_width="match_parent" android:id="@+id/textview_denomination" android:layout_weight="1"></TextView>
+        <ListView android:layout_width="match_parent" android:id="@+id/listview_attributes" android:layout_height="0px" android:layout_weight="9"></ListView>
+    </LinearLayout>
+    <LinearLayout android:id="@+id/linearLayout2" android:orientation="vertical" android:layout_height="0px" android:layout_width="match_parent" android:layout_weight="3">
+        <org.kohaerenzstiftung.EditText android:text="" android:layout_width="match_parent" android:layout_height="0px" android:layout_weight="1" android:id="@+id/edittext_answer"></org.kohaerenzstiftung.EditText>
+                <ListView android:layout_weight="1" android:layout_height="0dp" android:layout_width="match_parent" android:id="@+id/listview_wronganswer"></ListView>
+                <ListView android:layout_weight="1" android:layout_height="0dp" android:layout_width="match_parent" android:id="@+id/listview_correctanswer"></ListView>
+    </LinearLayout>
+    <LinearLayout android:id="@+id/linearLayout1" android:layout_width="match_parent" android:orientation="horizontal" android:layout_height="0px" android:layout_weight="1">
+        <Button android:layout_width="match_parent" android:layout_weight="50" android:id="@+id/button_ok" android:text="@string/ok" android:enabled="false" android:layout_height="match_parent"></Button>
+    </LinearLayout>
+    
+</LinearLayout>

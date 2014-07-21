@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="@string/add_entry" android:id="@+id/menuitem_addentry"></item>
+    <item android:title="@string/search_entry" android:id="@+id/menuitem_searchentry"></item><item android:id="@+id/menuitem_addcategory" android:title="@string/add_category"></item>
+    <item android:title="@string/add_sourcedetailskey" android:id="@+id/menuitem_addsourcedetailskey"></item>
+    <item android:title="@string/add_targetdetailskey" android:id="@+id/menuitem_addtargetdetailskey"></item>
+    <item android:id="@+id/menuitem_addsourceformkey" android:title="@string/add_source_form_key"></item><item android:title="@string/add_target_form_key" android:id="@+id/menuitem_addtargetformkey"></item><item android:title="@string/delete_list" android:id="@+id/menuitem_deletelist"></item>
+    <item android:title="@string/schedule" android:id="@+id/menuitem_schedule"></item>
+    <item android:id="@+id/menuitem_removeschedule" android:title="@string/remove_schedule"></item>
+    
+    
+    
+    
+    
+</menu>

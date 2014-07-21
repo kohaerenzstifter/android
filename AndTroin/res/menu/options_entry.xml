@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/menuitem_addcategory" android:title="@string/add_category"></item><item android:title="@string/add_sourcedenomination" android:id="@+id/menuitem_addsourcedenomination"></item>
+    <item android:title="@string/add_targetdenomination" android:id="@+id/menuitem_addtargetdenomination"></item>
+    <item android:id="@+id/menuitem_clone" android:title="@string/clone_entry"></item>
+    
+    
+</menu>

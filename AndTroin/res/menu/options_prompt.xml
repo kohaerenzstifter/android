@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/menuitem_more" android:title="@string/more"></item>
+    <item android:id="@+id/menuitem_gotoandtroin" android:title="@string/goto_andtroin"></item>
+    
+</menu>

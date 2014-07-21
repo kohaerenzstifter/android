@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" android:orientation="vertical">
+    <org.kohaerenzstiftung.andtroin.SearchEntryAutoCompleteTextView android:id="@+id/edittext_value" android:layout_width="match_parent" android:layout_height="0px" android:layout_weight="10">
+        <requestFocus></requestFocus>
+    </org.kohaerenzstiftung.andtroin.SearchEntryAutoCompleteTextView>
+    <LinearLayout android:id="@+id/linearLayout1" android:layout_width="match_parent" android:layout_height="0px" android:layout_weight="90">
+        <Button android:layout_height="match_parent" android:layout_width="0px" android:id="@+id/button_leftok" android:text="@string/ok" android:layout_weight="15" android:enabled="true"></Button>
+        <LinearLayout android:layout_height="match_parent" android:orientation="vertical" android:layout_width="0px" android:layout_weight="80">
+            <org.kohaerenzstiftung.ListView android:layout_height="0px" android:layout_width="match_parent" android:layout_weight="1" android:id="@+id/listview_attributes"></org.kohaerenzstiftung.ListView>
+        </LinearLayout>
+        <Button android:layout_height="match_parent" android:layout_width="0px" android:id="@+id/button_rightok" android:text="@string/ok" android:layout_weight="15" android:enabled="true"></Button>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent">
+    <org.kohaerenzstiftung.EditText android:id="@+id/edittext_value" android:layout_width="match_parent" android:layout_height="0px" android:layout_weight="10">
+        <requestFocus></requestFocus>
+    </org.kohaerenzstiftung.EditText>
+    <LinearLayout android:id="@+id/linearLayout2" android:layout_width="match_parent" android:layout_height="0px" android:layout_weight="90">
+        <Button android:layout_width="0px" android:layout_height="match_parent" android:layout_weight="15" android:id="@+id/button_leftok" android:text="@string/ok" android:enabled="true"></Button>
+        <LinearLayout android:id="@+id/linearLayout1" android:orientation="vertical" android:layout_width="0px" android:layout_height="match_parent" android:layout_weight="80">
+            <LinearLayout android:id="@+id/LinearLayout01" android:layout_height="0px" android:layout_weight="50" android:layout_width="match_parent" android:orientation="vertical">
+                <org.kohaerenzstiftung.ListView android:id="@+id/listview_values" android:layout_height="match_parent" android:layout_width="match_parent"></org.kohaerenzstiftung.ListView>
+            </LinearLayout>
+        </LinearLayout>
+        <Button android:layout_width="0px" android:layout_height="match_parent" android:layout_weight="15" android:id="@+id/button_rightok" android:text="@string/ok" android:enabled="true"></Button>
+    </LinearLayout>
+    
+</LinearLayout>

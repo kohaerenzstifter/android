@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent" android:orientation="vertical">
+    <org.kohaerenzstiftung.andtroin.SearchEntryAutoCompleteTextView android:completionThreshold="1" android:layout_width="fill_parent" android:text="" android:layout_height="wrap_content" android:id="@+id/autocompletetextview_searchme"></org.kohaerenzstiftung.andtroin.SearchEntryAutoCompleteTextView>
+    <RadioGroup android:id="@+id/radiogroup_bywhat" android:layout_width="wrap_content" android:orientation="horizontal" android:layout_height="wrap_content">
+        <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="true" android:text="@string/by_source" android:id="@+id/radiobutton_searchbysource"></RadioButton>
+        <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/by_target" android:id="@+id/radiobutton_searchbytarget"></RadioButton>
+    </RadioGroup>
+
+    <LinearLayout android:layout_height="wrap_content" android:layout_width="fill_parent" android:id="@+id/linearLayout1">
+        <Button android:layout_height="wrap_content" android:layout_width="fill_parent" android:layout_weight="1" android:id="@+id/button_ok" android:text="@string/ok"></Button>
+    </LinearLayout>
+
+</LinearLayout>

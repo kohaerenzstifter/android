@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent" android:orientation="vertical">
+
+        <LinearLayout android:layout_height="match_parent" android:id="@+id/linearLayout19" android:layout_width="match_parent" android:orientation="horizontal">
+        <org.kohaerenzstiftung.andtroin.FormAttributeAutoCompleteTextView android:id="@+id/edittext_attribute"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="50"
+                android:ems="10" />
+    </LinearLayout>
+    <LinearLayout android:layout_height="match_parent" android:id="@+id/linearLayout1" android:layout_width="match_parent" android:orientation="horizontal">
+        <Button android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="50" android:id="@+id/button_ok" android:text="@string/ok" android:enabled="false"></Button>
+    </LinearLayout>
+    
+</LinearLayout>

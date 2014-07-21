@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest package="org.kohaerenzstiftung.andtroin"
+      xmlns:android="http://schemas.android.com/apk/res/android" android:versionName="1.7.8.6" android:versionCode="29">
+    <uses-sdk android:targetSdkVersion="8" android:minSdkVersion="8"></uses-sdk>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
+	<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"></uses-permission>
+	<uses-permission android:name="com.android.vending.BILLING"/>
+	<uses-permission android:name="android.permission.INTERNET"/>
+
+    <application android:icon="@drawable/icon" android:label="@string/app_name">
+        <activity android:label="@string/app_name" android:name=".MainActivity" android:configChanges="orientation" android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- <service android:process=":org.kohaerenzstiftung.andtroin.service" android:name=".AndtroinService"></service>-->
+        <service android:name=".AndtroinService"></service>
+        <activity android:name=".ListActivity" android:configChanges="orientation" android:windowSoftInputMode="adjustPan"></activity>
+        <activity android:name=".DetailsKeyActivity" android:configChanges="orientation" android:windowSoftInputMode="adjustPan"></activity>
+        <activity android:name=".EntryActivity" android:configChanges="orientation" android:windowSoftInputMode="adjustPan"></activity>
+        <activity android:name=".DenominationActivity" android:configChanges="orientation" android:windowSoftInputMode="adjustPan"></activity>
+        <activity android:name=".FileActivity" android:windowSoftInputMode="adjustPan"></activity>
+        <activity android:name=".PromptActivity" android:launchMode="singleTask" android:windowSoftInputMode="adjustPan"></activity>
+        <receiver android:name=".AndtroinBroadcastReceiver" android:enabled="true" android:exported="true">
+        	<intent-filter>
+        		<action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="com.android.vending.billing.IN_APP_NOTIFY" />
+                <action android:name="com.android.vending.billing.RESPONSE_CODE" />
+                <action android:name="com.android.vending.billing.PURCHASE_STATE_CHANGED" /> 
+        	</intent-filter>
+   <!--     	<intent-filter>
+                <action android:name="com.android.vending.billing.IN_APP_NOTIFY" />
+                <action android:name="com.android.vending.billing.RESPONSE_CODE" />
+                <action android:name="com.android.vending.billing.PURCHASE_STATE_CHANGED" />
+            </intent-filter>-->  
+        </receiver>
+        <activity android:name="PreferenceActivity" android:configChanges="orientation" android:windowSoftInputMode="adjustPan"></activity>
+        <activity android:name="MergeActivity"></activity>
+        <activity android:name="DenominationFormActivity" android:windowSoftInputMode="adjustPan"></activity>
+        <activity android:name="PurchaseActivity"></activity>
+    </application>
+</manifest>

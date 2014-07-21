@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent" android:orientation="vertical">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/linearLayout2" android:orientation="vertical">
+        <ScrollView android:layout_width="match_parent" android:id="@+id/scrollView1" android:layout_height="0px" android:layout_weight="90">
+            <LinearLayout android:layout_height="match_parent" android:id="@+id/linearLayout3" android:layout_width="match_parent">
+                <TextView android:id="@+id/textview_text" android:layout_width="match_parent" android:layout_weight="90" android:layout_height="match_parent"></TextView>
+            </LinearLayout>
+        </ScrollView>
+        <Button android:layout_width="match_parent" android:layout_height="0px" android:layout_weight="10" android:id="@+id/button_ok" android:text="@string/ok"></Button>
+    </LinearLayout>
+    
+</LinearLayout>

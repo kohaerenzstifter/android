@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent">
+       <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/linearLayout2" android:layout_weight="80" android:orientation="horizontal">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="50" android:id="@+id/LinearLayout02" android:orientation="vertical">
+            <Button android:layout_width="match_parent" android:text="@string/new_list" android:layout_height="match_parent" android:layout_weight="50" android:id="@+id/button_newlist"></Button>
+            <Button android:layout_width="match_parent" android:text="@string/import_list" android:layout_height="match_parent" android:id="@+id/button_importlist" android:layout_weight="50"></Button>
+            <Button android:layout_width="match_parent" android:text="@string/export_list" android:layout_height="match_parent" android:layout_weight="50" android:id="@+id/button_exportlist"></Button>
+            <Button android:layout_height="match_parent" android:layout_weight="50" android:id="@+id/button_chooselist" android:text="@string/choose_list" android:layout_width="match_parent"></Button>
+            <Button android:layout_height="match_parent" android:layout_weight="50" android:id="@+id/button_preferences" android:layout_width="match_parent" android:text="@string/preferences"></Button>
+        </LinearLayout>
+    </LinearLayout>
+    
+</LinearLayout>

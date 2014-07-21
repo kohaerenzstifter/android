@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent" android:orientation="vertical">
+    <LinearLayout android:id="@+id/linearLayout1" android:layout_width="match_parent" android:orientation="vertical" android:layout_height="0px" android:layout_weight="40">
+        <TextView android:layout_width="match_parent" android:text="TextView" android:layout_height="0px" android:id="@+id/textView_status" android:layout_weight="20"></TextView>
+        <TextView android:layout_width="match_parent" android:id="@+id/textview_promptlanguage" android:layout_height="0px" android:layout_weight="20"></TextView>
+        <TextView android:lines="3" android:id="@+id/textview_prompt" android:layout_width="match_parent" android:layout_height="0px" android:layout_weight="40"></TextView>
+        <TextView android:layout_width="match_parent" android:id="@+id/textview_answerlanguage" android:layout_height="0px" android:layout_weight="20"></TextView>
+        <org.kohaerenzstiftung.EditText android:layout_width="fill_parent" android:id="@+id/edittext_answer" android:lines="2" android:layout_height="0px" android:layout_weight="40" android:inputType="textMultiLine"></org.kohaerenzstiftung.EditText>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/linLayoutBottom"
+        android:layout_width="match_parent" android:layout_height="0px" android:layout_weight="60">
+        <LinearLayout android:layout_height="match_parent" android:id="@+id/linearLayout3" android:orientation="vertical" android:layout_width="0px" android:layout_weight="15">
+            <Button android:layout_width="match_parent" android:layout_height="0px" android:layout_weight="33" android:text="@string/ok" android:id="@+id/button_leftok"></Button>
+
+            <Button
+                android:id="@+id/button_leftpeek"
+                android:layout_width="match_parent"
+                android:layout_height="0px"
+                android:layout_weight="33"
+                android:text="@string/peek" >
+</Button>
+            <Button android:layout_width="match_parent" android:layout_height="0px" android:layout_weight="33" android:text="@string/ignore" android:id="@+id/button_leftignore"></Button>
+            <Button android:layout_width="match_parent" android:layout_height="0px" android:layout_weight="33" android:text="@string/edit" android:id="@+id/button_leftedit"></Button>
+        </LinearLayout>
+        <LinearLayout android:layout_weight="33" android:orientation="vertical" android:id="@+id/linearLayout2" android:layout_height="match_parent" android:layout_width="0px">
+            <ListView android:id="@+id/listview_correction" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1"></ListView>
+            <ListView android:id="@+id/listview_wronganswer" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1"></ListView>
+            <!-- <TextView android:layout_width="match_parent" android:lines="3" android:layout_height="match_parent" android:layout_weight="1" android:id="@+id/textview_wronganswer"></TextView> -->
+        </LinearLayout>
+        <LinearLayout android:layout_height="match_parent" android:id="@+id/linearLayout4" android:orientation="vertical" android:layout_width="0px" android:layout_weight="15">
+            <Button android:layout_width="match_parent" android:layout_height="0px" android:layout_weight="33" android:text="@string/ok" android:id="@+id/button_rightok"></Button>
+
+            <Button
+                android:id="@+id/button_rightpeek"
+                android:layout_width="match_parent"
+                android:layout_height="0px"
+                android:layout_weight="33"
+                android:text="@string/peek" >
+</Button>
+            <Button android:layout_width="match_parent" android:layout_height="0px" android:layout_weight="33" android:text="@string/ignore" android:id="@+id/button_rightignore"></Button>
+            <Button android:layout_width="match_parent" android:layout_height="0px" android:layout_weight="33" android:text="@string/edit" android:id="@+id/button_rightedit"></Button>
+        </LinearLayout>
+    </LinearLayout>
+   
+</LinearLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/menuitem_editformkey" android:title="@string/edit_formkey"></item>
+    <item android:id="@+id/menuitem_deleteformkey" android:title="@string/delete_formkey"></item>
+    
+</menu>

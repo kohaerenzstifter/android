@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/menuitem_editdetailskey" android:title="@string/edit_detailskey"></item>
+    <item android:id="@+id/menuitem_deletedetailskey" android:title="@string/delete_detailskey"></item>
+    
+</menu>

@@ -1,0 +1,449 @@
+org.kohaerenzstiftung.Activity: Activity()
+org.kohaerenzstiftung.Activity: void hideSoftKeyboard(android.view.View)
+org.kohaerenzstiftung.AutoCompleteTextView: AutoCompleteTextView(android.content.Context,android.util.AttributeSet,int)
+org.kohaerenzstiftung.AutoCompleteTextView: AutoCompleteTextView(android.content.Context,android.util.AttributeSet)
+org.kohaerenzstiftung.AutoCompleteTextView: void setMultiline(boolean)
+org.kohaerenzstiftung.AutoCompleteTextView: java.lang.String getColumnName()
+org.kohaerenzstiftung.EditText
+org.kohaerenzstiftung.EditText: void setEnabled(boolean)
+org.kohaerenzstiftung.EditText: void setEditable(boolean)
+org.kohaerenzstiftung.EditText: EditText(android.content.Context,android.util.AttributeSet,int)
+org.kohaerenzstiftung.EditText: EditText(android.content.Context,android.util.AttributeSet)
+org.kohaerenzstiftung.EditText: void setMultiline(boolean)
+org.kohaerenzstiftung.Language
+org.kohaerenzstiftung.Language: android.os.Parcelable$Creator CREATOR
+org.kohaerenzstiftung.ListView
+org.kohaerenzstiftung.ListView: ListView(android.content.Context,android.util.AttributeSet)
+org.kohaerenzstiftung.ListView: void setAdapter(android.widget.ListAdapter)
+org.kohaerenzstiftung.ListView: android.view.ContextMenu$ContextMenuInfo getContextMenuInfo()
+org.kohaerenzstiftung.ListView: void setSelection(int)
+org.kohaerenzstiftung.ListView: int getFirstVisiblePosition()
+org.kohaerenzstiftung.MenuActivity: MenuActivity()
+org.kohaerenzstiftung.andtroin.AndtroinActivity: AndtroinActivity()
+org.kohaerenzstiftung.andtroin.AndtroinBroadcastReceiver
+org.kohaerenzstiftung.andtroin.AndtroinBroadcastReceiver: AndtroinBroadcastReceiver()
+org.kohaerenzstiftung.andtroin.AndtroinService
+org.kohaerenzstiftung.andtroin.AndtroinService: AndtroinService()
+org.kohaerenzstiftung.andtroin.Category
+org.kohaerenzstiftung.andtroin.Category: android.os.Parcelable$Creator CREATOR
+org.kohaerenzstiftung.andtroin.Database$DetailsKeyValueX
+org.kohaerenzstiftung.andtroin.Database$DetailsKeyX
+org.kohaerenzstiftung.andtroin.Denomination
+org.kohaerenzstiftung.andtroin.Denomination: android.os.Parcelable$Creator CREATOR
+org.kohaerenzstiftung.andtroin.DenominationActivity
+org.kohaerenzstiftung.andtroin.DenominationActivity: DenominationActivity()
+org.kohaerenzstiftung.andtroin.DenominationForm
+org.kohaerenzstiftung.andtroin.DenominationForm: android.os.Parcelable$Creator CREATOR
+org.kohaerenzstiftung.andtroin.DenominationFormActivity
+org.kohaerenzstiftung.andtroin.DenominationFormActivity: DenominationFormActivity()
+org.kohaerenzstiftung.andtroin.DetailsKey
+org.kohaerenzstiftung.andtroin.DetailsKey: android.os.Parcelable$Creator CREATOR
+org.kohaerenzstiftung.andtroin.DetailsKeyActivity
+org.kohaerenzstiftung.andtroin.DetailsKeyActivity: DetailsKeyActivity()
+org.kohaerenzstiftung.andtroin.DetailsKeyValue
+org.kohaerenzstiftung.andtroin.DetailsKeyValue: android.os.Parcelable$Creator CREATOR
+org.kohaerenzstiftung.andtroin.EditEntryStarterActivity: EditEntryStarterActivity()
+org.kohaerenzstiftung.andtroin.Entry
+org.kohaerenzstiftung.andtroin.Entry: android.os.Parcelable$Creator CREATOR
+org.kohaerenzstiftung.andtroin.EntryActivity
+org.kohaerenzstiftung.andtroin.EntryActivity: EntryActivity()
+org.kohaerenzstiftung.andtroin.Example
+org.kohaerenzstiftung.andtroin.Example: android.os.Parcelable$Creator CREATOR
+org.kohaerenzstiftung.andtroin.FileActivity
+org.kohaerenzstiftung.andtroin.FileActivity: FileActivity()
+org.kohaerenzstiftung.andtroin.FormAttribute
+org.kohaerenzstiftung.andtroin.FormAttribute: android.os.Parcelable$Creator CREATOR
+org.kohaerenzstiftung.andtroin.FormAttributeAutoCompleteTextView
+org.kohaerenzstiftung.andtroin.FormAttributeAutoCompleteTextView: FormAttributeAutoCompleteTextView(android.content.Context,android.util.AttributeSet,int)
+org.kohaerenzstiftung.andtroin.FormAttributeAutoCompleteTextView: FormAttributeAutoCompleteTextView(android.content.Context,android.util.AttributeSet)
+org.kohaerenzstiftung.andtroin.FormAttributeAutoCompleteTextView: java.lang.String getColumnName()
+org.kohaerenzstiftung.andtroin.ItemView: void setTextColor(int)
+org.kohaerenzstiftung.andtroin.List
+org.kohaerenzstiftung.andtroin.List: android.os.Parcelable$Creator CREATOR
+org.kohaerenzstiftung.andtroin.ListActivity
+org.kohaerenzstiftung.andtroin.ListActivity: ListActivity()
+org.kohaerenzstiftung.andtroin.MainActivity
+org.kohaerenzstiftung.andtroin.MainActivity: MainActivity()
+org.kohaerenzstiftung.andtroin.MenuActivity: MenuActivity()
+org.kohaerenzstiftung.andtroin.MergeActivity
+org.kohaerenzstiftung.andtroin.MergeActivity: MergeActivity()
+org.kohaerenzstiftung.andtroin.PreferenceActivity
+org.kohaerenzstiftung.andtroin.PreferenceActivity: PreferenceActivity()
+org.kohaerenzstiftung.andtroin.PromptActivity
+org.kohaerenzstiftung.andtroin.PromptActivity: PromptActivity()
+org.kohaerenzstiftung.andtroin.PurchaseActivity
+org.kohaerenzstiftung.andtroin.PurchaseActivity: PurchaseActivity()
+org.kohaerenzstiftung.andtroin.R$drawable: int button
+org.kohaerenzstiftung.andtroin.R$drawable: int disabled
+org.kohaerenzstiftung.andtroin.R$drawable: int icon
+org.kohaerenzstiftung.andtroin.R$drawable: int pressed
+org.kohaerenzstiftung.andtroin.R$drawable: int unpressed
+org.kohaerenzstiftung.andtroin.R$id: int LinearLayout01
+org.kohaerenzstiftung.andtroin.R$id: int LinearLayout02
+org.kohaerenzstiftung.andtroin.R$id: int autocompletetextview_searchme
+org.kohaerenzstiftung.andtroin.R$id: int button_cancel
+org.kohaerenzstiftung.andtroin.R$id: int button_chooselist
+org.kohaerenzstiftung.andtroin.R$id: int button_exportlist
+org.kohaerenzstiftung.andtroin.R$id: int button_httptest
+org.kohaerenzstiftung.andtroin.R$id: int button_importlist
+org.kohaerenzstiftung.andtroin.R$id: int button_leftedit
+org.kohaerenzstiftung.andtroin.R$id: int button_leftignore
+org.kohaerenzstiftung.andtroin.R$id: int button_leftmerge
+org.kohaerenzstiftung.andtroin.R$id: int button_leftno
+org.kohaerenzstiftung.andtroin.R$id: int button_leftok
+org.kohaerenzstiftung.andtroin.R$id: int button_leftpeek
+org.kohaerenzstiftung.andtroin.R$id: int button_newlist
+org.kohaerenzstiftung.andtroin.R$id: int button_ok
+org.kohaerenzstiftung.andtroin.R$id: int button_preferences
+org.kohaerenzstiftung.andtroin.R$id: int button_purchaselists
+org.kohaerenzstiftung.andtroin.R$id: int button_rightedit
+org.kohaerenzstiftung.andtroin.R$id: int button_rightignore
+org.kohaerenzstiftung.andtroin.R$id: int button_rightmerge
+org.kohaerenzstiftung.andtroin.R$id: int button_rightno
+org.kohaerenzstiftung.andtroin.R$id: int button_rightok
+org.kohaerenzstiftung.andtroin.R$id: int button_rightpeek
+org.kohaerenzstiftung.andtroin.R$id: int edittext_answer
+org.kohaerenzstiftung.andtroin.R$id: int edittext_attribute
+org.kohaerenzstiftung.andtroin.R$id: int edittext_filename
+org.kohaerenzstiftung.andtroin.R$id: int edittext_listname
+org.kohaerenzstiftung.andtroin.R$id: int edittext_sourcedenomination
+org.kohaerenzstiftung.andtroin.R$id: int edittext_sourcelanguage
+org.kohaerenzstiftung.andtroin.R$id: int edittext_targetdenomination
+org.kohaerenzstiftung.andtroin.R$id: int edittext_targetlanguage
+org.kohaerenzstiftung.andtroin.R$id: int edittext_translation
+org.kohaerenzstiftung.andtroin.R$id: int edittext_value
+org.kohaerenzstiftung.andtroin.R$id: int edittext_weight
+org.kohaerenzstiftung.andtroin.R$id: int linLayoutBottom
+org.kohaerenzstiftung.andtroin.R$id: int linear
+org.kohaerenzstiftung.andtroin.R$id: int linearLayout
+org.kohaerenzstiftung.andtroin.R$id: int linearLayout1
+org.kohaerenzstiftung.andtroin.R$id: int linearLayout19
+org.kohaerenzstiftung.andtroin.R$id: int linearLayout2
+org.kohaerenzstiftung.andtroin.R$id: int linearLayout3
+org.kohaerenzstiftung.andtroin.R$id: int linearLayout4
+org.kohaerenzstiftung.andtroin.R$id: int linearlayout_details
+org.kohaerenzstiftung.andtroin.R$id: int linearlayout_formkeys
+org.kohaerenzstiftung.andtroin.R$id: int linlayout1
+org.kohaerenzstiftung.andtroin.R$id: int linlayout2
+org.kohaerenzstiftung.andtroin.R$id: int listView_categories
+org.kohaerenzstiftung.andtroin.R$id: int listview_attributes
+org.kohaerenzstiftung.andtroin.R$id: int listview_categories1
+org.kohaerenzstiftung.andtroin.R$id: int listview_categories2
+org.kohaerenzstiftung.andtroin.R$id: int listview_correctanswer
+org.kohaerenzstiftung.andtroin.R$id: int listview_correction
+org.kohaerenzstiftung.andtroin.R$id: int listview_details
+org.kohaerenzstiftung.andtroin.R$id: int listview_entries
+org.kohaerenzstiftung.andtroin.R$id: int listview_entrycategories
+org.kohaerenzstiftung.andtroin.R$id: int listview_examples
+org.kohaerenzstiftung.andtroin.R$id: int listview_files
+org.kohaerenzstiftung.andtroin.R$id: int listview_forms
+org.kohaerenzstiftung.andtroin.R$id: int listview_infinitives
+org.kohaerenzstiftung.andtroin.R$id: int listview_purchaseblelists
+org.kohaerenzstiftung.andtroin.R$id: int listview_sourcedenominations
+org.kohaerenzstiftung.andtroin.R$id: int listview_sourcedenominations1
+org.kohaerenzstiftung.andtroin.R$id: int listview_sourcedenominations2
+org.kohaerenzstiftung.andtroin.R$id: int listview_sourcedetailskeys
+org.kohaerenzstiftung.andtroin.R$id: int listview_sourceformkeys
+org.kohaerenzstiftung.andtroin.R$id: int listview_targetdenominations
+org.kohaerenzstiftung.andtroin.R$id: int listview_targetdenominations1
+org.kohaerenzstiftung.andtroin.R$id: int listview_targetdenominations2
+org.kohaerenzstiftung.andtroin.R$id: int listview_targetdetailskeys
+org.kohaerenzstiftung.andtroin.R$id: int listview_targetformkeys
+org.kohaerenzstiftung.andtroin.R$id: int listview_values
+org.kohaerenzstiftung.andtroin.R$id: int listview_wronganswer
+org.kohaerenzstiftung.andtroin.R$id: int menuitem_add_formkey
+org.kohaerenzstiftung.andtroin.R$id: int menuitem_addcategory
+org.kohaerenzstiftung.andtroin.R$id: int menuitem_adddetail
+org.kohaerenzstiftung.andtroin.R$id: int menuitem_adddetailskeyvalue
+org.kohaerenzstiftung.andtroin.R$id: int menuitem_addentry
+org.kohaerenzstiftung.andtroin.R$id: int menuitem_addexample
+org.kohaerenzstiftung.andtroin.R$id: int menuitem_addform
+org.kohaerenzstiftung.andtroin.R$id: int menuitem_addsourcedenomination
+org.kohaerenzstiftung.andtroin.R$id: int menuitem_addsourcedetailskey
+org.kohaerenzstiftung.andtroin.R$id: int menuitem_addsourceformkey
+org.kohaerenzstiftung.andtroin.R$id: int menuitem_addtargetdenomination
+org.kohaerenzstiftung.andtroin.R$id: int menuitem_addtargetdetailskey
+org.kohaerenzstiftung.andtroin.R$id: int menuitem_addtargetformkey
+org.kohaerenzstiftung.andtroin.R$id: int menuitem_binaryselectforimport
+org.kohaerenzstiftung.andtroin.R$id: int menuitem_cancelled
+org.kohaerenzstiftung.andtroin.R$id: int menuitem_changedir
+org.kohaerenzstiftung.andtroin.R$id: int menuitem_chooseinfinitive
+org.kohaerenzstiftung.andtroin.R$id: int menuitem_clone
+org.kohaerenzstiftung.andtroin.R$id: int menuitem_deletecategory
+org.kohaerenzstiftung.andtroin.R$id: int menuitem_deletedenomination
+org.kohaerenzstiftung.andtroin.R$id: int menuitem_deletedetail
+org.kohaerenzstiftung.andtroin.R$id: int menuitem_deletedetailskey
+org.kohaerenzstiftung.andtroin.R$id: int menuitem_deletedetailskeyvalue
+org.kohaerenzstiftung.andtroin.R$id: int menuitem_deleteentry
+org.kohaerenzstiftung.andtroin.R$id: int menuitem_deleteexample
+org.kohaerenzstiftung.andtroin.R$id: int menuitem_deleteform
+org.kohaerenzstiftung.andtroin.R$id: int menuitem_deleteformkey
+org.kohaerenzstiftung.andtroin.R$id: int menuitem_deletelist
+org.kohaerenzstiftung.andtroin.R$id: int menuitem_deleteschedule
+org.kohaerenzstiftung.andtroin.R$id: int menuitem_editcategory
+org.kohaerenzstiftung.andtroin.R$id: int menuitem_editdenomination
+org.kohaerenzstiftung.andtroin.R$id: int menuitem_editdetailskey
+org.kohaerenzstiftung.andtroin.R$id: int menuitem_editdetailskeyvalue
+org.kohaerenzstiftung.andtroin.R$id: int menuitem_editentry
+org.kohaerenzstiftung.andtroin.R$id: int menuitem_editexample
+org.kohaerenzstiftung.andtroin.R$id: int menuitem_editform
+org.kohaerenzstiftung.andtroin.R$id: int menuitem_editformkey
+org.kohaerenzstiftung.andtroin.R$id: int menuitem_existinglist
+org.kohaerenzstiftung.andtroin.R$id: int menuitem_exportintocurrent
+org.kohaerenzstiftung.andtroin.R$id: int menuitem_flatselectforimport
+org.kohaerenzstiftung.andtroin.R$id: int menuitem_gotoandtroin
+org.kohaerenzstiftung.andtroin.R$id: int menuitem_jsonselectforimport
+org.kohaerenzstiftung.andtroin.R$id: int menuitem_more
+org.kohaerenzstiftung.andtroin.R$id: int menuitem_newlist
+org.kohaerenzstiftung.andtroin.R$id: int menuitem_purchase
+org.kohaerenzstiftung.andtroin.R$id: int menuitem_purchaselist
+org.kohaerenzstiftung.andtroin.R$id: int menuitem_refunded
+org.kohaerenzstiftung.andtroin.R$id: int menuitem_removeschedule
+org.kohaerenzstiftung.andtroin.R$id: int menuitem_schedule
+org.kohaerenzstiftung.andtroin.R$id: int menuitem_searchentry
+org.kohaerenzstiftung.andtroin.R$id: int menuitem_sortbysource
+org.kohaerenzstiftung.andtroin.R$id: int menuitem_sortbytarget
+org.kohaerenzstiftung.andtroin.R$id: int menuitem_unavailable
+org.kohaerenzstiftung.andtroin.R$id: int radiobutton_searchbysource
+org.kohaerenzstiftung.andtroin.R$id: int radiobutton_searchbytarget
+org.kohaerenzstiftung.andtroin.R$id: int radiobutton_sourcelanguage
+org.kohaerenzstiftung.andtroin.R$id: int radiobutton_targetlanguage
+org.kohaerenzstiftung.andtroin.R$id: int radiogroup_bywhat
+org.kohaerenzstiftung.andtroin.R$id: int radiogroup_targetlanguage
+org.kohaerenzstiftung.andtroin.R$id: int scrollView1
+org.kohaerenzstiftung.andtroin.R$id: int seekbar_itemsperday
+org.kohaerenzstiftung.andtroin.R$id: int seekbar_itemsperseries
+org.kohaerenzstiftung.andtroin.R$id: int spinner_answer
+org.kohaerenzstiftung.andtroin.R$id: int spinner_categories
+org.kohaerenzstiftung.andtroin.R$id: int spinner_detailskey
+org.kohaerenzstiftung.andtroin.R$id: int spinner_detailskeyvalue
+org.kohaerenzstiftung.andtroin.R$id: int spinner_lists
+org.kohaerenzstiftung.andtroin.R$id: int spinner_sourceLanguage
+org.kohaerenzstiftung.andtroin.R$id: int spinner_targetLanguage
+org.kohaerenzstiftung.andtroin.R$id: int textView1
+org.kohaerenzstiftung.andtroin.R$id: int textView2
+org.kohaerenzstiftung.andtroin.R$id: int textView3
+org.kohaerenzstiftung.andtroin.R$id: int textView_status
+org.kohaerenzstiftung.andtroin.R$id: int textview_answerlanguage
+org.kohaerenzstiftung.andtroin.R$id: int textview_denomination
+org.kohaerenzstiftung.andtroin.R$id: int textview_filename
+org.kohaerenzstiftung.andtroin.R$id: int textview_formkey
+org.kohaerenzstiftung.andtroin.R$id: int textview_itemsperday
+org.kohaerenzstiftung.andtroin.R$id: int textview_itemsperseries
+org.kohaerenzstiftung.andtroin.R$id: int textview_one
+org.kohaerenzstiftung.andtroin.R$id: int textview_prompt
+org.kohaerenzstiftung.andtroin.R$id: int textview_promptlanguage
+org.kohaerenzstiftung.andtroin.R$id: int textview_somanyperday
+org.kohaerenzstiftung.andtroin.R$id: int textview_somanyperseries
+org.kohaerenzstiftung.andtroin.R$id: int textview_sourcevalue
+org.kohaerenzstiftung.andtroin.R$id: int textview_targetvalue
+org.kohaerenzstiftung.andtroin.R$id: int textview_text
+org.kohaerenzstiftung.andtroin.R$id: int textview_value
+org.kohaerenzstiftung.andtroin.R$layout: int activity_andtroin
+org.kohaerenzstiftung.andtroin.R$layout: int activity_andtroin_purchase
+org.kohaerenzstiftung.andtroin.R$layout: int activity_denomination
+org.kohaerenzstiftung.andtroin.R$layout: int activity_denominationform
+org.kohaerenzstiftung.andtroin.R$layout: int activity_detailskey
+org.kohaerenzstiftung.andtroin.R$layout: int activity_entry
+org.kohaerenzstiftung.andtroin.R$layout: int activity_file
+org.kohaerenzstiftung.andtroin.R$layout: int activity_list
+org.kohaerenzstiftung.andtroin.R$layout: int activity_merge
+org.kohaerenzstiftung.andtroin.R$layout: int activity_prompt
+org.kohaerenzstiftung.andtroin.R$layout: int activity_purchase
+org.kohaerenzstiftung.andtroin.R$layout: int dialog_addentrycategory
+org.kohaerenzstiftung.andtroin.R$layout: int dialog_chooseinfinitive
+org.kohaerenzstiftung.andtroin.R$layout: int dialog_chooselist
+org.kohaerenzstiftung.andtroin.R$layout: int dialog_createentry
+org.kohaerenzstiftung.andtroin.R$layout: int dialog_createlist
+org.kohaerenzstiftung.andtroin.R$layout: int dialog_detailskeychallenge
+org.kohaerenzstiftung.andtroin.R$layout: int dialog_editcategory
+org.kohaerenzstiftung.andtroin.R$layout: int dialog_editdetailskeyvalue
+org.kohaerenzstiftung.andtroin.R$layout: int dialog_editformkey
+org.kohaerenzstiftung.andtroin.R$layout: int dialog_enterfilename
+org.kohaerenzstiftung.andtroin.R$layout: int dialog_example
+org.kohaerenzstiftung.andtroin.R$layout: int dialog_formchallenge
+org.kohaerenzstiftung.andtroin.R$layout: int dialog_pickattribute
+org.kohaerenzstiftung.andtroin.R$layout: int dialog_pickdetail
+org.kohaerenzstiftung.andtroin.R$layout: int dialog_schedule
+org.kohaerenzstiftung.andtroin.R$layout: int dialog_searchentry
+org.kohaerenzstiftung.andtroin.R$layout: int dialog_textview
+org.kohaerenzstiftung.andtroin.R$layout: int view_onetomany
+org.kohaerenzstiftung.andtroin.R$menu: int context_body_list
+org.kohaerenzstiftung.andtroin.R$menu: int context_category_list
+org.kohaerenzstiftung.andtroin.R$menu: int context_denominationform
+org.kohaerenzstiftung.andtroin.R$menu: int context_details_denomination
+org.kohaerenzstiftung.andtroin.R$menu: int context_detailskey
+org.kohaerenzstiftung.andtroin.R$menu: int context_detailskeys_list
+org.kohaerenzstiftung.andtroin.R$menu: int context_entry
+org.kohaerenzstiftung.andtroin.R$menu: int context_entrycategory_entry
+org.kohaerenzstiftung.andtroin.R$menu: int context_examples_denomination
+org.kohaerenzstiftung.andtroin.R$menu: int context_files_directory
+org.kohaerenzstiftung.andtroin.R$menu: int context_files_import
+org.kohaerenzstiftung.andtroin.R$menu: int context_formkeys_list
+org.kohaerenzstiftung.andtroin.R$menu: int context_forms_denomination
+org.kohaerenzstiftung.andtroin.R$menu: int context_header_list
+org.kohaerenzstiftung.andtroin.R$menu: int context_infinitivechooser
+org.kohaerenzstiftung.andtroin.R$menu: int context_purchase
+org.kohaerenzstiftung.andtroin.R$menu: int context_schedule
+org.kohaerenzstiftung.andtroin.R$menu: int options_denomination
+org.kohaerenzstiftung.andtroin.R$menu: int options_denominationform
+org.kohaerenzstiftung.andtroin.R$menu: int options_detailskey
+org.kohaerenzstiftung.andtroin.R$menu: int options_entry
+org.kohaerenzstiftung.andtroin.R$menu: int options_files
+org.kohaerenzstiftung.andtroin.R$menu: int options_list
+org.kohaerenzstiftung.andtroin.R$menu: int options_prompt
+org.kohaerenzstiftung.andtroin.R$string: int add_category
+org.kohaerenzstiftung.andtroin.R$string: int add_detail
+org.kohaerenzstiftung.andtroin.R$string: int add_detailskeyvalue
+org.kohaerenzstiftung.andtroin.R$string: int add_entry
+org.kohaerenzstiftung.andtroin.R$string: int add_example
+org.kohaerenzstiftung.andtroin.R$string: int add_form
+org.kohaerenzstiftung.andtroin.R$string: int add_formkey
+org.kohaerenzstiftung.andtroin.R$string: int add_schedule
+org.kohaerenzstiftung.andtroin.R$string: int add_source_form_key
+org.kohaerenzstiftung.andtroin.R$string: int add_sourcedenomination
+org.kohaerenzstiftung.andtroin.R$string: int add_sourcedetailskey
+org.kohaerenzstiftung.andtroin.R$string: int add_target_form_key
+org.kohaerenzstiftung.andtroin.R$string: int add_targetdenomination
+org.kohaerenzstiftung.andtroin.R$string: int add_targetdetailskey
+org.kohaerenzstiftung.andtroin.R$string: int andtroin_main
+org.kohaerenzstiftung.andtroin.R$string: int app_name
+org.kohaerenzstiftung.andtroin.R$string: int back_without_function
+org.kohaerenzstiftung.andtroin.R$string: int by_source
+org.kohaerenzstiftung.andtroin.R$string: int by_target
+org.kohaerenzstiftung.andtroin.R$string: int cancel
+org.kohaerenzstiftung.andtroin.R$string: int cancelled
+org.kohaerenzstiftung.andtroin.R$string: int categories
+org.kohaerenzstiftung.andtroin.R$string: int choose
+org.kohaerenzstiftung.andtroin.R$string: int choose_list
+org.kohaerenzstiftung.andtroin.R$string: int click_2_start_challenge
+org.kohaerenzstiftung.andtroin.R$string: int click_2_start_peer_review
+org.kohaerenzstiftung.andtroin.R$string: int clone_denomination
+org.kohaerenzstiftung.andtroin.R$string: int clone_denominationform
+org.kohaerenzstiftung.andtroin.R$string: int clone_entry
+org.kohaerenzstiftung.andtroin.R$string: int correct_answer
+org.kohaerenzstiftung.andtroin.R$string: int delete_category
+org.kohaerenzstiftung.andtroin.R$string: int delete_category2
+org.kohaerenzstiftung.andtroin.R$string: int delete_denomination
+org.kohaerenzstiftung.andtroin.R$string: int delete_denomination2
+org.kohaerenzstiftung.andtroin.R$string: int delete_detail
+org.kohaerenzstiftung.andtroin.R$string: int delete_detail2
+org.kohaerenzstiftung.andtroin.R$string: int delete_detailskey
+org.kohaerenzstiftung.andtroin.R$string: int delete_detailskey2
+org.kohaerenzstiftung.andtroin.R$string: int delete_detailskeyvalue
+org.kohaerenzstiftung.andtroin.R$string: int delete_detailskeyvalue2
+org.kohaerenzstiftung.andtroin.R$string: int delete_entry
+org.kohaerenzstiftung.andtroin.R$string: int delete_entry2
+org.kohaerenzstiftung.andtroin.R$string: int delete_example
+org.kohaerenzstiftung.andtroin.R$string: int delete_example2
+org.kohaerenzstiftung.andtroin.R$string: int delete_form
+org.kohaerenzstiftung.andtroin.R$string: int delete_form2
+org.kohaerenzstiftung.andtroin.R$string: int delete_formkey
+org.kohaerenzstiftung.andtroin.R$string: int delete_formkey2
+org.kohaerenzstiftung.andtroin.R$string: int delete_list
+org.kohaerenzstiftung.andtroin.R$string: int delete_list2
+org.kohaerenzstiftung.andtroin.R$string: int delete_schedule
+org.kohaerenzstiftung.andtroin.R$string: int delete_schedule2
+org.kohaerenzstiftung.andtroin.R$string: int details
+org.kohaerenzstiftung.andtroin.R$string: int details_keys
+org.kohaerenzstiftung.andtroin.R$string: int edit
+org.kohaerenzstiftung.andtroin.R$string: int edit_category
+org.kohaerenzstiftung.andtroin.R$string: int edit_denomination
+org.kohaerenzstiftung.andtroin.R$string: int edit_detail
+org.kohaerenzstiftung.andtroin.R$string: int edit_detailskey
+org.kohaerenzstiftung.andtroin.R$string: int edit_detailskeys
+org.kohaerenzstiftung.andtroin.R$string: int edit_detailskeyvalue
+org.kohaerenzstiftung.andtroin.R$string: int edit_entry
+org.kohaerenzstiftung.andtroin.R$string: int edit_example
+org.kohaerenzstiftung.andtroin.R$string: int edit_form
+org.kohaerenzstiftung.andtroin.R$string: int edit_formkey
+org.kohaerenzstiftung.andtroin.R$string: int edit_list
+org.kohaerenzstiftung.andtroin.R$string: int enter_directory
+org.kohaerenzstiftung.andtroin.R$string: int entry_not_exists_create
+org.kohaerenzstiftung.andtroin.R$string: int error_change_dir
+org.kohaerenzstiftung.andtroin.R$string: int error_open_file
+org.kohaerenzstiftung.andtroin.R$string: int examples
+org.kohaerenzstiftung.andtroin.R$string: int exercise
+org.kohaerenzstiftung.andtroin.R$string: int exercise2
+org.kohaerenzstiftung.andtroin.R$string: int existing_list
+org.kohaerenzstiftung.andtroin.R$string: int export_into_current
+org.kohaerenzstiftung.andtroin.R$string: int export_list
+org.kohaerenzstiftung.andtroin.R$string: int failure
+org.kohaerenzstiftung.andtroin.R$string: int file_not_found
+org.kohaerenzstiftung.andtroin.R$string: int filename
+org.kohaerenzstiftung.andtroin.R$string: int find_peers
+org.kohaerenzstiftung.andtroin.R$string: int forms
+org.kohaerenzstiftung.andtroin.R$string: int generic_error
+org.kohaerenzstiftung.andtroin.R$string: int goto_andtroin
+org.kohaerenzstiftung.andtroin.R$string: int gotolist
+org.kohaerenzstiftung.andtroin.R$string: int hello
+org.kohaerenzstiftung.andtroin.R$string: int help
+org.kohaerenzstiftung.andtroin.R$string: int help2
+org.kohaerenzstiftung.andtroin.R$string: int help_andtroinactivity
+org.kohaerenzstiftung.andtroin.R$string: int help_denominationactivity
+org.kohaerenzstiftung.andtroin.R$string: int help_detailskeyactivity
+org.kohaerenzstiftung.andtroin.R$string: int help_entryactivity
+org.kohaerenzstiftung.andtroin.R$string: int help_fileactivity
+org.kohaerenzstiftung.andtroin.R$string: int help_listactivity
+org.kohaerenzstiftung.andtroin.R$string: int ignore
+org.kohaerenzstiftung.andtroin.R$string: int import_list
+org.kohaerenzstiftung.andtroin.R$string: int invalid_denomination
+org.kohaerenzstiftung.andtroin.R$string: int invalid_denomination_form
+org.kohaerenzstiftung.andtroin.R$string: int invalid_detailskey
+org.kohaerenzstiftung.andtroin.R$string: int invalid_entry
+org.kohaerenzstiftung.andtroin.R$string: int items_per_day
+org.kohaerenzstiftung.andtroin.R$string: int items_per_series
+org.kohaerenzstiftung.andtroin.R$string: int list_exists
+org.kohaerenzstiftung.andtroin.R$string: int merge
+org.kohaerenzstiftung.andtroin.R$string: int merge_no
+org.kohaerenzstiftung.andtroin.R$string: int merge_yes
+org.kohaerenzstiftung.andtroin.R$string: int more
+org.kohaerenzstiftung.andtroin.R$string: int name
+org.kohaerenzstiftung.andtroin.R$string: int new_challenge
+org.kohaerenzstiftung.andtroin.R$string: int new_list
+org.kohaerenzstiftung.andtroin.R$string: int new_peers
+org.kohaerenzstiftung.andtroin.R$string: int no
+org.kohaerenzstiftung.andtroin.R$string: int no_detailskeys_available
+org.kohaerenzstiftung.andtroin.R$string: int no_external_files
+org.kohaerenzstiftung.andtroin.R$string: int no_list_available
+org.kohaerenzstiftung.andtroin.R$string: int no_peers_found
+org.kohaerenzstiftung.andtroin.R$string: int off
+org.kohaerenzstiftung.andtroin.R$string: int ok
+org.kohaerenzstiftung.andtroin.R$string: int peek
+org.kohaerenzstiftung.andtroin.R$string: int preferences
+org.kohaerenzstiftung.andtroin.R$string: int purchase
+org.kohaerenzstiftung.andtroin.R$string: int purchase_list
+org.kohaerenzstiftung.andtroin.R$string: int purchase_lists
+org.kohaerenzstiftung.andtroin.R$string: int refunded
+org.kohaerenzstiftung.andtroin.R$string: int remove_schedule
+org.kohaerenzstiftung.andtroin.R$string: int save_changes
+org.kohaerenzstiftung.andtroin.R$string: int schedule
+org.kohaerenzstiftung.andtroin.R$string: int search_entry
+org.kohaerenzstiftung.andtroin.R$string: int select_file_for_import
+org.kohaerenzstiftung.andtroin.R$string: int select_for_import
+org.kohaerenzstiftung.andtroin.R$string: int select_for_import_binary
+org.kohaerenzstiftung.andtroin.R$string: int select_for_import_flat
+org.kohaerenzstiftung.andtroin.R$string: int select_for_import_json
+org.kohaerenzstiftung.andtroin.R$string: int sort_by_source
+org.kohaerenzstiftung.andtroin.R$string: int sort_by_target
+org.kohaerenzstiftung.andtroin.R$string: int source_denominations
+org.kohaerenzstiftung.andtroin.R$string: int source_form_keys
+org.kohaerenzstiftung.andtroin.R$string: int source_language
+org.kohaerenzstiftung.andtroin.R$string: int success
+org.kohaerenzstiftung.andtroin.R$string: int target_denominations
+org.kohaerenzstiftung.andtroin.R$string: int target_form_keys
+org.kohaerenzstiftung.andtroin.R$string: int target_language
+org.kohaerenzstiftung.andtroin.R$string: int test_http
+org.kohaerenzstiftung.andtroin.R$string: int unknown_list
+org.kohaerenzstiftung.andtroin.R$string: int value
+org.kohaerenzstiftung.andtroin.R$string: int values
+org.kohaerenzstiftung.andtroin.R$string: int yes
+org.kohaerenzstiftung.andtroin.R$style: int Button
+org.kohaerenzstiftung.andtroin.R$xml: int preferences
+org.kohaerenzstiftung.andtroin.ScheduledEntry
+org.kohaerenzstiftung.andtroin.SearchEntryAutoCompleteTextView
+org.kohaerenzstiftung.andtroin.SearchEntryAutoCompleteTextView: void setmCheckWholeEntries(boolean)
+org.kohaerenzstiftung.andtroin.SearchEntryAutoCompleteTextView: void setBySource(boolean)
+org.kohaerenzstiftung.andtroin.SearchEntryAutoCompleteTextView: SearchEntryAutoCompleteTextView(android.content.Context,android.util.AttributeSet,int)
+org.kohaerenzstiftung.andtroin.SearchEntryAutoCompleteTextView: SearchEntryAutoCompleteTextView(android.content.Context,android.util.AttributeSet)
+org.kohaerenzstiftung.andtroin.SearchEntryAutoCompleteTextView: java.lang.String getColumnName()

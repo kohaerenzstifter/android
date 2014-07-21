@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent" android:orientation="vertical">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/linearLayout2" android:orientation="vertical">
+        <org.kohaerenzstiftung.EditText android:text="" android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/edittext_value">
+        </org.kohaerenzstiftung.EditText>
+        <org.kohaerenzstiftung.EditText android:layout_height="wrap_content" android:layout_width="match_parent" android:id="@+id/edittext_weight" android:inputType="number"></org.kohaerenzstiftung.EditText>
+    </LinearLayout>
+    <LinearLayout android:layout_height="match_parent" android:id="@+id/linearLayout1" android:layout_width="match_parent" android:orientation="horizontal">
+        <Button android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="50" android:id="@+id/button_ok" android:text="@string/ok" android:enabled="false"></Button>
+    </LinearLayout>
+    
+</LinearLayout>

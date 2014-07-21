@@ -1,0 +1,88 @@
+# view res/layout/activity_detailskey.xml #generated:7
+# view res/layout/activity_prompt.xml #generated:11
+# view res/layout/dialog_createlist.xml #generated:29
+# view res/layout/dialog_editcategory.xml #generated:12
+# view res/layout/dialog_editcategory.xml #generated:8
+# view res/layout/dialog_editdetailskeyvalue.xml #generated:8
+# view res/layout/dialog_editformkey.xml #generated:7
+# view res/layout/dialog_editformkey.xml #generated:9
+# view res/layout/dialog_enterfilename.xml #generated:8
+# view res/layout/dialog_example.xml #generated:6
+# view res/layout/dialog_example.xml #generated:9
+# view res/layout/dialog_formchallenge.xml #generated:11
+-keep class org.kohaerenzstiftung.EditText { <init>(...); }
+
+# view res/layout/activity_denomination.xml #generated:13
+# view res/layout/activity_denomination.xml #generated:14
+# view res/layout/activity_denomination.xml #generated:15
+# view res/layout/activity_denominationform.xml #generated:13
+# view res/layout/activity_detailskey.xml #generated:14
+# view res/layout/activity_entry.xml #generated:10
+# view res/layout/activity_entry.xml #generated:11
+# view res/layout/activity_entry.xml #generated:12
+# view res/layout/activity_file.xml #generated:7
+# view res/layout/activity_list.xml #generated:11
+# view res/layout/activity_list.xml #generated:12
+# view res/layout/activity_list.xml #generated:15
+# view res/layout/activity_list.xml #generated:16
+# view res/layout/activity_list.xml #generated:8
+# view res/layout/activity_list.xml #generated:9
+# view res/layout/activity_merge.xml #generated:13
+# view res/layout/activity_merge.xml #generated:14
+# view res/layout/activity_merge.xml #generated:15
+# view res/layout/activity_merge.xml #generated:17
+# view res/layout/activity_merge.xml #generated:18
+# view res/layout/activity_merge.xml #generated:19
+# view res/layout/activity_purchase.xml #generated:7
+# view res/layout/dialog_chooseinfinitive.xml #generated:6
+-keep class org.kohaerenzstiftung.ListView { <init>(...); }
+
+# view AndroidManifest.xml #generated:25
+-keep class org.kohaerenzstiftung.andtroin.AndtroinBroadcastReceiver { <init>(...); }
+
+# view AndroidManifest.xml #generated:18
+-keep class org.kohaerenzstiftung.andtroin.AndtroinService { <init>(...); }
+
+# view AndroidManifest.xml #generated:22
+-keep class org.kohaerenzstiftung.andtroin.DenominationActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:40
+-keep class org.kohaerenzstiftung.andtroin.DenominationFormActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:20
+-keep class org.kohaerenzstiftung.andtroin.DetailsKeyActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:21
+-keep class org.kohaerenzstiftung.andtroin.EntryActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:23
+-keep class org.kohaerenzstiftung.andtroin.FileActivity { <init>(...); }
+
+# view res/layout/dialog_pickattribute.xml #generated:8
+-keep class org.kohaerenzstiftung.andtroin.FormAttributeAutoCompleteTextView { <init>(...); }
+
+# view AndroidManifest.xml #generated:19
+-keep class org.kohaerenzstiftung.andtroin.ListActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:11
+-keep class org.kohaerenzstiftung.andtroin.MainActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:39
+-keep class org.kohaerenzstiftung.andtroin.MergeActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:38
+-keep class org.kohaerenzstiftung.andtroin.PreferenceActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:24
+-keep class org.kohaerenzstiftung.andtroin.PromptActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:41
+-keep class org.kohaerenzstiftung.andtroin.PurchaseActivity { <init>(...); }
+
+# view res/layout/activity_denomination.xml #generated:7
+# view res/layout/activity_denominationform.xml #generated:7
+# view res/layout/dialog_createentry.xml #generated:12
+# view res/layout/dialog_createentry.xml #generated:8
+# view res/layout/dialog_searchentry.xml #generated:6
+-keep class org.kohaerenzstiftung.andtroin.SearchEntryAutoCompleteTextView { <init>(...); }
+

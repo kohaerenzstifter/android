@@ -1,0 +1,2826 @@
+com.android.vending.billing.IMarketBillingService -> a.a.a.a.a:
+    android.os.Bundle sendBillingRequest(android.os.Bundle) -> a
+com.android.vending.billing.IMarketBillingService$Stub -> a.a.a.a.b:
+    com.android.vending.billing.IMarketBillingService asInterface(android.os.IBinder) -> a
+    boolean onTransact(int,android.os.Parcel,android.os.Parcel,int) -> onTransact
+com.android.vending.billing.IMarketBillingService$Stub$Proxy -> a.a.a.a.c:
+    android.os.IBinder mRemote -> a
+    android.os.IBinder asBinder() -> asBinder
+    android.os.Bundle sendBillingRequest(android.os.Bundle) -> a
+org.kohaerenzstiftung.Activity -> org.kohaerenzstiftung.a:
+    org.kohaerenzstiftung.Activity$Result mResult -> a
+    android.os.Bundle mResultBundle -> b
+    java.lang.String mFailureMessage -> c
+    org.kohaerenzstiftung.Activity$ActivityReturner mActivityReturner -> d
+    android.app.Dialog mDialog -> e
+    java.util.LinkedList mDialogRegistry -> f
+    void onPause() -> onPause
+    void onActivityResult(int,int,android.content.Intent) -> onActivityResult
+    void onResume() -> onResume
+    void recoverResources() -> a
+    void handleResult() -> j
+    void log(java.lang.Throwable) -> a
+    java.io.PrintWriter getLogWriter(android.content.Context) -> a
+    void onCreate(android.os.Bundle) -> onCreate
+    int getLayout() -> b
+    void updateViews() -> c
+    void readArguments(android.os.Bundle) -> a
+    void findElements() -> d
+    void assignHandlers() -> e
+    void finish(boolean) -> a
+    void startActivityForResult(java.lang.Class,org.kohaerenzstiftung.Activity$ActivityReturner) -> a
+    void startActivityForResult(java.lang.Class,org.kohaerenzstiftung.Activity$ActivityReturner,android.os.Bundle) -> a
+    void startActivity(java.lang.Class) -> a
+    void startActivity(java.lang.Class,android.os.Bundle) -> a
+    void releaseResources() -> f
+    void onStart() -> onStart
+    void initialise() -> g
+    void uninitialise() -> h
+    void onStop() -> onStop
+    android.app.Dialog onCreateDialog(int) -> onCreateDialog
+    void askYesNo(java.lang.String,java.lang.String,java.lang.String,org.kohaerenzstiftung.YesNoable) -> a
+    void showDialog(org.kohaerenzstiftung.Dialogable) -> a
+    void showSoftKeyboard() -> i
+    void hideSoftKeyboard(android.view.View) -> hideSoftKeyboard
+    void access$0(org.kohaerenzstiftung.Activity,java.lang.Throwable) -> a
+org.kohaerenzstiftung.Activity$1 -> org.kohaerenzstiftung.b:
+    org.kohaerenzstiftung.Activity this$0 -> a
+    void uncaughtException(java.lang.Thread,java.lang.Throwable) -> uncaughtException
+org.kohaerenzstiftung.Activity$2 -> org.kohaerenzstiftung.c:
+    org.kohaerenzstiftung.Activity this$0 -> a
+    void onDismiss(android.content.DialogInterface) -> onDismiss
+org.kohaerenzstiftung.Activity$ActivityReturner -> org.kohaerenzstiftung.d:
+    android.os.Bundle mExtras -> b
+    org.kohaerenzstiftung.Activity this$0 -> a
+    void handleResult(android.os.Bundle) -> a
+    android.os.Bundle getmExtras() -> a
+org.kohaerenzstiftung.Activity$ActivityReturnerNotSetException -> org.kohaerenzstiftung.e:
+    org.kohaerenzstiftung.Activity this$0 -> a
+org.kohaerenzstiftung.Activity$Result -> org.kohaerenzstiftung.f:
+    int mRequestCode -> b
+    int mResultCode -> c
+    android.content.Intent mData -> d
+    org.kohaerenzstiftung.Activity this$0 -> a
+    android.content.Intent getmData() -> a
+    boolean hasSucceeded() -> b
+org.kohaerenzstiftung.AutoCompleteTextView -> org.kohaerenzstiftung.g:
+    android.content.Context mContext -> a
+    boolean mMultiline -> b
+    boolean handleEnter() -> c
+    void setKeyListener() -> d
+    void setMultiline(boolean) -> setMultiline
+    boolean isMultiline() -> a
+    void setAdapter() -> b
+    android.database.Cursor getCursor(java.lang.String) -> a
+    java.lang.String getColumnName() -> getColumnName
+    boolean onTouchEvent(android.view.MotionEvent) -> onTouchEvent
+    boolean access$0(org.kohaerenzstiftung.AutoCompleteTextView) -> a
+org.kohaerenzstiftung.AutoCompleteTextView$1 -> org.kohaerenzstiftung.h:
+    org.kohaerenzstiftung.AutoCompleteTextView this$0 -> a
+    boolean onKey(android.view.View,int,android.view.KeyEvent) -> onKey
+org.kohaerenzstiftung.AutoCompleteTextView$Adapter -> org.kohaerenzstiftung.i:
+    org.kohaerenzstiftung.AutoCompleteTextView this$0 -> a
+    org.kohaerenzstiftung.AutoCompleteTextView access$0(org.kohaerenzstiftung.AutoCompleteTextView$Adapter) -> a
+org.kohaerenzstiftung.AutoCompleteTextView$Adapter$1 -> org.kohaerenzstiftung.j:
+    org.kohaerenzstiftung.AutoCompleteTextView$Adapter this$1 -> a
+    android.database.Cursor runQuery(java.lang.CharSequence) -> runQuery
+org.kohaerenzstiftung.ContextItemExecutor -> org.kohaerenzstiftung.k:
+    void execute(android.view.MenuItem) -> a
+org.kohaerenzstiftung.ContextMenuCreator -> org.kohaerenzstiftung.l:
+    int createContextMenu(android.view.ContextMenu$ContextMenuInfo) -> a
+org.kohaerenzstiftung.Dialog -> org.kohaerenzstiftung.m:
+    int mDialogId -> a
+    java.util.HashMap mContextMenuCreators -> b
+    java.util.HashMap mContextItemExecutors -> c
+    org.kohaerenzstiftung.Activity mActivity -> d
+    void onCreate(android.os.Bundle) -> onCreate
+    void onCreateContextMenu(android.view.ContextMenu,android.view.View,android.view.ContextMenu$ContextMenuInfo) -> onCreateContextMenu
+    int getDialogId() -> a
+    void setDialogId(int) -> a
+    void onShow() -> b
+    void onDismiss() -> c
+    void updateViews() -> d
+    void recoverResources() -> e
+    void releaseResources() -> f
+    void registerForContextMenu(android.view.View,org.kohaerenzstiftung.ContextMenuCreator) -> a
+    void setContextItemExecutor(int,org.kohaerenzstiftung.ContextItemExecutor) -> a
+    void findElements() -> g
+    boolean onContextItemSelected(android.view.MenuItem) -> onContextItemSelected
+    boolean onMenuItemSelected(int,android.view.MenuItem) -> onMenuItemSelected
+    void assignHandlers() -> h
+org.kohaerenzstiftung.Dialog$1 -> org.kohaerenzstiftung.n:
+    org.kohaerenzstiftung.Dialog this$0 -> a
+    void onShow(android.content.DialogInterface) -> onShow
+org.kohaerenzstiftung.Dialogable -> org.kohaerenzstiftung.o:
+    void setDialogId(int) -> a
+    void onDismiss() -> c
+    int getDialogId() -> a
+org.kohaerenzstiftung.EditText -> org.kohaerenzstiftung.EditText:
+    android.text.method.KeyListener mKeyListener -> a
+    boolean mMultiline -> b
+    android.content.Context mContext -> c
+    void setEnabled(boolean) -> setEnabled
+    void setEditable(boolean) -> setEditable
+    boolean onTouchEvent(android.view.MotionEvent) -> onTouchEvent
+    boolean handleEnter() -> b
+    void setKeyListener() -> c
+    void setMultiline(boolean) -> setMultiline
+    boolean isMultiline() -> a
+    boolean access$0(org.kohaerenzstiftung.EditText) -> a
+org.kohaerenzstiftung.EditText$1 -> org.kohaerenzstiftung.p:
+    org.kohaerenzstiftung.EditText this$0 -> a
+    boolean onKey(android.view.View,int,android.view.KeyEvent) -> onKey
+org.kohaerenzstiftung.HTTP -> org.kohaerenzstiftung.q:
+    org.apache.http.HttpResponse doHttps(java.lang.String,int,java.lang.String,java.io.InputStream,java.lang.String,int) -> a
+    org.apache.http.client.HttpClient getHttpClient(java.io.InputStream,java.lang.String,int) -> a
+org.kohaerenzstiftung.Language -> org.kohaerenzstiftung.Language:
+    android.os.Parcelable$Creator CREATOR -> CREATOR
+    java.lang.String mIso3Language -> a
+    java.lang.String mDisplayLanguage -> b
+    void setmIso3Language(java.lang.String) -> a
+    void setmDisplayLanguage(java.lang.String) -> b
+    java.util.ArrayList getLanguages() -> a
+    boolean equals(java.lang.Object) -> equals
+    java.lang.String getmIso3Language() -> b
+    java.lang.String getmDisplayLanguage() -> c
+    java.lang.String toString() -> toString
+    org.kohaerenzstiftung.Language getLanguageByIso3(java.lang.String) -> c
+    int describeContents() -> describeContents
+    void writeToParcel(android.os.Parcel,int) -> writeToParcel
+org.kohaerenzstiftung.Language$1 -> org.kohaerenzstiftung.r:
+    org.kohaerenzstiftung.Language createFromParcel(android.os.Parcel) -> a
+    org.kohaerenzstiftung.Language[] newArray(int) -> a
+    java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
+    java.lang.Object[] newArray(int) -> newArray
+org.kohaerenzstiftung.LanguageCollator -> org.kohaerenzstiftung.s:
+    int compare(org.kohaerenzstiftung.Language,org.kohaerenzstiftung.Language) -> a
+    int compare(java.lang.Object,java.lang.Object) -> compare
+org.kohaerenzstiftung.ListView -> org.kohaerenzstiftung.ListView:
+    org.kohaerenzstiftung.ListView$InternalListView mListView -> b
+    android.view.View mHeaderView -> c
+    android.widget.ListView mHeaderListView -> d
+    boolean mHaveDimensions -> e
+    boolean mHeaderLongClicked -> a
+    boolean mHaveHeader -> f
+    void onHeaderViewDimension(int,int) -> a
+    void setAdapter(android.widget.ListAdapter) -> setAdapter
+    void addHeaderView(android.view.View) -> a
+    void addViews() -> a
+    android.view.ContextMenu$ContextMenuInfo getContextMenuInfo() -> getContextMenuInfo
+    void setSelection(int) -> setSelection
+    java.lang.Object getItemAtPosition(int) -> a
+    void onRestoreInstanceState(android.os.Parcelable) -> onRestoreInstanceState
+    int getFirstVisiblePosition() -> getFirstVisiblePosition
+org.kohaerenzstiftung.ListView$1 -> org.kohaerenzstiftung.t:
+    org.kohaerenzstiftung.ListView this$0 -> a
+    boolean onItemLongClick(android.widget.AdapterView,android.view.View,int,long) -> onItemLongClick
+org.kohaerenzstiftung.ListView$2 -> org.kohaerenzstiftung.u:
+    org.kohaerenzstiftung.ListView this$0 -> a
+    boolean onLongClick(android.view.View) -> onLongClick
+org.kohaerenzstiftung.ListView$3 -> org.kohaerenzstiftung.v:
+    org.kohaerenzstiftung.ListView this$0 -> a
+    boolean onLongClick(android.view.View) -> onLongClick
+org.kohaerenzstiftung.ListView$4 -> org.kohaerenzstiftung.w:
+    org.kohaerenzstiftung.ListView this$0 -> a
+    void onDimension(int,int) -> a
+org.kohaerenzstiftung.ListView$EmptyAdapter -> org.kohaerenzstiftung.x:
+    org.kohaerenzstiftung.ListView this$0 -> a
+    int getCount() -> getCount
+    java.lang.Object getItem(int) -> getItem
+    long getItemId(int) -> getItemId
+    android.view.View getView(int,android.view.View,android.view.ViewGroup) -> getView
+    boolean isEmpty() -> isEmpty
+org.kohaerenzstiftung.ListView$InternalListView -> org.kohaerenzstiftung.y:
+    org.kohaerenzstiftung.ListView this$0 -> a
+    android.view.ContextMenu$ContextMenuInfo doGetContextMenuInfo() -> a
+org.kohaerenzstiftung.ListView$LayoutListener -> org.kohaerenzstiftung.z:
+    android.view.View mView -> b
+    org.kohaerenzstiftung.ListView$LayoutListenerCallback mLlc -> c
+    org.kohaerenzstiftung.ListView this$0 -> a
+    void onGlobalLayout() -> onGlobalLayout
+org.kohaerenzstiftung.ListView$LayoutListenerCallback -> org.kohaerenzstiftung.aa:
+    org.kohaerenzstiftung.ListView this$0 -> b
+    void onDimension(int,int) -> a
+org.kohaerenzstiftung.MenuActivity -> org.kohaerenzstiftung.ab:
+    int mOptionsMenu -> d
+    java.util.HashMap mOptionItemExecutors -> e
+    java.util.HashMap mContextMenuCreators -> f
+    java.util.HashMap mContextItemExecutors -> g
+    void onCreate(android.os.Bundle) -> onCreate
+    int getOptionsMenu() -> j
+    void setOptionItemExecutors() -> k
+    void setContextItemExecutors() -> l
+    void registerForContextMenus() -> m
+    boolean onCreateOptionsMenu(android.view.Menu) -> onCreateOptionsMenu
+    void setOptionItemExecutor(int,org.kohaerenzstiftung.MenuActivity$OptionItemExecutor) -> a
+    void setContextItemExecutor(int,org.kohaerenzstiftung.ContextItemExecutor) -> a
+    boolean onOptionsItemSelected(android.view.MenuItem) -> onOptionsItemSelected
+    void registerForContextMenu(android.view.View,org.kohaerenzstiftung.ContextMenuCreator) -> a
+    void onCreateContextMenu(android.view.ContextMenu,android.view.View,android.view.ContextMenu$ContextMenuInfo) -> onCreateContextMenu
+    boolean onContextItemSelected(android.view.MenuItem) -> onContextItemSelected
+org.kohaerenzstiftung.MenuActivity$OptionItemExecutor -> org.kohaerenzstiftung.ac:
+    void execute() -> a
+org.kohaerenzstiftung.UnknownIso3LanguageException -> org.kohaerenzstiftung.ad:
+org.kohaerenzstiftung.YesNoDialog -> org.kohaerenzstiftung.ae:
+    org.kohaerenzstiftung.YesNoable mYesNoable -> a
+    int mDialogId -> b
+    void yesNo(boolean) -> a
+    void yes() -> b
+    void no() -> d
+    void setDialogId(int) -> a
+    void onDismiss() -> c
+    int getDialogId() -> a
+    void access$0(org.kohaerenzstiftung.YesNoDialog,boolean) -> a
+org.kohaerenzstiftung.YesNoDialog$1 -> org.kohaerenzstiftung.af:
+    org.kohaerenzstiftung.YesNoDialog this$0 -> a
+    void onClick(android.content.DialogInterface,int) -> onClick
+org.kohaerenzstiftung.YesNoDialog$2 -> org.kohaerenzstiftung.ag:
+    org.kohaerenzstiftung.YesNoDialog this$0 -> a
+    void onClick(android.content.DialogInterface,int) -> onClick
+org.kohaerenzstiftung.YesNoable -> org.kohaerenzstiftung.ah:
+    android.os.Bundle mExtras -> a
+    void yes(int) -> a
+    void no(int) -> b
+    android.os.Bundle getmExtras() -> a
+org.kohaerenzstiftung.andtroin.AndtroinActivity -> org.kohaerenzstiftung.andtroin.a:
+    org.kohaerenzstiftung.andtroin.AndtroinService mAndtroinService -> d
+    android.content.ServiceConnection mServiceConnection -> e
+    void initialise() -> g
+    void onBind() -> n
+    void uninitialise() -> h
+org.kohaerenzstiftung.andtroin.AndtroinActivity$1 -> org.kohaerenzstiftung.andtroin.b:
+    org.kohaerenzstiftung.andtroin.AndtroinActivity this$0 -> a
+    void onServiceDisconnected(android.content.ComponentName) -> onServiceDisconnected
+    void onServiceConnected(android.content.ComponentName,android.os.IBinder) -> onServiceConnected
+org.kohaerenzstiftung.andtroin.AndtroinBroadcastReceiver -> org.kohaerenzstiftung.andtroin.AndtroinBroadcastReceiver:
+    void onReceive(android.content.Context,android.content.Intent) -> onReceive
+org.kohaerenzstiftung.andtroin.AndtroinService -> org.kohaerenzstiftung.andtroin.AndtroinService:
+    android.app.NotificationManager mNotificationManager -> a
+    java.util.LinkedList mRequestQueue -> b
+    java.lang.Thread mThread -> c
+    org.kohaerenzstiftung.andtroin.Database mDatabase -> d
+    boolean mFinishing -> e
+    java.util.HashSet mKnownNonces -> f
+    java.security.SecureRandom mRandom -> g
+    int mActivityCount -> h
+    com.android.vending.billing.IMarketBillingService mBillingService -> i
+    android.content.ServiceConnection mServiceConnection -> j
+    java.util.HashMap mSentRequests -> k
+    java.lang.Thread$UncaughtExceptionHandler mUeh -> l
+    void onCreate() -> onCreate
+    void log(java.lang.Throwable) -> a
+    java.io.PrintWriter getLogWriter(android.content.Context) -> a
+    void onBillingServiceConnected(android.content.ComponentName,android.os.IBinder) -> a
+    void onBillingServiceDisonnected(android.content.ComponentName) -> a
+    void setFinishing() -> a
+    boolean isFinishing() -> b
+    void doNotifications() -> j
+    void schedulingLoop() -> c
+    void proposePeers() -> k
+    boolean entriesScheduled() -> l
+    void scheduleEntries() -> m
+    void promptUser() -> n
+    void peerNotification() -> o
+    boolean peersPending() -> p
+    boolean promptingEnabled() -> q
+    boolean isActivityRunning() -> r
+    void onDestroy() -> onDestroy
+    android.os.IBinder onBind(android.content.Intent) -> onBind
+    int onStartCommand(android.content.Intent,int,int) -> onStartCommand
+    boolean verify(java.lang.String,java.lang.String) -> a
+    boolean isNonceKnown(long) -> a
+    void notifyUser(boolean,java.lang.String) -> a
+    void confirmNotification(java.lang.String) -> d
+    void incActivity() -> d
+    void putEntries(java.util.ArrayList,int) -> a
+    org.kohaerenzstiftung.andtroin.DetailsKey getDetailsKey(org.kohaerenzstiftung.andtroin.DetailsKeyValue) -> a
+    void handleWrongAnswer(int) -> a
+    void handleCorrectAnswer(int) -> b
+    org.kohaerenzstiftung.andtroin.List getList(int) -> c
+    org.kohaerenzstiftung.andtroin.ScheduledEntry getNextEntry() -> e
+    org.kohaerenzstiftung.andtroin.Entry getEntry(int) -> d
+    void doNotmergeEntries(int,int,int) -> a
+    org.kohaerenzstiftung.andtroin.EntryPeers getProposedEntryPeers() -> f
+    boolean listIsScheduled(int) -> e
+    void deleteList(int) -> f
+    void deleteEntry(int,boolean,java.lang.String,java.lang.String) -> a
+    void deleteDetailsKey(int) -> g
+    org.kohaerenzstiftung.andtroin.DetailsKey getDetailsKey(int) -> h
+    void putDetailsKey(org.kohaerenzstiftung.andtroin.DetailsKey,java.lang.String) -> a
+    void putFormKey(org.kohaerenzstiftung.andtroin.FormAttribute,int) -> a
+    void deleteScheduleByListId(int) -> i
+    void putSchedule(org.kohaerenzstiftung.andtroin.Schedule) -> a
+    int getEntryPairCount(int) -> j
+    org.kohaerenzstiftung.andtroin.EntryPair getEntryPairByPosition(int,boolean,int) -> a
+    void deleteFormKey(int) -> k
+    org.kohaerenzstiftung.andtroin.FormAttribute getFormKey(int) -> l
+    org.kohaerenzstiftung.andtroin.Category getCategoryByPosition(int,int) -> a
+    void deleteCategory(int) -> m
+    void putCategory(org.kohaerenzstiftung.andtroin.Category,int) -> a
+    int getFormKeysCount(int,boolean) -> a
+    org.kohaerenzstiftung.andtroin.FormAttribute getFormKeyByPosition(int,boolean,int) -> b
+    int getDetailsKeysCount(java.lang.String) -> a
+    org.kohaerenzstiftung.andtroin.DetailsKey getDetailsKeyByPosition(java.lang.String,int) -> a
+    int getCategoriesCountByListId(int) -> n
+    android.database.Cursor searchDenomination(int,java.lang.String,boolean) -> a
+    java.util.LinkedList getInfinitives(org.kohaerenzstiftung.andtroin.ListActivity,int,java.lang.String,boolean) -> a
+    int getPositionForEntryPair(int,java.lang.String,boolean) -> b
+    void exportList(int,java.lang.String,org.kohaerenzstiftung.andtroin.Updatable) -> a
+    void importListFromBufferedReader(org.kohaerenzstiftung.andtroin.List,java.io.BufferedReader,org.kohaerenzstiftung.andtroin.Updatable) -> a
+    android.database.Cursor getLists() -> g
+    void putList(org.kohaerenzstiftung.andtroin.List) -> a
+    void importFromJsonStrings(org.kohaerenzstiftung.andtroin.List,java.lang.String,org.kohaerenzstiftung.andtroin.Updatable) -> a
+    boolean listExists(java.lang.String) -> b
+    boolean isFormKeyReferenced(int) -> o
+    boolean isDetailsKeyReferenced(int) -> p
+    boolean isCategoryKeyReferenced(int) -> q
+    boolean isDetailsKeyValueReferenced(int) -> r
+    void importListFromDataInputStream(org.kohaerenzstiftung.andtroin.List,java.io.DataInputStream,org.kohaerenzstiftung.andtroin.Updatable) -> a
+    void decActivity() -> h
+    void getPurchaseInformation(java.lang.String) -> c
+    void unavailable(org.kohaerenzstiftung.Activity) -> a
+    void refunded(org.kohaerenzstiftung.Activity) -> b
+    void cancelled(org.kohaerenzstiftung.Activity) -> c
+    void purchase(org.kohaerenzstiftung.Activity) -> d
+    void runQueued() -> i
+    void perform(org.kohaerenzstiftung.andtroin.AndtroinService$BillingRequest) -> b
+    long generateNonce() -> s
+    void queue(org.kohaerenzstiftung.andtroin.AndtroinService$BillingRequest) -> a
+    java.util.LinkedList findWords(int,java.lang.String,boolean) -> c
+    android.database.Cursor getFormAttributes(int,boolean,java.lang.String) -> a
+    void access$0(org.kohaerenzstiftung.andtroin.AndtroinService,java.lang.Throwable) -> a
+    long access$1(org.kohaerenzstiftung.andtroin.AndtroinService) -> a
+    java.lang.Thread$UncaughtExceptionHandler access$2(org.kohaerenzstiftung.andtroin.AndtroinService) -> b
+org.kohaerenzstiftung.andtroin.AndtroinService$1 -> org.kohaerenzstiftung.andtroin.c:
+    org.kohaerenzstiftung.andtroin.AndtroinService this$0 -> a
+    void onServiceDisconnected(android.content.ComponentName) -> onServiceDisconnected
+    void onServiceConnected(android.content.ComponentName,android.os.IBinder) -> onServiceConnected
+org.kohaerenzstiftung.andtroin.AndtroinService$2 -> org.kohaerenzstiftung.andtroin.d:
+    org.kohaerenzstiftung.andtroin.AndtroinService this$0 -> a
+    void uncaughtException(java.lang.Thread,java.lang.Throwable) -> uncaughtException
+org.kohaerenzstiftung.andtroin.AndtroinService$3 -> org.kohaerenzstiftung.andtroin.e:
+    org.kohaerenzstiftung.andtroin.AndtroinService this$0 -> a
+    void run() -> run
+org.kohaerenzstiftung.andtroin.AndtroinService$BillingRequest -> org.kohaerenzstiftung.andtroin.f:
+    org.kohaerenzstiftung.andtroin.AndtroinService this$0 -> a
+    void perform(com.android.vending.billing.IMarketBillingService) -> a
+    android.os.Bundle sendBillingRequest(com.android.vending.billing.IMarketBillingService,android.os.Bundle) -> a
+    android.os.Bundle makeRequestBundle(java.lang.String) -> a
+org.kohaerenzstiftung.andtroin.AndtroinService$BillingSupportedRequest -> org.kohaerenzstiftung.andtroin.g:
+    org.kohaerenzstiftung.andtroin.AndtroinService this$0 -> b
+    void perform(com.android.vending.billing.IMarketBillingService) -> a
+org.kohaerenzstiftung.andtroin.AndtroinService$Binder -> org.kohaerenzstiftung.andtroin.h:
+    org.kohaerenzstiftung.andtroin.AndtroinService this$0 -> a
+    org.kohaerenzstiftung.andtroin.AndtroinService getService() -> a
+org.kohaerenzstiftung.andtroin.AndtroinService$ConfirmNotificationRequest -> org.kohaerenzstiftung.andtroin.i:
+    java.lang.String mNotificationId -> c
+    org.kohaerenzstiftung.andtroin.AndtroinService this$0 -> b
+    void perform(com.android.vending.billing.IMarketBillingService) -> a
+org.kohaerenzstiftung.andtroin.AndtroinService$GetPurchaseInformationRequest -> org.kohaerenzstiftung.andtroin.j:
+    java.lang.String mNotificationId -> c
+    java.util.HashMap mSentRequests -> d
+    org.kohaerenzstiftung.andtroin.AndtroinService this$0 -> b
+    void perform(com.android.vending.billing.IMarketBillingService) -> a
+org.kohaerenzstiftung.andtroin.AndtroinService$PurchaseRequest -> org.kohaerenzstiftung.andtroin.k:
+    java.lang.String mArticle -> c
+    java.lang.String mDeveloperPayload -> d
+    java.util.HashMap mSentRequests -> e
+    org.kohaerenzstiftung.andtroin.AndtroinService this$0 -> b
+    void perform(com.android.vending.billing.IMarketBillingService) -> a
+org.kohaerenzstiftung.andtroin.AsyncTask -> org.kohaerenzstiftung.andtroin.l:
+    org.kohaerenzstiftung.Activity mActivity -> a
+    java.lang.Object doInBackground(java.lang.Object[]) -> doInBackground
+    org.kohaerenzstiftung.Activity access$0(org.kohaerenzstiftung.andtroin.AsyncTask) -> a
+org.kohaerenzstiftung.andtroin.AsyncTask$1 -> org.kohaerenzstiftung.andtroin.m:
+    org.kohaerenzstiftung.andtroin.AsyncTask this$0 -> a
+    void uncaughtException(java.lang.Thread,java.lang.Throwable) -> uncaughtException
+    void log(java.lang.Throwable) -> a
+org.kohaerenzstiftung.andtroin.Category -> org.kohaerenzstiftung.andtroin.Category:
+    int mId -> a
+    java.lang.String mSourceLanguage -> b
+    java.lang.String mTargetLanguage -> c
+    int mListId -> d
+    android.os.Parcelable$Creator CREATOR -> CREATOR
+    int getmId() -> a
+    java.lang.String getmSourceLanguage() -> b
+    java.lang.String getmTargetLanguage() -> c
+    void setmSourceLanguage(java.lang.String) -> a
+    void setmTargetLanguage(java.lang.String) -> b
+    int describeContents() -> describeContents
+    void writeToParcel(android.os.Parcel,int) -> writeToParcel
+    org.kohaerenzstiftung.andtroin.Category clone() -> d
+    boolean isValid() -> e
+    boolean equals(java.lang.Object) -> equals
+    java.lang.Object clone() -> clone
+org.kohaerenzstiftung.andtroin.Category$1 -> org.kohaerenzstiftung.andtroin.n:
+    org.kohaerenzstiftung.andtroin.Category createFromParcel(android.os.Parcel) -> a
+    org.kohaerenzstiftung.andtroin.Category[] newArray(int) -> a
+    java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
+    java.lang.Object[] newArray(int) -> newArray
+org.kohaerenzstiftung.andtroin.Database -> org.kohaerenzstiftung.andtroin.Database:
+    android.database.DataSetObservable mObservable -> b
+    boolean mInTrx -> a
+    android.database.sqlite.SQLiteDatabase mDb -> c
+    org.kohaerenzstiftung.andtroin.Database$DatabaseHelper mDatabaseHelper -> d
+    int mTrxCount -> e
+    boolean mOpen -> f
+    boolean listExists(java.lang.String) -> a
+    int getLastInsertId() -> i
+    int getLastInsertId(android.database.sqlite.SQLiteDatabase) -> b
+    void startTransaction() -> j
+    void doImportListFromBufferedReader(org.kohaerenzstiftung.andtroin.List,java.io.BufferedReader,org.kohaerenzstiftung.andtroin.Updatable) -> b
+    void importListFromBufferedReader(org.kohaerenzstiftung.andtroin.List,java.io.BufferedReader,org.kohaerenzstiftung.andtroin.Updatable) -> a
+    void importFromJsonStrings(android.content.Context,org.kohaerenzstiftung.andtroin.List,java.lang.String,org.kohaerenzstiftung.andtroin.Updatable) -> a
+    void doImportFromJsonStrings(android.content.Context,org.kohaerenzstiftung.andtroin.List,java.lang.String,org.kohaerenzstiftung.andtroin.Updatable) -> b
+    void importJsonEntry(android.content.Context,org.json.JSONObject,org.kohaerenzstiftung.andtroin.List) -> a
+    org.kohaerenzstiftung.andtroin.Category getCategory(java.lang.String,java.lang.String,int) -> a
+    org.kohaerenzstiftung.andtroin.Denomination buildDenomination(android.content.Context,org.json.JSONObject,org.kohaerenzstiftung.andtroin.List,boolean,java.lang.String) -> a
+    org.kohaerenzstiftung.andtroin.DenominationForm buildForm(org.json.JSONObject,boolean) -> a
+    org.kohaerenzstiftung.andtroin.FormAttribute buildAttribute(org.json.JSONObject,boolean) -> b
+    org.kohaerenzstiftung.andtroin.Example buildExample(org.json.JSONObject) -> a
+    org.kohaerenzstiftung.andtroin.DetailsKeyValue getDetail(android.content.Context,java.lang.String,java.lang.String,org.kohaerenzstiftung.andtroin.List,boolean,java.lang.String) -> a
+    int getDetailId(java.lang.String,java.lang.String,boolean,int,java.lang.String) -> a
+    void putDetailsKeyValue(org.kohaerenzstiftung.andtroin.DetailsKeyValue,int) -> a
+    int getDetailsKeyId(java.lang.String,java.lang.String) -> a
+    void commit() -> k
+    void rollback() -> l
+    void open() -> m
+    void open(android.content.Context) -> a
+    void close() -> a
+    void doDeleteList(int) -> s
+    void deleteList(int) -> a
+    android.database.Cursor getLists() -> b
+    android.content.ContentValues getContentValues(org.kohaerenzstiftung.andtroin.Schedule) -> b
+    void doDeleteSchedule(int) -> t
+    android.database.Cursor getSeriesBySchedule(int) -> u
+    void deleteSeries(int,int) -> b
+    void doDeleteSeries(int,int) -> c
+    void deleteSchedule(int) -> b
+    org.kohaerenzstiftung.andtroin.List getList(int) -> c
+    org.kohaerenzstiftung.andtroin.EntryPair getEntryPairByPosition(long,boolean,int) -> a
+    int getEntryPairCount(long) -> a
+    android.content.ContentValues getContentValues(org.kohaerenzstiftung.andtroin.List) -> b
+    int putList(org.kohaerenzstiftung.andtroin.List) -> a
+    int doPutEntry(org.kohaerenzstiftung.andtroin.Entry,int) -> a
+    boolean entryExists(int) -> v
+    void putEntryCategories(int,int,java.util.LinkedList) -> a
+    void putEntryCategory(int,int,org.kohaerenzstiftung.andtroin.Category) -> a
+    android.content.ContentValues getContentValues(int,int,org.kohaerenzstiftung.andtroin.Category) -> b
+    void putEntryPairs(org.kohaerenzstiftung.andtroin.Entry,int,int) -> a
+    void putEntryPair(org.kohaerenzstiftung.andtroin.EntryPair,int,int) -> a
+    android.content.ContentValues getContentValues(org.kohaerenzstiftung.andtroin.EntryPair,int,int) -> b
+    void putDenominations(int,int,java.util.LinkedList,boolean) -> a
+    void doPutDenominations(int,int,java.util.LinkedList,boolean) -> b
+    void putDenomination(org.kohaerenzstiftung.andtroin.Denomination,int,int,boolean) -> a
+    void wordsCheck(java.lang.String,java.lang.String) -> b
+    void wordCheck(java.lang.String,java.lang.String) -> c
+    boolean haveWord(java.lang.String,java.lang.String) -> d
+    void putDenominationForm(int,int,org.kohaerenzstiftung.andtroin.DenominationForm) -> a
+    int getAttributeId(int,java.lang.String,int) -> a
+    android.content.ContentValues getContentValues(org.kohaerenzstiftung.andtroin.FormAttribute,int,int,int) -> a
+    android.content.ContentValues getContentValues(org.kohaerenzstiftung.andtroin.DenominationForm,int,int) -> a
+    void putExample(int,int,org.kohaerenzstiftung.andtroin.Example) -> a
+    android.content.ContentValues getContentValues(org.kohaerenzstiftung.andtroin.Example,int,int) -> a
+    void putDetail(int,org.kohaerenzstiftung.andtroin.DetailsKeyValue,boolean,int) -> a
+    android.content.ContentValues getContentValues(int,int,org.kohaerenzstiftung.andtroin.DetailsKeyValue) -> a
+    android.content.ContentValues getContentValues(org.kohaerenzstiftung.andtroin.Denomination,int,int,boolean) -> b
+    android.content.ContentValues getContentValues(org.kohaerenzstiftung.andtroin.Entry,int) -> b
+    void doDeleteEntry(int,boolean,java.lang.String,java.lang.String) -> b
+    void deleteEntryCategoriesbyEntryId(int) -> w
+    void deleteEntryPairs(int) -> x
+    void deleteDenominationsByEntryId(int,java.lang.String,java.lang.String) -> a
+    void doDeleteDenominationsByEntryId(int,java.lang.String,java.lang.String) -> b
+    void deleteDenominationFormsByDenominationId(int) -> y
+    void deleteExamplesByDenominationId(int) -> z
+    void deleteDetailsByDenominationId(int) -> A
+    void deleteSeriesContentByEntryId(int) -> B
+    org.kohaerenzstiftung.andtroin.Entry getEntry(int) -> d
+    java.util.LinkedList getCategories(int) -> C
+    java.util.LinkedList getSourceDenominations(int,java.lang.String) -> a
+    java.util.LinkedList getTargetDenominations(int,java.lang.String) -> b
+    java.util.LinkedList getDenominations(int,java.lang.String,java.lang.String) -> c
+    java.lang.String getDenominationValue(int) -> D
+    java.util.LinkedList getDenominationForms(int,boolean) -> b
+    java.util.LinkedList getFormAttributes(int) -> E
+    org.kohaerenzstiftung.andtroin.FormAttribute getFormAttribute(int) -> F
+    java.util.LinkedList getDenominationExamples(int) -> G
+    int getListIdForEntry(int) -> H
+    void deleteEntry(int,boolean,java.lang.String,java.lang.String) -> a
+    void putSchedule(org.kohaerenzstiftung.andtroin.Schedule) -> a
+    android.database.Cursor searchDenomination(int,java.lang.String,boolean) -> a
+    int getPositionForEntryPair(int,java.lang.String,boolean) -> b
+    boolean entriesScheduled() -> c
+    org.kohaerenzstiftung.andtroin.ScheduledEntry getNextEntry() -> d
+    org.kohaerenzstiftung.andtroin.Entry getRandomFailedEntry(int,int) -> d
+    void collectSeries(int) -> I
+    void handleCorrectAnswer(int) -> e
+    boolean seriesComplete(int) -> J
+    boolean seriesComplete(int,org.kohaerenzstiftung.andtroin.Schedule) -> a
+    void moveEntriesDown(int,int) -> e
+    int getFailedCountAtLevel(int,int) -> f
+    int getLevelForEntry(int) -> K
+    int getCountAtLevel(int,int) -> g
+    int getSeriesIdFromEntryId(int) -> L
+    void setEntryOk(int) -> M
+    void moveEntryUp(int) -> N
+    int getEntryStatusInSeries(int) -> O
+    void handleWrongAnswer(int) -> f
+    void scheduleEntries() -> e
+    org.kohaerenzstiftung.andtroin.Schedule getSchedule(int) -> P
+    boolean scheduleEntry(org.kohaerenzstiftung.andtroin.Schedule) -> c
+    boolean scheduleEntry(org.kohaerenzstiftung.andtroin.Schedule,boolean) -> a
+    void doScheduleEntry(int,org.kohaerenzstiftung.andtroin.Schedule) -> b
+    void doScheduleEntry(int,org.kohaerenzstiftung.andtroin.Schedule,int) -> a
+    int createSeries(org.kohaerenzstiftung.andtroin.Schedule) -> d
+    int getDetailsKeysCount(java.lang.String) -> b
+    org.kohaerenzstiftung.andtroin.DetailsKey getDetailsKeyByPosition(java.lang.String,int) -> a
+    java.util.LinkedList getDetailsKeyValues(android.database.sqlite.SQLiteDatabase,int,java.lang.String) -> a
+    void putDetailsKey(org.kohaerenzstiftung.andtroin.DetailsKey,java.lang.String) -> a
+    int doPutDetailsKey(org.kohaerenzstiftung.andtroin.DetailsKey,java.lang.String) -> b
+    int doPutDetailsKey(android.database.sqlite.SQLiteDatabase,org.kohaerenzstiftung.andtroin.DetailsKey,java.lang.String) -> b
+    org.kohaerenzstiftung.andtroin.DetailsKey doGetDetailsKey(int) -> Q
+    org.kohaerenzstiftung.andtroin.DetailsKey doGetDetailsKey(android.database.sqlite.SQLiteDatabase,int) -> b
+    int insertDetailsKey(android.database.sqlite.SQLiteDatabase,org.kohaerenzstiftung.andtroin.DetailsKey,java.lang.String) -> c
+    android.content.ContentValues getContentValues(org.kohaerenzstiftung.andtroin.DetailsKey,java.lang.String) -> c
+    void putDetailsKeyValue(android.database.sqlite.SQLiteDatabase,org.kohaerenzstiftung.andtroin.DetailsKeyValue,int) -> a
+    void insertDetailsKeyValue(android.database.sqlite.SQLiteDatabase,org.kohaerenzstiftung.andtroin.DetailsKeyValue,int) -> b
+    android.content.ContentValues getContentValues(org.kohaerenzstiftung.andtroin.DetailsKeyValue,int) -> b
+    void updateDetailsKey(android.database.sqlite.SQLiteDatabase,org.kohaerenzstiftung.andtroin.DetailsKey,java.lang.String) -> d
+    void deleteDetailsKeyValue(android.database.sqlite.SQLiteDatabase,int) -> c
+    void updateDetailsKeyValue(android.database.sqlite.SQLiteDatabase,org.kohaerenzstiftung.andtroin.DetailsKeyValue,int) -> c
+    void deleteDetailsKey(int) -> g
+    void doDeleteDetailsKey(int) -> R
+    org.kohaerenzstiftung.andtroin.DetailsKey getDetailsKey(int) -> h
+    java.util.LinkedList getDetails(int) -> S
+    boolean listIsScheduled(int) -> i
+    void deleteScheduleByListId(int) -> j
+    void putEntries(java.util.ArrayList,int) -> a
+    int getCategoriesCountByListId(int) -> k
+    org.kohaerenzstiftung.andtroin.Category getCategoryByPosition(int,int) -> a
+    void putCategory(org.kohaerenzstiftung.andtroin.Category,int) -> a
+    void doPutCategory(org.kohaerenzstiftung.andtroin.Category,int) -> b
+    void updateCategory(org.kohaerenzstiftung.andtroin.Category,int) -> c
+    android.content.ContentValues getContentValues(org.kohaerenzstiftung.andtroin.Category,int) -> d
+    void insertCategory(org.kohaerenzstiftung.andtroin.Category,int) -> e
+    void deleteCategory(int) -> l
+    void doDeleteCategory(int) -> T
+    void exportList(int,java.lang.String,org.kohaerenzstiftung.andtroin.Updatable) -> a
+    void exportListToDataOutputStream(int,java.io.DataOutputStream,org.kohaerenzstiftung.andtroin.Updatable) -> a
+    void exportToOsFromCursor(android.database.Cursor,int,java.io.DataOutputStream,org.kohaerenzstiftung.andtroin.Updatable) -> a
+    void exportEntryToOs(org.kohaerenzstiftung.andtroin.Entry,java.io.DataOutputStream) -> a
+    org.kohaerenzstiftung.andtroin.Entry readEntryFromDataInputStream(java.io.DataInputStream,org.kohaerenzstiftung.andtroin.List) -> a
+    void exportEntryDenominationsToOs(java.util.LinkedList,java.io.DataOutputStream) -> a
+    java.util.LinkedList readDenominations(java.io.DataInputStream,java.lang.String,boolean,int) -> a
+    void exportStringToOs(java.lang.String,java.io.DataOutputStream) -> a
+    java.lang.String readString(java.io.DataInputStream) -> a
+    void exportEntryDenominationToOs(org.kohaerenzstiftung.andtroin.Denomination,java.io.DataOutputStream) -> a
+    org.kohaerenzstiftung.andtroin.Denomination readDenomination(java.io.DataInputStream,java.lang.String,boolean,int) -> b
+    void exportDenominationFormsToOs(java.util.LinkedList,java.io.DataOutputStream) -> b
+    java.util.LinkedList readForms(java.io.DataInputStream,boolean,int) -> a
+    org.kohaerenzstiftung.andtroin.DenominationForm readForm(java.io.DataInputStream,boolean,int) -> b
+    void exportDenominationFormToOs(org.kohaerenzstiftung.andtroin.DenominationForm,java.io.DataOutputStream) -> a
+    void exportFormAttributesToOs(java.util.LinkedList,java.io.DataOutputStream) -> c
+    java.util.LinkedList readFormAttributes(java.io.DataInputStream,boolean,int) -> c
+    org.kohaerenzstiftung.andtroin.FormAttribute readFormAttribute(java.io.DataInputStream,boolean,int) -> d
+    org.kohaerenzstiftung.andtroin.FormAttribute getFormAttribute(int,java.lang.String,boolean) -> e
+    void exportFormAttributeToOs(org.kohaerenzstiftung.andtroin.FormAttribute,java.io.DataOutputStream) -> a
+    void exportDenominationExamplesToOs(java.util.LinkedList,java.io.DataOutputStream) -> d
+    java.util.LinkedList readExamples(java.io.DataInputStream) -> b
+    org.kohaerenzstiftung.andtroin.Example readExample(java.io.DataInputStream) -> c
+    void exportDenominationExampleToOs(org.kohaerenzstiftung.andtroin.Example,java.io.DataOutputStream) -> a
+    void exportDenominationDetailsToOs(java.util.LinkedList,java.io.DataOutputStream) -> e
+    java.util.LinkedList readDetails(java.io.DataInputStream,boolean,int,java.lang.String) -> a
+    org.kohaerenzstiftung.andtroin.DetailsKeyValue readDetail(java.io.DataInputStream,boolean,int,java.lang.String) -> b
+    void exportDenominationDetailToOs(org.kohaerenzstiftung.andtroin.DetailsKeyValue,java.io.DataOutputStream) -> a
+    void exportEntryCategoriesToOs(java.util.LinkedList,java.io.DataOutputStream) -> f
+    java.util.LinkedList readCategoriesFromIs(java.io.DataInputStream,int) -> a
+    org.kohaerenzstiftung.andtroin.Category readCategory(java.io.DataInputStream,int) -> b
+    void exportEntryCategoryToOs(org.kohaerenzstiftung.andtroin.Category,java.io.DataOutputStream) -> a
+    void proposePeers(int) -> U
+    boolean isNoPeers(org.kohaerenzstiftung.andtroin.EntryPeers) -> a
+    void proposePeers() -> f
+    android.content.ContentValues getContentValues(org.kohaerenzstiftung.andtroin.EntryPeers,int) -> a
+    org.kohaerenzstiftung.andtroin.EntryPeers findPeers() -> n
+    int getRandomEntryId() -> o
+    java.util.LinkedList getInfinitives(int,java.lang.String,boolean) -> c
+    java.util.LinkedList doGetInfinitives(int,java.lang.String,boolean) -> f
+    int getFormKeysCount(int,boolean) -> a
+    android.database.Cursor getFormAttributes(int,boolean,java.lang.String) -> a
+    int doGetFormKeysCount(int,boolean) -> c
+    android.database.Cursor doGetFormAttributes(int,boolean,java.lang.String) -> b
+    org.kohaerenzstiftung.andtroin.FormAttribute getFormKeyByPosition(int,boolean,int) -> a
+    org.kohaerenzstiftung.andtroin.FormAttribute doGetFormKeyByPosition(int,boolean,int) -> b
+    void putFormKey(org.kohaerenzstiftung.andtroin.FormAttribute,int) -> a
+    void doPutFormKey(org.kohaerenzstiftung.andtroin.FormAttribute,int) -> b
+    void updateFormKey(org.kohaerenzstiftung.andtroin.FormAttribute,int) -> c
+    android.content.ContentValues getContentValues(org.kohaerenzstiftung.andtroin.FormAttribute,int) -> d
+    void insertFormKey(org.kohaerenzstiftung.andtroin.FormAttribute,int) -> e
+    org.kohaerenzstiftung.andtroin.FormAttribute getFormKey(int) -> m
+    org.kohaerenzstiftung.andtroin.FormAttribute doGetFormKey(int) -> V
+    void deleteFormKey(int) -> n
+    org.kohaerenzstiftung.andtroin.DetailsKey doGetDetailsKey(org.kohaerenzstiftung.andtroin.DetailsKeyValue) -> b
+    org.kohaerenzstiftung.andtroin.DetailsKey getDetailsKey(org.kohaerenzstiftung.andtroin.DetailsKeyValue) -> a
+    boolean peersPending() -> g
+    org.kohaerenzstiftung.andtroin.EntryPeers getProposedEntryPeers() -> h
+    void doNotmergeEntries(int,int,int) -> a
+    boolean isFormKeyReferenced(int) -> o
+    boolean isDetailsKeyReferenced(int) -> p
+    boolean isCategoryKeyReferenced(int) -> q
+    boolean isDetailsKeyValueReferenced(int) -> r
+    void importListFromDataInputStream(org.kohaerenzstiftung.andtroin.List,java.io.DataInputStream,org.kohaerenzstiftung.andtroin.Updatable) -> a
+    void doImportListFromEntryPairList(org.kohaerenzstiftung.andtroin.List,java.util.LinkedList,org.kohaerenzstiftung.andtroin.Updatable) -> a
+    void doImportListFromDataInputStream(org.kohaerenzstiftung.andtroin.List,java.io.DataInputStream,org.kohaerenzstiftung.andtroin.Updatable) -> b
+    java.util.LinkedList findWords(int,java.lang.String,boolean) -> d
+    void access$0(org.kohaerenzstiftung.andtroin.Database,int,boolean,java.lang.String,java.lang.String) -> a
+    org.kohaerenzstiftung.andtroin.DetailsKey access$1(android.database.sqlite.SQLiteDatabase,int) -> a
+    int access$2(android.database.sqlite.SQLiteDatabase,org.kohaerenzstiftung.andtroin.DetailsKey,java.lang.String) -> a
+    int access$3(android.database.sqlite.SQLiteDatabase) -> a
+org.kohaerenzstiftung.andtroin.Database$DatabaseHelper -> org.kohaerenzstiftung.andtroin.o:
+    org.kohaerenzstiftung.andtroin.Database this$0 -> a
+    void onCreate(android.database.sqlite.SQLiteDatabase) -> onCreate
+    void onUpgrade(android.database.sqlite.SQLiteDatabase,int,int) -> onUpgrade
+    void doUpgradeStep(android.database.sqlite.SQLiteDatabase,int,int) -> a
+    void doVersion29toVersion30(android.database.sqlite.SQLiteDatabase) -> a
+    void doVersion28toVersion29(android.database.sqlite.SQLiteDatabase) -> b
+    void doVersion27toVersion28(android.database.sqlite.SQLiteDatabase) -> c
+    void doVersion26toVersion27(android.database.sqlite.SQLiteDatabase) -> d
+    void doVersion25toVersion26(android.database.sqlite.SQLiteDatabase) -> e
+    void doVersion24toVersion25(android.database.sqlite.SQLiteDatabase) -> f
+    void doVersion23toVersion24(android.database.sqlite.SQLiteDatabase) -> g
+    void doVersion22toVersion23(android.database.sqlite.SQLiteDatabase) -> h
+    void doVersion21toVersion22(android.database.sqlite.SQLiteDatabase) -> i
+    void doVersion19toVersion21(android.database.sqlite.SQLiteDatabase) -> j
+    void doVersion18toVersion19(android.database.sqlite.SQLiteDatabase) -> k
+    void doVersion17toVersion18(android.database.sqlite.SQLiteDatabase) -> l
+    void doVersion16toVersion17(android.database.sqlite.SQLiteDatabase) -> m
+    void doVersion15toVersion16(android.database.sqlite.SQLiteDatabase) -> n
+    void doVersion14toVersion15(android.database.sqlite.SQLiteDatabase) -> o
+    void doVersion13toVersion14(android.database.sqlite.SQLiteDatabase) -> p
+    void doVersion12toVersion13(android.database.sqlite.SQLiteDatabase) -> q
+    void doVersion11toVersion12(android.database.sqlite.SQLiteDatabase) -> r
+    void doVersion10toVersion11(android.database.sqlite.SQLiteDatabase) -> s
+    void doVersion9toVersion10(android.database.sqlite.SQLiteDatabase) -> t
+    void doVersion8toVersion9(android.database.sqlite.SQLiteDatabase) -> u
+    void convertDetailsKey(int,java.lang.String,java.lang.String,int,android.database.sqlite.SQLiteDatabase) -> a
+    void convertDetailsKeyValue(int,int,java.lang.String,int,android.database.sqlite.SQLiteDatabase) -> a
+    android.database.Cursor getDetails(int,android.database.sqlite.SQLiteDatabase) -> a
+    java.lang.String getLanguage(int,java.lang.String,android.database.sqlite.SQLiteDatabase) -> a
+    android.database.Cursor getDetailsKeyValues(int,android.database.sqlite.SQLiteDatabase) -> b
+    android.database.Cursor getDetailsKeys(android.database.sqlite.SQLiteDatabase) -> v
+    void doVersion7toVersion8(android.database.sqlite.SQLiteDatabase) -> w
+    void doVersion6toVersion7(android.database.sqlite.SQLiteDatabase) -> x
+    void doVersion5toVersion6(android.database.sqlite.SQLiteDatabase) -> y
+    void doVersion4toVersion5(android.database.sqlite.SQLiteDatabase) -> z
+    void doVersion3toVersion4(android.database.sqlite.SQLiteDatabase) -> A
+    void doVersion2toVersion3(android.database.sqlite.SQLiteDatabase) -> B
+    void doVersion1toVersion2(android.database.sqlite.SQLiteDatabase) -> C
+org.kohaerenzstiftung.andtroin.Database$DetailsKeyValueX -> org.kohaerenzstiftung.andtroin.Database$DetailsKeyValueX:
+    java.util.LinkedList mOld -> b
+    org.kohaerenzstiftung.andtroin.Database this$0 -> a
+    java.util.LinkedList getmOld() -> a
+    void addId(int) -> a
+org.kohaerenzstiftung.andtroin.Database$DetailsKeyX -> org.kohaerenzstiftung.andtroin.Database$DetailsKeyX:
+    org.kohaerenzstiftung.andtroin.Database this$0 -> a
+    boolean equals(java.lang.Object) -> equals
+    void addValue(org.kohaerenzstiftung.andtroin.DetailsKeyValue) -> a
+    void addValues(java.util.LinkedList) -> a
+org.kohaerenzstiftung.andtroin.Database$InvalidJsonDetailException -> org.kohaerenzstiftung.andtroin.p:
+org.kohaerenzstiftung.andtroin.Database$NotInTransactionException -> org.kohaerenzstiftung.andtroin.q:
+    org.kohaerenzstiftung.andtroin.Database this$0 -> a
+org.kohaerenzstiftung.andtroin.Denomination -> org.kohaerenzstiftung.andtroin.Denomination:
+    java.util.LinkedList mForms -> a
+    int mEntryId -> b
+    java.lang.String mValue -> c
+    int mId -> d
+    java.lang.String mLanguage -> e
+    java.util.LinkedList mExamples -> f
+    java.util.LinkedList mDetails -> g
+    int mListId -> h
+    android.os.Parcelable$Creator CREATOR -> CREATOR
+    java.util.LinkedList getmForms() -> a
+    java.lang.String getmValue() -> b
+    void setmValue(java.lang.String) -> a
+    int getmId() -> c
+    void setmId(int) -> a
+    java.util.LinkedList getmExamples() -> d
+    java.lang.String getmLanguage() -> e
+    java.util.LinkedList getmDetails() -> f
+    int getmListId() -> g
+    int describeContents() -> describeContents
+    void writeToParcel(android.os.Parcel,int) -> writeToParcel
+    boolean isValid() -> h
+    boolean areDetailsKeysUnique() -> j
+    boolean areExamplesValid() -> k
+    org.kohaerenzstiftung.andtroin.Denomination clone() -> i
+    boolean equals(java.lang.Object) -> equals
+    boolean formsEqual(java.util.LinkedList,java.util.LinkedList) -> a
+    boolean detailsEqual(java.util.LinkedList,java.util.LinkedList) -> b
+    boolean examplesEqual(java.util.LinkedList,java.util.LinkedList) -> c
+    java.lang.Object clone() -> clone
+org.kohaerenzstiftung.andtroin.Denomination$1 -> org.kohaerenzstiftung.andtroin.r:
+    org.kohaerenzstiftung.andtroin.Denomination createFromParcel(android.os.Parcel) -> a
+    org.kohaerenzstiftung.andtroin.Denomination[] newArray(int) -> a
+    java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
+    java.lang.Object[] newArray(int) -> newArray
+org.kohaerenzstiftung.andtroin.DenominationActivity -> org.kohaerenzstiftung.andtroin.DenominationActivity:
+    org.kohaerenzstiftung.andtroin.SearchEntryAutoCompleteTextView mValueEditText -> e
+    org.kohaerenzstiftung.ListView mDetailsListView -> f
+    org.kohaerenzstiftung.ListView mExamplesListView -> g
+    org.kohaerenzstiftung.andtroin.Denomination mDenomination -> h
+    android.widget.Button mLeftOkButton -> i
+    android.widget.Button mRightOkButton -> j
+    int mId -> k
+    org.kohaerenzstiftung.andtroin.ItemView mDetailsHeaderView -> l
+    org.kohaerenzstiftung.andtroin.ItemView mExamplesHeaderView -> m
+    boolean mHideTranslation -> n
+    java.util.ArrayList mClones -> o
+    org.kohaerenzstiftung.ListView mFormsListView -> p
+    org.kohaerenzstiftung.andtroin.ItemView mFormsHeaderView -> q
+    boolean mSource -> r
+    boolean mSetAdapter -> s
+    void registerForContextMenus() -> m
+    void setContextItemExecutors() -> l
+    void deleteForm(int) -> a
+    void doDeleteForm(int) -> b
+    void editForm(int) -> c
+    void deleteExample(int) -> d
+    void doDeleteExample() -> o
+    void editExample(int) -> e
+    void deleteDetail(int) -> f
+    void doDeleteDetail() -> p
+    void setOptionItemExecutors() -> k
+    void addForm() -> q
+    void editForm(org.kohaerenzstiftung.andtroin.DenominationForm,int) -> b
+    void putForm(org.kohaerenzstiftung.andtroin.DenominationForm,int) -> a
+    void cloneDenomination() -> r
+    void addExample() -> s
+    void addDetail() -> t
+    void assignHandlers() -> e
+    void handleOk() -> u
+    void saveAndExit() -> x
+    void leaveInvalid() -> y
+    void cancelAndExit() -> v
+    void findElements() -> d
+    void addHeaderViews() -> z
+    void readArguments(android.os.Bundle) -> a
+    void recoverResources() -> a
+    void releaseResources() -> f
+    void updateViews() -> c
+    void setAdapters() -> A
+    boolean onKeyDown(int,android.view.KeyEvent) -> onKeyDown
+    void handleBackKey() -> B
+    void leaveValid() -> C
+    void putDetail(org.kohaerenzstiftung.andtroin.DetailsKeyValue) -> a
+    void putExample(org.kohaerenzstiftung.andtroin.Example,int) -> a
+    void setHelp() -> w
+    void onBind() -> n
+    int getOptionsMenu() -> j
+    int getLayout() -> b
+    org.kohaerenzstiftung.andtroin.ItemView access$0(org.kohaerenzstiftung.andtroin.DenominationActivity) -> a
+    org.kohaerenzstiftung.andtroin.ItemView access$1(org.kohaerenzstiftung.andtroin.DenominationActivity) -> b
+    org.kohaerenzstiftung.andtroin.ItemView access$2(org.kohaerenzstiftung.andtroin.DenominationActivity) -> c
+    java.util.ArrayList access$3(org.kohaerenzstiftung.andtroin.DenominationActivity) -> d
+    org.kohaerenzstiftung.andtroin.Denomination access$4(org.kohaerenzstiftung.andtroin.DenominationActivity) -> e
+    void access$5(org.kohaerenzstiftung.andtroin.DenominationActivity) -> f
+org.kohaerenzstiftung.andtroin.DenominationActivity$1 -> org.kohaerenzstiftung.andtroin.s:
+    org.kohaerenzstiftung.andtroin.DenominationActivity this$0 -> a
+    int createContextMenu(android.view.ContextMenu$ContextMenuInfo) -> a
+org.kohaerenzstiftung.andtroin.DenominationActivity$10 -> org.kohaerenzstiftung.andtroin.t:
+    org.kohaerenzstiftung.andtroin.DenominationActivity this$0 -> a
+    void yes(int) -> a
+    void no(int) -> b
+org.kohaerenzstiftung.andtroin.DenominationActivity$11 -> org.kohaerenzstiftung.andtroin.u:
+    org.kohaerenzstiftung.andtroin.DenominationActivity this$0 -> a
+    void onNewExample(org.kohaerenzstiftung.andtroin.Example) -> a
+org.kohaerenzstiftung.andtroin.DenominationActivity$12 -> org.kohaerenzstiftung.andtroin.v:
+    org.kohaerenzstiftung.andtroin.DenominationActivity this$0 -> a
+    void no(int) -> b
+    void yes(int) -> a
+org.kohaerenzstiftung.andtroin.DenominationActivity$13 -> org.kohaerenzstiftung.andtroin.w:
+    org.kohaerenzstiftung.andtroin.DenominationActivity this$0 -> a
+    void execute() -> a
+org.kohaerenzstiftung.andtroin.DenominationActivity$14 -> org.kohaerenzstiftung.andtroin.x:
+    org.kohaerenzstiftung.andtroin.DenominationActivity this$0 -> a
+    void execute() -> a
+org.kohaerenzstiftung.andtroin.DenominationActivity$15 -> org.kohaerenzstiftung.andtroin.y:
+    org.kohaerenzstiftung.andtroin.DenominationActivity this$0 -> a
+    void execute() -> a
+org.kohaerenzstiftung.andtroin.DenominationActivity$16 -> org.kohaerenzstiftung.andtroin.z:
+    org.kohaerenzstiftung.andtroin.DenominationActivity this$0 -> a
+    void execute() -> a
+org.kohaerenzstiftung.andtroin.DenominationActivity$17 -> org.kohaerenzstiftung.andtroin.aa:
+    org.kohaerenzstiftung.andtroin.DenominationActivity this$0 -> b
+    void handleResult(android.os.Bundle) -> a
+org.kohaerenzstiftung.andtroin.DenominationActivity$18 -> org.kohaerenzstiftung.andtroin.ab:
+    org.kohaerenzstiftung.andtroin.DenominationActivity this$0 -> b
+    void handleResult(android.os.Bundle) -> a
+org.kohaerenzstiftung.andtroin.DenominationActivity$19 -> org.kohaerenzstiftung.andtroin.ac:
+    org.kohaerenzstiftung.andtroin.DenominationActivity this$0 -> a
+    void onNewExample(org.kohaerenzstiftung.andtroin.Example) -> a
+org.kohaerenzstiftung.andtroin.DenominationActivity$2 -> org.kohaerenzstiftung.andtroin.ad:
+    org.kohaerenzstiftung.andtroin.DenominationActivity this$0 -> a
+    int createContextMenu(android.view.ContextMenu$ContextMenuInfo) -> a
+org.kohaerenzstiftung.andtroin.DenominationActivity$20 -> org.kohaerenzstiftung.andtroin.ae:
+    org.kohaerenzstiftung.andtroin.DenominationActivity this$0 -> a
+    void onNewDetail(org.kohaerenzstiftung.andtroin.DetailsKeyValue) -> a
+org.kohaerenzstiftung.andtroin.DenominationActivity$21 -> org.kohaerenzstiftung.andtroin.af:
+    org.kohaerenzstiftung.andtroin.DenominationActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+org.kohaerenzstiftung.andtroin.DenominationActivity$22 -> org.kohaerenzstiftung.andtroin.ag:
+    org.kohaerenzstiftung.andtroin.DenominationActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+org.kohaerenzstiftung.andtroin.DenominationActivity$23 -> org.kohaerenzstiftung.andtroin.ah:
+    org.kohaerenzstiftung.andtroin.DenominationActivity this$0 -> a
+    void yes(int) -> a
+    void no(int) -> b
+org.kohaerenzstiftung.andtroin.DenominationActivity$24 -> org.kohaerenzstiftung.andtroin.ai:
+    org.kohaerenzstiftung.andtroin.DenominationActivity this$0 -> a
+    void onTextChanged(java.lang.CharSequence,int,int,int) -> onTextChanged
+    void beforeTextChanged(java.lang.CharSequence,int,int,int) -> beforeTextChanged
+    void afterTextChanged(android.text.Editable) -> afterTextChanged
+org.kohaerenzstiftung.andtroin.DenominationActivity$25 -> org.kohaerenzstiftung.andtroin.aj:
+    org.kohaerenzstiftung.andtroin.DenominationActivity this$0 -> a
+    void yes(int) -> a
+    void no(int) -> b
+org.kohaerenzstiftung.andtroin.DenominationActivity$3 -> org.kohaerenzstiftung.andtroin.ak:
+    org.kohaerenzstiftung.andtroin.DenominationActivity this$0 -> a
+    int createContextMenu(android.view.ContextMenu$ContextMenuInfo) -> a
+org.kohaerenzstiftung.andtroin.DenominationActivity$4 -> org.kohaerenzstiftung.andtroin.al:
+    org.kohaerenzstiftung.andtroin.DenominationActivity this$0 -> a
+    void execute(android.view.MenuItem) -> a
+org.kohaerenzstiftung.andtroin.DenominationActivity$5 -> org.kohaerenzstiftung.andtroin.am:
+    org.kohaerenzstiftung.andtroin.DenominationActivity this$0 -> a
+    void execute(android.view.MenuItem) -> a
+org.kohaerenzstiftung.andtroin.DenominationActivity$6 -> org.kohaerenzstiftung.andtroin.an:
+    org.kohaerenzstiftung.andtroin.DenominationActivity this$0 -> a
+    void execute(android.view.MenuItem) -> a
+org.kohaerenzstiftung.andtroin.DenominationActivity$7 -> org.kohaerenzstiftung.andtroin.ao:
+    org.kohaerenzstiftung.andtroin.DenominationActivity this$0 -> a
+    void execute(android.view.MenuItem) -> a
+org.kohaerenzstiftung.andtroin.DenominationActivity$8 -> org.kohaerenzstiftung.andtroin.ap:
+    org.kohaerenzstiftung.andtroin.DenominationActivity this$0 -> a
+    void execute(android.view.MenuItem) -> a
+org.kohaerenzstiftung.andtroin.DenominationActivity$9 -> org.kohaerenzstiftung.andtroin.aq:
+    org.kohaerenzstiftung.andtroin.DenominationActivity this$0 -> a
+    void yes(int) -> a
+    void no(int) -> b
+org.kohaerenzstiftung.andtroin.DenominationActivity$DetailDialog -> org.kohaerenzstiftung.andtroin.ar:
+    android.widget.Spinner mDetailsKeySpinner -> b
+    android.widget.Spinner mDetailsKeyValueSpinner -> c
+    org.kohaerenzstiftung.Activity mActivity -> d
+    java.lang.String mLanguage -> e
+    org.kohaerenzstiftung.andtroin.DenominationActivity$DetailListener mDetailListener -> f
+    android.widget.Button mOkButton -> g
+    org.kohaerenzstiftung.andtroin.DetailsKey mDetailsKey -> h
+    org.kohaerenzstiftung.andtroin.DetailsKeyValue mDetailsKeyValue -> i
+    org.kohaerenzstiftung.andtroin.DenominationActivity this$0 -> a
+    void assignHandlers() -> h
+    void disableOk() -> i
+    void onDetailsKeyValueSelected() -> j
+    void enableOk() -> m
+    void onDetailsKeySelected() -> k
+    void setDetailsKeyValuesAdapter(org.kohaerenzstiftung.andtroin.DetailsKey) -> a
+    void handleOk() -> l
+    void findElements() -> g
+    void recoverResources() -> e
+    void releaseResources() -> f
+    void updateViews() -> d
+    void setAdapters() -> n
+org.kohaerenzstiftung.andtroin.DenominationActivity$DetailDialog$1 -> org.kohaerenzstiftung.andtroin.as:
+    org.kohaerenzstiftung.andtroin.DenominationActivity$DetailDialog this$1 -> a
+    void onClick(android.view.View) -> onClick
+org.kohaerenzstiftung.andtroin.DenominationActivity$DetailDialog$2 -> org.kohaerenzstiftung.andtroin.at:
+    org.kohaerenzstiftung.andtroin.DenominationActivity$DetailDialog this$1 -> a
+    void onItemSelected(android.widget.AdapterView,android.view.View,int,long) -> onItemSelected
+    void onNothingSelected(android.widget.AdapterView) -> onNothingSelected
+org.kohaerenzstiftung.andtroin.DenominationActivity$DetailDialog$3 -> org.kohaerenzstiftung.andtroin.au:
+    org.kohaerenzstiftung.andtroin.DenominationActivity$DetailDialog this$1 -> a
+    void onItemSelected(android.widget.AdapterView,android.view.View,int,long) -> onItemSelected
+    void onNothingSelected(android.widget.AdapterView) -> onNothingSelected
+org.kohaerenzstiftung.andtroin.DenominationActivity$DetailListener -> org.kohaerenzstiftung.andtroin.av:
+    org.kohaerenzstiftung.andtroin.DenominationActivity this$0 -> b
+    void onNewDetail(org.kohaerenzstiftung.andtroin.DetailsKeyValue) -> a
+org.kohaerenzstiftung.andtroin.DenominationActivity$DetailsAdapter -> org.kohaerenzstiftung.andtroin.aw:
+    android.content.Context mContext -> b
+    java.util.LinkedList mDetails -> c
+    org.kohaerenzstiftung.andtroin.DenominationActivity this$0 -> a
+    int getCount() -> getCount
+    java.lang.Object getItem(int) -> getItem
+    long getItemId(int) -> getItemId
+    android.view.View getView(int,android.view.View,android.view.ViewGroup) -> getView
+org.kohaerenzstiftung.andtroin.DenominationActivity$DetailsKeyValuesAdapter -> org.kohaerenzstiftung.andtroin.ax:
+    java.util.LinkedList mValues -> b
+    android.content.Context mContext -> c
+    org.kohaerenzstiftung.andtroin.DenominationActivity this$0 -> a
+    int getCount() -> getCount
+    java.lang.Object getItem(int) -> getItem
+    long getItemId(int) -> getItemId
+    android.view.View getView(int,android.view.View,android.view.ViewGroup) -> getView
+    android.view.View getDropDownView(int,android.view.View,android.view.ViewGroup) -> getDropDownView
+org.kohaerenzstiftung.andtroin.DenominationActivity$DetailsKeysAdapter -> org.kohaerenzstiftung.andtroin.ay:
+    android.content.Context mContext -> b
+    java.lang.String mLanguage -> c
+    org.kohaerenzstiftung.andtroin.DenominationActivity this$0 -> a
+    int getCount() -> getCount
+    java.lang.Object getItem(int) -> getItem
+    long getItemId(int) -> getItemId
+    android.view.View getView(int,android.view.View,android.view.ViewGroup) -> getView
+    android.view.View getDropDownView(int,android.view.View,android.view.ViewGroup) -> getDropDownView
+org.kohaerenzstiftung.andtroin.DenominationActivity$ExampleDialog -> org.kohaerenzstiftung.andtroin.az:
+    org.kohaerenzstiftung.andtroin.Example mExample -> b
+    org.kohaerenzstiftung.andtroin.DenominationActivity$ExampleListener mExampleListener -> c
+    org.kohaerenzstiftung.EditText mValueEditText -> d
+    org.kohaerenzstiftung.EditText mTranslationEditText -> e
+    android.widget.Button mOkButton -> f
+    boolean mHideTranslation -> g
+    org.kohaerenzstiftung.andtroin.DenominationActivity this$0 -> a
+    void assignHandlers() -> h
+    void handleOk() -> i
+    void findElements() -> g
+    void checkOkEnabled() -> j
+    void recoverResources() -> e
+    void releaseResources() -> f
+    void updateViews() -> d
+    org.kohaerenzstiftung.andtroin.Example access$0(org.kohaerenzstiftung.andtroin.DenominationActivity$ExampleDialog) -> a
+org.kohaerenzstiftung.andtroin.DenominationActivity$ExampleDialog$1 -> org.kohaerenzstiftung.andtroin.ba:
+    org.kohaerenzstiftung.andtroin.DenominationActivity$ExampleDialog this$1 -> a
+    void onClick(android.view.View) -> onClick
+org.kohaerenzstiftung.andtroin.DenominationActivity$ExampleDialog$2 -> org.kohaerenzstiftung.andtroin.bb:
+    org.kohaerenzstiftung.andtroin.DenominationActivity$ExampleDialog this$1 -> a
+    void onTextChanged(java.lang.CharSequence,int,int,int) -> onTextChanged
+    void beforeTextChanged(java.lang.CharSequence,int,int,int) -> beforeTextChanged
+    void afterTextChanged(android.text.Editable) -> afterTextChanged
+org.kohaerenzstiftung.andtroin.DenominationActivity$ExampleDialog$3 -> org.kohaerenzstiftung.andtroin.bc:
+    org.kohaerenzstiftung.andtroin.DenominationActivity$ExampleDialog this$1 -> a
+    void onTextChanged(java.lang.CharSequence,int,int,int) -> onTextChanged
+    void beforeTextChanged(java.lang.CharSequence,int,int,int) -> beforeTextChanged
+    void afterTextChanged(android.text.Editable) -> afterTextChanged
+org.kohaerenzstiftung.andtroin.DenominationActivity$ExampleListener -> org.kohaerenzstiftung.andtroin.bd:
+    int mPosition -> b
+    org.kohaerenzstiftung.andtroin.DenominationActivity this$0 -> c
+    void onNewExample(org.kohaerenzstiftung.andtroin.Example) -> a
+org.kohaerenzstiftung.andtroin.DenominationActivity$ExamplesAdapter -> org.kohaerenzstiftung.andtroin.be:
+    android.content.Context mContext -> b
+    java.util.LinkedList mExamples -> c
+    boolean mHideTranslation -> d
+    org.kohaerenzstiftung.andtroin.DenominationActivity this$0 -> a
+    int getCount() -> getCount
+    java.lang.Object getItem(int) -> getItem
+    long getItemId(int) -> getItemId
+    android.view.View getView(int,android.view.View,android.view.ViewGroup) -> getView
+org.kohaerenzstiftung.andtroin.DenominationActivity$FormsAdapter -> org.kohaerenzstiftung.andtroin.bf:
+    java.util.LinkedList mForms -> b
+    org.kohaerenzstiftung.andtroin.DenominationActivity mContext -> c
+    org.kohaerenzstiftung.andtroin.DenominationActivity this$0 -> a
+    int getCount() -> getCount
+    java.lang.Object getItem(int) -> getItem
+    long getItemId(int) -> getItemId
+    android.view.View getView(int,android.view.View,android.view.ViewGroup) -> getView
+org.kohaerenzstiftung.andtroin.DenominationForm -> org.kohaerenzstiftung.andtroin.DenominationForm:
+    org.kohaerenzstiftung.andtroin.DenominationForm$Comparator comparator -> a
+    int mId -> b
+    java.lang.String mValue -> c
+    int mDenominationId -> d
+    java.util.LinkedList mFormAttributes -> e
+    android.os.Parcelable$Creator CREATOR -> CREATOR
+    int getmId() -> a
+    java.lang.String getmValue() -> b
+    void setmValue(java.lang.String) -> a
+    java.util.LinkedList getmFormAttributes() -> c
+    int describeContents() -> describeContents
+    void writeToParcel(android.os.Parcel,int) -> writeToParcel
+    org.kohaerenzstiftung.andtroin.DenominationForm clone() -> d
+    java.util.LinkedList cloneFormAttributes() -> f
+    boolean isValid() -> e
+    boolean equals(java.lang.Object) -> equals
+    java.lang.Object clone() -> clone
+org.kohaerenzstiftung.andtroin.DenominationForm$1 -> org.kohaerenzstiftung.andtroin.bg:
+    org.kohaerenzstiftung.andtroin.DenominationForm createFromParcel(android.os.Parcel) -> a
+    org.kohaerenzstiftung.andtroin.DenominationForm[] newArray(int) -> a
+    java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
+    java.lang.Object[] newArray(int) -> newArray
+org.kohaerenzstiftung.andtroin.DenominationForm$Comparator -> org.kohaerenzstiftung.andtroin.bh:
+    int compare(org.kohaerenzstiftung.andtroin.DenominationForm,org.kohaerenzstiftung.andtroin.DenominationForm) -> a
+    int compareDenominationForms(org.kohaerenzstiftung.andtroin.DenominationForm,org.kohaerenzstiftung.andtroin.DenominationForm,int) -> a
+    int compare(java.lang.Object,java.lang.Object) -> compare
+org.kohaerenzstiftung.andtroin.DenominationFormActivity -> org.kohaerenzstiftung.andtroin.DenominationFormActivity:
+    org.kohaerenzstiftung.andtroin.SearchEntryAutoCompleteTextView mValueEditText -> e
+    android.widget.Button mLeftOkButton -> f
+    android.widget.Button mRightOkButton -> g
+    org.kohaerenzstiftung.ListView mAttributesListView -> h
+    org.kohaerenzstiftung.andtroin.DenominationForm mForm -> i
+    int mListId -> j
+    boolean mSource -> k
+    java.util.ArrayList mClones -> l
+    boolean mSetAdapter -> m
+    void setHelp() -> w
+    void setOptionItemExecutors() -> k
+    void cloneDenominationForm() -> o
+    void addFormKey() -> p
+    void putDetail(org.kohaerenzstiftung.andtroin.FormAttribute) -> a
+    void setContextItemExecutors() -> l
+    void deleteFormKey(int) -> a
+    void doDeleteFormKey(int) -> b
+    void registerForContextMenus() -> m
+    void assignHandlers() -> e
+    void handleOk() -> q
+    void cancelAndExit() -> r
+    void saveAndExit() -> t
+    void checkOkEnabled() -> s
+    void findElements() -> d
+    void readArguments(android.os.Bundle) -> a
+    void recoverResources() -> a
+    void releaseResources() -> f
+    void updateViews() -> c
+    void setAdapters() -> u
+    boolean onKeyDown(int,android.view.KeyEvent) -> onKeyDown
+    void handleBackKey() -> v
+    void leaveInvalid() -> x
+    void leaveValid() -> y
+    void onBind() -> n
+    int getOptionsMenu() -> j
+    int getLayout() -> b
+    int access$0(org.kohaerenzstiftung.andtroin.DenominationFormActivity) -> a
+    boolean access$1(org.kohaerenzstiftung.andtroin.DenominationFormActivity) -> b
+    java.util.ArrayList access$2(org.kohaerenzstiftung.andtroin.DenominationFormActivity) -> c
+    org.kohaerenzstiftung.andtroin.DenominationForm access$3(org.kohaerenzstiftung.andtroin.DenominationFormActivity) -> d
+    void access$4(org.kohaerenzstiftung.andtroin.DenominationFormActivity) -> e
+org.kohaerenzstiftung.andtroin.DenominationFormActivity$1 -> org.kohaerenzstiftung.andtroin.bi:
+    org.kohaerenzstiftung.andtroin.DenominationFormActivity this$0 -> a
+    void execute() -> a
+org.kohaerenzstiftung.andtroin.DenominationFormActivity$10 -> org.kohaerenzstiftung.andtroin.bj:
+    org.kohaerenzstiftung.andtroin.DenominationFormActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+org.kohaerenzstiftung.andtroin.DenominationFormActivity$11 -> org.kohaerenzstiftung.andtroin.bk:
+    org.kohaerenzstiftung.andtroin.DenominationFormActivity this$0 -> a
+    void yes(int) -> a
+    void no(int) -> b
+org.kohaerenzstiftung.andtroin.DenominationFormActivity$12 -> org.kohaerenzstiftung.andtroin.bl:
+    org.kohaerenzstiftung.andtroin.DenominationFormActivity this$0 -> a
+    void yes(int) -> a
+    void no(int) -> b
+org.kohaerenzstiftung.andtroin.DenominationFormActivity$2 -> org.kohaerenzstiftung.andtroin.bm:
+    org.kohaerenzstiftung.andtroin.DenominationFormActivity this$0 -> a
+    void execute() -> a
+org.kohaerenzstiftung.andtroin.DenominationFormActivity$3 -> org.kohaerenzstiftung.andtroin.bn:
+    org.kohaerenzstiftung.andtroin.DenominationFormActivity this$0 -> b
+    void handleResult(android.os.Bundle) -> a
+org.kohaerenzstiftung.andtroin.DenominationFormActivity$4 -> org.kohaerenzstiftung.andtroin.bo:
+    org.kohaerenzstiftung.andtroin.DenominationFormActivity this$0 -> a
+    void onNewForm(org.kohaerenzstiftung.andtroin.FormAttribute) -> a
+org.kohaerenzstiftung.andtroin.DenominationFormActivity$5 -> org.kohaerenzstiftung.andtroin.bp:
+    org.kohaerenzstiftung.andtroin.DenominationFormActivity this$0 -> a
+    void execute(android.view.MenuItem) -> a
+org.kohaerenzstiftung.andtroin.DenominationFormActivity$6 -> org.kohaerenzstiftung.andtroin.bq:
+    org.kohaerenzstiftung.andtroin.DenominationFormActivity this$0 -> a
+    void yes(int) -> a
+    void no(int) -> b
+org.kohaerenzstiftung.andtroin.DenominationFormActivity$7 -> org.kohaerenzstiftung.andtroin.br:
+    org.kohaerenzstiftung.andtroin.DenominationFormActivity this$0 -> a
+    int createContextMenu(android.view.ContextMenu$ContextMenuInfo) -> a
+org.kohaerenzstiftung.andtroin.DenominationFormActivity$8 -> org.kohaerenzstiftung.andtroin.bs:
+    org.kohaerenzstiftung.andtroin.DenominationFormActivity this$0 -> a
+    void onTextChanged(java.lang.CharSequence,int,int,int) -> onTextChanged
+    void beforeTextChanged(java.lang.CharSequence,int,int,int) -> beforeTextChanged
+    void afterTextChanged(android.text.Editable) -> afterTextChanged
+org.kohaerenzstiftung.andtroin.DenominationFormActivity$9 -> org.kohaerenzstiftung.andtroin.bt:
+    org.kohaerenzstiftung.andtroin.DenominationFormActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+org.kohaerenzstiftung.andtroin.DenominationFormActivity$AttributeListener -> org.kohaerenzstiftung.andtroin.bu:
+    org.kohaerenzstiftung.andtroin.DenominationFormActivity this$0 -> b
+    void onNewForm(org.kohaerenzstiftung.andtroin.FormAttribute) -> a
+org.kohaerenzstiftung.andtroin.DenominationFormActivity$FormAttributesAdapter -> org.kohaerenzstiftung.andtroin.bv:
+    android.content.Context mContext -> b
+    org.kohaerenzstiftung.andtroin.DenominationForm mForm -> c
+    org.kohaerenzstiftung.andtroin.DenominationFormActivity this$0 -> a
+    int getCount() -> getCount
+    java.lang.Object getItem(int) -> getItem
+    long getItemId(int) -> getItemId
+    android.view.View getView(int,android.view.View,android.view.ViewGroup) -> getView
+org.kohaerenzstiftung.andtroin.DenominationFormActivity$FormKeyDialog -> org.kohaerenzstiftung.andtroin.bw:
+    android.widget.Button mOkButton -> b
+    org.kohaerenzstiftung.andtroin.FormAttribute mFormAttribute -> c
+    org.kohaerenzstiftung.andtroin.DenominationFormActivity$AttributeListener mAttributeListener -> d
+    int mListId -> e
+    boolean mSource -> f
+    org.kohaerenzstiftung.Activity mActivity -> g
+    org.kohaerenzstiftung.andtroin.FormAttributeAutoCompleteTextView mAttributesEditText -> h
+    org.kohaerenzstiftung.andtroin.DenominationFormActivity this$0 -> a
+    void updateViews() -> d
+    void setAdapters() -> k
+    void recoverResources() -> e
+    void releaseResources() -> f
+    void findElements() -> g
+    void assignHandlers() -> h
+    void enableOk() -> l
+    void disableOk() -> i
+    void handleOk() -> j
+    void access$0(org.kohaerenzstiftung.andtroin.DenominationFormActivity$FormKeyDialog) -> a
+org.kohaerenzstiftung.andtroin.DenominationFormActivity$FormKeyDialog$1 -> org.kohaerenzstiftung.andtroin.bx:
+    org.kohaerenzstiftung.andtroin.DenominationFormActivity$FormKeyDialog this$1 -> a
+    void onClick(android.view.View) -> onClick
+org.kohaerenzstiftung.andtroin.DenominationFormActivity$FormKeyDialog$2 -> org.kohaerenzstiftung.andtroin.by:
+    org.kohaerenzstiftung.andtroin.DenominationFormActivity$FormKeyDialog this$1 -> a
+    void onTextChanged(java.lang.CharSequence,int,int,int) -> onTextChanged
+    void beforeTextChanged(java.lang.CharSequence,int,int,int) -> beforeTextChanged
+    void afterTextChanged(android.text.Editable) -> afterTextChanged
+org.kohaerenzstiftung.andtroin.DetailsKey -> org.kohaerenzstiftung.andtroin.DetailsKey:
+    java.lang.String mLanguage -> a
+    java.lang.String mValue -> b
+    java.util.LinkedList mValues -> c
+    int mId -> d
+    android.os.Parcelable$Creator CREATOR -> CREATOR
+    java.lang.String getmLanguage() -> a
+    java.lang.String getmValue() -> b
+    java.util.LinkedList getmValues() -> c
+    int getmId() -> d
+    void setmValue(java.lang.String) -> a
+    int describeContents() -> describeContents
+    void writeToParcel(android.os.Parcel,int) -> writeToParcel
+    boolean isValid() -> e
+org.kohaerenzstiftung.andtroin.DetailsKey$1 -> org.kohaerenzstiftung.andtroin.bz:
+    org.kohaerenzstiftung.andtroin.DetailsKey createFromParcel(android.os.Parcel) -> a
+    org.kohaerenzstiftung.andtroin.DetailsKey[] newArray(int) -> a
+    java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
+    java.lang.Object[] newArray(int) -> newArray
+org.kohaerenzstiftung.andtroin.DetailsKeyActivity -> org.kohaerenzstiftung.andtroin.DetailsKeyActivity:
+    org.kohaerenzstiftung.andtroin.DetailsKey mDetailsKey -> f
+    org.kohaerenzstiftung.EditText mValueEditText -> g
+    org.kohaerenzstiftung.ListView mValuesListView -> h
+    android.widget.Button mLeftOkButton -> i
+    android.widget.Button mRightOkButton -> j
+    int mId -> k
+    org.kohaerenzstiftung.andtroin.ItemView mValuesHeaderView -> l
+    boolean hideDeleteDetailsKeyValue -> e
+    void assignHandlers() -> e
+    void checkOkEnabled() -> o
+    void handleOk() -> p
+    void saveAndExit() -> t
+    void leaveInvalid() -> u
+    void cancelAndExit() -> q
+    void findElements() -> d
+    void addHeaderViews() -> v
+    void readArguments(android.os.Bundle) -> a
+    void recoverResources() -> a
+    void releaseResources() -> f
+    void updateViews() -> c
+    void setAdapters() -> x
+    void registerForContextMenus() -> m
+    boolean isDetailsKeyValueReferenced(int) -> a
+    void setContextItemExecutors() -> l
+    void deleteDetailsKeyValue(int) -> b
+    void deleteDetailsKeyValue() -> r
+    void editDetailsKeyValue(int) -> c
+    void setOptionItemExecutors() -> k
+    void addDetailsKeyValue() -> s
+    void editDetailsKeyValue(org.kohaerenzstiftung.andtroin.DetailsKeyValue) -> b
+    boolean onKeyDown(int,android.view.KeyEvent) -> onKeyDown
+    void handleBackKey() -> y
+    void leaveValid() -> z
+    void putDetailsKeyValue(org.kohaerenzstiftung.andtroin.DetailsKeyValue) -> a
+    void setHelp() -> w
+    void onBind() -> n
+    void onCreateContextMenu(android.view.ContextMenu,android.view.View,android.view.ContextMenu$ContextMenuInfo) -> onCreateContextMenu
+    int getOptionsMenu() -> j
+    int getLayout() -> b
+    org.kohaerenzstiftung.andtroin.DetailsKey access$0(org.kohaerenzstiftung.andtroin.DetailsKeyActivity) -> a
+    org.kohaerenzstiftung.andtroin.ItemView access$1(org.kohaerenzstiftung.andtroin.DetailsKeyActivity) -> b
+    void access$2(org.kohaerenzstiftung.andtroin.DetailsKeyActivity) -> c
+org.kohaerenzstiftung.andtroin.DetailsKeyActivity$1 -> org.kohaerenzstiftung.andtroin.ca:
+    org.kohaerenzstiftung.andtroin.DetailsKeyActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+org.kohaerenzstiftung.andtroin.DetailsKeyActivity$10 -> org.kohaerenzstiftung.andtroin.cb:
+    org.kohaerenzstiftung.andtroin.DetailsKeyActivity this$0 -> a
+    void onNewDetailsKeyValue(org.kohaerenzstiftung.andtroin.DetailsKeyValue) -> a
+org.kohaerenzstiftung.andtroin.DetailsKeyActivity$11 -> org.kohaerenzstiftung.andtroin.cc:
+    org.kohaerenzstiftung.andtroin.DetailsKeyActivity this$0 -> a
+    void yes(int) -> a
+    void no(int) -> b
+org.kohaerenzstiftung.andtroin.DetailsKeyActivity$2 -> org.kohaerenzstiftung.andtroin.cd:
+    org.kohaerenzstiftung.andtroin.DetailsKeyActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+org.kohaerenzstiftung.andtroin.DetailsKeyActivity$3 -> org.kohaerenzstiftung.andtroin.ce:
+    org.kohaerenzstiftung.andtroin.DetailsKeyActivity this$0 -> a
+    void onTextChanged(java.lang.CharSequence,int,int,int) -> onTextChanged
+    void beforeTextChanged(java.lang.CharSequence,int,int,int) -> beforeTextChanged
+    void afterTextChanged(android.text.Editable) -> afterTextChanged
+org.kohaerenzstiftung.andtroin.DetailsKeyActivity$4 -> org.kohaerenzstiftung.andtroin.cf:
+    org.kohaerenzstiftung.andtroin.DetailsKeyActivity this$0 -> a
+    void yes(int) -> a
+    void no(int) -> b
+org.kohaerenzstiftung.andtroin.DetailsKeyActivity$5 -> org.kohaerenzstiftung.andtroin.cg:
+    org.kohaerenzstiftung.andtroin.DetailsKeyActivity this$0 -> a
+    int createContextMenu(android.view.ContextMenu$ContextMenuInfo) -> a
+org.kohaerenzstiftung.andtroin.DetailsKeyActivity$6 -> org.kohaerenzstiftung.andtroin.ch:
+    org.kohaerenzstiftung.andtroin.DetailsKeyActivity this$0 -> a
+    void execute(android.view.MenuItem) -> a
+org.kohaerenzstiftung.andtroin.DetailsKeyActivity$7 -> org.kohaerenzstiftung.andtroin.ci:
+    org.kohaerenzstiftung.andtroin.DetailsKeyActivity this$0 -> a
+    void execute(android.view.MenuItem) -> a
+org.kohaerenzstiftung.andtroin.DetailsKeyActivity$8 -> org.kohaerenzstiftung.andtroin.cj:
+    org.kohaerenzstiftung.andtroin.DetailsKeyActivity this$0 -> a
+    void yes(int) -> a
+    void no(int) -> b
+org.kohaerenzstiftung.andtroin.DetailsKeyActivity$9 -> org.kohaerenzstiftung.andtroin.ck:
+    org.kohaerenzstiftung.andtroin.DetailsKeyActivity this$0 -> a
+    void execute() -> a
+org.kohaerenzstiftung.andtroin.DetailsKeyActivity$DetailsKeyValueDialog -> org.kohaerenzstiftung.andtroin.cl:
+    org.kohaerenzstiftung.andtroin.DetailsKeyActivity$DetailsKeyValueListener mDetailsKeyValueListener -> b
+    org.kohaerenzstiftung.andtroin.DetailsKeyValue mDetailsKeyValue -> c
+    org.kohaerenzstiftung.EditText mValueEditText -> d
+    android.widget.Button mOkButton -> e
+    org.kohaerenzstiftung.andtroin.DetailsKeyActivity this$0 -> a
+    void assignHandlers() -> h
+    void checkOkEnabled() -> i
+    void handleOk() -> j
+    void findElements() -> g
+    void recoverResources() -> e
+    void releaseResources() -> f
+    void updateViews() -> d
+    org.kohaerenzstiftung.andtroin.DetailsKeyValue access$0(org.kohaerenzstiftung.andtroin.DetailsKeyActivity$DetailsKeyValueDialog) -> a
+org.kohaerenzstiftung.andtroin.DetailsKeyActivity$DetailsKeyValueDialog$1 -> org.kohaerenzstiftung.andtroin.cm:
+    org.kohaerenzstiftung.andtroin.DetailsKeyActivity$DetailsKeyValueDialog this$1 -> a
+    void onClick(android.view.View) -> onClick
+org.kohaerenzstiftung.andtroin.DetailsKeyActivity$DetailsKeyValueDialog$2 -> org.kohaerenzstiftung.andtroin.cn:
+    org.kohaerenzstiftung.andtroin.DetailsKeyActivity$DetailsKeyValueDialog this$1 -> a
+    void onTextChanged(java.lang.CharSequence,int,int,int) -> onTextChanged
+    void beforeTextChanged(java.lang.CharSequence,int,int,int) -> beforeTextChanged
+    void afterTextChanged(android.text.Editable) -> afterTextChanged
+org.kohaerenzstiftung.andtroin.DetailsKeyActivity$DetailsKeyValueListener -> org.kohaerenzstiftung.andtroin.co:
+    org.kohaerenzstiftung.andtroin.DetailsKeyActivity this$0 -> b
+    void onNewDetailsKeyValue(org.kohaerenzstiftung.andtroin.DetailsKeyValue) -> a
+org.kohaerenzstiftung.andtroin.DetailsKeyActivity$DetailsKeyValuesAdapter -> org.kohaerenzstiftung.andtroin.cp:
+    android.content.Context mContext -> b
+    java.util.LinkedList mDetailsKeyValues -> c
+    org.kohaerenzstiftung.andtroin.DetailsKeyActivity this$0 -> a
+    int getCount() -> getCount
+    java.lang.Object getItem(int) -> getItem
+    long getItemId(int) -> getItemId
+    android.view.View getView(int,android.view.View,android.view.ViewGroup) -> getView
+org.kohaerenzstiftung.andtroin.DetailsKeyValue -> org.kohaerenzstiftung.andtroin.DetailsKeyValue:
+    int mId -> a
+    java.lang.String mKey -> b
+    java.lang.String mValue -> c
+    android.os.Parcelable$Creator CREATOR -> CREATOR
+    int getmId() -> b
+    java.lang.String getmValue() -> c
+    void setmValue(java.lang.String) -> a
+    java.lang.String getmKey() -> d
+    int describeContents() -> describeContents
+    void writeToParcel(android.os.Parcel,int) -> writeToParcel
+    boolean equals(java.lang.Object) -> equals
+    boolean isValid() -> e
+    org.kohaerenzstiftung.andtroin.DetailsKeyValue clone() -> f
+    java.lang.Object clone() -> clone
+org.kohaerenzstiftung.andtroin.DetailsKeyValue$1 -> org.kohaerenzstiftung.andtroin.cq:
+    org.kohaerenzstiftung.andtroin.DetailsKeyValue createFromParcel(android.os.Parcel) -> a
+    org.kohaerenzstiftung.andtroin.DetailsKeyValue[] newArray(int) -> a
+    java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
+    java.lang.Object[] newArray(int) -> newArray
+org.kohaerenzstiftung.andtroin.EditEntryStarterActivity -> org.kohaerenzstiftung.andtroin.cr:
+    org.kohaerenzstiftung.andtroin.EditEntryStarterActivity$EditEntryReturner mEditEntryReturner -> e
+    void editEntry(org.kohaerenzstiftung.andtroin.Entry,org.kohaerenzstiftung.andtroin.EditEntryStarterActivity$EditEntryReturner) -> a
+    void editEntry(org.kohaerenzstiftung.andtroin.Entry,org.kohaerenzstiftung.andtroin.EditEntryStarterActivity$EditEntryReturner,boolean) -> a
+    void putEntries(java.util.ArrayList,org.kohaerenzstiftung.andtroin.Entry) -> a
+    void recoverResources() -> a
+    void releaseResources() -> f
+    org.kohaerenzstiftung.andtroin.EditEntryStarterActivity$EditEntryReturner access$0(org.kohaerenzstiftung.andtroin.EditEntryStarterActivity) -> a
+org.kohaerenzstiftung.andtroin.EditEntryStarterActivity$1 -> org.kohaerenzstiftung.andtroin.cs:
+    org.kohaerenzstiftung.andtroin.EditEntryStarterActivity this$0 -> b
+    void handleResult(android.os.Bundle) -> a
+org.kohaerenzstiftung.andtroin.EditEntryStarterActivity$2 -> org.kohaerenzstiftung.andtroin.ct:
+    org.kohaerenzstiftung.andtroin.EditEntryStarterActivity this$0 -> b
+    void handleResult(android.os.Bundle) -> a
+org.kohaerenzstiftung.andtroin.EditEntryStarterActivity$EditEntryReturner -> org.kohaerenzstiftung.andtroin.cu:
+    org.kohaerenzstiftung.andtroin.EditEntryStarterActivity this$0 -> a
+    void onReturn(java.util.ArrayList,org.kohaerenzstiftung.andtroin.Entry) -> a
+org.kohaerenzstiftung.andtroin.Entry -> org.kohaerenzstiftung.andtroin.Entry:
+    int mScore -> a
+    int mStatus -> b
+    java.lang.String mSourceLanguage -> c
+    java.lang.String mTargetLanguage -> d
+    int mId -> e
+    int mListId -> f
+    java.util.LinkedList mTargetDenominations -> g
+    java.util.LinkedList mSourceDenominations -> h
+    java.util.LinkedList mCategories -> i
+    android.os.Parcelable$Creator CREATOR -> CREATOR
+    java.lang.String getmSourceLanguage() -> a
+    java.lang.String getmTargetLanguage() -> b
+    int getmScore() -> c
+    int getmStatus() -> d
+    int getmId() -> e
+    void setmId(int) -> a
+    int getmListId() -> f
+    java.util.LinkedList getmTargetDenominations() -> g
+    java.util.LinkedList getmSourceDenominations() -> h
+    java.util.LinkedList getmCategories() -> i
+    int describeContents() -> describeContents
+    void writeToParcel(android.os.Parcel,int) -> writeToParcel
+    void addSourceDenomination(java.lang.String) -> a
+    void addTargetDenomination(java.lang.String) -> b
+    boolean isValid() -> j
+    boolean categoriesValid() -> l
+    boolean areDenominationsValid(java.util.LinkedList) -> a
+    org.kohaerenzstiftung.andtroin.Entry clone() -> k
+    boolean equals(java.lang.Object) -> equals
+    boolean categoriesEqual(java.util.LinkedList,java.util.LinkedList) -> a
+    boolean denominationsEqual(java.util.LinkedList,java.util.LinkedList) -> b
+    java.util.LinkedList cloneCategories(java.util.LinkedList) -> b
+    java.util.LinkedList cloneDenominations(java.util.LinkedList) -> c
+    org.kohaerenzstiftung.andtroin.Entry merge(org.kohaerenzstiftung.andtroin.Entry,org.kohaerenzstiftung.andtroin.Entry,int) -> a
+    java.util.LinkedList mergeDenominations(java.util.LinkedList,java.util.LinkedList) -> c
+    void mergeDenominations(org.kohaerenzstiftung.andtroin.Denomination,org.kohaerenzstiftung.andtroin.Denomination) -> a
+    void mergeDetailsKeyValues(java.util.LinkedList,java.util.LinkedList) -> d
+    void mergeExamples(java.util.LinkedList,java.util.LinkedList) -> e
+    java.util.LinkedList mergeCategories(java.util.LinkedList,java.util.LinkedList) -> f
+    java.lang.Object clone() -> clone
+org.kohaerenzstiftung.andtroin.Entry$1 -> org.kohaerenzstiftung.andtroin.cv:
+    org.kohaerenzstiftung.andtroin.Entry createFromParcel(android.os.Parcel) -> a
+    org.kohaerenzstiftung.andtroin.Entry[] newArray(int) -> a
+    java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
+    java.lang.Object[] newArray(int) -> newArray
+org.kohaerenzstiftung.andtroin.EntryActivity -> org.kohaerenzstiftung.andtroin.EntryActivity:
+    org.kohaerenzstiftung.ListView mSourceDenominationsListView -> e
+    org.kohaerenzstiftung.ListView mTargetDenominationsListView -> f
+    org.kohaerenzstiftung.andtroin.Entry mEntry -> g
+    int mId -> h
+    android.widget.Button mLeftOkButton -> i
+    android.widget.Button mRightOkButton -> j
+    int mPosition -> k
+    org.kohaerenzstiftung.andtroin.ItemView mSourceDenominationsHeaderView -> l
+    org.kohaerenzstiftung.andtroin.ItemView mTargetDenominationsHeaderView -> m
+    boolean mCheckSource -> n
+    boolean mIsSource -> o
+    java.util.ArrayList mClones -> p
+    org.kohaerenzstiftung.ListView mEntryCategoriesListView -> q
+    org.kohaerenzstiftung.andtroin.ItemView mEntryCategoriesHeaderView -> r
+    void registerForContextMenus() -> m
+    void setContextItemExecutors() -> l
+    void deleteEntryCategory(int) -> a
+    void deleteDenomination(int) -> b
+    void doDeleteDenomination() -> o
+    void editDenomination(int) -> c
+    void editDenomination(org.kohaerenzstiftung.andtroin.Denomination,int,boolean) -> a
+    void putDenomination(org.kohaerenzstiftung.andtroin.Denomination,boolean,boolean) -> a
+    void setOptionItemExecutors() -> k
+    void handleAddCategoryClick() -> p
+    void addDenomination(boolean) -> b
+    void assignHandlers() -> e
+    void handleCloneClick() -> q
+    void handleOkClick() -> r
+    void leaveInvalid() -> u
+    void cancelAndExit() -> s
+    boolean onKeyDown(int,android.view.KeyEvent) -> onKeyDown
+    void handleBackKey() -> v
+    void leaveValid() -> x
+    void saveAndExit() -> t
+    void findElements() -> d
+    void addHeaderViews() -> y
+    void readArguments(android.os.Bundle) -> a
+    void recoverResources() -> a
+    void releaseResources() -> f
+    void updateViews() -> c
+    void setAdapters() -> z
+    void addCategory(org.kohaerenzstiftung.andtroin.Category) -> a
+    void setHelp() -> w
+    void onBind() -> n
+    int getOptionsMenu() -> j
+    int getLayout() -> b
+    org.kohaerenzstiftung.andtroin.ItemView access$0(org.kohaerenzstiftung.andtroin.EntryActivity) -> a
+    org.kohaerenzstiftung.andtroin.ItemView access$1(org.kohaerenzstiftung.andtroin.EntryActivity) -> b
+    org.kohaerenzstiftung.andtroin.ItemView access$2(org.kohaerenzstiftung.andtroin.EntryActivity) -> c
+    java.util.ArrayList access$3(org.kohaerenzstiftung.andtroin.EntryActivity) -> d
+org.kohaerenzstiftung.andtroin.EntryActivity$1 -> org.kohaerenzstiftung.andtroin.cw:
+    org.kohaerenzstiftung.andtroin.EntryActivity this$0 -> a
+    int createContextMenu(android.view.ContextMenu$ContextMenuInfo) -> a
+org.kohaerenzstiftung.andtroin.EntryActivity$10 -> org.kohaerenzstiftung.andtroin.cx:
+    org.kohaerenzstiftung.andtroin.EntryActivity this$0 -> a
+    void execute() -> a
+org.kohaerenzstiftung.andtroin.EntryActivity$11 -> org.kohaerenzstiftung.andtroin.cy:
+    org.kohaerenzstiftung.andtroin.EntryActivity this$0 -> a
+    void execute() -> a
+org.kohaerenzstiftung.andtroin.EntryActivity$12 -> org.kohaerenzstiftung.andtroin.cz:
+    org.kohaerenzstiftung.andtroin.EntryActivity this$0 -> a
+    void execute() -> a
+org.kohaerenzstiftung.andtroin.EntryActivity$13 -> org.kohaerenzstiftung.andtroin.da:
+    org.kohaerenzstiftung.andtroin.EntryActivity this$0 -> a
+    void onNewCategory(org.kohaerenzstiftung.andtroin.Category) -> a
+org.kohaerenzstiftung.andtroin.EntryActivity$14 -> org.kohaerenzstiftung.andtroin.db:
+    org.kohaerenzstiftung.andtroin.EntryActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+org.kohaerenzstiftung.andtroin.EntryActivity$15 -> org.kohaerenzstiftung.andtroin.dc:
+    org.kohaerenzstiftung.andtroin.EntryActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+org.kohaerenzstiftung.andtroin.EntryActivity$16 -> org.kohaerenzstiftung.andtroin.dd:
+    org.kohaerenzstiftung.andtroin.EntryActivity this$0 -> b
+    void onReturn(java.util.ArrayList,org.kohaerenzstiftung.andtroin.Entry) -> a
+org.kohaerenzstiftung.andtroin.EntryActivity$17 -> org.kohaerenzstiftung.andtroin.de:
+    org.kohaerenzstiftung.andtroin.EntryActivity this$0 -> a
+    void yes(int) -> a
+    void no(int) -> b
+org.kohaerenzstiftung.andtroin.EntryActivity$18 -> org.kohaerenzstiftung.andtroin.df:
+    org.kohaerenzstiftung.andtroin.EntryActivity this$0 -> a
+    void yes(int) -> a
+    void no(int) -> b
+org.kohaerenzstiftung.andtroin.EntryActivity$2 -> org.kohaerenzstiftung.andtroin.dg:
+    org.kohaerenzstiftung.andtroin.EntryActivity this$0 -> a
+    int createContextMenu(android.view.ContextMenu$ContextMenuInfo) -> a
+org.kohaerenzstiftung.andtroin.EntryActivity$3 -> org.kohaerenzstiftung.andtroin.dh:
+    org.kohaerenzstiftung.andtroin.EntryActivity this$0 -> a
+    int createContextMenu(android.view.ContextMenu$ContextMenuInfo) -> a
+org.kohaerenzstiftung.andtroin.EntryActivity$4 -> org.kohaerenzstiftung.andtroin.di:
+    org.kohaerenzstiftung.andtroin.EntryActivity this$0 -> a
+    void execute(android.view.MenuItem) -> a
+org.kohaerenzstiftung.andtroin.EntryActivity$5 -> org.kohaerenzstiftung.andtroin.dj:
+    org.kohaerenzstiftung.andtroin.EntryActivity this$0 -> a
+    void execute(android.view.MenuItem) -> a
+org.kohaerenzstiftung.andtroin.EntryActivity$6 -> org.kohaerenzstiftung.andtroin.dk:
+    org.kohaerenzstiftung.andtroin.EntryActivity this$0 -> a
+    void execute(android.view.MenuItem) -> a
+org.kohaerenzstiftung.andtroin.EntryActivity$7 -> org.kohaerenzstiftung.andtroin.dl:
+    org.kohaerenzstiftung.andtroin.EntryActivity this$0 -> a
+    void yes(int) -> a
+    void no(int) -> b
+org.kohaerenzstiftung.andtroin.EntryActivity$8 -> org.kohaerenzstiftung.andtroin.dm:
+    org.kohaerenzstiftung.andtroin.EntryActivity this$0 -> b
+    void handleResult(android.os.Bundle) -> a
+org.kohaerenzstiftung.andtroin.EntryActivity$9 -> org.kohaerenzstiftung.andtroin.dn:
+    org.kohaerenzstiftung.andtroin.EntryActivity this$0 -> a
+    void execute() -> a
+org.kohaerenzstiftung.andtroin.EntryActivity$CategoriesSpinnerAdapter -> org.kohaerenzstiftung.andtroin.do:
+    org.kohaerenzstiftung.Activity mActivity -> b
+    int mListId -> c
+    org.kohaerenzstiftung.andtroin.EntryActivity this$0 -> a
+    int getCount() -> getCount
+    java.lang.Object getItem(int) -> getItem
+    long getItemId(int) -> getItemId
+    android.view.View getView(int,android.view.View,android.view.ViewGroup) -> getView
+    android.view.View getDropDownView(int,android.view.View,android.view.ViewGroup) -> getDropDownView
+org.kohaerenzstiftung.andtroin.EntryActivity$CategoryDialog -> org.kohaerenzstiftung.andtroin.dp:
+    org.kohaerenzstiftung.andtroin.EntryActivity$CategoryListener mCategoryListener -> b
+    android.widget.Spinner mCategoriesSpinner -> c
+    android.widget.Button mOkButton -> d
+    org.kohaerenzstiftung.Activity mActivity -> e
+    int mListId -> f
+    org.kohaerenzstiftung.andtroin.EntryActivity this$0 -> a
+    void assignHandlers() -> h
+    void handleOkClick() -> i
+    void findElements() -> g
+    void recoverResources() -> e
+    void releaseResources() -> f
+    void updateViews() -> d
+    void setAdapters() -> j
+    android.widget.Button access$0(org.kohaerenzstiftung.andtroin.EntryActivity$CategoryDialog) -> a
+org.kohaerenzstiftung.andtroin.EntryActivity$CategoryDialog$1 -> org.kohaerenzstiftung.andtroin.dq:
+    org.kohaerenzstiftung.andtroin.EntryActivity$CategoryDialog this$1 -> a
+    void onItemSelected(android.widget.AdapterView,android.view.View,int,long) -> onItemSelected
+    void onNothingSelected(android.widget.AdapterView) -> onNothingSelected
+org.kohaerenzstiftung.andtroin.EntryActivity$CategoryDialog$2 -> org.kohaerenzstiftung.andtroin.dr:
+    org.kohaerenzstiftung.andtroin.EntryActivity$CategoryDialog this$1 -> a
+    void onClick(android.view.View) -> onClick
+org.kohaerenzstiftung.andtroin.EntryActivity$CategoryListener -> org.kohaerenzstiftung.andtroin.ds:
+    org.kohaerenzstiftung.andtroin.EntryActivity this$0 -> b
+    void onNewCategory(org.kohaerenzstiftung.andtroin.Category) -> a
+org.kohaerenzstiftung.andtroin.EntryActivity$DenominationsAdapter -> org.kohaerenzstiftung.andtroin.dt:
+    java.util.LinkedList mDenominations -> b
+    android.content.Context mContext -> c
+    boolean mSource -> d
+    org.kohaerenzstiftung.andtroin.EntryActivity this$0 -> a
+    int getCount() -> getCount
+    java.lang.Object getItem(int) -> getItem
+    long getItemId(int) -> getItemId
+    android.view.View getView(int,android.view.View,android.view.ViewGroup) -> getView
+org.kohaerenzstiftung.andtroin.EntryActivity$EntryCategoriesAdapter -> org.kohaerenzstiftung.andtroin.du:
+    org.kohaerenzstiftung.Activity mActivity -> b
+    java.util.LinkedList mCategories -> c
+    org.kohaerenzstiftung.andtroin.EntryActivity this$0 -> a
+    int getCount() -> getCount
+    java.lang.Object getItem(int) -> getItem
+    long getItemId(int) -> getItemId
+    android.view.View getView(int,android.view.View,android.view.ViewGroup) -> getView
+org.kohaerenzstiftung.andtroin.EntryPair -> org.kohaerenzstiftung.andtroin.dv:
+    java.lang.String mSource -> a
+    java.lang.String mTarget -> b
+    int mEntryId -> c
+    int mListId -> d
+    int getmEntryId() -> a
+    java.lang.String getmSource() -> b
+    java.lang.String getmTarget() -> c
+org.kohaerenzstiftung.andtroin.EntryPeers -> org.kohaerenzstiftung.andtroin.dw:
+    int mId1 -> a
+    int mId2 -> b
+    int getmId1() -> a
+    int getmId2() -> b
+org.kohaerenzstiftung.andtroin.Example -> org.kohaerenzstiftung.andtroin.Example:
+    java.lang.String mValue -> a
+    java.lang.String mTranslation -> b
+    int mId -> c
+    int mDenominationId -> d
+    int mListId -> e
+    android.os.Parcelable$Creator CREATOR -> CREATOR
+    java.lang.String getmValue() -> a
+    void setmValue(java.lang.String) -> a
+    java.lang.String getmTranslation() -> b
+    void setmTranslation(java.lang.String) -> b
+    int getmId() -> c
+    int describeContents() -> describeContents
+    void writeToParcel(android.os.Parcel,int) -> writeToParcel
+    boolean isValid() -> d
+    org.kohaerenzstiftung.andtroin.Example clone() -> e
+    boolean equals(java.lang.Object) -> equals
+    java.lang.Object clone() -> clone
+org.kohaerenzstiftung.andtroin.Example$1 -> org.kohaerenzstiftung.andtroin.dx:
+    org.kohaerenzstiftung.andtroin.Example createFromParcel(android.os.Parcel) -> a
+    org.kohaerenzstiftung.andtroin.Example[] newArray(int) -> a
+    java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
+    java.lang.Object[] newArray(int) -> newArray
+org.kohaerenzstiftung.andtroin.FileActivity -> org.kohaerenzstiftung.andtroin.FileActivity:
+    java.io.File mCurrentDirectory -> g
+    org.kohaerenzstiftung.ListView mFilesListView -> h
+    org.kohaerenzstiftung.andtroin.ItemView mHeaderView -> i
+    boolean mImport -> j
+    int mPosition -> e
+    int importFormat -> f
+    void registerForContextMenus() -> m
+    void handleFilename(java.lang.String) -> a
+    boolean isEligibleForImport(java.io.File) -> a
+    void setContextItemExecutors() -> l
+    void selectFileForImportBinary(int,boolean) -> a
+    void selectFileForImportJson(int,boolean) -> b
+    void changeDirectory(int) -> a
+    void selectFileForImport(int,boolean) -> c
+    void setOptionItemExecutors() -> k
+    boolean onPrepareOptionsMenu(android.view.Menu) -> onPrepareOptionsMenu
+    void assignHandlers() -> e
+    void findElements() -> d
+    void readArguments(android.os.Bundle) -> a
+    void recoverResources() -> a
+    void releaseResources() -> f
+    void updateViews() -> c
+    void setAdapters() -> o
+    void setHelp() -> w
+    void onBind() -> n
+    int getOptionsMenu() -> j
+    int getLayout() -> b
+    org.kohaerenzstiftung.ListView access$0(org.kohaerenzstiftung.andtroin.FileActivity) -> a
+    boolean access$1(org.kohaerenzstiftung.andtroin.FileActivity) -> b
+    java.io.File access$2(org.kohaerenzstiftung.andtroin.FileActivity) -> c
+    void access$3(org.kohaerenzstiftung.andtroin.FileActivity,org.kohaerenzstiftung.Dialogable) -> a
+org.kohaerenzstiftung.andtroin.FileActivity$1 -> org.kohaerenzstiftung.andtroin.dy:
+    org.kohaerenzstiftung.andtroin.FileActivity this$0 -> a
+    int createContextMenu(android.view.ContextMenu$ContextMenuInfo) -> a
+org.kohaerenzstiftung.andtroin.FileActivity$2 -> org.kohaerenzstiftung.andtroin.dz:
+    org.kohaerenzstiftung.andtroin.FileActivity this$0 -> a
+    void execute(android.view.MenuItem) -> a
+org.kohaerenzstiftung.andtroin.FileActivity$3 -> org.kohaerenzstiftung.andtroin.ea:
+    org.kohaerenzstiftung.andtroin.FileActivity this$0 -> a
+    void execute(android.view.MenuItem) -> a
+org.kohaerenzstiftung.andtroin.FileActivity$4 -> org.kohaerenzstiftung.andtroin.eb:
+    org.kohaerenzstiftung.andtroin.FileActivity this$0 -> a
+    void execute(android.view.MenuItem) -> a
+org.kohaerenzstiftung.andtroin.FileActivity$5 -> org.kohaerenzstiftung.andtroin.ec:
+    org.kohaerenzstiftung.andtroin.FileActivity this$0 -> a
+    void execute(android.view.MenuItem) -> a
+org.kohaerenzstiftung.andtroin.FileActivity$6 -> org.kohaerenzstiftung.andtroin.ed:
+    org.kohaerenzstiftung.andtroin.FileActivity this$0 -> a
+    void execute(android.view.MenuItem) -> a
+org.kohaerenzstiftung.andtroin.FileActivity$7 -> org.kohaerenzstiftung.andtroin.ee:
+    org.kohaerenzstiftung.andtroin.FileActivity this$0 -> a
+    void execute(android.view.MenuItem) -> a
+org.kohaerenzstiftung.andtroin.FileActivity$8 -> org.kohaerenzstiftung.andtroin.ef:
+    org.kohaerenzstiftung.andtroin.FileActivity this$0 -> a
+    void execute() -> a
+org.kohaerenzstiftung.andtroin.FileActivity$FilenameDialog -> org.kohaerenzstiftung.andtroin.eg:
+    org.kohaerenzstiftung.EditText mFilenameEditText -> b
+    android.widget.Button mOkButton -> c
+    java.lang.String mFileName -> d
+    java.lang.String mPath -> e
+    org.kohaerenzstiftung.andtroin.FileActivity this$0 -> a
+    void updateViews() -> d
+    void recoverResources() -> e
+    void releaseResources() -> f
+    void findElements() -> g
+    void handleTextChange(java.lang.String) -> a
+    void assignHandlers() -> h
+    void handleOk() -> i
+org.kohaerenzstiftung.andtroin.FileActivity$FilenameDialog$1 -> org.kohaerenzstiftung.andtroin.eh:
+    org.kohaerenzstiftung.andtroin.FileActivity$FilenameDialog this$1 -> a
+    void onTextChanged(java.lang.CharSequence,int,int,int) -> onTextChanged
+    void beforeTextChanged(java.lang.CharSequence,int,int,int) -> beforeTextChanged
+    void afterTextChanged(android.text.Editable) -> afterTextChanged
+org.kohaerenzstiftung.andtroin.FileActivity$FilenameDialog$2 -> org.kohaerenzstiftung.andtroin.ei:
+    org.kohaerenzstiftung.andtroin.FileActivity$FilenameDialog this$1 -> a
+    void onClick(android.view.View) -> onClick
+org.kohaerenzstiftung.andtroin.FileActivity$FilesAdapter -> org.kohaerenzstiftung.andtroin.ej:
+    android.content.Context mContext -> b
+    java.io.File mDirectory -> c
+    java.io.File mParentDirectory -> d
+    org.kohaerenzstiftung.andtroin.FileActivity this$0 -> a
+    int getCount() -> getCount
+    java.lang.Object getItem(int) -> getItem
+    long getItemId(int) -> getItemId
+    android.view.View getView(int,android.view.View,android.view.ViewGroup) -> getView
+org.kohaerenzstiftung.andtroin.FormAttribute -> org.kohaerenzstiftung.andtroin.FormAttribute:
+    org.kohaerenzstiftung.andtroin.FormAttribute$Comparator comparator -> a
+    android.os.Parcelable$Creator CREATOR -> CREATOR
+    int mWeight -> b
+    int mId -> c
+    java.lang.String mValue -> d
+    boolean mSource -> e
+    int getmWeight() -> a
+    void setmWeight(int) -> a
+    int getmId() -> b
+    void setmId(int) -> b
+    java.lang.String getmValue() -> c
+    void setmValue(java.lang.String) -> a
+    boolean ismSource() -> d
+    int describeContents() -> describeContents
+    void writeToParcel(android.os.Parcel,int) -> writeToParcel
+    org.kohaerenzstiftung.andtroin.FormAttribute clone() -> e
+    boolean equals(java.lang.Object) -> equals
+    java.lang.Object clone() -> clone
+org.kohaerenzstiftung.andtroin.FormAttribute$1 -> org.kohaerenzstiftung.andtroin.ek:
+    org.kohaerenzstiftung.andtroin.FormAttribute createFromParcel(android.os.Parcel) -> a
+    org.kohaerenzstiftung.andtroin.FormAttribute[] newArray(int) -> a
+    java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
+    java.lang.Object[] newArray(int) -> newArray
+org.kohaerenzstiftung.andtroin.FormAttribute$Comparator -> org.kohaerenzstiftung.andtroin.el:
+    int compare(org.kohaerenzstiftung.andtroin.FormAttribute,org.kohaerenzstiftung.andtroin.FormAttribute) -> a
+    int compare(java.lang.Object,java.lang.Object) -> compare
+org.kohaerenzstiftung.andtroin.FormAttributeAutoCompleteTextView -> org.kohaerenzstiftung.andtroin.FormAttributeAutoCompleteTextView:
+    org.kohaerenzstiftung.andtroin.AndtroinService mAntroinService -> b
+    android.database.Cursor mCursor -> c
+    int mListId -> d
+    boolean mSource -> e
+    android.database.Cursor mOldCursor -> f
+    android.database.Cursor getCursor(java.lang.String) -> a
+    void closeOldCursor() -> d
+    java.lang.String getColumnName() -> getColumnName
+    void initialise(int,boolean,org.kohaerenzstiftung.andtroin.AndtroinService) -> a
+    void closeCursors() -> c
+org.kohaerenzstiftung.andtroin.ItemView -> org.kohaerenzstiftung.andtroin.em:
+    android.widget.TextView[] mTextViews -> a
+    void setTextValue(int,java.lang.String) -> a
+    void setTextColor(int) -> setTextColor
+org.kohaerenzstiftung.andtroin.List -> org.kohaerenzstiftung.andtroin.List:
+    android.os.Parcelable$Creator CREATOR -> CREATOR
+    org.kohaerenzstiftung.Language mSourceLanguage -> c
+    org.kohaerenzstiftung.Language mTargetLanguage -> d
+    int mId -> a
+    java.lang.String mName -> b
+    void writeToParcel(android.os.Parcel,int) -> writeToParcel
+    java.lang.String getmName() -> a
+    void setmId(int) -> a
+    org.kohaerenzstiftung.Language getmSourceLanguage() -> b
+    org.kohaerenzstiftung.Language getmTargetLanguage() -> c
+    int getmId() -> d
+    int describeContents() -> describeContents
+org.kohaerenzstiftung.andtroin.List$1 -> org.kohaerenzstiftung.andtroin.en:
+    org.kohaerenzstiftung.andtroin.List createFromParcel(android.os.Parcel) -> a
+    org.kohaerenzstiftung.andtroin.List[] newArray(int) -> a
+    java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
+    java.lang.Object[] newArray(int) -> newArray
+org.kohaerenzstiftung.andtroin.ListActivity -> org.kohaerenzstiftung.andtroin.ListActivity:
+    org.kohaerenzstiftung.ListView mEntriesListView -> h
+    org.kohaerenzstiftung.ListView mSourceDetailsKeysListView -> i
+    org.kohaerenzstiftung.ListView mTargetDetailsKeysListView -> j
+    boolean mSortBySource -> k
+    org.kohaerenzstiftung.andtroin.ItemView mEntriesHeaderView -> l
+    int mId -> m
+    org.kohaerenzstiftung.andtroin.ListActivity$AndtroinProgressDialog mAndtroinProgressDialog -> n
+    org.kohaerenzstiftung.andtroin.ItemView mSourceDetailsHeaderView -> o
+    org.kohaerenzstiftung.andtroin.ItemView mTargetDetailsHeaderView -> p
+    org.kohaerenzstiftung.andtroin.ItemView mCategoriesHeaderView -> q
+    org.kohaerenzstiftung.ListView mCategoriesListView -> r
+    int mSelectedItemPosition -> s
+    android.os.Handler mHandler -> t
+    org.kohaerenzstiftung.ListView mSourceFormKeysListView -> u
+    org.kohaerenzstiftung.ListView mTargetFormKeysListView -> v
+    org.kohaerenzstiftung.andtroin.ItemView mSourceFormKeysHeaderView -> w
+    org.kohaerenzstiftung.andtroin.ItemView mTargetFormKeysHeaderView -> x
+    boolean hideDeleteFormKey -> e
+    boolean hideDeleteDetailsKey -> f
+    boolean hideDeleteCategory -> g
+    org.kohaerenzstiftung.andtroin.List mList -> y
+    boolean onPrepareOptionsMenu(android.view.Menu) -> onPrepareOptionsMenu
+    void registerForContextMenus() -> m
+    boolean isCategoryKeyReferenced(int) -> a
+    boolean isDetailsKeyReferenced(int) -> b
+    boolean isFormKeyReferenced(int) -> c
+    void chooseInfinitive(java.util.LinkedList,org.kohaerenzstiftung.andtroin.ListActivity$InfinitiveChosenListener) -> a
+    void setSelection(int) -> d
+    void setContextItemExecutors() -> l
+    void deleteFormKey(int) -> e
+    void dodeleteFormKey(int) -> f
+    void editFormKey(int) -> g
+    void deleteCategory(int) -> h
+    void doDeleteCategory(org.kohaerenzstiftung.andtroin.Category) -> a
+    void editCategory(int) -> i
+    void deleteEntry(int) -> j
+    void doDeleteEntry() -> o
+    void deleteDetailsKey(int) -> k
+    void doDeleteDetailsKey() -> p
+    void editDetailsKey(int) -> l
+    void editDetailsKey(org.kohaerenzstiftung.andtroin.DetailsKey) -> a
+    void putDetailsKey(org.kohaerenzstiftung.andtroin.DetailsKey) -> b
+    void editEntry(int) -> m
+    void sortByTarget() -> q
+    void sortBySource() -> r
+    void setOptionItemExecutors() -> k
+    void handleAddTargetFormKey() -> s
+    void handleAddFormKey(boolean) -> b
+    void editFormKey(org.kohaerenzstiftung.andtroin.FormAttribute) -> b
+    void putFormKey(org.kohaerenzstiftung.andtroin.FormAttribute) -> a
+    void handleAddSourceFormKey() -> t
+    void handleAddCategory() -> u
+    void deleteScheduleByListId(int) -> n
+    void handleSchedule() -> v
+    void handleDeleteList() -> x
+    void doDeleteList() -> y
+    void handleAddTargetDetailsKey() -> z
+    void handleAddDetailsKey(java.lang.String) -> a
+    void handleAddSourceDetailsKey() -> A
+    void handleSearchEntry() -> B
+    void handleAddEntry(java.lang.String,java.lang.String) -> a
+    void assignHandlers() -> e
+    void findElements() -> d
+    void doSetAdapters() -> C
+    void releaseResources() -> f
+    void readArguments(android.os.Bundle) -> a
+    void addHeaderViews() -> D
+    void updateViews() -> c
+    void doUpdateViews(boolean) -> c
+    void setAdapters(boolean) -> d
+    void putCategory(org.kohaerenzstiftung.andtroin.Category) -> b
+    void handleNewEntry(org.kohaerenzstiftung.andtroin.Entry) -> a
+    void setHelp() -> w
+    void onBind() -> n
+    void onCreateContextMenu(android.view.ContextMenu,android.view.View,android.view.ContextMenu$ContextMenuInfo) -> onCreateContextMenu
+    int getOptionsMenu() -> j
+    int getLayout() -> b
+    org.kohaerenzstiftung.andtroin.List access$0(org.kohaerenzstiftung.andtroin.ListActivity) -> a
+    org.kohaerenzstiftung.andtroin.ListActivity$AndtroinProgressDialog access$1(org.kohaerenzstiftung.andtroin.ListActivity) -> b
+    void access$2(org.kohaerenzstiftung.andtroin.ListActivity,org.kohaerenzstiftung.andtroin.ListActivity$AndtroinProgressDialog) -> a
+    void access$3(org.kohaerenzstiftung.andtroin.ListActivity,boolean) -> a
+    void access$4(org.kohaerenzstiftung.andtroin.ListActivity,org.kohaerenzstiftung.Dialogable) -> a
+    void access$5(org.kohaerenzstiftung.andtroin.ListActivity,java.lang.String,java.lang.String,java.lang.String,org.kohaerenzstiftung.YesNoable) -> a
+    org.kohaerenzstiftung.andtroin.ItemView access$6(org.kohaerenzstiftung.andtroin.ListActivity) -> c
+    org.kohaerenzstiftung.andtroin.ItemView access$7(org.kohaerenzstiftung.andtroin.ListActivity) -> d
+    org.kohaerenzstiftung.andtroin.ItemView access$8(org.kohaerenzstiftung.andtroin.ListActivity) -> e
+    org.kohaerenzstiftung.andtroin.ItemView access$9(org.kohaerenzstiftung.andtroin.ListActivity) -> f
+    org.kohaerenzstiftung.andtroin.ItemView access$10(org.kohaerenzstiftung.andtroin.ListActivity) -> g
+    org.kohaerenzstiftung.andtroin.ItemView access$11(org.kohaerenzstiftung.andtroin.ListActivity) -> h
+    void access$12(org.kohaerenzstiftung.andtroin.ListActivity,boolean) -> b
+    void access$13(org.kohaerenzstiftung.andtroin.ListActivity) -> i
+org.kohaerenzstiftung.andtroin.ListActivity$1 -> org.kohaerenzstiftung.andtroin.eo:
+    org.kohaerenzstiftung.andtroin.ListActivity this$0 -> a
+    int createContextMenu(android.view.ContextMenu$ContextMenuInfo) -> a
+org.kohaerenzstiftung.andtroin.ListActivity$10 -> org.kohaerenzstiftung.andtroin.ep:
+    org.kohaerenzstiftung.andtroin.ListActivity this$0 -> a
+    void execute(android.view.MenuItem) -> a
+org.kohaerenzstiftung.andtroin.ListActivity$11 -> org.kohaerenzstiftung.andtroin.eq:
+    org.kohaerenzstiftung.andtroin.ListActivity this$0 -> a
+    void execute(android.view.MenuItem) -> a
+org.kohaerenzstiftung.andtroin.ListActivity$12 -> org.kohaerenzstiftung.andtroin.er:
+    org.kohaerenzstiftung.andtroin.ListActivity this$0 -> a
+    void execute(android.view.MenuItem) -> a
+org.kohaerenzstiftung.andtroin.ListActivity$13 -> org.kohaerenzstiftung.andtroin.es:
+    org.kohaerenzstiftung.andtroin.ListActivity this$0 -> a
+    void execute(android.view.MenuItem) -> a
+org.kohaerenzstiftung.andtroin.ListActivity$14 -> org.kohaerenzstiftung.andtroin.et:
+    org.kohaerenzstiftung.andtroin.ListActivity this$0 -> a
+    void execute(android.view.MenuItem) -> a
+org.kohaerenzstiftung.andtroin.ListActivity$15 -> org.kohaerenzstiftung.andtroin.eu:
+    org.kohaerenzstiftung.andtroin.ListActivity this$0 -> a
+    void execute(android.view.MenuItem) -> a
+org.kohaerenzstiftung.andtroin.ListActivity$16 -> org.kohaerenzstiftung.andtroin.ev:
+    org.kohaerenzstiftung.andtroin.ListActivity this$0 -> a
+    void execute(android.view.MenuItem) -> a
+org.kohaerenzstiftung.andtroin.ListActivity$17 -> org.kohaerenzstiftung.andtroin.ew:
+    org.kohaerenzstiftung.andtroin.ListActivity this$0 -> a
+    void yes(int) -> a
+    void no(int) -> b
+org.kohaerenzstiftung.andtroin.ListActivity$18 -> org.kohaerenzstiftung.andtroin.ex:
+    org.kohaerenzstiftung.andtroin.ListActivity this$0 -> a
+    void yes(int) -> a
+    void no(int) -> b
+org.kohaerenzstiftung.andtroin.ListActivity$19 -> org.kohaerenzstiftung.andtroin.ey:
+    org.kohaerenzstiftung.andtroin.ListActivity this$0 -> a
+    void onPutCategory(org.kohaerenzstiftung.andtroin.Category) -> a
+org.kohaerenzstiftung.andtroin.ListActivity$2 -> org.kohaerenzstiftung.andtroin.ez:
+    org.kohaerenzstiftung.andtroin.ListActivity this$0 -> a
+    int createContextMenu(android.view.ContextMenu$ContextMenuInfo) -> a
+org.kohaerenzstiftung.andtroin.ListActivity$20 -> org.kohaerenzstiftung.andtroin.fa:
+    org.kohaerenzstiftung.andtroin.ListActivity this$0 -> a
+    void yes(int) -> a
+    void no(int) -> b
+org.kohaerenzstiftung.andtroin.ListActivity$21 -> org.kohaerenzstiftung.andtroin.fb:
+    org.kohaerenzstiftung.andtroin.ListActivity this$0 -> a
+    void yes(int) -> a
+    void no(int) -> b
+org.kohaerenzstiftung.andtroin.ListActivity$22 -> org.kohaerenzstiftung.andtroin.fc:
+    org.kohaerenzstiftung.andtroin.ListActivity this$0 -> b
+    void handleResult(android.os.Bundle) -> a
+org.kohaerenzstiftung.andtroin.ListActivity$23 -> org.kohaerenzstiftung.andtroin.fd:
+    org.kohaerenzstiftung.andtroin.ListActivity this$0 -> b
+    void onReturn(java.util.ArrayList,org.kohaerenzstiftung.andtroin.Entry) -> a
+org.kohaerenzstiftung.andtroin.ListActivity$24 -> org.kohaerenzstiftung.andtroin.fe:
+    org.kohaerenzstiftung.andtroin.ListActivity this$0 -> a
+    void execute() -> a
+org.kohaerenzstiftung.andtroin.ListActivity$25 -> org.kohaerenzstiftung.andtroin.ff:
+    org.kohaerenzstiftung.andtroin.ListActivity this$0 -> a
+    void execute() -> a
+org.kohaerenzstiftung.andtroin.ListActivity$26 -> org.kohaerenzstiftung.andtroin.fg:
+    org.kohaerenzstiftung.andtroin.ListActivity this$0 -> a
+    void execute() -> a
+org.kohaerenzstiftung.andtroin.ListActivity$27 -> org.kohaerenzstiftung.andtroin.fh:
+    org.kohaerenzstiftung.andtroin.ListActivity this$0 -> a
+    void execute() -> a
+org.kohaerenzstiftung.andtroin.ListActivity$28 -> org.kohaerenzstiftung.andtroin.fi:
+    org.kohaerenzstiftung.andtroin.ListActivity this$0 -> a
+    void execute() -> a
+org.kohaerenzstiftung.andtroin.ListActivity$29 -> org.kohaerenzstiftung.andtroin.fj:
+    org.kohaerenzstiftung.andtroin.ListActivity this$0 -> a
+    void execute() -> a
+org.kohaerenzstiftung.andtroin.ListActivity$3 -> org.kohaerenzstiftung.andtroin.fk:
+    org.kohaerenzstiftung.andtroin.ListActivity this$0 -> a
+    int createContextMenu(android.view.ContextMenu$ContextMenuInfo) -> a
+org.kohaerenzstiftung.andtroin.ListActivity$30 -> org.kohaerenzstiftung.andtroin.fl:
+    org.kohaerenzstiftung.andtroin.ListActivity this$0 -> a
+    void execute() -> a
+org.kohaerenzstiftung.andtroin.ListActivity$31 -> org.kohaerenzstiftung.andtroin.fm:
+    org.kohaerenzstiftung.andtroin.ListActivity this$0 -> a
+    void execute() -> a
+org.kohaerenzstiftung.andtroin.ListActivity$32 -> org.kohaerenzstiftung.andtroin.fn:
+    org.kohaerenzstiftung.andtroin.ListActivity this$0 -> a
+    void execute() -> a
+org.kohaerenzstiftung.andtroin.ListActivity$33 -> org.kohaerenzstiftung.andtroin.fo:
+    org.kohaerenzstiftung.andtroin.ListActivity this$0 -> a
+    void execute() -> a
+org.kohaerenzstiftung.andtroin.ListActivity$34 -> org.kohaerenzstiftung.andtroin.fp:
+    org.kohaerenzstiftung.andtroin.ListActivity this$0 -> a
+    void onPutFormKey(org.kohaerenzstiftung.andtroin.FormAttribute) -> a
+org.kohaerenzstiftung.andtroin.ListActivity$35 -> org.kohaerenzstiftung.andtroin.fq:
+    org.kohaerenzstiftung.andtroin.ListActivity this$0 -> a
+    void onPutCategory(org.kohaerenzstiftung.andtroin.Category) -> a
+org.kohaerenzstiftung.andtroin.ListActivity$36 -> org.kohaerenzstiftung.andtroin.fr:
+    org.kohaerenzstiftung.andtroin.ListActivity this$0 -> a
+    void yes(int) -> a
+    void no(int) -> b
+org.kohaerenzstiftung.andtroin.ListActivity$37 -> org.kohaerenzstiftung.andtroin.fs:
+    org.kohaerenzstiftung.andtroin.ListActivity this$0 -> a
+    void onNewSchedule(org.kohaerenzstiftung.andtroin.Schedule) -> a
+org.kohaerenzstiftung.andtroin.ListActivity$38 -> org.kohaerenzstiftung.andtroin.ft:
+    org.kohaerenzstiftung.andtroin.ListActivity this$0 -> a
+    void yes(int) -> a
+    void no(int) -> b
+org.kohaerenzstiftung.andtroin.ListActivity$39 -> org.kohaerenzstiftung.andtroin.fu:
+    org.kohaerenzstiftung.andtroin.ListActivity this$0 -> a
+    void onNewEntry(org.kohaerenzstiftung.andtroin.Entry) -> a
+org.kohaerenzstiftung.andtroin.ListActivity$4 -> org.kohaerenzstiftung.andtroin.fv:
+    org.kohaerenzstiftung.andtroin.ListActivity this$0 -> a
+    int createContextMenu(android.view.ContextMenu$ContextMenuInfo) -> a
+org.kohaerenzstiftung.andtroin.ListActivity$40 -> org.kohaerenzstiftung.andtroin.fw:
+    org.kohaerenzstiftung.andtroin.ListActivity this$0 -> a
+    void run() -> run
+org.kohaerenzstiftung.andtroin.ListActivity$41 -> org.kohaerenzstiftung.andtroin.fx:
+    org.kohaerenzstiftung.andtroin.ListActivity this$0 -> b
+    void onReturn(java.util.ArrayList,org.kohaerenzstiftung.andtroin.Entry) -> a
+org.kohaerenzstiftung.andtroin.ListActivity$5 -> org.kohaerenzstiftung.andtroin.fy:
+    org.kohaerenzstiftung.andtroin.ListActivity this$0 -> a
+    int createContextMenu(android.view.ContextMenu$ContextMenuInfo) -> a
+org.kohaerenzstiftung.andtroin.ListActivity$6 -> org.kohaerenzstiftung.andtroin.fz:
+    org.kohaerenzstiftung.andtroin.ListActivity this$0 -> a
+    int createContextMenu(android.view.ContextMenu$ContextMenuInfo) -> a
+org.kohaerenzstiftung.andtroin.ListActivity$7 -> org.kohaerenzstiftung.andtroin.ga:
+    org.kohaerenzstiftung.andtroin.ListActivity this$0 -> a
+    void execute(android.view.MenuItem) -> a
+org.kohaerenzstiftung.andtroin.ListActivity$8 -> org.kohaerenzstiftung.andtroin.gb:
+    org.kohaerenzstiftung.andtroin.ListActivity this$0 -> a
+    void execute(android.view.MenuItem) -> a
+org.kohaerenzstiftung.andtroin.ListActivity$9 -> org.kohaerenzstiftung.andtroin.gc:
+    org.kohaerenzstiftung.andtroin.ListActivity this$0 -> a
+    void execute(android.view.MenuItem) -> a
+org.kohaerenzstiftung.andtroin.ListActivity$AndtroinProgressDialog -> org.kohaerenzstiftung.andtroin.gd:
+    int mDialogId -> b
+    org.kohaerenzstiftung.andtroin.ListActivity this$0 -> a
+    void onDismiss() -> c
+    void setDialogId(int) -> a
+    int getDialogId() -> a
+org.kohaerenzstiftung.andtroin.ListActivity$CategoriesAdapter -> org.kohaerenzstiftung.andtroin.ge:
+    android.content.Context mContext -> b
+    int mListId -> c
+    org.kohaerenzstiftung.andtroin.ListActivity this$0 -> a
+    int getCount() -> getCount
+    java.lang.Object getItem(int) -> getItem
+    long getItemId(int) -> getItemId
+    android.view.View getView(int,android.view.View,android.view.ViewGroup) -> getView
+org.kohaerenzstiftung.andtroin.ListActivity$ChooseInfinitiveDialog -> org.kohaerenzstiftung.andtroin.gf:
+    java.util.LinkedList mInfinitives -> b
+    org.kohaerenzstiftung.andtroin.ListActivity$InfinitiveChosenListener mInfinitiveChosenListener -> c
+    org.kohaerenzstiftung.ListView mInfinitivesListView -> d
+    org.kohaerenzstiftung.andtroin.ListActivity this$0 -> a
+    void updateViews() -> d
+    void setAdapters() -> i
+    void recoverResources() -> e
+    void releaseResources() -> f
+    void findElements() -> g
+    void assignHandlers() -> h
+    void choosePosition(int) -> b
+org.kohaerenzstiftung.andtroin.ListActivity$ChooseInfinitiveDialog$1 -> org.kohaerenzstiftung.andtroin.gg:
+    org.kohaerenzstiftung.andtroin.ListActivity$ChooseInfinitiveDialog this$1 -> a
+    int createContextMenu(android.view.ContextMenu$ContextMenuInfo) -> a
+org.kohaerenzstiftung.andtroin.ListActivity$ChooseInfinitiveDialog$2 -> org.kohaerenzstiftung.andtroin.gh:
+    org.kohaerenzstiftung.andtroin.ListActivity$ChooseInfinitiveDialog this$1 -> a
+    void execute(android.view.MenuItem) -> a
+org.kohaerenzstiftung.andtroin.ListActivity$DeleteListAsyncTask -> org.kohaerenzstiftung.andtroin.gi:
+    org.kohaerenzstiftung.andtroin.ListActivity this$0 -> a
+    void onCancelled() -> onCancelled
+    void onPostExecute(java.lang.Void) -> a
+    void onPreExecute() -> onPreExecute
+    void onProgressUpdate(java.lang.Void[]) -> a
+    java.lang.Void doInBackground(java.lang.Integer[]) -> a
+    void onPostExecute(java.lang.Object) -> onPostExecute
+    java.lang.Object doInBackground(java.lang.Object[]) -> doInBackground
+    void onProgressUpdate(java.lang.Object[]) -> onProgressUpdate
+org.kohaerenzstiftung.andtroin.ListActivity$DetailsKeysAdapter -> org.kohaerenzstiftung.andtroin.gj:
+    android.content.Context mContext -> b
+    java.lang.String mLanguage -> c
+    org.kohaerenzstiftung.andtroin.ListActivity this$0 -> a
+    int getCount() -> getCount
+    java.lang.Object getItem(int) -> getItem
+    long getItemId(int) -> getItemId
+    android.view.View getView(int,android.view.View,android.view.ViewGroup) -> getView
+org.kohaerenzstiftung.andtroin.ListActivity$EditCategoryDialog -> org.kohaerenzstiftung.andtroin.gk:
+    org.kohaerenzstiftung.EditText mSourceLanguageEditText -> b
+    org.kohaerenzstiftung.EditText mTargetLanguageEditText -> c
+    android.widget.Button mOkButton -> d
+    org.kohaerenzstiftung.andtroin.Category mCategory -> e
+    org.kohaerenzstiftung.andtroin.ListActivity$PutCategoryListener mPutCategoryListener -> f
+    android.widget.TextView mSourceValueTextView -> g
+    android.widget.TextView mTargetValueTextView -> h
+    org.kohaerenzstiftung.andtroin.ListActivity this$0 -> a
+    void checkOkEnabled() -> i
+    void assignHandlers() -> h
+    void findElements() -> g
+    void recoverResources() -> e
+    void releaseResources() -> f
+    void updateViews() -> d
+    org.kohaerenzstiftung.andtroin.Category access$0(org.kohaerenzstiftung.andtroin.ListActivity$EditCategoryDialog) -> a
+    org.kohaerenzstiftung.andtroin.ListActivity$PutCategoryListener access$1(org.kohaerenzstiftung.andtroin.ListActivity$EditCategoryDialog) -> b
+org.kohaerenzstiftung.andtroin.ListActivity$EditCategoryDialog$1 -> org.kohaerenzstiftung.andtroin.gl:
+    org.kohaerenzstiftung.andtroin.ListActivity$EditCategoryDialog this$1 -> a
+    void onTextChanged(java.lang.CharSequence,int,int,int) -> onTextChanged
+    void beforeTextChanged(java.lang.CharSequence,int,int,int) -> beforeTextChanged
+    void afterTextChanged(android.text.Editable) -> afterTextChanged
+org.kohaerenzstiftung.andtroin.ListActivity$EditCategoryDialog$2 -> org.kohaerenzstiftung.andtroin.gm:
+    org.kohaerenzstiftung.andtroin.ListActivity$EditCategoryDialog this$1 -> a
+    void onTextChanged(java.lang.CharSequence,int,int,int) -> onTextChanged
+    void beforeTextChanged(java.lang.CharSequence,int,int,int) -> beforeTextChanged
+    void afterTextChanged(android.text.Editable) -> afterTextChanged
+org.kohaerenzstiftung.andtroin.ListActivity$EditCategoryDialog$3 -> org.kohaerenzstiftung.andtroin.gn:
+    org.kohaerenzstiftung.andtroin.ListActivity$EditCategoryDialog this$1 -> a
+    void onClick(android.view.View) -> onClick
+org.kohaerenzstiftung.andtroin.ListActivity$EditFormKeyDialog -> org.kohaerenzstiftung.andtroin.go:
+    org.kohaerenzstiftung.andtroin.FormAttribute mFormAttribute -> b
+    org.kohaerenzstiftung.andtroin.ListActivity$PutFormKeyListener mPutFormKeyListener -> c
+    org.kohaerenzstiftung.EditText mValueEditText -> d
+    android.widget.Button mOkButton -> e
+    org.kohaerenzstiftung.EditText mWeightEditText -> f
+    org.kohaerenzstiftung.andtroin.ListActivity this$0 -> a
+    void updateViews() -> d
+    void recoverResources() -> e
+    void releaseResources() -> f
+    void findElements() -> g
+    void assignHandlers() -> h
+    void setWeight(java.lang.String) -> a
+    void setValue(java.lang.String) -> b
+    void checkOkEnabled() -> j
+    void handleOk() -> i
+org.kohaerenzstiftung.andtroin.ListActivity$EditFormKeyDialog$1 -> org.kohaerenzstiftung.andtroin.gp:
+    org.kohaerenzstiftung.andtroin.ListActivity$EditFormKeyDialog this$1 -> a
+    void onClick(android.view.View) -> onClick
+org.kohaerenzstiftung.andtroin.ListActivity$EditFormKeyDialog$2 -> org.kohaerenzstiftung.andtroin.gq:
+    org.kohaerenzstiftung.andtroin.ListActivity$EditFormKeyDialog this$1 -> a
+    void onTextChanged(java.lang.CharSequence,int,int,int) -> onTextChanged
+    void beforeTextChanged(java.lang.CharSequence,int,int,int) -> beforeTextChanged
+    void afterTextChanged(android.text.Editable) -> afterTextChanged
+org.kohaerenzstiftung.andtroin.ListActivity$EditFormKeyDialog$3 -> org.kohaerenzstiftung.andtroin.gr:
+    org.kohaerenzstiftung.andtroin.ListActivity$EditFormKeyDialog this$1 -> a
+    void onTextChanged(java.lang.CharSequence,int,int,int) -> onTextChanged
+    void beforeTextChanged(java.lang.CharSequence,int,int,int) -> beforeTextChanged
+    void afterTextChanged(android.text.Editable) -> afterTextChanged
+org.kohaerenzstiftung.andtroin.ListActivity$EntryPairAdapter -> org.kohaerenzstiftung.andtroin.gs:
+    int mListId -> b
+    boolean mSortBySource -> c
+    android.content.Context mContext -> d
+    org.kohaerenzstiftung.andtroin.ListActivity this$0 -> a
+    int getCount() -> getCount
+    java.lang.Object getItem(int) -> getItem
+    long getItemId(int) -> getItemId
+    android.view.View getView(int,android.view.View,android.view.ViewGroup) -> getView
+org.kohaerenzstiftung.andtroin.ListActivity$FormKeysAdapter -> org.kohaerenzstiftung.andtroin.gt:
+    android.content.Context mContext -> b
+    boolean mSource -> c
+    int mListId -> d
+    org.kohaerenzstiftung.andtroin.ListActivity this$0 -> a
+    int getCount() -> getCount
+    java.lang.Object getItem(int) -> getItem
+    long getItemId(int) -> getItemId
+    android.view.View getView(int,android.view.View,android.view.ViewGroup) -> getView
+org.kohaerenzstiftung.andtroin.ListActivity$InfinitiveChosenListener -> org.kohaerenzstiftung.andtroin.gu:
+    org.kohaerenzstiftung.andtroin.ListActivity this$0 -> a
+    void onInfinitiveChosen(java.lang.String) -> a
+org.kohaerenzstiftung.andtroin.ListActivity$InfinitivesAdapter -> org.kohaerenzstiftung.andtroin.gv:
+    java.util.LinkedList mInfinitives -> b
+    org.kohaerenzstiftung.andtroin.ListActivity this$0 -> a
+    int getCount() -> getCount
+    java.lang.Object getItem(int) -> getItem
+    long getItemId(int) -> getItemId
+    android.view.View getView(int,android.view.View,android.view.ViewGroup) -> getView
+org.kohaerenzstiftung.andtroin.ListActivity$NewEntryDialog -> org.kohaerenzstiftung.andtroin.gw:
+    org.kohaerenzstiftung.andtroin.SearchEntryAutoCompleteTextView mSourceDenominationEditText -> b
+    org.kohaerenzstiftung.andtroin.SearchEntryAutoCompleteTextView mTargetDenominationEditText -> c
+    android.widget.Button mOkButton -> d
+    org.kohaerenzstiftung.andtroin.ListActivity$NewEntryListener mNewEntryListener -> e
+    org.kohaerenzstiftung.andtroin.Entry mEntry -> f
+    android.widget.TextView mSourceValueTextView -> g
+    android.widget.TextView mTargetValueTextView -> h
+    java.lang.String mSource -> i
+    java.lang.String mTarget -> j
+    org.kohaerenzstiftung.andtroin.ListActivity this$0 -> a
+    void onDismiss() -> c
+    void onShow() -> b
+    void assignHandlers() -> h
+    void handleOkClick() -> i
+    void findElements() -> g
+    void checkOkEnabled() -> j
+    void recoverResources() -> e
+    void releaseResources() -> f
+    void updateViews() -> d
+    org.kohaerenzstiftung.andtroin.Entry access$0(org.kohaerenzstiftung.andtroin.ListActivity$NewEntryDialog) -> a
+    void access$1(org.kohaerenzstiftung.andtroin.ListActivity$NewEntryDialog,java.lang.String) -> a
+    void access$2(org.kohaerenzstiftung.andtroin.ListActivity$NewEntryDialog,java.lang.String) -> b
+org.kohaerenzstiftung.andtroin.ListActivity$NewEntryDialog$1 -> org.kohaerenzstiftung.andtroin.gx:
+    org.kohaerenzstiftung.andtroin.ListActivity$NewEntryDialog this$1 -> a
+    void onTextChanged(java.lang.CharSequence,int,int,int) -> onTextChanged
+    void beforeTextChanged(java.lang.CharSequence,int,int,int) -> beforeTextChanged
+    void afterTextChanged(android.text.Editable) -> afterTextChanged
+org.kohaerenzstiftung.andtroin.ListActivity$NewEntryDialog$2 -> org.kohaerenzstiftung.andtroin.gy:
+    org.kohaerenzstiftung.andtroin.ListActivity$NewEntryDialog this$1 -> a
+    void onTextChanged(java.lang.CharSequence,int,int,int) -> onTextChanged
+    void beforeTextChanged(java.lang.CharSequence,int,int,int) -> beforeTextChanged
+    void afterTextChanged(android.text.Editable) -> afterTextChanged
+org.kohaerenzstiftung.andtroin.ListActivity$NewEntryDialog$3 -> org.kohaerenzstiftung.andtroin.gz:
+    org.kohaerenzstiftung.andtroin.ListActivity$NewEntryDialog this$1 -> a
+    void onClick(android.view.View) -> onClick
+org.kohaerenzstiftung.andtroin.ListActivity$NewEntryDialog$4 -> org.kohaerenzstiftung.andtroin.ha:
+    org.kohaerenzstiftung.andtroin.ListActivity$NewEntryDialog this$1 -> a
+    void onTextChanged(java.lang.CharSequence,int,int,int) -> onTextChanged
+    void beforeTextChanged(java.lang.CharSequence,int,int,int) -> beforeTextChanged
+    void afterTextChanged(android.text.Editable) -> afterTextChanged
+org.kohaerenzstiftung.andtroin.ListActivity$NewEntryDialog$5 -> org.kohaerenzstiftung.andtroin.hb:
+    org.kohaerenzstiftung.andtroin.ListActivity$NewEntryDialog this$1 -> a
+    void onTextChanged(java.lang.CharSequence,int,int,int) -> onTextChanged
+    void beforeTextChanged(java.lang.CharSequence,int,int,int) -> beforeTextChanged
+    void afterTextChanged(android.text.Editable) -> afterTextChanged
+org.kohaerenzstiftung.andtroin.ListActivity$NewEntryListener -> org.kohaerenzstiftung.andtroin.hc:
+    org.kohaerenzstiftung.andtroin.ListActivity this$0 -> b
+    void onNewEntry(org.kohaerenzstiftung.andtroin.Entry) -> a
+org.kohaerenzstiftung.andtroin.ListActivity$NewScheduleListener -> org.kohaerenzstiftung.andtroin.hd:
+    org.kohaerenzstiftung.andtroin.ListActivity this$0 -> b
+    void onNewSchedule(org.kohaerenzstiftung.andtroin.Schedule) -> a
+org.kohaerenzstiftung.andtroin.ListActivity$PutCategoryListener -> org.kohaerenzstiftung.andtroin.he:
+    org.kohaerenzstiftung.andtroin.ListActivity this$0 -> b
+    void onPutCategory(org.kohaerenzstiftung.andtroin.Category) -> a
+org.kohaerenzstiftung.andtroin.ListActivity$PutFormKeyListener -> org.kohaerenzstiftung.andtroin.hf:
+    org.kohaerenzstiftung.andtroin.ListActivity this$0 -> b
+    void onPutFormKey(org.kohaerenzstiftung.andtroin.FormAttribute) -> a
+org.kohaerenzstiftung.andtroin.ListActivity$ScheduleDialog -> org.kohaerenzstiftung.andtroin.hg:
+    android.widget.SeekBar mItemsPerDaySeekBar -> b
+    android.widget.SeekBar mItemsPerSeriesSeekBar -> c
+    android.widget.Button mOkButton -> d
+    int mListId -> e
+    org.kohaerenzstiftung.andtroin.ListActivity$NewScheduleListener mNewScheduleListener -> f
+    android.widget.TextView mSoManyPerDayTextView -> g
+    android.widget.TextView mSoManyPerSeriesTextView -> h
+    android.widget.RadioButton mSourceRadio -> i
+    android.widget.RadioButton mTargetRadio -> j
+    org.kohaerenzstiftung.andtroin.ListActivity this$0 -> a
+    void checkOkEnabled() -> i
+    void assignHandlers() -> h
+    void handleOk() -> j
+    void findElements() -> g
+    void recoverResources() -> e
+    void releaseResources() -> f
+    void updateViews() -> d
+    android.widget.TextView access$0(org.kohaerenzstiftung.andtroin.ListActivity$ScheduleDialog) -> a
+    android.widget.TextView access$1(org.kohaerenzstiftung.andtroin.ListActivity$ScheduleDialog) -> b
+org.kohaerenzstiftung.andtroin.ListActivity$ScheduleDialog$1 -> org.kohaerenzstiftung.andtroin.hh:
+    org.kohaerenzstiftung.andtroin.ListActivity$ScheduleDialog this$1 -> a
+    void onStopTrackingTouch(android.widget.SeekBar) -> onStopTrackingTouch
+    void onStartTrackingTouch(android.widget.SeekBar) -> onStartTrackingTouch
+    void onProgressChanged(android.widget.SeekBar,int,boolean) -> onProgressChanged
+org.kohaerenzstiftung.andtroin.ListActivity$ScheduleDialog$2 -> org.kohaerenzstiftung.andtroin.hi:
+    org.kohaerenzstiftung.andtroin.ListActivity$ScheduleDialog this$1 -> a
+    void onStopTrackingTouch(android.widget.SeekBar) -> onStopTrackingTouch
+    void onStartTrackingTouch(android.widget.SeekBar) -> onStartTrackingTouch
+    void onProgressChanged(android.widget.SeekBar,int,boolean) -> onProgressChanged
+org.kohaerenzstiftung.andtroin.ListActivity$ScheduleDialog$3 -> org.kohaerenzstiftung.andtroin.hj:
+    org.kohaerenzstiftung.andtroin.ListActivity$ScheduleDialog this$1 -> a
+    void onClick(android.view.View) -> onClick
+org.kohaerenzstiftung.andtroin.ListActivity$SearchEntryDialog -> org.kohaerenzstiftung.andtroin.hk:
+    org.kohaerenzstiftung.andtroin.ListActivity mListActivity -> b
+    android.widget.RadioButton mBySourceRadio -> c
+    org.kohaerenzstiftung.andtroin.SearchEntryAutoCompleteTextView mAutoCompleteTextView -> d
+    android.widget.Button mOkButton -> e
+    org.kohaerenzstiftung.andtroin.ListActivity this$0 -> a
+    void onDismiss() -> c
+    void assignHandlers() -> h
+    void setAdapter() -> i
+    void handleOk() -> j
+    void doHandleOk(org.kohaerenzstiftung.andtroin.ListActivity,int,java.lang.String,boolean) -> a
+    void findElements() -> g
+    void recoverResources() -> e
+    void releaseResources() -> f
+    void updateViews() -> d
+    org.kohaerenzstiftung.andtroin.SearchEntryAutoCompleteTextView access$0(org.kohaerenzstiftung.andtroin.ListActivity$SearchEntryDialog) -> a
+    org.kohaerenzstiftung.andtroin.ListActivity access$1(org.kohaerenzstiftung.andtroin.ListActivity$SearchEntryDialog) -> b
+    void access$2(org.kohaerenzstiftung.andtroin.ListActivity$SearchEntryDialog,org.kohaerenzstiftung.andtroin.ListActivity,int,java.lang.String,boolean) -> a
+    android.widget.RadioButton access$3(org.kohaerenzstiftung.andtroin.ListActivity$SearchEntryDialog) -> c
+    org.kohaerenzstiftung.andtroin.ListActivity access$4(org.kohaerenzstiftung.andtroin.ListActivity$SearchEntryDialog) -> d
+org.kohaerenzstiftung.andtroin.ListActivity$SearchEntryDialog$1 -> org.kohaerenzstiftung.andtroin.hl:
+    org.kohaerenzstiftung.andtroin.ListActivity$SearchEntryDialog this$1 -> a
+    void onClick(android.view.View) -> onClick
+org.kohaerenzstiftung.andtroin.ListActivity$SearchEntryDialog$2 -> org.kohaerenzstiftung.andtroin.hm:
+    org.kohaerenzstiftung.andtroin.ListActivity$SearchEntryDialog this$1 -> a
+    void onCheckedChanged(android.widget.CompoundButton,boolean) -> onCheckedChanged
+org.kohaerenzstiftung.andtroin.ListActivity$SearchEntryDialog$3 -> org.kohaerenzstiftung.andtroin.hn:
+    org.kohaerenzstiftung.andtroin.ListActivity$SearchEntryDialog this$1 -> a
+    void yes(int) -> a
+    void no(int) -> b
+org.kohaerenzstiftung.andtroin.ListActivity$SearchEntryDialog$4 -> org.kohaerenzstiftung.andtroin.ho:
+    org.kohaerenzstiftung.andtroin.ListActivity$SearchEntryDialog this$1 -> b
+    void onInfinitiveChosen(java.lang.String) -> a
+org.kohaerenzstiftung.andtroin.MainActivity -> org.kohaerenzstiftung.andtroin.MainActivity:
+    android.widget.Button mNewListButton -> e
+    android.widget.Button mChooseListButton -> f
+    android.widget.Button mImportListButton -> g
+    org.kohaerenzstiftung.andtroin.MainActivity$ListChosenListener mListChosenListener -> h
+    org.kohaerenzstiftung.andtroin.NewListListener mNewListListener -> i
+    java.lang.String mPath -> j
+    org.kohaerenzstiftung.andtroin.MainActivity$ImportListProgressDialog mImportListProgressDialog -> k
+    android.widget.Button mPreferencesButton -> l
+    android.widget.Button mExportListButton -> m
+    android.os.Handler handler -> n
+    android.widget.Button mPurchaseListsButton -> o
+    android.widget.Button mTestHttpButton -> p
+    void registerForContextMenus() -> m
+    void setContextItemExecutors() -> l
+    void setOptionItemExecutors() -> k
+    void assignHandlers() -> e
+    void testHttp() -> u
+    void handlePurchaseLists() -> o
+    void handleExportListClick() -> p
+    void handlePreferencesClick() -> q
+    void handleImportListClick() -> r
+    void importListFromBinaryFile(java.lang.String,boolean) -> a
+    void importListFromJsonFile(java.lang.String,boolean) -> b
+    void importListFromFile(java.lang.String,boolean) -> c
+    void createListFromFile(java.lang.String,org.kohaerenzstiftung.Language,org.kohaerenzstiftung.Language,int) -> a
+    void importListFromJsonFile(java.lang.String,org.kohaerenzstiftung.Language,org.kohaerenzstiftung.Language,int) -> b
+    void importListFromBinaryFile(java.lang.String,org.kohaerenzstiftung.Language,org.kohaerenzstiftung.Language,int) -> c
+    void handleChooseListClick() -> s
+    void chooseList(int) -> a
+    void exportList(int) -> b
+    void chooseList(org.kohaerenzstiftung.andtroin.MainActivity$ListChosenListener) -> a
+    void handleNewListClick() -> t
+    void newList(java.lang.String,org.kohaerenzstiftung.Language,org.kohaerenzstiftung.Language) -> a
+    void newList(org.kohaerenzstiftung.andtroin.NewListListener) -> a
+    void findElements() -> d
+    void recoverResources() -> a
+    void releaseResources() -> f
+    boolean isDebuggable() -> v
+    void readArguments(android.os.Bundle) -> a
+    void updateViews() -> c
+    void setHelp() -> w
+    void onBind() -> n
+    int getOptionsMenu() -> j
+    int getLayout() -> b
+    android.os.Handler access$0(org.kohaerenzstiftung.andtroin.MainActivity) -> a
+    org.kohaerenzstiftung.andtroin.MainActivity$ImportListProgressDialog access$1(org.kohaerenzstiftung.andtroin.MainActivity) -> b
+    void access$2(org.kohaerenzstiftung.andtroin.MainActivity,org.kohaerenzstiftung.andtroin.MainActivity$ImportListProgressDialog) -> a
+    void access$3(org.kohaerenzstiftung.andtroin.MainActivity,org.kohaerenzstiftung.Dialogable) -> a
+    void access$4(org.kohaerenzstiftung.andtroin.MainActivity) -> c
+    void access$5(org.kohaerenzstiftung.andtroin.MainActivity,int) -> a
+org.kohaerenzstiftung.andtroin.MainActivity$1 -> org.kohaerenzstiftung.andtroin.hp:
+    org.kohaerenzstiftung.andtroin.MainActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+org.kohaerenzstiftung.andtroin.MainActivity$10 -> org.kohaerenzstiftung.andtroin.hq:
+    org.kohaerenzstiftung.andtroin.MainActivity this$0 -> b
+    void handleResult(android.os.Bundle) -> a
+org.kohaerenzstiftung.andtroin.MainActivity$11 -> org.kohaerenzstiftung.andtroin.hr:
+    org.kohaerenzstiftung.andtroin.MainActivity this$0 -> a
+    void chosen(java.lang.String,org.kohaerenzstiftung.Language,org.kohaerenzstiftung.Language) -> a
+org.kohaerenzstiftung.andtroin.MainActivity$12 -> org.kohaerenzstiftung.andtroin.hs:
+    org.kohaerenzstiftung.andtroin.MainActivity this$0 -> a
+    void chosen(int) -> a
+org.kohaerenzstiftung.andtroin.MainActivity$13 -> org.kohaerenzstiftung.andtroin.ht:
+    org.kohaerenzstiftung.andtroin.MainActivity this$0 -> a
+    void chosen(java.lang.String,org.kohaerenzstiftung.Language,org.kohaerenzstiftung.Language) -> a
+org.kohaerenzstiftung.andtroin.MainActivity$14 -> org.kohaerenzstiftung.andtroin.hu:
+    org.kohaerenzstiftung.andtroin.MainActivity this$0 -> a
+    void chosen(int) -> a
+org.kohaerenzstiftung.andtroin.MainActivity$15 -> org.kohaerenzstiftung.andtroin.hv:
+    org.kohaerenzstiftung.andtroin.MainActivity this$0 -> a
+    void chosen(java.lang.String,org.kohaerenzstiftung.Language,org.kohaerenzstiftung.Language) -> a
+org.kohaerenzstiftung.andtroin.MainActivity$16 -> org.kohaerenzstiftung.andtroin.hw:
+    org.kohaerenzstiftung.andtroin.MainActivity this$0 -> a
+    void chosen(int) -> a
+org.kohaerenzstiftung.andtroin.MainActivity$17 -> org.kohaerenzstiftung.andtroin.hx:
+    org.kohaerenzstiftung.andtroin.MainActivity this$0 -> a
+    void chosen(int) -> a
+org.kohaerenzstiftung.andtroin.MainActivity$18 -> org.kohaerenzstiftung.andtroin.hy:
+    org.kohaerenzstiftung.andtroin.MainActivity this$0 -> b
+    void handleResult(android.os.Bundle) -> a
+org.kohaerenzstiftung.andtroin.MainActivity$19 -> org.kohaerenzstiftung.andtroin.hz:
+    org.kohaerenzstiftung.andtroin.MainActivity this$0 -> a
+    void chosen(java.lang.String,org.kohaerenzstiftung.Language,org.kohaerenzstiftung.Language) -> a
+org.kohaerenzstiftung.andtroin.MainActivity$2 -> org.kohaerenzstiftung.andtroin.ia:
+    org.kohaerenzstiftung.andtroin.MainActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+org.kohaerenzstiftung.andtroin.MainActivity$3 -> org.kohaerenzstiftung.andtroin.ib:
+    org.kohaerenzstiftung.andtroin.MainActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+org.kohaerenzstiftung.andtroin.MainActivity$4 -> org.kohaerenzstiftung.andtroin.ic:
+    org.kohaerenzstiftung.andtroin.MainActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+org.kohaerenzstiftung.andtroin.MainActivity$5 -> org.kohaerenzstiftung.andtroin.id:
+    org.kohaerenzstiftung.andtroin.MainActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+org.kohaerenzstiftung.andtroin.MainActivity$6 -> org.kohaerenzstiftung.andtroin.ie:
+    org.kohaerenzstiftung.andtroin.MainActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+org.kohaerenzstiftung.andtroin.MainActivity$7 -> org.kohaerenzstiftung.andtroin.if:
+    org.kohaerenzstiftung.andtroin.MainActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+org.kohaerenzstiftung.andtroin.MainActivity$8 -> org.kohaerenzstiftung.andtroin.ig:
+    org.kohaerenzstiftung.andtroin.MainActivity this$0 -> b
+    void handleResult(android.os.Bundle) -> a
+org.kohaerenzstiftung.andtroin.MainActivity$9 -> org.kohaerenzstiftung.andtroin.ih:
+    org.kohaerenzstiftung.andtroin.MainActivity this$0 -> a
+    void chosen(int) -> a
+org.kohaerenzstiftung.andtroin.MainActivity$ExportListParams -> org.kohaerenzstiftung.andtroin.ii:
+    int mListId -> b
+    java.lang.String mTargetPath -> c
+    org.kohaerenzstiftung.andtroin.MainActivity this$0 -> a
+    int getmListId() -> a
+    java.lang.String getmTargetPath() -> b
+org.kohaerenzstiftung.andtroin.MainActivity$ImportListParams -> org.kohaerenzstiftung.andtroin.ij:
+    int mListId -> g
+    java.lang.String mFormat -> h
+    java.lang.String mName -> a
+    java.lang.String mPath -> b
+    org.kohaerenzstiftung.Language mSourceLanguage -> c
+    org.kohaerenzstiftung.Language mTargetLanguage -> d
+    org.kohaerenzstiftung.andtroin.MainActivity this$0 -> e
+    java.lang.String getmFormat() -> a
+    java.lang.String getmPath() -> b
+    java.lang.String getName() -> c
+    org.kohaerenzstiftung.Language getSourceLanguage() -> d
+    org.kohaerenzstiftung.Language getTargetLanguage() -> e
+    int getmListId() -> f
+    void setmListId(int) -> a
+org.kohaerenzstiftung.andtroin.MainActivity$ImportListProgressDialog -> org.kohaerenzstiftung.andtroin.ik:
+    int mDialogId -> b
+    org.kohaerenzstiftung.andtroin.MainActivity this$0 -> a
+    void onDismiss() -> c
+    void setDialogId(int) -> a
+    int getDialogId() -> a
+org.kohaerenzstiftung.andtroin.MainActivity$ListChooseDialog -> org.kohaerenzstiftung.andtroin.il:
+    android.widget.Spinner mListsSpinner -> b
+    android.widget.Button mOkButton -> c
+    android.widget.Button mCancelButton -> d
+    org.kohaerenzstiftung.andtroin.MainActivity$ListChosenListener mListChosenListener -> e
+    android.content.Context mContext -> f
+    android.database.Cursor mCursor -> g
+    org.kohaerenzstiftung.andtroin.MainActivity this$0 -> a
+    void assignHandlers() -> h
+    void handleCancelClick() -> i
+    void handleOkClick() -> j
+    void findElements() -> g
+    void recoverResources() -> e
+    void releaseResources() -> f
+    void updateViews() -> d
+    android.widget.Button access$0(org.kohaerenzstiftung.andtroin.MainActivity$ListChooseDialog) -> a
+org.kohaerenzstiftung.andtroin.MainActivity$ListChooseDialog$1 -> org.kohaerenzstiftung.andtroin.im:
+    org.kohaerenzstiftung.andtroin.MainActivity$ListChooseDialog this$1 -> a
+    void onClick(android.view.View) -> onClick
+org.kohaerenzstiftung.andtroin.MainActivity$ListChooseDialog$2 -> org.kohaerenzstiftung.andtroin.in:
+    org.kohaerenzstiftung.andtroin.MainActivity$ListChooseDialog this$1 -> a
+    void onClick(android.view.View) -> onClick
+org.kohaerenzstiftung.andtroin.MainActivity$ListChooseDialog$3 -> org.kohaerenzstiftung.andtroin.io:
+    org.kohaerenzstiftung.andtroin.MainActivity$ListChooseDialog this$1 -> a
+    void onItemSelected(android.widget.AdapterView,android.view.View,int,long) -> onItemSelected
+    void onNothingSelected(android.widget.AdapterView) -> onNothingSelected
+org.kohaerenzstiftung.andtroin.MainActivity$ListChosenListener -> org.kohaerenzstiftung.andtroin.ip:
+    void chosen(int) -> a
+org.kohaerenzstiftung.andtroin.MainActivity$NewListDialog -> org.kohaerenzstiftung.andtroin.iq:
+    org.kohaerenzstiftung.andtroin.NewListListener mNewListListener -> b
+    android.widget.Spinner mSourceLanguageSpinner -> c
+    android.widget.Spinner mTargetLanguageSpinner -> d
+    org.kohaerenzstiftung.EditText mListNameEditText -> e
+    android.widget.Button mOkButton -> f
+    android.widget.Button mCancelButton -> g
+    org.kohaerenzstiftung.Language mSourceLanguage -> h
+    org.kohaerenzstiftung.Language mTargetLanguage -> i
+    java.lang.String mName -> j
+    org.kohaerenzstiftung.andtroin.MainActivity this$0 -> a
+    void assignHandlers() -> h
+    void handleCancel() -> i
+    void handleOk() -> j
+    void checkOkEnabled() -> k
+    void findElements() -> g
+    void recoverResources() -> e
+    void releaseResources() -> f
+    void updateViews() -> d
+org.kohaerenzstiftung.andtroin.MainActivity$NewListDialog$1 -> org.kohaerenzstiftung.andtroin.ir:
+    org.kohaerenzstiftung.andtroin.MainActivity$NewListDialog this$1 -> a
+    void onTextChanged(java.lang.CharSequence,int,int,int) -> onTextChanged
+    void beforeTextChanged(java.lang.CharSequence,int,int,int) -> beforeTextChanged
+    void afterTextChanged(android.text.Editable) -> afterTextChanged
+org.kohaerenzstiftung.andtroin.MainActivity$NewListDialog$2 -> org.kohaerenzstiftung.andtroin.is:
+    org.kohaerenzstiftung.andtroin.MainActivity$NewListDialog this$1 -> a
+    void onItemSelected(android.widget.AdapterView,android.view.View,int,long) -> onItemSelected
+    void onNothingSelected(android.widget.AdapterView) -> onNothingSelected
+org.kohaerenzstiftung.andtroin.MainActivity$NewListDialog$3 -> org.kohaerenzstiftung.andtroin.it:
+    org.kohaerenzstiftung.andtroin.MainActivity$NewListDialog this$1 -> a
+    void onItemSelected(android.widget.AdapterView,android.view.View,int,long) -> onItemSelected
+    void onNothingSelected(android.widget.AdapterView) -> onNothingSelected
+org.kohaerenzstiftung.andtroin.MainActivity$NewListDialog$4 -> org.kohaerenzstiftung.andtroin.iu:
+    org.kohaerenzstiftung.andtroin.MainActivity$NewListDialog this$1 -> a
+    void onClick(android.view.View) -> onClick
+org.kohaerenzstiftung.andtroin.MainActivity$NewListDialog$5 -> org.kohaerenzstiftung.andtroin.iv:
+    org.kohaerenzstiftung.andtroin.MainActivity$NewListDialog this$1 -> a
+    void onClick(android.view.View) -> onClick
+org.kohaerenzstiftung.andtroin.MainActivity$ProgressTask -> org.kohaerenzstiftung.andtroin.iw:
+    boolean mhaveMax -> b
+    org.kohaerenzstiftung.andtroin.MainActivity this$0 -> a
+    void onCancelled() -> onCancelled
+    void onPostExecute(java.lang.Boolean) -> a
+    void onPreExecute() -> onPreExecute
+    void onProgressUpdate(java.lang.Integer[]) -> a
+    java.lang.Boolean doInBackground(org.kohaerenzstiftung.andtroin.MainActivity$ProgressTaskParams[]) -> a
+    boolean exportInBackground(org.kohaerenzstiftung.andtroin.MainActivity$ExportListParams) -> a
+    boolean importInBackground(org.kohaerenzstiftung.andtroin.MainActivity$ImportListParams) -> a
+    void onPostExecute(java.lang.Object) -> onPostExecute
+    java.lang.Object doInBackground(java.lang.Object[]) -> doInBackground
+    void onProgressUpdate(java.lang.Object[]) -> onProgressUpdate
+    void access$3(org.kohaerenzstiftung.andtroin.MainActivity$ProgressTask,java.lang.Object[]) -> a
+    org.kohaerenzstiftung.andtroin.MainActivity access$4(org.kohaerenzstiftung.andtroin.MainActivity$ProgressTask) -> a
+org.kohaerenzstiftung.andtroin.MainActivity$ProgressTask$1 -> org.kohaerenzstiftung.andtroin.ix:
+    org.kohaerenzstiftung.andtroin.MainActivity$ProgressTask this$1 -> a
+    void run() -> run
+org.kohaerenzstiftung.andtroin.MainActivity$ProgressTask$2 -> org.kohaerenzstiftung.andtroin.iy:
+    org.kohaerenzstiftung.andtroin.MainActivity$ProgressTask this$1 -> a
+    void run() -> run
+org.kohaerenzstiftung.andtroin.MainActivity$ProgressTask$3 -> org.kohaerenzstiftung.andtroin.iz:
+    org.kohaerenzstiftung.andtroin.MainActivity$ProgressTask this$1 -> a
+    void update(int) -> a
+org.kohaerenzstiftung.andtroin.MainActivity$ProgressTask$4 -> org.kohaerenzstiftung.andtroin.ja:
+    org.kohaerenzstiftung.andtroin.MainActivity$ProgressTask this$1 -> a
+    void update(int) -> a
+org.kohaerenzstiftung.andtroin.MainActivity$ProgressTask$5 -> org.kohaerenzstiftung.andtroin.jb:
+    org.kohaerenzstiftung.andtroin.MainActivity$ProgressTask this$1 -> a
+    void update(int) -> a
+org.kohaerenzstiftung.andtroin.MainActivity$ProgressTask$6 -> org.kohaerenzstiftung.andtroin.jc:
+    org.kohaerenzstiftung.andtroin.MainActivity$ProgressTask this$1 -> a
+    void update(int) -> a
+org.kohaerenzstiftung.andtroin.MainActivity$ProgressTaskParams -> org.kohaerenzstiftung.andtroin.jd:
+    org.kohaerenzstiftung.andtroin.MainActivity this$0 -> f
+org.kohaerenzstiftung.andtroin.MenuActivity -> org.kohaerenzstiftung.andtroin.je:
+    java.lang.String mHelp -> d
+    boolean mHelpDisplayed -> e
+    void onCreate(android.os.Bundle) -> onCreate
+    void setHelp() -> w
+    void setHelp(java.lang.String) -> b
+    void onResume() -> onResume
+    boolean helpEnabled() -> n
+org.kohaerenzstiftung.andtroin.MergeActivity -> org.kohaerenzstiftung.andtroin.MergeActivity:
+    org.kohaerenzstiftung.ListView mCategories1ListView -> e
+    org.kohaerenzstiftung.ListView mCategories2ListView -> f
+    org.kohaerenzstiftung.ListView mSourceDenominations1ListView -> g
+    org.kohaerenzstiftung.ListView mSourceDenominations2ListView -> h
+    org.kohaerenzstiftung.ListView mTargetDenominations1ListView -> i
+    org.kohaerenzstiftung.ListView mTargetDenominations2ListView -> j
+    android.widget.Button mLeftMergeButton -> k
+    android.widget.Button mRightMergeButton -> l
+    org.kohaerenzstiftung.andtroin.Entry mEntry1 -> m
+    org.kohaerenzstiftung.andtroin.Entry mEntry2 -> n
+    android.widget.Button mLeftNoButton -> o
+    android.widget.Button mRightNoButton -> p
+    boolean mHaveElements -> q
+    boolean mUpdateViews -> r
+    void setHelp() -> w
+    void setOptionItemExecutors() -> k
+    void setContextItemExecutors() -> l
+    void registerForContextMenus() -> m
+    void assignHandlers() -> e
+    void handleMerge() -> o
+    void handleNo() -> p
+    void doNotMerge() -> q
+    void doMerge() -> r
+    void findElements() -> d
+    void addHeaderViews() -> s
+    void readArguments(android.os.Bundle) -> a
+    void recoverResources() -> a
+    void releaseResources() -> f
+    void updateViews() -> c
+    void setAdapters() -> t
+    void onBind() -> n
+    int getOptionsMenu() -> j
+    int getLayout() -> b
+    org.kohaerenzstiftung.andtroin.Entry access$0(org.kohaerenzstiftung.andtroin.MergeActivity) -> a
+    org.kohaerenzstiftung.andtroin.Entry access$1(org.kohaerenzstiftung.andtroin.MergeActivity) -> b
+org.kohaerenzstiftung.andtroin.MergeActivity$1 -> org.kohaerenzstiftung.andtroin.jf:
+    org.kohaerenzstiftung.andtroin.MergeActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+org.kohaerenzstiftung.andtroin.MergeActivity$2 -> org.kohaerenzstiftung.andtroin.jg:
+    org.kohaerenzstiftung.andtroin.MergeActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+org.kohaerenzstiftung.andtroin.MergeActivity$3 -> org.kohaerenzstiftung.andtroin.jh:
+    org.kohaerenzstiftung.andtroin.MergeActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+org.kohaerenzstiftung.andtroin.MergeActivity$4 -> org.kohaerenzstiftung.andtroin.ji:
+    org.kohaerenzstiftung.andtroin.MergeActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+org.kohaerenzstiftung.andtroin.MergeActivity$5 -> org.kohaerenzstiftung.andtroin.jj:
+    org.kohaerenzstiftung.andtroin.MergeActivity this$0 -> a
+    void yes(int) -> a
+    void no(int) -> b
+org.kohaerenzstiftung.andtroin.MergeActivity$6 -> org.kohaerenzstiftung.andtroin.jk:
+    org.kohaerenzstiftung.andtroin.MergeActivity this$0 -> a
+    void yes(int) -> a
+    void no(int) -> b
+org.kohaerenzstiftung.andtroin.MergeActivity$7 -> org.kohaerenzstiftung.andtroin.jl:
+    org.kohaerenzstiftung.andtroin.MergeActivity this$0 -> b
+    void onReturn(java.util.ArrayList,org.kohaerenzstiftung.andtroin.Entry) -> a
+org.kohaerenzstiftung.andtroin.MergeActivity$CategoriesAdapter -> org.kohaerenzstiftung.andtroin.jm:
+    android.content.Context mContext -> b
+    java.util.LinkedList mCategories -> c
+    org.kohaerenzstiftung.andtroin.MergeActivity this$0 -> a
+    int getCount() -> getCount
+    java.lang.Object getItem(int) -> getItem
+    long getItemId(int) -> getItemId
+    android.view.View getView(int,android.view.View,android.view.ViewGroup) -> getView
+org.kohaerenzstiftung.andtroin.MergeActivity$DenominationsAdapter -> org.kohaerenzstiftung.andtroin.jn:
+    android.content.Context mContext -> b
+    java.util.LinkedList mDenominations -> c
+    org.kohaerenzstiftung.andtroin.MergeActivity this$0 -> a
+    int getCount() -> getCount
+    java.lang.Object getItem(int) -> getItem
+    long getItemId(int) -> getItemId
+    android.view.View getView(int,android.view.View,android.view.ViewGroup) -> getView
+org.kohaerenzstiftung.andtroin.NewListListener -> org.kohaerenzstiftung.andtroin.jo:
+    void chosen(java.lang.String,org.kohaerenzstiftung.Language,org.kohaerenzstiftung.Language) -> a
+org.kohaerenzstiftung.andtroin.PreferenceActivity -> org.kohaerenzstiftung.andtroin.PreferenceActivity:
+    void onCreate(android.os.Bundle) -> onCreate
+org.kohaerenzstiftung.andtroin.PromptActivity -> org.kohaerenzstiftung.andtroin.PromptActivity:
+    android.widget.ListView mCorrectionListView -> e
+    android.widget.TextView mPromptTextView -> f
+    org.kohaerenzstiftung.EditText mAnswerEditText -> g
+    java.util.LinkedList mCorrectAnswer -> h
+    boolean mJustCreated -> i
+    int mDirection -> j
+    java.util.Random mRandom -> k
+    org.kohaerenzstiftung.andtroin.ScheduledEntry mEntry -> l
+    boolean mAcceptingMistake -> m
+    java.lang.String mPromptTextViewText -> n
+    int mCurrentDirection -> o
+    int mFromIdx -> p
+    android.widget.TextView mPromptLanguageTextView -> q
+    android.widget.TextView mAnswerLanguageTextView -> r
+    org.kohaerenzstiftung.andtroin.List mList -> s
+    boolean showAnswer -> t
+    boolean mPrompting -> u
+    android.widget.Button mLeftOkButton -> v
+    android.widget.Button mRightOkButton -> w
+    android.widget.Button mLeftIgnoreButton -> x
+    android.widget.Button mRightIgnoreButton -> y
+    android.widget.Button mLeftEditButton -> z
+    android.widget.Button mRightEditButton -> A
+    java.lang.String mWrongAnswer -> B
+    boolean afterFormChallenge -> C
+    android.widget.TextView mStatusTextView -> D
+    android.widget.Button mLeftPeekButton -> E
+    android.widget.Button mRightPeekButton -> F
+    android.widget.ListView mWrongAnswerListView -> G
+    boolean mHaveElements -> H
+    boolean mOnBind -> I
+    void resetView() -> r
+    void assignHandlers() -> e
+    void handleGotoAndtroin() -> o
+    void handleMore() -> p
+    void handleEdit() -> s
+    void onStop() -> onStop
+    void handleIgnore() -> t
+    void handleCorrectAnswer() -> u
+    void doDetailsKeyChallenge(org.kohaerenzstiftung.andtroin.PromptActivity$SuccessFailure) -> a
+    void detailsKeyChallenge(org.kohaerenzstiftung.andtroin.Denomination,org.kohaerenzstiftung.andtroin.DetailsKey,org.kohaerenzstiftung.andtroin.PromptActivity$SuccessFailure) -> a
+    org.kohaerenzstiftung.andtroin.DetailsKey getRandomDetailsKey(java.util.LinkedList) -> a
+    org.kohaerenzstiftung.andtroin.Denomination getRandomDenominationWithDetailsKeys(java.util.LinkedList) -> b
+    void doFormChallenge(org.kohaerenzstiftung.andtroin.PromptActivity$SuccessFailure) -> b
+    org.kohaerenzstiftung.andtroin.Denomination getRandomDenominationWithForms(java.util.LinkedList) -> c
+    org.kohaerenzstiftung.andtroin.DenominationForm getRandomDenominationForm(java.util.LinkedList) -> d
+    void formChallenge(org.kohaerenzstiftung.andtroin.Denomination,java.util.LinkedList,org.kohaerenzstiftung.andtroin.PromptActivity$SuccessFailure) -> a
+    void handleOk(boolean) -> b
+    void handleWrongAnswer(java.lang.String,boolean) -> a
+    void letUserAcceptMistake(boolean) -> c
+    void doHandleCorrectAnswer() -> v
+    void onCreate(android.os.Bundle) -> onCreate
+    void onDestroy() -> onDestroy
+    void onResume() -> onResume
+    void onPause() -> onPause
+    void onStart() -> onStart
+    void prompt() -> x
+    boolean promptingEnabled() -> y
+    java.lang.String getFrom() -> z
+    int getRandomDirection() -> A
+    org.kohaerenzstiftung.andtroin.ScheduledEntry getNextEntry() -> B
+    void checkOkEnabled() -> C
+    void findElements() -> d
+    void recoverResources() -> a
+    void releaseResources() -> f
+    void refreshTexts() -> D
+    void reloadEntry() -> q
+    void readArguments(android.os.Bundle) -> a
+    void updateViews() -> c
+    void registerForContextMenus() -> m
+    void setContextItemExecutors() -> l
+    void setOptionItemExecutors() -> k
+    boolean onPrepareOptionsMenu(android.view.Menu) -> onPrepareOptionsMenu
+    void setHelp() -> w
+    void onBind() -> n
+    int getOptionsMenu() -> j
+    int getLayout() -> b
+    boolean access$0(org.kohaerenzstiftung.andtroin.PromptActivity) -> a
+    void access$1(org.kohaerenzstiftung.andtroin.PromptActivity) -> b
+    void access$2(org.kohaerenzstiftung.andtroin.PromptActivity,boolean) -> a
+    void access$3(org.kohaerenzstiftung.andtroin.PromptActivity) -> c
+    void access$4(org.kohaerenzstiftung.andtroin.PromptActivity) -> d
+    void access$5(org.kohaerenzstiftung.andtroin.PromptActivity) -> e
+    void access$6(org.kohaerenzstiftung.andtroin.PromptActivity,boolean) -> b
+    void access$7(org.kohaerenzstiftung.andtroin.PromptActivity,boolean) -> c
+    void access$8(org.kohaerenzstiftung.andtroin.PromptActivity,org.kohaerenzstiftung.andtroin.PromptActivity$SuccessFailure) -> a
+org.kohaerenzstiftung.andtroin.PromptActivity$1 -> org.kohaerenzstiftung.andtroin.jp:
+    org.kohaerenzstiftung.andtroin.PromptActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+org.kohaerenzstiftung.andtroin.PromptActivity$10 -> org.kohaerenzstiftung.andtroin.jq:
+    org.kohaerenzstiftung.andtroin.PromptActivity this$0 -> b
+    void onReturn(java.util.ArrayList,org.kohaerenzstiftung.andtroin.Entry) -> a
+org.kohaerenzstiftung.andtroin.PromptActivity$11 -> org.kohaerenzstiftung.andtroin.jr:
+    org.kohaerenzstiftung.andtroin.PromptActivity this$0 -> a
+    void success() -> a
+    void failure() -> b
+    org.kohaerenzstiftung.andtroin.PromptActivity access$0(org.kohaerenzstiftung.andtroin.PromptActivity$11) -> a
+org.kohaerenzstiftung.andtroin.PromptActivity$11$1 -> org.kohaerenzstiftung.andtroin.js:
+    org.kohaerenzstiftung.andtroin.PromptActivity$11 this$1 -> a
+    void success() -> a
+    void failure() -> b
+org.kohaerenzstiftung.andtroin.PromptActivity$12 -> org.kohaerenzstiftung.andtroin.jt:
+    org.kohaerenzstiftung.andtroin.PromptActivity this$0 -> a
+    void execute() -> a
+org.kohaerenzstiftung.andtroin.PromptActivity$13 -> org.kohaerenzstiftung.andtroin.ju:
+    org.kohaerenzstiftung.andtroin.PromptActivity this$0 -> a
+    void execute() -> a
+org.kohaerenzstiftung.andtroin.PromptActivity$2 -> org.kohaerenzstiftung.andtroin.jv:
+    org.kohaerenzstiftung.andtroin.PromptActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+org.kohaerenzstiftung.andtroin.PromptActivity$3 -> org.kohaerenzstiftung.andtroin.jw:
+    org.kohaerenzstiftung.andtroin.PromptActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+org.kohaerenzstiftung.andtroin.PromptActivity$4 -> org.kohaerenzstiftung.andtroin.jx:
+    org.kohaerenzstiftung.andtroin.PromptActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+org.kohaerenzstiftung.andtroin.PromptActivity$5 -> org.kohaerenzstiftung.andtroin.jy:
+    org.kohaerenzstiftung.andtroin.PromptActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+org.kohaerenzstiftung.andtroin.PromptActivity$6 -> org.kohaerenzstiftung.andtroin.jz:
+    org.kohaerenzstiftung.andtroin.PromptActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+org.kohaerenzstiftung.andtroin.PromptActivity$7 -> org.kohaerenzstiftung.andtroin.ka:
+    org.kohaerenzstiftung.andtroin.PromptActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+org.kohaerenzstiftung.andtroin.PromptActivity$8 -> org.kohaerenzstiftung.andtroin.kb:
+    org.kohaerenzstiftung.andtroin.PromptActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+org.kohaerenzstiftung.andtroin.PromptActivity$9 -> org.kohaerenzstiftung.andtroin.kc:
+    org.kohaerenzstiftung.andtroin.PromptActivity this$0 -> b
+    void onReturn(java.util.ArrayList,org.kohaerenzstiftung.andtroin.Entry) -> a
+org.kohaerenzstiftung.andtroin.PromptActivity$AnswerWatcher -> org.kohaerenzstiftung.andtroin.kd:
+    org.kohaerenzstiftung.andtroin.PromptActivity this$0 -> a
+    void afterTextChanged(android.text.Editable) -> afterTextChanged
+    void beforeTextChanged(java.lang.CharSequence,int,int,int) -> beforeTextChanged
+    void onTextChanged(java.lang.CharSequence,int,int,int) -> onTextChanged
+org.kohaerenzstiftung.andtroin.PromptActivity$DenominationsAdapter -> org.kohaerenzstiftung.andtroin.ke:
+    android.content.Context mContext -> b
+    java.util.LinkedList mDenominations -> c
+    boolean mCorrect -> d
+    org.kohaerenzstiftung.andtroin.PromptActivity this$0 -> a
+    int getCount() -> getCount
+    java.lang.Object getItem(int) -> getItem
+    long getItemId(int) -> getItemId
+    android.view.View getView(int,android.view.View,android.view.ViewGroup) -> getView
+org.kohaerenzstiftung.andtroin.PromptActivity$DetailsKeyChallengeDialog -> org.kohaerenzstiftung.andtroin.kf:
+    org.kohaerenzstiftung.andtroin.Denomination mDenomination -> b
+    org.kohaerenzstiftung.andtroin.DetailsKey mDetailsKey -> c
+    org.kohaerenzstiftung.andtroin.PromptActivity$SuccessFailure mSuccessFailure -> d
+    android.widget.TextView mDenominationTextView -> e
+    android.widget.TextView mFormKeyTextView -> f
+    android.widget.Spinner mAnswerSpinner -> g
+    android.widget.Button mOkButton -> h
+    android.widget.ListView mCorrectAnswerListView -> i
+    boolean mAccepting -> j
+    org.kohaerenzstiftung.andtroin.PromptActivity this$0 -> a
+    void updateViews() -> d
+    void recoverResources() -> e
+    void releaseResources() -> f
+    void findElements() -> g
+    void assignHandlers() -> h
+    void handleOk() -> i
+org.kohaerenzstiftung.andtroin.PromptActivity$DetailsKeyChallengeDialog$1 -> org.kohaerenzstiftung.andtroin.kg:
+    org.kohaerenzstiftung.andtroin.PromptActivity$DetailsKeyChallengeDialog this$1 -> a
+    void onClick(android.view.View) -> onClick
+org.kohaerenzstiftung.andtroin.PromptActivity$DetailsKeyValueAdapter -> org.kohaerenzstiftung.andtroin.kh:
+    java.util.LinkedList mDetailsKeys -> b
+    boolean mSpinner -> c
+    org.kohaerenzstiftung.andtroin.PromptActivity this$0 -> a
+    int getCount() -> getCount
+    java.lang.Object getItem(int) -> getItem
+    long getItemId(int) -> getItemId
+    android.view.View getView(int,android.view.View,android.view.ViewGroup) -> getView
+    android.view.View getSpinnerView(int,android.view.View,android.view.ViewGroup) -> a
+    android.view.View getListViewView(int,android.view.View,android.view.ViewGroup) -> b
+    android.view.View getDropDownView(int,android.view.View,android.view.ViewGroup) -> getDropDownView
+org.kohaerenzstiftung.andtroin.PromptActivity$EmptyListAdapter -> org.kohaerenzstiftung.andtroin.ki:
+    org.kohaerenzstiftung.andtroin.PromptActivity this$0 -> a
+    int getCount() -> getCount
+    java.lang.Object getItem(int) -> getItem
+    long getItemId(int) -> getItemId
+    android.view.View getView(int,android.view.View,android.view.ViewGroup) -> getView
+org.kohaerenzstiftung.andtroin.PromptActivity$FormChallengeDialog -> org.kohaerenzstiftung.andtroin.kj:
+    android.widget.TextView mDenominationTextView -> b
+    android.widget.ListView mAttributesListView -> c
+    org.kohaerenzstiftung.EditText mAnswerEditText -> d
+    android.widget.Button mOkButton -> e
+    boolean acceptingMistake -> f
+    org.kohaerenzstiftung.andtroin.Denomination mDenomination -> g
+    java.util.LinkedList mAttributes -> h
+    java.util.LinkedList mDenominationForms -> i
+    android.widget.ListView mCorrectAnswerListView -> j
+    android.widget.ListView mWrongAnswerListView -> k
+    org.kohaerenzstiftung.andtroin.PromptActivity$SuccessFailure mSuccessFailure -> l
+    org.kohaerenzstiftung.andtroin.PromptActivity this$0 -> a
+    boolean formHasAttributes(org.kohaerenzstiftung.andtroin.DenominationForm,java.util.LinkedList) -> a
+    void updateViews() -> d
+    void recoverResources() -> e
+    void releaseResources() -> f
+    void findElements() -> g
+    void assignHandlers() -> h
+    void handleWrong() -> i
+    void handleCorrect() -> j
+    android.widget.Button access$0(org.kohaerenzstiftung.andtroin.PromptActivity$FormChallengeDialog) -> a
+    org.kohaerenzstiftung.EditText access$1(org.kohaerenzstiftung.andtroin.PromptActivity$FormChallengeDialog) -> b
+    boolean access$2(org.kohaerenzstiftung.andtroin.PromptActivity$FormChallengeDialog) -> c
+    java.util.LinkedList access$3(org.kohaerenzstiftung.andtroin.PromptActivity$FormChallengeDialog) -> d
+    android.widget.ListView access$4(org.kohaerenzstiftung.andtroin.PromptActivity$FormChallengeDialog) -> e
+    android.widget.ListView access$5(org.kohaerenzstiftung.andtroin.PromptActivity$FormChallengeDialog) -> f
+    void access$6(org.kohaerenzstiftung.andtroin.PromptActivity$FormChallengeDialog,boolean) -> a
+    org.kohaerenzstiftung.andtroin.PromptActivity access$7(org.kohaerenzstiftung.andtroin.PromptActivity$FormChallengeDialog) -> g
+org.kohaerenzstiftung.andtroin.PromptActivity$FormChallengeDialog$1 -> org.kohaerenzstiftung.andtroin.kk:
+    org.kohaerenzstiftung.andtroin.PromptActivity$FormChallengeDialog this$1 -> a
+    void onTextChanged(java.lang.CharSequence,int,int,int) -> onTextChanged
+    void beforeTextChanged(java.lang.CharSequence,int,int,int) -> beforeTextChanged
+    void afterTextChanged(android.text.Editable) -> afterTextChanged
+org.kohaerenzstiftung.andtroin.PromptActivity$FormChallengeDialog$2 -> org.kohaerenzstiftung.andtroin.kl:
+    org.kohaerenzstiftung.andtroin.PromptActivity$FormChallengeDialog this$1 -> a
+    void onClick(android.view.View) -> onClick
+org.kohaerenzstiftung.andtroin.PromptActivity$FormKeysAdapter -> org.kohaerenzstiftung.andtroin.km:
+    android.content.Context mContext -> b
+    java.util.LinkedList mFormAttributes -> c
+    org.kohaerenzstiftung.andtroin.PromptActivity this$0 -> a
+    int getCount() -> getCount
+    java.lang.Object getItem(int) -> getItem
+    long getItemId(int) -> getItemId
+    android.view.View getView(int,android.view.View,android.view.ViewGroup) -> getView
+org.kohaerenzstiftung.andtroin.PromptActivity$FormsAdapter -> org.kohaerenzstiftung.andtroin.kn:
+    java.util.LinkedList mDenominationForms -> b
+    boolean mRight -> c
+    org.kohaerenzstiftung.andtroin.PromptActivity this$0 -> a
+    int getCount() -> getCount
+    java.lang.Object getItem(int) -> getItem
+    long getItemId(int) -> getItemId
+    android.view.View getView(int,android.view.View,android.view.ViewGroup) -> getView
+org.kohaerenzstiftung.andtroin.PromptActivity$SuccessFailure -> org.kohaerenzstiftung.andtroin.ko:
+    org.kohaerenzstiftung.andtroin.PromptActivity this$0 -> b
+    void success() -> a
+    void failure() -> b
+org.kohaerenzstiftung.andtroin.PurchaseActivity -> org.kohaerenzstiftung.andtroin.PurchaseActivity:
+    org.kohaerenzstiftung.ListView mPurchasebleLists -> e
+    void onBind() -> n
+    void setHelp() -> w
+    void setOptionItemExecutors() -> k
+    void setContextItemExecutors() -> l
+    void unavailable() -> o
+    void refunded() -> p
+    void cancelled() -> q
+    void purchase() -> r
+    void registerForContextMenus() -> m
+    void assignHandlers() -> e
+    void readArguments(android.os.Bundle) -> a
+    void recoverResources() -> a
+    void releaseResources() -> f
+    void updateViews() -> c
+    void setAdapters() -> s
+    void findElements() -> d
+    int getOptionsMenu() -> j
+    int getLayout() -> b
+org.kohaerenzstiftung.andtroin.PurchaseActivity$1 -> org.kohaerenzstiftung.andtroin.kp:
+    org.kohaerenzstiftung.andtroin.PurchaseActivity this$0 -> a
+    void execute(android.view.MenuItem) -> a
+org.kohaerenzstiftung.andtroin.PurchaseActivity$2 -> org.kohaerenzstiftung.andtroin.kq:
+    org.kohaerenzstiftung.andtroin.PurchaseActivity this$0 -> a
+    void execute(android.view.MenuItem) -> a
+org.kohaerenzstiftung.andtroin.PurchaseActivity$3 -> org.kohaerenzstiftung.andtroin.kr:
+    org.kohaerenzstiftung.andtroin.PurchaseActivity this$0 -> a
+    void execute(android.view.MenuItem) -> a
+org.kohaerenzstiftung.andtroin.PurchaseActivity$4 -> org.kohaerenzstiftung.andtroin.ks:
+    org.kohaerenzstiftung.andtroin.PurchaseActivity this$0 -> a
+    void execute(android.view.MenuItem) -> a
+org.kohaerenzstiftung.andtroin.PurchaseActivity$5 -> org.kohaerenzstiftung.andtroin.kt:
+    org.kohaerenzstiftung.andtroin.PurchaseActivity this$0 -> a
+    void execute(android.view.MenuItem) -> a
+org.kohaerenzstiftung.andtroin.PurchaseActivity$6 -> org.kohaerenzstiftung.andtroin.ku:
+    org.kohaerenzstiftung.andtroin.PurchaseActivity this$0 -> a
+    int createContextMenu(android.view.ContextMenu$ContextMenuInfo) -> a
+org.kohaerenzstiftung.andtroin.PurchaseActivity$PurchasebleList -> org.kohaerenzstiftung.andtroin.kv:
+    java.lang.String mName -> b
+    java.lang.String mDescription -> c
+    org.kohaerenzstiftung.Language mSourceLanguage -> d
+    org.kohaerenzstiftung.Language mTargetLanguage -> e
+    org.kohaerenzstiftung.andtroin.PurchaseActivity this$0 -> a
+    java.lang.String getmName() -> a
+org.kohaerenzstiftung.andtroin.PurchaseActivity$PurchasebleListsAdapter -> org.kohaerenzstiftung.andtroin.kw:
+    org.kohaerenzstiftung.andtroin.PurchaseActivity this$0 -> a
+    int getCount() -> getCount
+    java.lang.Object getItem(int) -> getItem
+    long getItemId(int) -> getItemId
+    android.view.View getView(int,android.view.View,android.view.ViewGroup) -> getView
+org.kohaerenzstiftung.andtroin.Schedule -> org.kohaerenzstiftung.andtroin.kx:
+    boolean mSourceForeign -> a
+    int mId -> b
+    int mInterval -> c
+    int mListId -> d
+    int mSeriesSize -> e
+    boolean ismSourceForeign() -> a
+    int getmInterval() -> b
+    int getmListId() -> c
+    int getmSeriesSize() -> d
+    int getmId() -> e
+    void setSoManyPerDay(int) -> a
+org.kohaerenzstiftung.andtroin.ScheduledEntry -> org.kohaerenzstiftung.andtroin.ScheduledEntry:
+    boolean mSourceForeign -> b
+    int mSeriesId -> c
+    int mLevel -> a
+    boolean ismSourceForeign() -> l
+    int getmSeriesId() -> m
+    int getmLevel() -> n
+org.kohaerenzstiftung.andtroin.SearchEntryAutoCompleteTextView -> org.kohaerenzstiftung.andtroin.SearchEntryAutoCompleteTextView:
+    android.database.Cursor mOldCursor -> b
+    android.database.Cursor mCursor -> c
+    boolean mBySource -> d
+    org.kohaerenzstiftung.andtroin.AndtroinActivity mActivity -> e
+    int mListId -> f
+    boolean mCheckWholeEntries -> g
+    void setmCheckWholeEntries(boolean) -> setmCheckWholeEntries
+    boolean isBySource() -> c
+    void setBySource(boolean) -> setBySource
+    android.database.Cursor getCursor(java.lang.String) -> a
+    void closeOldCursor() -> e
+    java.lang.String getColumnName() -> getColumnName
+    void closeCursors() -> d
+    void setListAndActivity(int,org.kohaerenzstiftung.andtroin.AndtroinActivity) -> a
+org.kohaerenzstiftung.andtroin.TextViewDialog -> org.kohaerenzstiftung.andtroin.ky:
+    android.widget.TextView mTextTextView -> a
+    android.widget.Button mOkButton -> b
+    void updateViews() -> d
+    void recoverResources() -> e
+    void releaseResources() -> f
+    void findElements() -> g
+    void assignHandlers() -> h
+org.kohaerenzstiftung.andtroin.TextViewDialog$1 -> org.kohaerenzstiftung.andtroin.kz:
+    org.kohaerenzstiftung.andtroin.TextViewDialog this$0 -> a
+    void onClick(android.view.View) -> onClick
+org.kohaerenzstiftung.andtroin.Updatable -> org.kohaerenzstiftung.andtroin.la:
+    void update(int) -> a

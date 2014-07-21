@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/linearLayout1" android:orientation="vertical">
+        <TextView android:id="@+id/textview_itemsperday" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="@string/items_per_day"></TextView>
+        <SeekBar android:layout_weight="80" android:layout_height="wrap_content" android:id="@+id/seekbar_itemsperday" android:layout_width="match_parent"></SeekBar>
+        <TextView android:layout_width="wrap_content" android:text="" android:layout_height="wrap_content" android:id="@+id/textview_somanyperday"></TextView>
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/linearLayout2" android:orientation="vertical">
+        <TextView android:id="@+id/textview_itemsperseries" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="@string/items_per_series"></TextView>
+        <SeekBar android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/seekbar_itemsperseries"></SeekBar>
+        <TextView android:layout_width="wrap_content" android:text="" android:layout_height="wrap_content" android:id="@+id/textview_somanyperseries"></TextView>
+    </LinearLayout>
+    <LinearLayout android:layout_height="wrap_content" android:id="@+id/linearLayout4" android:orientation="vertical" android:layout_width="match_parent">
+        <RadioGroup android:layout_width="wrap_content" android:orientation="horizontal" android:layout_height="wrap_content" android:id="@+id/radiogroup_targetlanguage">
+        <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="true" android:id="@+id/radiobutton_sourcelanguage"></RadioButton>
+        <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/radiobutton_targetlanguage"></RadioButton>
+    </RadioGroup>
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/linearLayout3" android:orientation="vertical">
+        <Button android:layout_height="wrap_content" android:id="@+id/button_ok" android:text="@string/ok" android:layout_width="match_parent"></Button>
+    </LinearLayout>
+    
+</LinearLayout>

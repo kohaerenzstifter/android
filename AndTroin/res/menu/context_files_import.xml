@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/menuitem_flatselectforimport" android:title="@string/select_for_import_flat"><menu>
+            <item android:title="@string/new_list" android:id="@+id/menuitem_newlist"></item>
+            <item android:title="@string/existing_list" android:id="@+id/menuitem_existinglist"></item>
+        </menu></item>
+    
+    <item android:title="@string/select_for_import_json" android:id="@+id/menuitem_jsonselectforimport">
+        <menu>
+            <item android:title="@string/new_list" android:id="@+id/menuitem_newlist"></item>
+            <item android:title="@string/existing_list" android:id="@+id/menuitem_existinglist"></item>
+        </menu>
+    </item>
+    <item android:id="@+id/menuitem_binaryselectforimport" android:title="@string/select_for_import_binary">
+        <menu><item android:title="@string/new_list" android:id="@+id/menuitem_newlist"></item><item android:title="@string/existing_list" android:id="@+id/menuitem_existinglist"></item></menu>
+    </item>
+    
+</menu>

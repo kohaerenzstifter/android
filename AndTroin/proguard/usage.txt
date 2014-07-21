@@ -1,0 +1,195 @@
+android.annotation.SuppressLint
+android.annotation.TargetApi
+com.android.vending.billing.IMarketBillingService$Stub:
+    private static final java.lang.String DESCRIPTOR
+    static final int TRANSACTION_sendBillingRequest
+    13:16:public IMarketBillingService$Stub()
+    34:34:public android.os.IBinder asBinder()
+com.android.vending.billing.IMarketBillingService$Stub$Proxy:
+    82:82:public java.lang.String getInterfaceDescriptor()
+org.kohaerenzstiftung.Activity:
+    165:171:public static void log(java.lang.String,android.content.Context)
+org.kohaerenzstiftung.Activity$ActivityReturnerNotSetException:
+    private static final long serialVersionUID
+org.kohaerenzstiftung.Activity$Result:
+    58:58:public int getmRequestCode()
+    62:62:public int getmResultCode()
+    80:83:protected void assertSuccess()
+org.kohaerenzstiftung.Activity$ResultHasFailedException
+org.kohaerenzstiftung.HTTP:
+    public static final int HTTP_GET
+    public static final int HTTP_PUT
+    public static final int HTTP_POST
+    public static final int HTTP_DEL
+    26:26:public HTTP()
+org.kohaerenzstiftung.MenuActivity:
+    107:125:protected android.os.Bundle getResultExtras()
+    protected abstract void assignHandlers()
+    protected abstract void findElements()
+    protected abstract void readArguments(android.os.Bundle)
+    protected abstract void recoverResources()
+    protected abstract void releaseResources()
+    protected abstract void updateViews()
+org.kohaerenzstiftung.UnknownIso3LanguageException:
+    private static final long serialVersionUID
+org.kohaerenzstiftung.YesNoDialog:
+    32:33:public void setParams(java.lang.String)
+    52:52:public void saveState(android.os.Bundle)
+org.kohaerenzstiftung.andtroin.AndtroinService:
+    public static final int INVALIDDIRECTION
+    public static final int RANDOM
+    public static final int TOTARGET
+    public static final int TOSOURCE
+    private static final int NOTIFICATION_NEW_CHALLENGE
+    private static final int NOTIFICATION_PEERS_PENDING
+    private static final int NOTIFICATION_BILLING
+    public static final int RESPONSECODE_RESULT_OK
+    public static final int RESPONSECODE_RESULT_USER_CANCELED
+    public static final int RESPONSECODE_RESULT_SERVICE_UNAVAILABLE
+    public static final int RESPONSECODE_RESULT_BILLING_UNAVAILABLE
+    public static final int RESPONSECODE_RESULT_ITEM_UNAVAILABLE
+    public static final int RESPONSECODE_RESULT_DEVELOPER_ERROR
+    public static final int RESPONSECODE_RESULT_ERROR
+    private static final java.lang.String SERVER
+    private static final java.lang.String SERVICE
+    private static final int PORT
+    891:891:public void purchaseList(int)
+    925:928:public void purchase(java.lang.String,java.lang.String,org.kohaerenzstiftung.andtroin.AndtroinService$BillingRequest)
+org.kohaerenzstiftung.andtroin.BuildConfig
+org.kohaerenzstiftung.andtroin.Category:
+    17:18:public void setmId(int)
+    38:38:public int getmListId()
+    41:42:public void setmListId(int)
+org.kohaerenzstiftung.andtroin.Database:
+    private static final int SERIES_INCOMPLETE
+    private static final int SERIES_COMPLETE
+    private static final int ENTRY_FAILED
+    public static final int ENTRY_PENDING
+    private static final int ENTRY_SCHEDULED
+    private static final int ENTRY_SWAP
+    private static final int ENTRY_FAILED_UP
+    private static final int ENTRY_OK
+    private static final int ENTRY_INVALID
+    130:130:public boolean isMOpen()
+    1355:1361:public java.lang.String getSourceLanguage(int)
+    1366:1372:public java.lang.String getTargetLanguage(int)
+    1377:1382:public int getScheduleCount()
+    1387:1399:public org.kohaerenzstiftung.andtroin.Schedule getScheduleByPosition(int)
+    1404:1410:public java.lang.String getListNameById(int)
+    2906:2909:public android.database.Cursor getDetailsKeys(org.kohaerenzstiftung.andtroin.Database,java.lang.String)
+    2913:2916:public android.database.Cursor getDetailsKeyValues(org.kohaerenzstiftung.andtroin.Database,int)
+org.kohaerenzstiftung.andtroin.Database$DatabaseHelper:
+    private static final int CURRENT_VERSION
+org.kohaerenzstiftung.andtroin.Database$InvalidJsonDetailException:
+    private static final long serialVersionUID
+    final synthetic org.kohaerenzstiftung.andtroin.Database this$0
+    96:98:public Database$InvalidJsonDetailException(org.kohaerenzstiftung.andtroin.Database,java.lang.String)
+org.kohaerenzstiftung.andtroin.Database$NotInTransactionException:
+    private static final long serialVersionUID
+org.kohaerenzstiftung.andtroin.Denomination:
+    14:15:public void setmForms(java.util.LinkedList)
+    34:35:public void setmExamples(java.util.LinkedList)
+    63:64:public void setmLanguage(java.lang.String)
+    76:77:public void setmDetails(java.util.LinkedList)
+    85:86:public void setmListId(int)
+    102:103:public void setmEntryId(int)
+    105:105:public int getmEntryId()
+org.kohaerenzstiftung.andtroin.DenominationActivity$ExampleDialog:
+    359:359:public void saveState(android.os.Bundle)
+org.kohaerenzstiftung.andtroin.DenominationForm:
+    77:78:public void setmId(int)
+    86:86:public int getmDenominationId()
+    89:90:public void setmDenominationId(int)
+    95:96:public void setmFormAttributes(java.util.LinkedList)
+org.kohaerenzstiftung.andtroin.DetailsKey:
+    13:14:public void setmLanguage(java.lang.String)
+    29:30:public void setmValues(java.util.LinkedList)
+    32:33:public void setmId(int)
+org.kohaerenzstiftung.andtroin.DetailsKeyValue:
+    21:22:public void setmId(int)
+    32:33:public void setmKey(java.lang.String)
+org.kohaerenzstiftung.andtroin.Entry:
+    17:18:public void setmSourceLanguage(java.lang.String)
+    23:24:public void setmTargetLanguage(java.lang.String)
+    68:69:public void setmListId(int)
+    75:76:public void setmTargetDenominations(java.util.LinkedList)
+    82:83:public void setmSourceDenominations(java.util.LinkedList)
+    92:93:public void setmCategories(java.util.LinkedList)
+org.kohaerenzstiftung.andtroin.EntryPair:
+    17:17:public int getmListId()
+    20:21:public void setmListId(int)
+    26:27:public void setmEntryId(int)
+    33:34:public void setmSource(java.lang.String)
+    39:40:public void setmTarget(java.lang.String)
+org.kohaerenzstiftung.andtroin.Example:
+    12:12:public int getmListId()
+    15:16:public void setmListId(int)
+    43:44:public void setmId(int)
+    46:46:public int getmDenominationId()
+    49:50:public void setmDenominationId(int)
+org.kohaerenzstiftung.andtroin.FileActivity:
+    public static final int FLAT
+    public static final int JSON
+    public static final int BINARY
+org.kohaerenzstiftung.andtroin.FormAttribute:
+    69:70:public void setmSource(boolean)
+org.kohaerenzstiftung.andtroin.List:
+    52:53:public void setmName(java.lang.String)
+    61:62:public void setmSourceLanguage(org.kohaerenzstiftung.Language)
+    67:68:public void setmTargetLanguage(org.kohaerenzstiftung.Language)
+org.kohaerenzstiftung.andtroin.ListActivity:
+    1732:1732:public org.kohaerenzstiftung.andtroin.List getmList()
+org.kohaerenzstiftung.andtroin.ListActivity$NewEntryDialog:
+    895:895:public void saveState(android.os.Bundle)
+org.kohaerenzstiftung.andtroin.ListActivity$ScheduleDialog:
+    private static final int MAX_ITEMS_PER_DAY
+    private static final int MAX_ITEMS_PER_SERIES
+org.kohaerenzstiftung.andtroin.MainActivity$ImportListParams:
+    296:297:public void setmFormat(java.lang.String)
+org.kohaerenzstiftung.andtroin.MainActivity$NewListDialog:
+    446:446:public void saveState(android.os.Bundle)
+org.kohaerenzstiftung.andtroin.MenuActivity:
+    22:22:protected java.lang.String getHelp()
+    protected abstract void setOptionItemExecutors()
+    protected abstract void setContextItemExecutors()
+    protected abstract void registerForContextMenus()
+    protected abstract void assignHandlers()
+    protected abstract void findElements()
+    protected abstract void readArguments(android.os.Bundle)
+    protected abstract void recoverResources()
+    protected abstract void releaseResources()
+    protected abstract void updateViews()
+org.kohaerenzstiftung.andtroin.PromptActivity:
+    642:643:protected void putEntries(java.util.ArrayList)
+org.kohaerenzstiftung.andtroin.PurchaseActivity:
+    166:167:protected void purchaseList(int)
+org.kohaerenzstiftung.andtroin.PurchaseActivity$PurchasebleList:
+    27:28:public void setmName(java.lang.String)
+    31:31:public java.lang.String getmDescription()
+    35:36:public void setmDescription(java.lang.String)
+    39:39:public org.kohaerenzstiftung.Language getmSourceLanguage()
+    43:44:public void setmSourceLanguage(org.kohaerenzstiftung.Language)
+    47:47:public org.kohaerenzstiftung.Language getmTargetLanguage()
+    51:52:public void setmTargetLanguage(org.kohaerenzstiftung.Language)
+org.kohaerenzstiftung.andtroin.R
+org.kohaerenzstiftung.andtroin.R$attr
+org.kohaerenzstiftung.andtroin.R$drawable
+org.kohaerenzstiftung.andtroin.R$id
+org.kohaerenzstiftung.andtroin.R$layout
+org.kohaerenzstiftung.andtroin.R$menu
+org.kohaerenzstiftung.andtroin.R$string
+org.kohaerenzstiftung.andtroin.R$style
+org.kohaerenzstiftung.andtroin.R$xml
+org.kohaerenzstiftung.andtroin.Schedule:
+    17:18:public void setmSourceForeign(boolean)
+    23:24:public void setmInterval(int)
+    29:30:public void setmListId(int)
+    35:36:public void setmSeriesSize(int)
+    42:43:public void setmId(int)
+org.kohaerenzstiftung.andtroin.ScheduledEntry:
+    10:11:public void setmSourceForeign(boolean)
+    34:35:public void setmSeriesId(int)
+    42:43:public void setmLevel(int)
+org.kohaerenzstiftung.andtroin.SchedulesAdapter
+org.kohaerenzstiftung.andtroin.Selectionable
+org.kohaerenzstiftung.andtroin.Series
