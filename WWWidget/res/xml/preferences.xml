@@ -1,6 +1,5 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
-    <EditTextPreference android:title="@string/server" android:key="server" android:summary="@string/server2"/><EditTextPreference android:key="update_interval" android:title="@string/update_interval" android:summary="@string/update_interval2" android:defaultValue="60" />
+    <EditTextPreference android:title="@string/server" android:key="server" android:summary="@string/server2"/><CheckBoxPreference android:key="do_https" android:summary="@string/do_https2" android:title="@string/do_https" /><EditTextPreference android:key="update_interval" android:title="@string/update_interval" android:summary="@string/update_interval2" android:defaultValue="60" />
     <CheckBoxPreference android:title="@string/wifi_only" android:summary="@string/wifi_only2" android:key="wifi_only" android:defaultValue="false"/>
-    
     
 </PreferenceScreen>

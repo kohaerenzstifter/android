@@ -11,6 +11,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.PrintWriter;
 import java.io.StringWriter;
+import java.util.ArrayList;
 import java.util.LinkedList;
 
 import org.apache.http.HttpResponse;
@@ -40,7 +41,6 @@ import android.widget.RemoteViews;
 public class Helper {
 	public static final int STANDARD_LENGTH = 512;
 	private static final Config BITMAP_CONFIG = Config.RGB_565;
-	public static final String STANDARD_SERVER = "kohaerenzstiftung.org";
 	public static final int STANDARD_PORT = 8080;
 
 	static void configure(Context context, String url, int appWidgetId,
@@ -191,6 +191,12 @@ public class Helper {
 		}
 	}
 
+	public static String getInitialDirPath(Context context) {
+		File cacheDir = context.getCacheDir();
+		String result = cacheDir.getAbsolutePath() + File.separator + "initial";
+		return result;
+	}
+
 	public static String getInitial(String url,
 			int displayWidth, int displayHeight,
 			Context context) throws Throwable  {
@@ -208,39 +214,39 @@ public class Helper {
 			screenshotFile = new File(filePath);
 			delete(screenshotFile);
 
-			getFileFromKohaerenzstiftung(context, url, true,
+			String fingerprint = getFileFromServer(context, url, true,
 					displayWidth, displayHeight, -1, -1, -1, -1,
 					screenshotFile);
 
-			inputStream = new FileInputStream(screenshotFile);
-	        bitmap = BitmapFactory.decodeStream(inputStream);
+			if (fingerprint == null) {
+				inputStream = new FileInputStream(screenshotFile);
+				bitmap = BitmapFactory.decodeStream(inputStream);
 
-			String initialDirPath =
-					cacheDir.getAbsolutePath() +
-					File.separator + "initial";
-			File initialDir = new File(initialDirPath);
-			delete(initialDir);
-			initialDir.mkdir();
+				String initialDirPath = getInitialDirPath(context);
+				File initialDir = new File(initialDirPath);
+				delete(initialDir);
+				initialDir.mkdir();
 
-			int intrinsicWidth = bitmap.getWidth();
-			int intrinsicHeight = bitmap.getHeight();
+				int intrinsicWidth = bitmap.getWidth();
+				int intrinsicHeight = bitmap.getHeight();
 
-			for (int x = 0; x < intrinsicWidth; x += STANDARD_LENGTH) {
-				for (int y = 0; y < intrinsicHeight; y += STANDARD_LENGTH) {
-					int widthNow = intrinsicWidth - x;
-					widthNow = widthNow > STANDARD_LENGTH ? STANDARD_LENGTH : widthNow;
-					int heightNow = intrinsicHeight - y;
-					heightNow = heightNow > STANDARD_LENGTH ? STANDARD_LENGTH : heightNow;
-					fragment = getFragment(bitmap, x, y, widthNow, heightNow);
-					String fragmentPath = initialDirPath + File.separator +
-							widthNow + "x" + heightNow + "_" + x + "_" + y + ".jpg";
-					writebitmap2File(fragment, fragmentPath);
+				for (int x = 0; x < intrinsicWidth; x += STANDARD_LENGTH) {
+					for (int y = 0; y < intrinsicHeight; y += STANDARD_LENGTH) {
+						int widthNow = intrinsicWidth - x;
+						widthNow = widthNow > STANDARD_LENGTH ? STANDARD_LENGTH : widthNow;
+						int heightNow = intrinsicHeight - y;
+						heightNow = heightNow > STANDARD_LENGTH ? STANDARD_LENGTH : heightNow;
+						fragment = getFragment(bitmap, x, y, widthNow, heightNow);
+						String fragmentPath = initialDirPath + File.separator +
+								widthNow + "x" + heightNow + "_" + x + "_" + y + ".jpg";
+						writebitmap2File(fragment, fragmentPath);
+					}
 				}
+
+				createInfoTxt(initialDirPath, url, intrinsicWidth, intrinsicHeight);	
+			} else {
+				result = fingerprint;
 			}
-
-			createInfoTxt(initialDirPath, url, intrinsicWidth, intrinsicHeight);
-
-			result = initialDirPath;
 
 		} catch (Throwable t) {
 			throwable = t;
@@ -286,25 +292,29 @@ public class Helper {
 		return result;
 	}
 
-	private static void doGetFileFromServer(String serverUrl, int port,
+	private static String doGetFileFromServer(String serverUrl, int port,
 			String username, String password, String url,
-			LinkedList<BasicNameValuePair> parameters, InputStream instream,
-			String keyStorePw, File file) throws Throwable {
+			LinkedList<BasicNameValuePair> parameters, File file, Context context) throws Throwable {
 		Throwable throwable = null;
 		InputStream inputStream = null;
 		FileOutputStream outputStream = null;
+		ArrayList<String> fingerprints = getFingerprints(context);
+		TrustChecker trustChecker = new TrustChecker(fingerprints);
+		String result = null;
 		try {
 			HttpResponse httpResponse = null;
-			boolean secure = instream != null;
+			SharedPreferences preferences = PreferenceManager
+					.getDefaultSharedPreferences(context);
+			boolean secure = preferences.getBoolean("do_https", false);
 			if (secure) {
 				httpResponse =
 						HTTP.doHttps(serverUrl, port, url, username, password,
-								parameters, instream, keyStorePw,
+								parameters, null, trustChecker,
 								org.kohaerenzstiftung.HTTP.HTTP_GET);
 			} else {
 				httpResponse =
 						HTTP.doHttp(serverUrl, port, url, username, password,
-								parameters, org.kohaerenzstiftung.HTTP.HTTP_GET);
+								parameters, null, org.kohaerenzstiftung.HTTP.HTTP_GET);
 			}
 			int code = httpResponse.getStatusLine().getStatusCode();
 			if (code != HttpStatus.SC_OK) {
@@ -315,11 +325,12 @@ public class Helper {
 			outputStream = new FileOutputStream(file);
 
 			byte[] buffer = new byte[4096];
-	        int length; 
+			int length; 
 			while((length = inputStream.read(buffer)) > 0) {
 				outputStream.write(buffer, 0, length);
 			}
 		} catch (Throwable t) {
+			result = trustChecker.mFingerprint;
 			throwable = t;
 		} finally {
 			if (inputStream != null) {
@@ -335,9 +346,50 @@ public class Helper {
 				}
 			}
 		}
-		if (throwable != null) {
+		if ((result == null)&&(throwable != null)) {
 			throw throwable;
 		}
+		return result;
+	}
+
+	private static ArrayList<String> getFingerprints(Context context) {
+		ArrayList<String> result = new ArrayList<String>();
+		BufferedReader bufferedReader = null;
+		FileReader fileReader = null;
+
+		try {
+			File filesDir = context.getFilesDir();
+			String path = filesDir.getAbsoluteFile() + File.separator + "fingerprints";
+			File file = new File(path);
+			if (file.exists()) {
+				fileReader = new FileReader(path);
+				bufferedReader = new BufferedReader(fileReader);
+
+				String line = null;
+				while ((line = bufferedReader.readLine()) != null) {
+					result.add(line);
+				}
+			}
+		} catch (Throwable t) {
+			t.printStackTrace();
+		} finally {
+			if (bufferedReader != null) {
+				try {
+					bufferedReader.close();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			}
+			if (fileReader != null) {
+				try {
+					fileReader.close();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			}
+		}
+
+		return result;
 	}
 
 	private static void createInfoTxt(String initialDirPath, String url,
@@ -511,7 +563,7 @@ public class Helper {
 				File cacheDir = context.getCacheDir();
 				screenshotFile = File.createTempFile("screenshot", ".jpg", cacheDir);
 				if (System.currentTimeMillis() < 1420023600000L) {
-					getFileFromKohaerenzstiftung(context, periodicParameters.mUrl,
+					getFileFromServer(context, periodicParameters.mUrl,
 							false, periodicParameters.mDisplayWidth,
 							periodicParameters.mDisplayHeight,
 							periodicParameters.mX, periodicParameters.mWidth,
@@ -533,18 +585,18 @@ public class Helper {
 
 				Intent intent = new Intent(Intent.ACTION_VIEW);
 				intent.setData(Uri.parse(periodicParameters.mUrl));
-		        PendingIntent pendingIntent = PendingIntent.getActivity(context, 0, intent, 0);
+				PendingIntent pendingIntent = PendingIntent.getActivity(context, 0, intent, 0);
 				views.setOnClickPendingIntent(R.id.imageView, pendingIntent);
 
-		        views.setImageViewBitmap(R.id.imageView, bitmap);
-		        dirFile = new File(context.getFilesDir().getAbsolutePath() +
-		        		File.separator + widgetId);
-		        if (new File(dirFile.getAbsolutePath() + File.separator +
-		        		"lastUpdate").exists()) {
+				views.setImageViewBitmap(R.id.imageView, bitmap);
+				dirFile = new File(context.getFilesDir().getAbsolutePath() +
+						File.separator + widgetId);
+				if (new File(dirFile.getAbsolutePath() + File.separator +
+						"lastUpdate").exists()) {
 					appWidgetManager.updateAppWidget(widgetId, views);	
-		        }
-		        unixTimestamp = System.currentTimeMillis() / 1000;
-		        setLastUpdate(dirFile, (int) unixTimestamp);
+				}
+				unixTimestamp = System.currentTimeMillis() / 1000;
+				setLastUpdate(dirFile, (int) unixTimestamp);
 
 			} catch (Throwable t) {
 				throwable = t;
@@ -591,13 +643,12 @@ public class Helper {
 		return result;
 	}
 
-	private static void getFileFromKohaerenzstiftung(Context context,
+	private static String getFileFromServer(Context context,
 			String url, boolean initial, int displayWidth, int displayHeight,
 			int x, int width, int y, int height, File screenshotFile)
 					throws Throwable {
 		Throwable throwable = null;
-		InputStream inputStream = null;
-		String keystorePw = null;
+		String result = null;
 
 		try {
 			SharedPreferences preferences = PreferenceManager
@@ -611,48 +662,34 @@ public class Helper {
 					getKohaerenzstiftungParameters(url,
 							displayWidth, displayHeight,
 							initial, x, width, y, height);
-			if (server.equals(STANDARD_SERVER)) {
-				keystorePw = "IdnNmPg";
-				inputStream = context.getAssets().open("ca2.bks");	
-			}
+
 			String subUrl = initial ? "initial" : "periodic";
-			doGetFileFromServer(server, port,
+			result = doGetFileFromServer(server, port,
 					getWwWidgetUsername(), getWwWidgetPassword(),
 					"wwwidget/" + subUrl,
-				parameters, inputStream, keystorePw, screenshotFile);
+					parameters, screenshotFile, context);
 		} catch (Throwable t) {
 			throwable = t;
-		} finally {
-			if (inputStream != null) {
-				try {
-					inputStream.close();
-				} catch (Exception e) {
-				}
-			}
 		}
-		
+
 		if (throwable != null) {
 			throw throwable;
 		}
-		
-		
+
+		return result;
 	}
 
 	private static int getPort(String server, String serverString) {
 		int result = 0;
-		if (server.equals(STANDARD_SERVER)) {
+		int colonIndex = serverString.indexOf(':');
+		if (colonIndex == -1) {
 			result = STANDARD_PORT;
 		} else {
-			int colonIndex = serverString.indexOf(':');
-			if (colonIndex == -1) {
+			String portPart = serverString.substring(colonIndex + 1, serverString.length());
+			try {
+				result = Integer.parseInt(portPart);
+			} catch (Throwable t) {
 				result = STANDARD_PORT;
-			} else {
-				String portPart = serverString.substring(colonIndex + 1, serverString.length());
-				try {
-					result = Integer.parseInt(portPart);
-				} catch (Throwable t) {
-					result = STANDARD_PORT;
-				}
 			}
 		}
 		return result;
@@ -660,16 +697,12 @@ public class Helper {
 
 	private static String getServer(String serverString) {
 		String result = null;
-		if (serverString.trim().equals("")) {
-			result = STANDARD_SERVER;
+		int colonIndex = serverString.indexOf(':');
+		if (colonIndex != -1) {
+			result = serverString.substring(0, colonIndex);
 		} else {
-			int colonIndex = serverString.indexOf(':');
-			if (colonIndex != -1) {
-				result = serverString.substring(0, colonIndex);
-			} else {
-				result = serverString;
-			}	
-		}
+			result = serverString;
+		}	
 		return result;
 	}
 
@@ -709,13 +742,68 @@ public class Helper {
 		} else {
 			result = 'a';
 		}
-		
+
 		return result;
 	}
 
 	private static String getWwWidgetUsername() {
 		String result = "wwwidget";
-		
+
 		return result;
 	}
+
+
+	/*private static void doGetFileFromServer(String serverUrl, int port,
+			String username, String password, String url,
+			LinkedList<BasicNameValuePair> parameters, InputStream instream,
+			String keyStorePw, File file) throws Throwable {
+		Throwable throwable = null;
+		InputStream inputStream = null;
+		FileOutputStream outputStream = null;
+		try {
+			HttpResponse httpResponse = null;
+			boolean secure = instream != null;
+			if (secure) {
+				httpResponse =
+						HTTP.doHttps(serverUrl, port, url, username, password,
+								parameters, instream, keyStorePw,
+								org.kohaerenzstiftung.HTTP.HTTP_GET);
+			} else {
+				httpResponse =
+						HTTP.doHttp(serverUrl, port, url, username, password,
+								parameters, org.kohaerenzstiftung.HTTP.HTTP_GET);
+			}
+			int code = httpResponse.getStatusLine().getStatusCode();
+			if (code != HttpStatus.SC_OK) {
+				throw new Exception("HTTP Status: " + code);
+			}
+			inputStream = httpResponse.getEntity().getContent();
+			file.delete();
+			outputStream = new FileOutputStream(file);
+
+			byte[] buffer = new byte[4096];
+			int length; 
+			while((length = inputStream.read(buffer)) > 0) {
+				outputStream.write(buffer, 0, length);
+			}
+		} catch (Throwable t) {
+			throwable = t;
+		} finally {
+			if (inputStream != null) {
+				try {
+					inputStream.close();
+				} catch (IOException e) {
+				}
+			}
+			if (outputStream != null) {
+				try {
+					outputStream.close();
+				} catch (IOException e) {
+				}
+			}
+		}
+		if (throwable != null) {
+			throw throwable;
+		}
+	}*/
 }

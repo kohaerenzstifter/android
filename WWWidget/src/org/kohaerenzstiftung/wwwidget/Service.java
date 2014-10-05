@@ -1,7 +1,6 @@
 package org.kohaerenzstiftung.wwwidget;
 
 import java.io.File;
-
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Message;

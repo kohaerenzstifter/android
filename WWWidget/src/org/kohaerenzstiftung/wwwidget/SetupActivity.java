@@ -1,5 +1,10 @@
 package org.kohaerenzstiftung.wwwidget;
 
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+
 import org.kohaerenzstiftung.Dialog;
 import org.kohaerenzstiftung.Dialogable;
 import org.kohaerenzstiftung.StandardActivity;
@@ -20,7 +25,62 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
-public class SetupActivity extends StandardActivity {
+public class SetupActivity  extends StandardActivity {
+
+	public class YesNoable extends org.kohaerenzstiftung.YesNoable {
+
+		public YesNoable(Bundle extras, String fingerprint, String url) {
+			super(extras);
+			this.mFingerprint = fingerprint;
+			this.mUrl = url;
+		}
+
+		private String mFingerprint;
+		private String mUrl;
+
+		private void trustServer(String fingerprint) {
+			BufferedWriter bufferedWriter = null;
+			FileWriter fileWriter = null;
+
+			try {
+				File filesDir = getFilesDir();
+				String path = filesDir.getAbsoluteFile() + File.separator + "fingerprints";
+				fileWriter = new FileWriter(path, true);
+				bufferedWriter = new BufferedWriter(fileWriter);
+				bufferedWriter.write(fingerprint);
+				bufferedWriter.newLine();
+			} catch (Throwable t) {
+				t.printStackTrace();
+			} finally {
+				if (bufferedWriter != null) {
+					try {
+						bufferedWriter.close();
+					} catch (IOException e) {
+						e.printStackTrace();
+					}
+				}
+				if (fileWriter != null) {
+					try {
+						fileWriter.close();
+					} catch (IOException e) {
+						e.printStackTrace();
+					}
+				}
+			}
+
+		}
+
+		@Override
+		public void yes(int dialogId) {
+			trustServer(mFingerprint);
+			new GetInitialAsyncTask().execute(mUrl);
+		}
+
+		@Override
+		public void no(int dialogId) {			
+		}
+
+	}
 
 	public abstract class Executor {
 		protected abstract void execute();
@@ -107,11 +167,17 @@ public class SetupActivity extends StandardActivity {
 	public int mDisplayWidth;
 	public int mDisplayHeight;
 
+	public class GetInitialAsyncTaskResult {
+
+		public Throwable mThrowable;
+		public String mFingerprint;
+
+	}
+
 	public class GetInitialAsyncTask extends
-			AsyncTask<String, Void, Throwable> {
+	AsyncTask<String, Void, GetInitialAsyncTaskResult> {
 
 		private org.kohaerenzstiftung.wwwidget.SetupActivity.ProgressDialog mProgressDialog;
-		private String mDirectory;
 
 		@Override
 		protected void onCancelled() {
@@ -122,17 +188,29 @@ public class SetupActivity extends StandardActivity {
 			mProgressDialog = null;
 		}
 
+		private void askIfServerTrusted(String fingerprint, org.kohaerenzstiftung.YesNoable yesNoable) {
+			Resources resources = getResources();
+			String ok = resources.getString(R.string.ok);
+			String cancel = resources.getString(R.string.cancel);
+			String serverCertificate = resources.getString(R.string.server_certificate);
+
+			askYesNo(serverCertificate, fingerprint, ok, cancel, yesNoable);
+		}
+
 		@Override
-		protected void onPostExecute(Throwable result) {
+		protected void onPostExecute(GetInitialAsyncTaskResult result) {
 			super.onPostExecute(result);
 			if (mProgressDialog != null) {
 				mProgressDialog.dismiss();
 			}
 			mProgressDialog = null;
 			if (result == null) {
-				SetupActivity.this.startMainActivity(mDirectory);
-			} else {
-				String message = result.getMessage();
+				SetupActivity.this.startMainActivity(Helper.getInitialDirPath(SetupActivity.this));
+			} else if (result.mFingerprint != null) {
+				YesNoable yesNoable = new YesNoable(null, result.mFingerprint, mUrl);
+				askIfServerTrusted(result.mFingerprint, yesNoable);
+			} else if (result.mThrowable != null) {
+				String message = result.mThrowable.getMessage();
 				String text;
 				if (message != null) {
 					text = result.getClass().getName() + ": " + message;
@@ -152,18 +230,26 @@ public class SetupActivity extends StandardActivity {
 		}
 
 		@Override
-		protected Throwable doInBackground(String... params) {
+		protected GetInitialAsyncTaskResult doInBackground(String... params) {
 			mUrl = params[0];
-			Throwable result = null;
+			GetInitialAsyncTaskResult result = null;
+			String fingerprint = null;
+			Throwable throwable = null;
 			try {
 				DisplayMetrics displaymetrics = new DisplayMetrics();
-		        getWindowManager().getDefaultDisplay().getMetrics(displaymetrics);
-		        SetupActivity.this.mDisplayWidth = displaymetrics.widthPixels;
-		        SetupActivity.this.mDisplayHeight = displaymetrics.heightPixels;
-				mDirectory = Helper.getInitial(mUrl, SetupActivity.this.mDisplayWidth,
+				getWindowManager().getDefaultDisplay().getMetrics(displaymetrics);
+				SetupActivity.this.mDisplayWidth = displaymetrics.widthPixels;
+				SetupActivity.this.mDisplayHeight = displaymetrics.heightPixels;
+				fingerprint = Helper.getInitial(mUrl, SetupActivity.this.mDisplayWidth,
 						SetupActivity.this.mDisplayHeight, SetupActivity.this);
 			} catch (Throwable t) {
-				result = t;
+				throwable = t;
+			}
+
+			if ((throwable != null)||(fingerprint != null)) {
+				result = new GetInitialAsyncTaskResult();
+				result.mThrowable = throwable;
+				result.mFingerprint = fingerprint;
 			}
 
 			return result;
@@ -174,8 +260,8 @@ public class SetupActivity extends StandardActivity {
 	private EditText mUrlEditText;
 	private Button mOkButton;
 	private int mAppWidgetId = AppWidgetManager.INVALID_APPWIDGET_ID;
-	private String mUrl;
 	private String mDirectory;
+	private String mUrl;
 
 	@Override
 	protected void recoverResources() {
@@ -186,7 +272,7 @@ public class SetupActivity extends StandardActivity {
 		Resources resources = getResources();
 		String info = resources.getString(R.string.info2);
 		Dialog dialog = new TextInfoDialog(this, info, new Executor() {
-			
+
 			@Override
 			protected void execute() {
 				SetupActivity.this.doStartMainActivity();
@@ -199,7 +285,7 @@ public class SetupActivity extends StandardActivity {
 		Bundle bundle = new Bundle();
 		bundle.putString("directory", mDirectory);
 		startActivityForResult(MainActivity.class, new ActivityReturner(bundle) {
-			
+
 			@Override
 			protected void handleResult(Bundle bundle) {
 				SetupActivity.this.handleResult(bundle);
@@ -213,8 +299,8 @@ public class SetupActivity extends StandardActivity {
 				}
 			}
 		}, bundle);
-		
-		
+
+
 	}
 
 	@Override
@@ -230,8 +316,8 @@ public class SetupActivity extends StandardActivity {
 	protected void readArguments(Bundle extras) {
 		if (extras != null) {
 			mAppWidgetId = extras.getInt(
-		            AppWidgetManager.EXTRA_APPWIDGET_ID, 
-		            AppWidgetManager.INVALID_APPWIDGET_ID);	
+					AppWidgetManager.EXTRA_APPWIDGET_ID, 
+					AppWidgetManager.INVALID_APPWIDGET_ID);	
 		}
 	}
 
@@ -251,16 +337,16 @@ public class SetupActivity extends StandardActivity {
 			}
 		});
 		mUrlEditText.addTextChangedListener(new TextWatcher() {
-			
+
 			@Override
 			public void onTextChanged(CharSequence s, int start, int before, int count) {
 			}
-			
+
 			@Override
 			public void beforeTextChanged(CharSequence s, int start, int count,
 					int after) {
 			}
-			
+
 			@Override
 			public void afterTextChanged(Editable s) {
 				SetupActivity.this.checkOkEnabled(s.toString().trim());
@@ -285,7 +371,7 @@ public class SetupActivity extends StandardActivity {
 		Resources resources = getResources();
 		String info = resources.getString(R.string.info);
 		Dialog dialog = new TextInfoDialog(this, info, new Executor() {
-			
+
 			@Override
 			protected void execute() {
 				SetupActivity.this.doHandleOk();
