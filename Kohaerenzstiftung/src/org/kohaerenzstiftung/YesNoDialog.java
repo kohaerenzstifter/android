@@ -10,10 +10,13 @@ public class YesNoDialog extends AlertDialog implements Dialogable {
 	private YesNoable mYesNoable;
 	private int mDialogId;
 
-	public YesNoDialog(StandardActivity activity,
-			String prompt, String yes, String no, YesNoable yesnoable) {
+	public YesNoDialog(StandardActivity activity, String title,
+			String message, String yes, String no, YesNoable yesnoable) {
 		super(activity);
-		setTitle(prompt);
+		if (title != null) {
+			setTitle(title);
+		}
+		setMessage(message);
 		this.setButton(BUTTON_POSITIVE, yes, new OnClickListener() {
 			public void onClick(DialogInterface dialog, int which) {
 				YesNoDialog.this.yesNo(true);
@@ -26,6 +29,11 @@ public class YesNoDialog extends AlertDialog implements Dialogable {
 		});
 		this.setCancelable(true);
 		this.mYesNoable = yesnoable;
+	}
+
+	public YesNoDialog(StandardActivity activity,
+			String message, String yes, String no, YesNoable yesnoable) {
+		this(activity, null, message, yes, no, yesnoable);
 	}
 
 	public void setParams(String title) {

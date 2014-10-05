@@ -14,6 +14,7 @@ import android.widget.SimpleCursorAdapter;
 public abstract class AutoCompleteTextView extends android.widget.AutoCompleteTextView {
 	public class Adapter extends SimpleCursorAdapter {
 
+		@SuppressWarnings("deprecation")
 		public Adapter(Cursor cursor) {
 			super(AutoCompleteTextView.this.getContext(),
 					android.R.layout.simple_dropdown_item_1line,

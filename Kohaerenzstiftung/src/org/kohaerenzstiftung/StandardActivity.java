@@ -45,7 +45,7 @@ public abstract class StandardActivity extends Activity {
 		this.updateViews();
 	}
 
-	@SuppressWarnings({ "unused" })
+	@SuppressWarnings({ "unused", "deprecation" })
 	@Override
 	protected Dialog onCreateDialog(int id) {
 		Dialogable dialog = (Dialogable) mDialog;
@@ -61,10 +61,15 @@ public abstract class StandardActivity extends Activity {
 		}
 	}
 
-	protected void askYesNo(String prompt, String yes, String no, YesNoable yesNoable) {
-		showDialog(new YesNoDialog(this, prompt, yes, no, yesNoable));
+	public void askYesNo(String title, String message, String yes, String no, YesNoable yesNoable) {
+		showDialog(new YesNoDialog(this, title, message, yes, no, yesNoable));
 	}
 
+	public void askYesNo(String message, String yes, String no, YesNoable yesNoable) {
+		askYesNo(null, message, yes, no, yesNoable);
+	}
+
+	@SuppressWarnings("deprecation")
 	protected void showDialog(Dialogable dia) {
 		Dialog dialog = (Dialog) dia;
 		mDialog = dialog;

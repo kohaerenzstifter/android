@@ -1,13 +1,6 @@
 package org.kohaerenzstiftung;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.security.KeyManagementException;
-import java.security.KeyStore;
-import java.security.KeyStoreException;
-import java.security.NoSuchAlgorithmException;
-import java.security.UnrecoverableKeyException;
-import java.security.cert.CertificateException;
+
 import java.util.List;
 
 import org.apache.http.Header;
@@ -20,9 +13,9 @@ import org.apache.http.client.methods.HttpPost;
 import org.apache.http.client.methods.HttpPut;
 import org.apache.http.client.methods.HttpUriRequest;
 import org.apache.http.conn.scheme.Scheme;
-import org.apache.http.conn.ssl.SSLSocketFactory;
 import org.apache.http.impl.auth.BasicScheme;
 import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.message.BasicHeader;
 import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.params.BasicHttpParams;
 import org.apache.http.params.HttpConnectionParams;
@@ -37,23 +30,24 @@ public class HTTP {
 	public static final int HTTP_PUT = 1;
 	public static final int HTTP_POST = 2;
 	public static final int HTTP_DEL = 3;
+	private static SocketFactory socketFactory;
 
 	public static HttpResponse doHttps(String server, int port, String url,
-			String username, String password,
-			List<BasicNameValuePair> parameters, InputStream instream, String keyStorePw,
+			String username, String password, List<BasicNameValuePair> headers,
+			List<BasicNameValuePair> parameters, TrustChecker trustChecker,
 			int method) throws Throwable {
 
 		HttpResponse result = null;
 		Throwable throwable = null;
 
 		try {
-			DefaultHttpClient httpClient = getHttpClient(instream, keyStorePw, port);
+			DefaultHttpClient httpClient = getHttpClient(port, trustChecker);
 
 			Builder uriBuilder =
 					Uri.parse("https://" + server + ":" + port + "/" + url).buildUpon();
 
 			result = doHttp(httpClient, username, password,
-					uriBuilder, parameters, method);
+					uriBuilder, headers, parameters, method);
 		} catch (Throwable t) {
 			throwable = t;
 		} finally {
@@ -67,20 +61,20 @@ public class HTTP {
 	}
 
 	public static HttpResponse doHttp(String server, int port, String url,
-			String username, String password,
+			String username, String password, List<BasicNameValuePair> headers,
 			List<BasicNameValuePair> parameters, int method) throws Throwable {
 
 		HttpResponse result = null;
 		Throwable throwable = null;
 
 		try {
-			DefaultHttpClient httpClient = getHttpClient(null, null, port);
+			DefaultHttpClient httpClient = getHttpClient(port, null);
 
 			Builder uriBuilder =
 					Uri.parse("http://" + server + ":" + port + "/" + url).buildUpon();
 
 			result =
-					doHttp(httpClient, username, password, uriBuilder, parameters, method);
+					doHttp(httpClient, username, password, uriBuilder, headers, parameters, method);
 		} catch (Throwable t) {
 			throwable = t;
 		} finally {
@@ -95,7 +89,8 @@ public class HTTP {
 
 	private static HttpResponse doHttp(DefaultHttpClient httpClient,
 			String username, String password,
-			Builder uriBuilder, List<BasicNameValuePair> parameters, int method) throws Throwable {
+			Builder uriBuilder, List<BasicNameValuePair> headers,
+			List<BasicNameValuePair> parameters, int method) throws Throwable {
 		HttpResponse result = null;
 		Throwable throwable = null;
 		try {
@@ -128,10 +123,18 @@ public class HTTP {
 			if ((username != null)&&(password != null)) {
 				UsernamePasswordCredentials usernamePasswordCredentials =
 						new UsernamePasswordCredentials(username, password);
-			    BasicScheme basicScheme = new BasicScheme();
-			    Header authorizationHeader =
-			    		basicScheme.authenticate(usernamePasswordCredentials, httpUriRequest);
-			    httpUriRequest.addHeader(authorizationHeader);
+				BasicScheme basicScheme = new BasicScheme();
+				Header authorizationHeader =
+						basicScheme.authenticate(usernamePasswordCredentials, httpUriRequest);
+				httpUriRequest.addHeader(authorizationHeader);
+			}
+
+			if (parameters != null) {
+				for (NameValuePair parameter : parameters) {
+					BasicHeader basicHeader =
+							new BasicHeader(parameter.getName(), parameter.getValue());
+					httpUriRequest.addHeader(basicHeader);
+				}
 			}
 
 			result = httpClient.execute(httpUriRequest);
@@ -147,10 +150,57 @@ public class HTTP {
 		return result;
 	}
 
-	private static DefaultHttpClient getHttpClient(
+
+	private static DefaultHttpClient getHttpClient(int port, TrustChecker trustChecker) throws Throwable  {
+		HttpParams httpParameters = new BasicHttpParams();
+		HttpConnectionParams.setConnectionTimeout(httpParameters, 5000);
+		DefaultHttpClient result = new DefaultHttpClient(httpParameters);
+
+		if (trustChecker != null) {
+			if (socketFactory == null) {
+				socketFactory = new SocketFactory();
+			}
+			socketFactory.setmTrustChecker(trustChecker);
+
+			Scheme scheme = new Scheme("https", socketFactory, port);
+
+			result.getConnectionManager().getSchemeRegistry().register(scheme);
+		}
+
+		return result;		
+	}
+
+	/*public static HttpResponse doHttps(String server, int port, String url,
+			String username, String password,
+			List<BasicNameValuePair> parameters, InputStream instream, String keyStorePw,
+			int method) throws Throwable {
+
+		HttpResponse result = null;
+		Throwable throwable = null;
+
+		try {
+			DefaultHttpClient httpClient = getHttpClient(instream, keyStorePw, port);
+
+			Builder uriBuilder =
+					Uri.parse("https://" + server + ":" + port + "/" + url).buildUpon();
+
+			result = doHttp(httpClient, username, password,
+					uriBuilder, parameters, method);
+		} catch (Throwable t) {
+			throwable = t;
+		} finally {
+		}
+
+		if (throwable != null) {
+			throw throwable;
+		}
+
+		return result;
+	}*/
+
+	/*private static DefaultHttpClient getHttpClient(
 			InputStream instream, String keyStorePw, int port)
-			throws KeyStoreException, IOException, NoSuchAlgorithmException, CertificateException,
-			KeyManagementException, UnrecoverableKeyException {
+			throws Throwable {
 
 		HttpParams httpParameters = new BasicHttpParams();
 		HttpConnectionParams.setConnectionTimeout(httpParameters, 5000);
@@ -162,10 +212,10 @@ public class HTTP {
 
 			SSLSocketFactory socketFactory = new SSLSocketFactory(trustStore);
 			Scheme scheme = new Scheme("https", socketFactory, port);
-			
+
 			result.getConnectionManager().getSchemeRegistry().register(scheme);
 		}
 
 		return result;
-	}
+	}*/
 }

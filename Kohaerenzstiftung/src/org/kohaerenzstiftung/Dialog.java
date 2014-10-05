@@ -3,7 +3,6 @@ package org.kohaerenzstiftung;
 
 import java.util.HashMap;
 
-
 import android.annotation.SuppressLint;
 import android.content.DialogInterface;
 import android.os.Bundle;
@@ -25,6 +24,7 @@ public abstract class Dialog extends android.app.Dialog implements Dialogable {
 	private HashMap<Integer, ContextItemExecutor> mContextItemExecutors =
 			new HashMap<Integer, ContextItemExecutor>();
 	private StandardActivity mActivity;
+	@SuppressWarnings("deprecation")
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
