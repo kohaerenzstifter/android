@@ -24,7 +24,6 @@ import android.appwidget.AppWidgetManager;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.content.res.AssetManager;
 import android.graphics.Bitmap;
 import android.graphics.Bitmap.Config;
 import android.graphics.BitmapFactory;
@@ -293,7 +292,7 @@ public class Helper {
 	}
 
 	private static String doGetFileFromServer(String serverUrl, int port,
-			String username, String password, String url,
+			String username, String url,
 			LinkedList<BasicNameValuePair> parameters, File file, Context context) throws Throwable {
 		Throwable throwable = null;
 		InputStream inputStream = null;
@@ -301,11 +300,13 @@ public class Helper {
 		ArrayList<String> fingerprints = getFingerprints(context);
 		TrustChecker trustChecker = new TrustChecker(fingerprints);
 		String result = null;
+		
 		try {
 			HttpResponse httpResponse = null;
 			SharedPreferences preferences = PreferenceManager
 					.getDefaultSharedPreferences(context);
 			boolean secure = preferences.getBoolean("do_https", false);
+			String password = preferences.getString("password", "");
 			if (secure) {
 				httpResponse =
 						HTTP.doHttps(serverUrl, port, url, username, password,
@@ -562,21 +563,12 @@ public class Helper {
 				PeriodicParameters periodicParameters = getPeriodicParameters(context, widgetId);
 				File cacheDir = context.getCacheDir();
 				screenshotFile = File.createTempFile("screenshot", ".jpg", cacheDir);
-				if (System.currentTimeMillis() < 1420023600000L) {
-					getFileFromServer(context, periodicParameters.mUrl,
-							false, periodicParameters.mDisplayWidth,
-							periodicParameters.mDisplayHeight,
-							periodicParameters.mX, periodicParameters.mWidth,
-							periodicParameters.mY, periodicParameters.mHeight,
-							screenshotFile);
-				} else {
-					AssetManager assets = context.getAssets();
-					assetInputStream = assets.open("pleaseUpdatewwWidget.png");
-					assetBitmap = BitmapFactory.decodeStream(assetInputStream);
-					assetOutputStream = new FileOutputStream(screenshotFile);
-					assetBitmap.compress(Bitmap.CompressFormat.JPEG, 100, assetOutputStream);
-					assetOutputStream.close(); assetOutputStream = null;
-				}
+				getFileFromServer(context, periodicParameters.mUrl,
+						false, periodicParameters.mDisplayWidth,
+						periodicParameters.mDisplayHeight,
+						periodicParameters.mX, periodicParameters.mWidth,
+						periodicParameters.mY, periodicParameters.mHeight,
+						screenshotFile);
 				inputStream = new FileInputStream(screenshotFile);
 				bitmap = BitmapFactory.decodeStream(inputStream);
 
@@ -665,8 +657,7 @@ public class Helper {
 
 			String subUrl = initial ? "initial" : "periodic";
 			result = doGetFileFromServer(server, port,
-					getWwWidgetUsername(), getWwWidgetPassword(),
-					"wwwidget/" + subUrl,
+					getWwWidgetUsername(), "wwwidget/" + subUrl,
 					parameters, screenshotFile, context);
 		} catch (Throwable t) {
 			throwable = t;
@@ -703,46 +694,6 @@ public class Helper {
 		} else {
 			result = serverString;
 		}	
-		return result;
-	}
-
-	private static String getWwWidgetPassword() {
-		char[] charArray = new char[15];
-		for (int i = 0; i < charArray.length; i++) {
-			charArray[i] = getPasswordCharacter(i);
-		}
-		String result = new String(charArray);
-		return result;
-	}
-
-	private static char getPasswordCharacter(int i) {
-		char result = 0;
-		if (i == 0) {
-			result = 'E';
-		} else if (i == 1) {
-			result = 'l';
-		} else if (i == 2) {
-			result = 'J';
-		} else if (i == 4) {
-			result = 'r';
-		} else if (i == 6) {
-			result = 'b';
-		} else if (i == 7) {
-			result = 'e';
-		} else if (i == 8) {
-			result = 'T';
-		} else if (i == 10) {
-			result = 'p';
-		} else if (i == 12) {
-			result = 't';
-		} else if (i == 13) {
-			result = 'i';
-		} else if (i == 14) {
-			result = 'o';
-		} else {
-			result = 'a';
-		}
-
 		return result;
 	}
 

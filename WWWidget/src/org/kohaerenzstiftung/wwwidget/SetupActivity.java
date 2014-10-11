@@ -11,9 +11,11 @@ import org.kohaerenzstiftung.StandardActivity;
 
 import android.appwidget.AppWidgetManager;
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.content.res.Resources;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.DisplayMetrics;
@@ -299,8 +301,10 @@ public class SetupActivity  extends StandardActivity {
 				}
 			}
 		}, bundle);
+	}
 
-
+	protected void doStartPreferenceActivity() {
+		startActivity(PreferenceActivity.class);
 	}
 
 	@Override
@@ -367,17 +371,35 @@ public class SetupActivity  extends StandardActivity {
 	}
 
 	protected void handleOk() {
-		mUrl = mUrlEditText.getText().toString().trim();
+		SharedPreferences preferences = PreferenceManager
+				.getDefaultSharedPreferences(this);
+		String serverString = preferences.getString("server", "");
+		String password = preferences.getString("password", "");
 		Resources resources = getResources();
-		String info = resources.getString(R.string.info);
-		Dialog dialog = new TextInfoDialog(this, info, new Executor() {
 
-			@Override
-			protected void execute() {
-				SetupActivity.this.doHandleOk();
-			}
-		});
-		showDialog(dialog);
+		if (((serverString == null)||(serverString.equals("")))||
+			((password == null)||(password.equals("")))) {
+			String advisory = resources.getString(R.string.advisory);
+			Dialog dialog = new TextInfoDialog(this, advisory, new Executor() {
+
+				@Override
+				protected void execute() {
+					SetupActivity.this.doStartPreferenceActivity();
+				}
+			});
+			showDialog(dialog);
+		} else {
+			mUrl = mUrlEditText.getText().toString().trim();
+			String info = resources.getString(R.string.info);
+			Dialog dialog = new TextInfoDialog(this, info, new Executor() {
+
+				@Override
+				protected void execute() {
+					SetupActivity.this.doHandleOk();
+				}
+			});
+			showDialog(dialog);
+		}
 	}
 
 	protected void doHandleOk() {

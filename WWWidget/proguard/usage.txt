@@ -1,5 +1,3 @@
-android.annotation.SuppressLint
-android.annotation.TargetApi
 android.support.v4.accessibilityservice.AccessibilityServiceInfoCompat
 android.support.v4.accessibilityservice.AccessibilityServiceInfoCompat$AccessibilityServiceInfoIcsImpl
 android.support.v4.accessibilityservice.AccessibilityServiceInfoCompat$AccessibilityServiceInfoStubImpl
@@ -337,10 +335,6 @@ android.support.v4.net.TrafficStatsCompat$TrafficStatsCompatImpl
 android.support.v4.net.TrafficStatsCompatIcs
 android.support.v4.os.ParcelableCompat:
     26:42:public ParcelableCompat()
-android.support.v4.os.ParcelableCompatCreatorHoneycombMR2:
-    36:36:public java.lang.Object createFromParcel(android.os.Parcel)
-    40:40:public java.lang.Object createFromParcel(android.os.Parcel,java.lang.ClassLoader)
-    44:44:public java.lang.Object[] newArray(int)
 android.support.v4.os.ParcelableCompatCreatorHoneycombMR2Stub:
     22:22:ParcelableCompatCreatorHoneycombMR2Stub()
 android.support.v4.util.AtomicFile
@@ -864,8 +858,6 @@ android.support.v4.widget.ViewDragHelper$Callback:
     148:148:public ViewDragHelper$Callback()
 org.kohaerenzstiftung.Activity:
     137:138:protected void startActivityForResult(java.lang.Class,org.kohaerenzstiftung.Activity$ActivityReturner)
-    150:151:protected void startActivity(java.lang.Class)
-    154:159:protected void startActivity(java.lang.Class,android.os.Bundle)
     163:171:protected void startActivity(java.lang.Class,int,android.os.Bundle)
     293:311:protected android.os.Bundle getResultExtras()
 org.kohaerenzstiftung.Activity$ActivityReturner:
@@ -891,7 +883,7 @@ org.kohaerenzstiftung.HTTP:
     public static final int HTTP_PUT
     public static final int HTTP_POST
     public static final int HTTP_DEL
-    34:34:public HTTP()
+    27:27:public HTTP()
 org.kohaerenzstiftung.Language:
     40:43:public Language(java.lang.String,java.lang.String)
     49:61:public static java.util.ArrayList getLanguages()
@@ -916,13 +908,15 @@ org.kohaerenzstiftung.Service$ServiceHandler:
     final synthetic org.kohaerenzstiftung.Service this$0
     19:21:public Service$ServiceHandler(org.kohaerenzstiftung.Service,android.os.Looper)
 org.kohaerenzstiftung.StandardActivity:
-    65:66:protected void askYesNo(java.lang.String,java.lang.String,java.lang.String,org.kohaerenzstiftung.YesNoable)
-    96:98:public void showSoftKeyboard()
+    69:70:public void askYesNo(java.lang.String,java.lang.String,java.lang.String,org.kohaerenzstiftung.YesNoable)
+    101:103:public void showSoftKeyboard()
 org.kohaerenzstiftung.UnknownIso3LanguageException
-org.kohaerenzstiftung.YesNoDialog
-org.kohaerenzstiftung.YesNoDialog$1
-org.kohaerenzstiftung.YesNoDialog$2
-org.kohaerenzstiftung.YesNoable
+org.kohaerenzstiftung.YesNoDialog:
+    36:37:public YesNoDialog(org.kohaerenzstiftung.StandardActivity,java.lang.String,java.lang.String,java.lang.String,org.kohaerenzstiftung.YesNoable)
+    40:41:public void setParams(java.lang.String)
+    60:60:public void saveState(android.os.Bundle)
+org.kohaerenzstiftung.YesNoable:
+    13:13:public android.os.Bundle getmExtras()
 org.kohaerenzstiftung.game.ContextItemExecutor
 org.kohaerenzstiftung.game.ContextMenuCreator
 org.kohaerenzstiftung.game.Finger:
@@ -990,7 +984,6 @@ org.kohaerenzstiftung.game.ordinary.Graphics
 org.kohaerenzstiftung.wwwidget.BuildConfig
 org.kohaerenzstiftung.wwwidget.Helper:
     public static final int STANDARD_LENGTH
-    public static final java.lang.String STANDARD_SERVER
     public static final int STANDARD_PORT
     40:40:public Helper()
 org.kohaerenzstiftung.wwwidget.MainActivity:

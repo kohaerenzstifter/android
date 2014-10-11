@@ -19,5 +19,8 @@
     <string name="server_certificate">Server certificate</string>
     <string name="do_https">Secure connection (HTTPS)</string>
     <string name="do_https2">Connect to server via HTTPS instead of HTTP.</string>
+    <string name="password">Password</string>
+    <string name="password2">The password used for authentication with the server.</string>
+    <string name="advisory">Server and Password must be set first!</string>
 
 </resources>
