@@ -301,9 +301,6 @@ public class PromptActivity extends EditEntryStarterActivity {
 		private boolean formHasAttributes(DenominationForm denominationForm,
 				LinkedList<FormAttribute> attributes) {
 			LinkedList<FormAttribute> fas = denominationForm.getmFormAttributes();
-			if (fas.size() != attributes.size()) {
-				return false;
-			}
 			for (FormAttribute formAttribute : attributes) {
 				if (!fas.contains(formAttribute)) {
 					return false;
