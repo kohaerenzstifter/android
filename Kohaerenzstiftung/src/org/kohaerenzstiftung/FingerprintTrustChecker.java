@@ -1,4 +1,4 @@
-package org.kohaerenzstiftung.wwwidget;
+package org.kohaerenzstiftung;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
@@ -6,10 +6,10 @@ import java.security.cert.CertificateException;
 import java.security.cert.X509Certificate;
 import java.util.ArrayList;
 
-class TrustChecker extends org.kohaerenzstiftung.TrustChecker {
+public class FingerprintTrustChecker extends org.kohaerenzstiftung.TrustChecker {
 
 	private ArrayList<String> mFingerprints = null;
-	public String mFingerprint = null;
+	private String mFingerprint = null;
 	@Override
 	public void checkServerTrusted(X509Certificate[] chain, String authType)
 			throws java.security.cert.CertificateException {
@@ -52,6 +52,12 @@ class TrustChecker extends org.kohaerenzstiftung.TrustChecker {
 		
 	}
 
+	public String getFingerprint() {
+		String result = mFingerprint;
+		mFingerprint = null;
+		return result;
+	}
+
 	private static String hexify(byte[] digest) {
 		char[] hexDigits = {'0', '1', '2', '3', '4', '5', '6', '7', 
 				'8', '9', 'a', 'b', 'c', 'd', 'e', 'f'};
@@ -66,9 +72,9 @@ class TrustChecker extends org.kohaerenzstiftung.TrustChecker {
 		return buf.toString();
 	}
 
-	public TrustChecker(ArrayList<String> fingerprints) {
+	public FingerprintTrustChecker(ArrayList<String> fingerprints) {
 		super();
-		this.mFingerprints = fingerprints;
+		mFingerprints = fingerprints;
 	}
 	
 }

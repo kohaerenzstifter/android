@@ -18,6 +18,7 @@ import org.apache.http.HttpResponse;
 import org.apache.http.HttpStatus;
 import org.apache.http.message.BasicNameValuePair;
 import org.kohaerenzstiftung.HTTP;
+import org.kohaerenzstiftung.FingerprintTrustChecker;
 
 import android.app.PendingIntent;
 import android.appwidget.AppWidgetManager;
@@ -298,7 +299,7 @@ public class Helper {
 		InputStream inputStream = null;
 		FileOutputStream outputStream = null;
 		ArrayList<String> fingerprints = getFingerprints(context);
-		TrustChecker trustChecker = new TrustChecker(fingerprints);
+		FingerprintTrustChecker fingerprintTrustChecker = new FingerprintTrustChecker(fingerprints);
 		String result = null;
 		
 		try {
@@ -310,12 +311,13 @@ public class Helper {
 			if (secure) {
 				httpResponse =
 						HTTP.doHttps(serverUrl, port, url, username, password,
-								parameters, null, trustChecker,
+								parameters, null, fingerprintTrustChecker, null,
 								org.kohaerenzstiftung.HTTP.HTTP_GET);
 			} else {
 				httpResponse =
 						HTTP.doHttp(serverUrl, port, url, username, password,
-								parameters, null, org.kohaerenzstiftung.HTTP.HTTP_GET);
+								parameters, null, null,
+								org.kohaerenzstiftung.HTTP.HTTP_GET);
 			}
 			int code = httpResponse.getStatusLine().getStatusCode();
 			if (code != HttpStatus.SC_OK) {
@@ -331,7 +333,7 @@ public class Helper {
 				outputStream.write(buffer, 0, length);
 			}
 		} catch (Throwable t) {
-			result = trustChecker.mFingerprint;
+			result = fingerprintTrustChecker.getFingerprint();
 			throwable = t;
 		} finally {
 			if (inputStream != null) {

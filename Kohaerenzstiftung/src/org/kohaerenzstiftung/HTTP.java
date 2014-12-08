@@ -13,6 +13,7 @@ import org.apache.http.client.methods.HttpPost;
 import org.apache.http.client.methods.HttpPut;
 import org.apache.http.client.methods.HttpUriRequest;
 import org.apache.http.conn.scheme.Scheme;
+import org.apache.http.entity.AbstractHttpEntity;
 import org.apache.http.impl.auth.BasicScheme;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.message.BasicHeader;
@@ -35,7 +36,7 @@ public class HTTP {
 	public static HttpResponse doHttps(String server, int port, String url,
 			String username, String password, List<BasicNameValuePair> headers,
 			List<BasicNameValuePair> parameters, TrustChecker trustChecker,
-			int method) throws Throwable {
+			AbstractHttpEntity entity, int method) throws Throwable {
 
 		HttpResponse result = null;
 		Throwable throwable = null;
@@ -47,7 +48,7 @@ public class HTTP {
 					Uri.parse("https://" + server + ":" + port + "/" + url).buildUpon();
 
 			result = doHttp(httpClient, username, password,
-					uriBuilder, headers, parameters, method);
+					uriBuilder, headers, parameters, entity, method);
 		} catch (Throwable t) {
 			throwable = t;
 		} finally {
@@ -62,7 +63,8 @@ public class HTTP {
 
 	public static HttpResponse doHttp(String server, int port, String url,
 			String username, String password, List<BasicNameValuePair> headers,
-			List<BasicNameValuePair> parameters, int method) throws Throwable {
+			List<BasicNameValuePair> parameters, AbstractHttpEntity entity,
+			int method) throws Throwable {
 
 		HttpResponse result = null;
 		Throwable throwable = null;
@@ -74,7 +76,7 @@ public class HTTP {
 					Uri.parse("http://" + server + ":" + port + "/" + url).buildUpon();
 
 			result =
-					doHttp(httpClient, username, password, uriBuilder, headers, parameters, method);
+					doHttp(httpClient, username, password, uriBuilder, headers, parameters, entity, method);
 		} catch (Throwable t) {
 			throwable = t;
 		} finally {
@@ -90,7 +92,7 @@ public class HTTP {
 	private static HttpResponse doHttp(DefaultHttpClient httpClient,
 			String username, String password,
 			Builder uriBuilder, List<BasicNameValuePair> headers,
-			List<BasicNameValuePair> parameters, int method) throws Throwable {
+			List<BasicNameValuePair> parameters, AbstractHttpEntity entity, int method) throws Throwable {
 		HttpResponse result = null;
 		Throwable throwable = null;
 		try {
@@ -105,16 +107,26 @@ public class HTTP {
 			HttpUriRequest httpUriRequest = null;
 			switch (method) {
 			case HTTP_GET:
-				httpUriRequest = new HttpGet(uri);
+				HttpGet httpGet = new HttpGet(uri);
+				httpUriRequest = httpGet;
 				break;
 			case HTTP_PUT:
-				httpUriRequest = new HttpPut(uri);
+				HttpPut httpPut = new HttpPut(uri);
+				if (entity != null) {
+					httpPut.setEntity(entity);
+				}
+				httpUriRequest = httpPut;
 				break;
 			case HTTP_POST:
-				httpUriRequest = new HttpPost(uri);
+				HttpPost httpPost = new HttpPost(uri);
+				if (entity != null) {
+					httpPost.setEntity(entity);
+				}
+				httpUriRequest = httpPost;
 				break;
 			case HTTP_DEL:
-				httpUriRequest = new HttpDelete(uri);
+				HttpDelete httpDelete = new HttpDelete(uri);
+				httpUriRequest = httpDelete;
 				break;
 			default:
 				throw new Exception("unknown HTTP method: " + method);
@@ -129,10 +141,10 @@ public class HTTP {
 				httpUriRequest.addHeader(authorizationHeader);
 			}
 
-			if (parameters != null) {
-				for (NameValuePair parameter : parameters) {
+			if (headers != null) {
+				for (NameValuePair header : headers) {
 					BasicHeader basicHeader =
-							new BasicHeader(parameter.getName(), parameter.getValue());
+							new BasicHeader(header.getName(), header.getValue());
 					httpUriRequest.addHeader(basicHeader);
 				}
 			}

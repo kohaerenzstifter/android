@@ -1,19 +1,15 @@
 package org.kohaerenzstiftung.wwwidget;
 
-import java.io.BufferedWriter;
 import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
 
+import org.kohaerenzstiftung.AsyncTaskResult;
 import org.kohaerenzstiftung.Dialog;
-import org.kohaerenzstiftung.Dialogable;
+import org.kohaerenzstiftung.HTTPServerRequest;
 import org.kohaerenzstiftung.StandardActivity;
 
 import android.appwidget.AppWidgetManager;
-import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.res.Resources;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.text.Editable;
@@ -29,65 +25,74 @@ import android.widget.Toast;
 
 public class SetupActivity  extends StandardActivity {
 
-	public class YesNoable extends org.kohaerenzstiftung.YesNoable {
-
-		public YesNoable(Bundle extras, String fingerprint, String url) {
-			super(extras);
-			this.mFingerprint = fingerprint;
-			this.mUrl = url;
-		}
-
-		private String mFingerprint;
-		private String mUrl;
-
-		private void trustServer(String fingerprint) {
-			BufferedWriter bufferedWriter = null;
-			FileWriter fileWriter = null;
-
-			try {
-				File filesDir = getFilesDir();
-				String path = filesDir.getAbsoluteFile() + File.separator + "fingerprints";
-				fileWriter = new FileWriter(path, true);
-				bufferedWriter = new BufferedWriter(fileWriter);
-				bufferedWriter.write(fingerprint);
-				bufferedWriter.newLine();
-			} catch (Throwable t) {
-				t.printStackTrace();
-			} finally {
-				if (bufferedWriter != null) {
-					try {
-						bufferedWriter.close();
-					} catch (IOException e) {
-						e.printStackTrace();
-					}
-				}
-				if (fileWriter != null) {
-					try {
-						fileWriter.close();
-					} catch (IOException e) {
-						e.printStackTrace();
-					}
-				}
-			}
-
-		}
-
-		@Override
-		public void yes(int dialogId) {
-			trustServer(mFingerprint);
-			new GetInitialAsyncTask().execute(mUrl);
-		}
-
-		@Override
-		public void no(int dialogId) {			
-		}
-
-	}
-
 	public abstract class Executor {
 		protected abstract void execute();
 	}
 
+	private HTTPServerRequest mHttpServerRequest;
+	private Runnable mGetScreenshotSuccessfulRunnable = new Runnable() {
+
+		@Override
+		public void run() {
+			SetupActivity.this.startMainActivity(Helper.getInitialDirPath(SetupActivity.this));
+		}
+	};
+	private Runnable mGetScreenshotCancelledRunnable = new Runnable() {
+
+		@Override
+		public void run() {
+			//TODO
+		}
+	};
+	private HTTPServerRequest.Worker mGetScreenshotWorker = new HTTPServerRequest.Worker() {
+
+		@Override
+		public AsyncTaskResult work() {
+			AsyncTaskResult result = new AsyncTaskResult();
+			String fingerprint = null;
+			Throwable throwable = null;
+			try {
+				DisplayMetrics displaymetrics = new DisplayMetrics();
+				getWindowManager().getDefaultDisplay().getMetrics(displaymetrics);
+				SetupActivity.this.mDisplayWidth = displaymetrics.widthPixels;
+				SetupActivity.this.mDisplayHeight = displaymetrics.heightPixels;
+				fingerprint = Helper.getInitial(mUrl, SetupActivity.this.mDisplayWidth,
+						SetupActivity.this.mDisplayHeight, SetupActivity.this);
+			} catch (Throwable t) {
+				throwable = t;
+			}
+
+			result.setThrowable(throwable);
+			result.setFingerprint(fingerprint);
+
+			return result;
+		}
+		
+	};
+	private HTTPServerRequest.ThrowableRunnable mGetScreenshotFailedRunnable =
+			new HTTPServerRequest.ThrowableRunnable() {
+
+				private Throwable mThrowable;
+
+				@Override
+				public void run() {
+					String message = mThrowable.getMessage();
+					String text;
+					if (message != null) {
+						text = mThrowable.getClass().getName() + ": " + message;
+					} else {
+						text = mThrowable.getClass().getName();
+					}
+					Toast.makeText(SetupActivity.this,
+							text, Toast.LENGTH_LONG).show();	
+				}
+
+				@Override
+				public void setThrowable(Throwable throwable) {
+					mThrowable = throwable;
+				}
+		
+	};
 	public String mInfo;
 
 	public class TextInfoDialog extends Dialog {
@@ -138,126 +143,8 @@ public class SetupActivity  extends StandardActivity {
 
 	}
 
-	public class ProgressDialog extends android.app.ProgressDialog implements Dialogable {
-
-		private int mDialogId;
-
-		public ProgressDialog(Context context) {
-			super(context);
-			setProgressStyle(ProgressDialog.STYLE_SPINNER);
-			setIndeterminate(true);
-			setProgress(0);
-			setCancelable(false);
-		}
-
-		@Override
-		public void setDialogId(int dialogId) {
-			this.mDialogId = dialogId;
-		}
-
-		@Override
-		public void onDismiss() {
-		}
-
-		@Override
-		public int getDialogId() {
-			return this.mDialogId;
-		}
-
-	}
-
 	public int mDisplayWidth;
 	public int mDisplayHeight;
-
-	public class GetInitialAsyncTaskResult {
-
-		public Throwable mThrowable;
-		public String mFingerprint;
-
-	}
-
-	public class GetInitialAsyncTask extends
-	AsyncTask<String, Void, GetInitialAsyncTaskResult> {
-
-		private org.kohaerenzstiftung.wwwidget.SetupActivity.ProgressDialog mProgressDialog;
-
-		@Override
-		protected void onCancelled() {
-			super.onCancelled();
-			if (mProgressDialog != null) {
-				mProgressDialog.dismiss();
-			}
-			mProgressDialog = null;
-		}
-
-		private void askIfServerTrusted(String fingerprint, org.kohaerenzstiftung.YesNoable yesNoable) {
-			Resources resources = getResources();
-			String ok = resources.getString(R.string.ok);
-			String cancel = resources.getString(R.string.cancel);
-			String serverCertificate = resources.getString(R.string.server_certificate);
-
-			askYesNo(serverCertificate, fingerprint, ok, cancel, yesNoable);
-		}
-
-		@Override
-		protected void onPostExecute(GetInitialAsyncTaskResult result) {
-			super.onPostExecute(result);
-			if (mProgressDialog != null) {
-				mProgressDialog.dismiss();
-			}
-			mProgressDialog = null;
-			if (result == null) {
-				SetupActivity.this.startMainActivity(Helper.getInitialDirPath(SetupActivity.this));
-			} else if (result.mFingerprint != null) {
-				YesNoable yesNoable = new YesNoable(null, result.mFingerprint, mUrl);
-				askIfServerTrusted(result.mFingerprint, yesNoable);
-			} else if (result.mThrowable != null) {
-				String message = result.mThrowable.getMessage();
-				String text;
-				if (message != null) {
-					text = result.getClass().getName() + ": " + message;
-				} else {
-					text = result.getClass().getName();
-				}
-				Toast.makeText(SetupActivity.this,
-						text, Toast.LENGTH_LONG).show();	
-			}
-		}
-
-		@Override
-		protected void onPreExecute() {
-			super.onPreExecute();
-			SetupActivity.this.showDialog(mProgressDialog =
-					new ProgressDialog(SetupActivity.this));
-		}
-
-		@Override
-		protected GetInitialAsyncTaskResult doInBackground(String... params) {
-			mUrl = params[0];
-			GetInitialAsyncTaskResult result = null;
-			String fingerprint = null;
-			Throwable throwable = null;
-			try {
-				DisplayMetrics displaymetrics = new DisplayMetrics();
-				getWindowManager().getDefaultDisplay().getMetrics(displaymetrics);
-				SetupActivity.this.mDisplayWidth = displaymetrics.widthPixels;
-				SetupActivity.this.mDisplayHeight = displaymetrics.heightPixels;
-				fingerprint = Helper.getInitial(mUrl, SetupActivity.this.mDisplayWidth,
-						SetupActivity.this.mDisplayHeight, SetupActivity.this);
-			} catch (Throwable t) {
-				throwable = t;
-			}
-
-			if ((throwable != null)||(fingerprint != null)) {
-				result = new GetInitialAsyncTaskResult();
-				result.mThrowable = throwable;
-				result.mFingerprint = fingerprint;
-			}
-
-			return result;
-		}
-
-	}
 
 	private EditText mUrlEditText;
 	private Button mOkButton;
@@ -402,8 +289,16 @@ public class SetupActivity  extends StandardActivity {
 		}
 	}
 
-	protected void doHandleOk() {
-		new GetInitialAsyncTask().execute(mUrl);
+	protected void doHandleOk() {	
+		if (mHttpServerRequest == null) {
+			String pathToFingerprints =
+					getFilesDir().getAbsoluteFile() + File.separator + "fingerprints";
+			mHttpServerRequest = new HTTPServerRequest(this,
+					mGetScreenshotSuccessfulRunnable, mGetScreenshotCancelledRunnable, 
+					mGetScreenshotWorker, mGetScreenshotFailedRunnable, pathToFingerprints,
+					R.string.ok, R.string.cancel, R.string.server_certificate);
+		}
+		mHttpServerRequest.execute();
 	}
 
 	protected void handleResult(Bundle bundle) {
