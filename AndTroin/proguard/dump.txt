@@ -431,12 +431,11 @@ Methods (count = 3):
       Code attribute exceptions (count = 1):
       - ExceptionInfo (8 -> 85: 85):
       Code attribute attributes (attribute count = 1):
-      + Stack map table attribute (count = 6):
+      + Stack map table attribute (count = 5):
         - [32] Var: ...[a:android/os/Parcel][a:android/os/Parcel], Stack: (empty)
         - [37] Var: ..., Stack: (empty)
         - [79] Var: ..., Stack: (empty)
-        - [82] Var: ...[a:android/os/Bundle], Stack: (empty)
-        - [85] Var: [a:a/a/a/a/c][a:android/os/Bundle][a:android/os/Parcel][a:android/os/Parcel], Stack: [a:java/lang/Throwable]
+        - [85] Var: ..., Stack: [a:java/lang/Throwable]
         - [98] Var: ...[a:android/os/Bundle], Stack: (empty)
 
 Class file attributes (count = 0):
@@ -1012,10 +1011,9 @@ Methods (count = 30):
       [94] return
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 1):
-      + Stack map table attribute (count = 5):
+      + Stack map table attribute (count = 4):
         - [16] Var: ..., Stack: (empty)
         - [62] Var: [a:org/kohaerenzstiftung/a][a:org/kohaerenzstiftung/d][a:android/content/Intent][a:java/lang/String][a:android/os/Bundle], Stack: 
-        - [85] Var: ..., Stack: (empty)
         - [88] Var: ..., Stack: (empty)
         - [94] Var: ..., Stack: (empty)
   + Method:       a(Ljava/lang/Throwable;)V
@@ -3484,8 +3482,7 @@ Methods (count = 10):
       [41] return
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 1):
-      + Stack map table attribute (count = 4):
-        - [19] Var: ..., Stack: (empty)
+      + Stack map table attribute (count = 3):
         - [22] Var: ..., Stack: (empty)
         - [36] Var: ...[a:android/text/method/KeyListener], Stack: (empty)
         - [41] Var: -1, Stack: (empty)
@@ -4773,7 +4770,7 @@ _____________________________________________________________________
 
 Interfaces (count = 0):
 
-Constant Pool (count = 146):
+Constant Pool (count = 148):
   + Class [android/view/ContextMenu$ContextMenuInfo]
   + Class [android/view/View]
   + Class [android/view/ViewTreeObserver]
@@ -4814,7 +4811,7 @@ Constant Pool (count = 146):
   + Methodref [org/kohaerenzstiftung/t.<init> (Lorg/kohaerenzstiftung/ListView;)V]
   + Methodref [org/kohaerenzstiftung/u.<init> (Lorg/kohaerenzstiftung/ListView;)V]
   + Methodref [org/kohaerenzstiftung/v.<init> (Lorg/kohaerenzstiftung/ListView;)V]
-  + Methodref [org/kohaerenzstiftung/w.<init> (Lorg/kohaerenzstiftung/ListView;)V]
+  + Methodref [org/kohaerenzstiftung/w.<init> (Lorg/kohaerenzstiftung/ListView;Lorg/kohaerenzstiftung/ListView;)V]
   + Methodref [org/kohaerenzstiftung/x.<init> (Lorg/kohaerenzstiftung/ListView;)V]
   + Methodref [org/kohaerenzstiftung/y.<init> (Lorg/kohaerenzstiftung/ListView;Landroid/content/Context;Landroid/util/AttributeSet;)V]
   + Methodref [org/kohaerenzstiftung/y.a ()Landroid/view/ContextMenu$ContextMenuInfo;]
@@ -4833,6 +4830,7 @@ Constant Pool (count = 146):
   + NameAndType [<init> (Lorg/kohaerenzstiftung/ListView;)V]
   + NameAndType [<init> (Lorg/kohaerenzstiftung/ListView;Landroid/content/Context;Landroid/util/AttributeSet;)V]
   + NameAndType [<init> (Lorg/kohaerenzstiftung/ListView;Landroid/view/View;Lorg/kohaerenzstiftung/aa;)V]
+  + NameAndType [<init> (Lorg/kohaerenzstiftung/ListView;Lorg/kohaerenzstiftung/ListView;)V]
   + NameAndType [a ()Landroid/view/ContextMenu$ContextMenuInfo;]
   + NameAndType [a ()V]
   + NameAndType [a Z]
@@ -4875,6 +4873,7 @@ Constant Pool (count = 146):
   + Utf8 [(Lorg/kohaerenzstiftung/ListView;)V]
   + Utf8 [(Lorg/kohaerenzstiftung/ListView;Landroid/content/Context;Landroid/util/AttributeSet;)V]
   + Utf8 [(Lorg/kohaerenzstiftung/ListView;Landroid/view/View;Lorg/kohaerenzstiftung/aa;)V]
+  + Utf8 [(Lorg/kohaerenzstiftung/ListView;Lorg/kohaerenzstiftung/ListView;)V]
   + Utf8 [<init>]
   + Utf8 [Code]
   + Utf8 [Landroid/view/View;]
@@ -5093,7 +5092,7 @@ Methods (count = 10):
     Access flags: 0x1
       = public void a(android.view.View)
     Class member attributes (count = 1):
-    + Code attribute instructions (code length = 91, locals = 3, stack = 8):
+    + Code attribute instructions (code length = 92, locals = 3, stack = 9):
       [0] aload_0 v0
       [1] iconst_1
       [2] putfield #22
@@ -5133,36 +5132,37 @@ Methods (count = 10):
         + Class [org/kohaerenzstiftung/w]
       [48] dup
       [49] aload_0 v0
-      [50] invokespecial #41
-        + Methodref [org/kohaerenzstiftung/w.<init> (Lorg/kohaerenzstiftung/ListView;)V]
-      [53] invokespecial #53
+      [50] aload_0 v0
+      [51] invokespecial #41
+        + Methodref [org/kohaerenzstiftung/w.<init> (Lorg/kohaerenzstiftung/ListView;Lorg/kohaerenzstiftung/ListView;)V]
+      [54] invokespecial #53
         + Methodref [org/kohaerenzstiftung/z.<init> (Lorg/kohaerenzstiftung/ListView;Landroid/view/View;Lorg/kohaerenzstiftung/aa;)V]
-      [56] invokevirtual #25
+      [57] invokevirtual #25
         + Methodref [android/view/ViewTreeObserver.addOnGlobalLayoutListener (Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V]
-      [59] aload_0 v0
-      [60] getfield #20
+      [60] aload_0 v0
+      [61] getfield #20
         + Fieldref [org/kohaerenzstiftung/ListView.d Landroid/widget/ListView;]
-      [63] aload_1 v1
-      [64] invokevirtual #31
+      [64] aload_1 v1
+      [65] invokevirtual #31
         + Methodref [android/widget/ListView.addHeaderView (Landroid/view/View;)V]
-      [67] aload_0 v0
-      [68] getfield #20
+      [68] aload_0 v0
+      [69] getfield #20
         + Fieldref [org/kohaerenzstiftung/ListView.d Landroid/widget/ListView;]
-      [71] new #14
+      [72] new #14
         + Class [org/kohaerenzstiftung/x]
-      [74] dup
-      [75] aload_0 v0
-      [76] invokespecial #42
+      [75] dup
+      [76] aload_0 v0
+      [77] invokespecial #42
         + Methodref [org/kohaerenzstiftung/x.<init> (Lorg/kohaerenzstiftung/ListView;)V]
-      [79] invokevirtual #32
+      [80] invokevirtual #32
         + Methodref [android/widget/ListView.setAdapter (Landroid/widget/ListAdapter;)V]
-      [82] aload_0 v0
-      [83] invokevirtual #36
+      [83] aload_0 v0
+      [84] invokevirtual #36
         + Methodref [org/kohaerenzstiftung/ListView.removeAllViews ()V]
-      [86] aload_0 v0
-      [87] invokespecial #34
+      [87] aload_0 v0
+      [88] invokespecial #34
         + Methodref [org/kohaerenzstiftung/ListView.a ()V]
-      [90] return
+      [91] return
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 0):
   + Method:       a()V
@@ -5518,7 +5518,7 @@ _____________________________________________________________________
 
 Interfaces (count = 0):
 
-Constant Pool (count = 19):
+Constant Pool (count = 20):
   + Class [org/kohaerenzstiftung/ListView]
   + Class [org/kohaerenzstiftung/aa]
   + Class [org/kohaerenzstiftung/w]
@@ -5530,6 +5530,7 @@ Constant Pool (count = 19):
   + NameAndType [a Lorg/kohaerenzstiftung/ListView;]
   + Utf8 [(II)V]
   + Utf8 [(Lorg/kohaerenzstiftung/ListView;)V]
+  + Utf8 [(Lorg/kohaerenzstiftung/ListView;Lorg/kohaerenzstiftung/ListView;)V]
   + Utf8 [<init>]
   + Utf8 [Code]
   + Utf8 [Lorg/kohaerenzstiftung/ListView;]
@@ -5544,13 +5545,13 @@ Fields (count = 1):
       = final synthetic org.kohaerenzstiftung.ListView a
 
 Methods (count = 2):
-  - Method:       <init>(Lorg/kohaerenzstiftung/ListView;)V
+  - Method:       <init>(Lorg/kohaerenzstiftung/ListView;Lorg/kohaerenzstiftung/ListView;)V
     Access flags: 0x0
-      = w(org.kohaerenzstiftung.ListView)
+      = w(org.kohaerenzstiftung.ListView,org.kohaerenzstiftung.ListView)
     Class member attributes (count = 1):
-    + Code attribute instructions (code length = 11, locals = 2, stack = 2):
+    + Code attribute instructions (code length = 11, locals = 3, stack = 2):
       [0] aload_0 v0
-      [1] aload_1 v1
+      [1] aload_2 v2
       [2] putfield #4
         + Fieldref [org/kohaerenzstiftung/w.a Lorg/kohaerenzstiftung/ListView;]
       [5] aload_0 v0
@@ -9127,9 +9128,8 @@ Methods (count = 85):
       - ExceptionInfo (126 -> 284: 287):
       + Class [java/lang/Exception]
       Code attribute attributes (attribute count = 1):
-      + Stack map table attribute (count = 14):
-        - [70] Var: ...[a:java/lang/String], Stack: (empty)
-        - [73] Var: ..., Stack: (empty)
+      + Stack map table attribute (count = 11):
+        - [73] Var: ...[a:java/lang/String], Stack: (empty)
         - [100] Var: ..., Stack: (empty)
         - [187] Var: [a:org/kohaerenzstiftung/andtroin/AndtroinService][a:android/content/Intent][i][i][a:java/lang/String][a:java/lang/String][a:java/lang/String][i][a:org/json/JSONObject][l][a:org/json/JSONArray][i][i], Stack: 
         - [239] Var: ...[a:org/json/JSONObject][i][a:java/lang/String], Stack: (empty)
@@ -9137,9 +9137,7 @@ Methods (count = 85):
         - [254] Var: ..., Stack: [i]
         - [264] Var: -3, Stack: (empty)
         - [267] Var: ..., Stack: (empty)
-        - [274] Var: [a:org/kohaerenzstiftung/andtroin/AndtroinService][a:android/content/Intent][i][i][a:java/lang/String][a:java/lang/String][a:java/lang/String][i], Stack: 
-        - [277] Var: ..., Stack: [a:org/json/JSONException]
-        - [284] Var: ..., Stack: (empty)
+        - [277] Var: [a:org/kohaerenzstiftung/andtroin/AndtroinService][a:android/content/Intent][i][i][a:java/lang/String][a:java/lang/String][a:java/lang/String][i], Stack: [a:org/json/JSONException]
         - [287] Var: [a:org/kohaerenzstiftung/andtroin/AndtroinService][a:android/content/Intent][i][i][a:java/lang/String][a:java/lang/String][a:java/lang/String], Stack: [a:java/lang/Exception]
         - [294] Var: -3, Stack: (empty)
   + Method:       a(Ljava/lang/String;Ljava/lang/String;)Z
@@ -14606,9 +14604,8 @@ Methods (count = 213):
       - ExceptionInfo (30 -> 34: 37):
       + Class [org/kohaerenzstiftung/andtroin/q]
       Code attribute attributes (attribute count = 1):
-      + Stack map table attribute (count = 6):
+      + Stack map table attribute (count = 5):
         - [18] Var: ..., Stack: [a:org/kohaerenzstiftung/andtroin/q]
-        - [25] Var: ..., Stack: (empty)
         - [28] Var: ..., Stack: [a:java/io/IOException]
         - [37] Var: [a:org/kohaerenzstiftung/andtroin/Database][a:org/kohaerenzstiftung/andtroin/List][a:java/io/BufferedReader][a:org/kohaerenzstiftung/andtroin/la][a:java/io/IOException], Stack: [a:org/kohaerenzstiftung/andtroin/q]
         - [44] Var: ..., Stack: (empty)
@@ -14687,12 +14684,11 @@ Methods (count = 213):
       - ExceptionInfo (79 -> 83: 86):
       + Class [org/kohaerenzstiftung/andtroin/q]
       Code attribute attributes (attribute count = 1):
-      + Stack map table attribute (count = 9):
+      + Stack map table attribute (count = 8):
         - [32] Var: ...[a:java/lang/Exception][i], Stack: (empty)
         - [51] Var: ..., Stack: [a:java/lang/Exception]
         - [57] Var: ..., Stack: (empty)
         - [69] Var: ..., Stack: [a:org/kohaerenzstiftung/andtroin/q]
-        - [76] Var: ..., Stack: (empty)
         - [79] Var: ..., Stack: (empty)
         - [86] Var: ..., Stack: [a:org/kohaerenzstiftung/andtroin/q]
         - [93] Var: ..., Stack: (empty)
@@ -15758,12 +15754,11 @@ Methods (count = 213):
       - ExceptionInfo (23 -> 29: 32):
       + Class [java/lang/InterruptedException]
       Code attribute attributes (attribute count = 1):
-      + Stack map table attribute (count = 5):
+      + Stack map table attribute (count = 4):
         - [0] Var: ..., Stack: (empty)
         - [22] Var: ..., Stack: [a:java/lang/Exception]
         - [32] Var: [a:org/kohaerenzstiftung/andtroin/Database][a:java/lang/Exception], Stack: [a:java/lang/InterruptedException]
-        - [37] Var: -1, Stack: (empty)
-        - [40] Var: ..., Stack: (empty)
+        - [40] Var: -1, Stack: (empty)
   + Method:       a(Landroid/content/Context;)V
     Access flags: 0x1
       = public void a(android.content.Context)
@@ -20656,12 +20651,10 @@ Methods (count = 213):
       - ExceptionInfo (202 -> 206: 209):
       + Class [org/kohaerenzstiftung/andtroin/q]
       Code attribute attributes (attribute count = 1):
-      + Stack map table attribute (count = 8):
+      + Stack map table attribute (count = 6):
         - [53] Var: ...[i][i][i], Stack: (empty)
-        - [126] Var: -1, Stack: (empty)
-        - [129] Var: ..., Stack: (empty)
-        - [192] Var: ...[i][i][i], Stack: (empty)
-        - [195] Var: ..., Stack: (empty)
+        - [129] Var: -1, Stack: (empty)
+        - [195] Var: ...[i][i][i], Stack: (empty)
         - [202] Var: [a:org/kohaerenzstiftung/andtroin/Database][i][i], Stack: 
         - [209] Var: ..., Stack: [a:org/kohaerenzstiftung/andtroin/q]
         - [214] Var: ..., Stack: (empty)
@@ -26544,9 +26537,8 @@ Methods (count = 213):
       - ExceptionInfo (30 -> 34: 37):
       + Class [org/kohaerenzstiftung/andtroin/q]
       Code attribute attributes (attribute count = 1):
-      + Stack map table attribute (count = 6):
+      + Stack map table attribute (count = 5):
         - [18] Var: ..., Stack: [a:org/kohaerenzstiftung/andtroin/q]
-        - [25] Var: ..., Stack: (empty)
         - [28] Var: ..., Stack: [a:java/io/IOException]
         - [37] Var: [a:org/kohaerenzstiftung/andtroin/Database][a:org/kohaerenzstiftung/andtroin/List][a:java/io/DataInputStream][a:org/kohaerenzstiftung/andtroin/la][a:java/io/IOException], Stack: [a:org/kohaerenzstiftung/andtroin/q]
         - [44] Var: ..., Stack: (empty)
@@ -31480,7 +31472,7 @@ _____________________________________________________________________
 
 Interfaces (count = 0):
 
-Constant Pool (count = 445):
+Constant Pool (count = 447):
   + Integer [-16777216]
   + Integer [2130903042]
   + Integer [2131034149]
@@ -31638,9 +31630,9 @@ Constant Pool (count = 445):
   + Methodref [org/kohaerenzstiftung/andtroin/a.onKeyDown (ILandroid/view/KeyEvent;)Z]
   + Methodref [org/kohaerenzstiftung/andtroin/aa.<init> (Lorg/kohaerenzstiftung/andtroin/DenominationActivity;Lorg/kohaerenzstiftung/a;Landroid/os/Bundle;)V]
   + Methodref [org/kohaerenzstiftung/andtroin/ab.<init> (Lorg/kohaerenzstiftung/andtroin/DenominationActivity;Lorg/kohaerenzstiftung/a;Landroid/os/Bundle;)V]
-  + Methodref [org/kohaerenzstiftung/andtroin/ac.<init> (Lorg/kohaerenzstiftung/andtroin/DenominationActivity;I)V]
+  + Methodref [org/kohaerenzstiftung/andtroin/ac.<init> (Lorg/kohaerenzstiftung/andtroin/DenominationActivity;Lorg/kohaerenzstiftung/andtroin/DenominationActivity;I)V]
   + Methodref [org/kohaerenzstiftung/andtroin/ad.<init> (Lorg/kohaerenzstiftung/andtroin/DenominationActivity;)V]
-  + Methodref [org/kohaerenzstiftung/andtroin/ae.<init> (Lorg/kohaerenzstiftung/andtroin/DenominationActivity;)V]
+  + Methodref [org/kohaerenzstiftung/andtroin/ae.<init> (Lorg/kohaerenzstiftung/andtroin/DenominationActivity;Lorg/kohaerenzstiftung/andtroin/DenominationActivity;)V]
   + Methodref [org/kohaerenzstiftung/andtroin/af.<init> (Lorg/kohaerenzstiftung/andtroin/DenominationActivity;)V]
   + Methodref [org/kohaerenzstiftung/andtroin/ag.<init> (Lorg/kohaerenzstiftung/andtroin/DenominationActivity;)V]
   + Methodref [org/kohaerenzstiftung/andtroin/ah.<init> (Lorg/kohaerenzstiftung/andtroin/DenominationActivity;Landroid/os/Bundle;)V]
@@ -31664,7 +31656,7 @@ Constant Pool (count = 445):
   + Methodref [org/kohaerenzstiftung/andtroin/em.setTextColor (I)V]
   + Methodref [org/kohaerenzstiftung/andtroin/s.<init> (Lorg/kohaerenzstiftung/andtroin/DenominationActivity;)V]
   + Methodref [org/kohaerenzstiftung/andtroin/t.<init> (Lorg/kohaerenzstiftung/andtroin/DenominationActivity;Landroid/os/Bundle;)V]
-  + Methodref [org/kohaerenzstiftung/andtroin/u.<init> (Lorg/kohaerenzstiftung/andtroin/DenominationActivity;I)V]
+  + Methodref [org/kohaerenzstiftung/andtroin/u.<init> (Lorg/kohaerenzstiftung/andtroin/DenominationActivity;Lorg/kohaerenzstiftung/andtroin/DenominationActivity;I)V]
   + Methodref [org/kohaerenzstiftung/andtroin/v.<init> (Lorg/kohaerenzstiftung/andtroin/DenominationActivity;Landroid/os/Bundle;)V]
   + Methodref [org/kohaerenzstiftung/andtroin/w.<init> (Lorg/kohaerenzstiftung/andtroin/DenominationActivity;)V]
   + Methodref [org/kohaerenzstiftung/andtroin/x.<init> (Lorg/kohaerenzstiftung/andtroin/DenominationActivity;)V]
@@ -31675,13 +31667,14 @@ Constant Pool (count = 445):
   + NameAndType [<init> (ILjava/lang/String;ILjava/util/LinkedList;)V]
   + NameAndType [<init> (Landroid/content/Context;II)V]
   + NameAndType [<init> (Lorg/kohaerenzstiftung/andtroin/DenominationActivity;)V]
-  + NameAndType [<init> (Lorg/kohaerenzstiftung/andtroin/DenominationActivity;I)V]
   + NameAndType [<init> (Lorg/kohaerenzstiftung/andtroin/DenominationActivity;Landroid/content/Context;Ljava/util/LinkedList;)V]
   + NameAndType [<init> (Lorg/kohaerenzstiftung/andtroin/DenominationActivity;Landroid/content/Context;Ljava/util/LinkedList;Z)V]
   + NameAndType [<init> (Lorg/kohaerenzstiftung/andtroin/DenominationActivity;Landroid/os/Bundle;)V]
   + NameAndType [<init> (Lorg/kohaerenzstiftung/andtroin/DenominationActivity;Lorg/kohaerenzstiftung/a;Landroid/os/Bundle;)V]
   + NameAndType [<init> (Lorg/kohaerenzstiftung/andtroin/DenominationActivity;Lorg/kohaerenzstiftung/a;Ljava/lang/String;Lorg/kohaerenzstiftung/andtroin/av;)V]
   + NameAndType [<init> (Lorg/kohaerenzstiftung/andtroin/DenominationActivity;Lorg/kohaerenzstiftung/a;Lorg/kohaerenzstiftung/andtroin/Example;Lorg/kohaerenzstiftung/andtroin/bd;Z)V]
+  + NameAndType [<init> (Lorg/kohaerenzstiftung/andtroin/DenominationActivity;Lorg/kohaerenzstiftung/andtroin/DenominationActivity;)V]
+  + NameAndType [<init> (Lorg/kohaerenzstiftung/andtroin/DenominationActivity;Lorg/kohaerenzstiftung/andtroin/DenominationActivity;I)V]
   + NameAndType [<init> (Lorg/kohaerenzstiftung/andtroin/DenominationActivity;Lorg/kohaerenzstiftung/andtroin/DenominationActivity;Ljava/util/LinkedList;)V]
   + NameAndType [A ()V]
   + NameAndType [B ()V]
@@ -31795,13 +31788,14 @@ Constant Pool (count = 445):
   + Utf8 [(Lorg/kohaerenzstiftung/andtroin/DenominationActivity;)Lorg/kohaerenzstiftung/andtroin/Denomination;]
   + Utf8 [(Lorg/kohaerenzstiftung/andtroin/DenominationActivity;)Lorg/kohaerenzstiftung/andtroin/em;]
   + Utf8 [(Lorg/kohaerenzstiftung/andtroin/DenominationActivity;)V]
-  + Utf8 [(Lorg/kohaerenzstiftung/andtroin/DenominationActivity;I)V]
   + Utf8 [(Lorg/kohaerenzstiftung/andtroin/DenominationActivity;Landroid/content/Context;Ljava/util/LinkedList;)V]
   + Utf8 [(Lorg/kohaerenzstiftung/andtroin/DenominationActivity;Landroid/content/Context;Ljava/util/LinkedList;Z)V]
   + Utf8 [(Lorg/kohaerenzstiftung/andtroin/DenominationActivity;Landroid/os/Bundle;)V]
   + Utf8 [(Lorg/kohaerenzstiftung/andtroin/DenominationActivity;Lorg/kohaerenzstiftung/a;Landroid/os/Bundle;)V]
   + Utf8 [(Lorg/kohaerenzstiftung/andtroin/DenominationActivity;Lorg/kohaerenzstiftung/a;Ljava/lang/String;Lorg/kohaerenzstiftung/andtroin/av;)V]
   + Utf8 [(Lorg/kohaerenzstiftung/andtroin/DenominationActivity;Lorg/kohaerenzstiftung/a;Lorg/kohaerenzstiftung/andtroin/Example;Lorg/kohaerenzstiftung/andtroin/bd;Z)V]
+  + Utf8 [(Lorg/kohaerenzstiftung/andtroin/DenominationActivity;Lorg/kohaerenzstiftung/andtroin/DenominationActivity;)V]
+  + Utf8 [(Lorg/kohaerenzstiftung/andtroin/DenominationActivity;Lorg/kohaerenzstiftung/andtroin/DenominationActivity;I)V]
   + Utf8 [(Lorg/kohaerenzstiftung/andtroin/DenominationActivity;Lorg/kohaerenzstiftung/andtroin/DenominationActivity;Ljava/util/LinkedList;)V]
   + Utf8 [(Lorg/kohaerenzstiftung/andtroin/DenominationForm;I)V]
   + Utf8 [(Lorg/kohaerenzstiftung/andtroin/DetailsKeyValue;)V]
@@ -32270,7 +32264,7 @@ Methods (count = 45):
     Access flags: 0x4
       = protected void e(int)
     Class member attributes (count = 1):
-    + Code attribute instructions (code length = 43, locals = 3, stack = 10):
+    + Code attribute instructions (code length = 44, locals = 3, stack = 11):
       [0] aload_0 v0
       [1] getfield #88
         + Fieldref [org/kohaerenzstiftung/andtroin/DenominationActivity.h Lorg/kohaerenzstiftung/andtroin/Denomination;]
@@ -32293,17 +32287,18 @@ Methods (count = 45):
         + Class [org/kohaerenzstiftung/andtroin/u]
       [26] dup
       [27] aload_0 v0
-      [28] iload_1 v1
-      [29] invokespecial #184
-        + Methodref [org/kohaerenzstiftung/andtroin/u.<init> (Lorg/kohaerenzstiftung/andtroin/DenominationActivity;I)V]
-      [32] aload_0 v0
-      [33] getfield #94
+      [28] aload_0 v0
+      [29] iload_1 v1
+      [30] invokespecial #184
+        + Methodref [org/kohaerenzstiftung/andtroin/u.<init> (Lorg/kohaerenzstiftung/andtroin/DenominationActivity;Lorg/kohaerenzstiftung/andtroin/DenominationActivity;I)V]
+      [33] aload_0 v0
+      [34] getfield #94
         + Fieldref [org/kohaerenzstiftung/andtroin/DenominationActivity.n Z]
-      [36] invokespecial #175
+      [37] invokespecial #175
         + Methodref [org/kohaerenzstiftung/andtroin/az.<init> (Lorg/kohaerenzstiftung/andtroin/DenominationActivity;Lorg/kohaerenzstiftung/a;Lorg/kohaerenzstiftung/andtroin/Example;Lorg/kohaerenzstiftung/andtroin/bd;Z)V]
-      [39] invokevirtual #136
+      [40] invokevirtual #136
         + Methodref [org/kohaerenzstiftung/andtroin/DenominationActivity.a (Lorg/kohaerenzstiftung/o;)V]
-      [42] return
+      [43] return
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 0):
   + Method:       f(I)V
@@ -32595,7 +32590,7 @@ Methods (count = 45):
     Access flags: 0x4
       = protected void s()
     Class member attributes (count = 1):
-    + Code attribute instructions (code length = 55, locals = 2, stack = 10):
+    + Code attribute instructions (code length = 56, locals = 2, stack = 11):
       [0] new #50
         + Class [org/kohaerenzstiftung/andtroin/Example]
       [3] dup
@@ -32628,24 +32623,25 @@ Methods (count = 45):
         + Class [org/kohaerenzstiftung/andtroin/ac]
       [38] dup
       [39] aload_0 v0
-      [40] iconst_m1
-      [41] invokespecial #158
-        + Methodref [org/kohaerenzstiftung/andtroin/ac.<init> (Lorg/kohaerenzstiftung/andtroin/DenominationActivity;I)V]
-      [44] aload_0 v0
-      [45] getfield #94
+      [40] aload_0 v0
+      [41] iconst_m1
+      [42] invokespecial #158
+        + Methodref [org/kohaerenzstiftung/andtroin/ac.<init> (Lorg/kohaerenzstiftung/andtroin/DenominationActivity;Lorg/kohaerenzstiftung/andtroin/DenominationActivity;I)V]
+      [45] aload_0 v0
+      [46] getfield #94
         + Fieldref [org/kohaerenzstiftung/andtroin/DenominationActivity.n Z]
-      [48] invokespecial #175
+      [49] invokespecial #175
         + Methodref [org/kohaerenzstiftung/andtroin/az.<init> (Lorg/kohaerenzstiftung/andtroin/DenominationActivity;Lorg/kohaerenzstiftung/a;Lorg/kohaerenzstiftung/andtroin/Example;Lorg/kohaerenzstiftung/andtroin/bd;Z)V]
-      [51] invokevirtual #136
+      [52] invokevirtual #136
         + Methodref [org/kohaerenzstiftung/andtroin/DenominationActivity.a (Lorg/kohaerenzstiftung/o;)V]
-      [54] return
+      [55] return
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 0):
   + Method:       t()V
     Access flags: 0x4
       = protected void t()
     Class member attributes (count = 1):
-    + Code attribute instructions (code length = 29, locals = 1, stack = 9):
+    + Code attribute instructions (code length = 30, locals = 1, stack = 10):
       [0] aload_0 v0
       [1] new #70
         + Class [org/kohaerenzstiftung/andtroin/ar]
@@ -32661,13 +32657,14 @@ Methods (count = 45):
         + Class [org/kohaerenzstiftung/andtroin/ae]
       [17] dup
       [18] aload_0 v0
-      [19] invokespecial #160
-        + Methodref [org/kohaerenzstiftung/andtroin/ae.<init> (Lorg/kohaerenzstiftung/andtroin/DenominationActivity;)V]
-      [22] invokespecial #173
+      [19] aload_0 v0
+      [20] invokespecial #160
+        + Methodref [org/kohaerenzstiftung/andtroin/ae.<init> (Lorg/kohaerenzstiftung/andtroin/DenominationActivity;Lorg/kohaerenzstiftung/andtroin/DenominationActivity;)V]
+      [23] invokespecial #173
         + Methodref [org/kohaerenzstiftung/andtroin/ar.<init> (Lorg/kohaerenzstiftung/andtroin/DenominationActivity;Lorg/kohaerenzstiftung/a;Ljava/lang/String;Lorg/kohaerenzstiftung/andtroin/av;)V]
-      [25] invokevirtual #136
+      [26] invokevirtual #136
         + Methodref [org/kohaerenzstiftung/andtroin/DenominationActivity.a (Lorg/kohaerenzstiftung/o;)V]
-      [28] return
+      [29] return
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 0):
   + Method:       e()V
@@ -33689,7 +33686,7 @@ _____________________________________________________________________
 
 Interfaces (count = 0):
 
-Constant Pool (count = 24):
+Constant Pool (count = 25):
   + Class [org/kohaerenzstiftung/andtroin/DenominationActivity]
   + Class [org/kohaerenzstiftung/andtroin/bd]
   + Class [org/kohaerenzstiftung/andtroin/u]
@@ -33702,6 +33699,7 @@ Constant Pool (count = 24):
   + NameAndType [a Lorg/kohaerenzstiftung/andtroin/DenominationActivity;]
   + NameAndType [b I]
   + Utf8 [(Lorg/kohaerenzstiftung/andtroin/DenominationActivity;I)V]
+  + Utf8 [(Lorg/kohaerenzstiftung/andtroin/DenominationActivity;Lorg/kohaerenzstiftung/andtroin/DenominationActivity;I)V]
   + Utf8 [(Lorg/kohaerenzstiftung/andtroin/Example;)V]
   + Utf8 [(Lorg/kohaerenzstiftung/andtroin/Example;I)V]
   + Utf8 [<init>]
@@ -33720,18 +33718,18 @@ Fields (count = 1):
       = final synthetic org.kohaerenzstiftung.andtroin.DenominationActivity a
 
 Methods (count = 2):
-  - Method:       <init>(Lorg/kohaerenzstiftung/andtroin/DenominationActivity;I)V
+  - Method:       <init>(Lorg/kohaerenzstiftung/andtroin/DenominationActivity;Lorg/kohaerenzstiftung/andtroin/DenominationActivity;I)V
     Access flags: 0x0
-      = u(org.kohaerenzstiftung.andtroin.DenominationActivity,int)
+      = u(org.kohaerenzstiftung.andtroin.DenominationActivity,org.kohaerenzstiftung.andtroin.DenominationActivity,int)
     Class member attributes (count = 1):
-    + Code attribute instructions (code length = 12, locals = 3, stack = 3):
+    + Code attribute instructions (code length = 12, locals = 4, stack = 3):
       [0] aload_0 v0
-      [1] aload_1 v1
+      [1] aload_2 v2
       [2] putfield #4
         + Fieldref [org/kohaerenzstiftung/andtroin/u.a Lorg/kohaerenzstiftung/andtroin/DenominationActivity;]
       [5] aload_0 v0
       [6] aload_1 v1
-      [7] iload_2 v2
+      [7] iload_3 v3
       [8] invokespecial #7
         + Methodref [org/kohaerenzstiftung/andtroin/bd.<init> (Lorg/kohaerenzstiftung/andtroin/DenominationActivity;I)V]
       [11] return
@@ -34413,7 +34411,7 @@ _____________________________________________________________________
 
 Interfaces (count = 0):
 
-Constant Pool (count = 20):
+Constant Pool (count = 21):
   + Class [org/kohaerenzstiftung/andtroin/DenominationActivity]
   + Class [org/kohaerenzstiftung/andtroin/ac]
   + Class [org/kohaerenzstiftung/andtroin/bd]
@@ -34424,6 +34422,7 @@ Constant Pool (count = 20):
   + NameAndType [a (Lorg/kohaerenzstiftung/andtroin/Example;I)V]
   + NameAndType [a Lorg/kohaerenzstiftung/andtroin/DenominationActivity;]
   + Utf8 [(Lorg/kohaerenzstiftung/andtroin/DenominationActivity;I)V]
+  + Utf8 [(Lorg/kohaerenzstiftung/andtroin/DenominationActivity;Lorg/kohaerenzstiftung/andtroin/DenominationActivity;I)V]
   + Utf8 [(Lorg/kohaerenzstiftung/andtroin/Example;)V]
   + Utf8 [(Lorg/kohaerenzstiftung/andtroin/Example;I)V]
   + Utf8 [<init>]
@@ -34440,18 +34439,18 @@ Fields (count = 1):
       = final synthetic org.kohaerenzstiftung.andtroin.DenominationActivity a
 
 Methods (count = 2):
-  - Method:       <init>(Lorg/kohaerenzstiftung/andtroin/DenominationActivity;I)V
+  - Method:       <init>(Lorg/kohaerenzstiftung/andtroin/DenominationActivity;Lorg/kohaerenzstiftung/andtroin/DenominationActivity;I)V
     Access flags: 0x0
-      = ac(org.kohaerenzstiftung.andtroin.DenominationActivity,int)
+      = ac(org.kohaerenzstiftung.andtroin.DenominationActivity,org.kohaerenzstiftung.andtroin.DenominationActivity,int)
     Class member attributes (count = 1):
-    + Code attribute instructions (code length = 12, locals = 3, stack = 3):
+    + Code attribute instructions (code length = 12, locals = 4, stack = 3):
       [0] aload_0 v0
-      [1] aload_1 v1
+      [1] aload_2 v2
       [2] putfield #4
         + Fieldref [org/kohaerenzstiftung/andtroin/ac.a Lorg/kohaerenzstiftung/andtroin/DenominationActivity;]
       [5] aload_0 v0
       [6] aload_1 v1
-      [7] iload_2 v2
+      [7] iload_3 v3
       [8] invokespecial #6
         + Methodref [org/kohaerenzstiftung/andtroin/bd.<init> (Lorg/kohaerenzstiftung/andtroin/DenominationActivity;I)V]
       [11] return
@@ -34580,7 +34579,7 @@ _____________________________________________________________________
 
 Interfaces (count = 0):
 
-Constant Pool (count = 19):
+Constant Pool (count = 20):
   + Class [org/kohaerenzstiftung/andtroin/DenominationActivity]
   + Class [org/kohaerenzstiftung/andtroin/ae]
   + Class [org/kohaerenzstiftung/andtroin/av]
@@ -34591,6 +34590,7 @@ Constant Pool (count = 19):
   + NameAndType [a (Lorg/kohaerenzstiftung/andtroin/DetailsKeyValue;)V]
   + NameAndType [a Lorg/kohaerenzstiftung/andtroin/DenominationActivity;]
   + Utf8 [(Lorg/kohaerenzstiftung/andtroin/DenominationActivity;)V]
+  + Utf8 [(Lorg/kohaerenzstiftung/andtroin/DenominationActivity;Lorg/kohaerenzstiftung/andtroin/DenominationActivity;)V]
   + Utf8 [(Lorg/kohaerenzstiftung/andtroin/DetailsKeyValue;)V]
   + Utf8 [<init>]
   + Utf8 [Code]
@@ -34606,13 +34606,13 @@ Fields (count = 1):
       = final synthetic org.kohaerenzstiftung.andtroin.DenominationActivity a
 
 Methods (count = 2):
-  - Method:       <init>(Lorg/kohaerenzstiftung/andtroin/DenominationActivity;)V
+  - Method:       <init>(Lorg/kohaerenzstiftung/andtroin/DenominationActivity;Lorg/kohaerenzstiftung/andtroin/DenominationActivity;)V
     Access flags: 0x0
-      = ae(org.kohaerenzstiftung.andtroin.DenominationActivity)
+      = ae(org.kohaerenzstiftung.andtroin.DenominationActivity,org.kohaerenzstiftung.andtroin.DenominationActivity)
     Class member attributes (count = 1):
-    + Code attribute instructions (code length = 11, locals = 2, stack = 2):
+    + Code attribute instructions (code length = 11, locals = 3, stack = 2):
       [0] aload_0 v0
-      [1] aload_1 v1
+      [1] aload_2 v2
       [2] putfield #4
         + Fieldref [org/kohaerenzstiftung/andtroin/ae.a Lorg/kohaerenzstiftung/andtroin/DenominationActivity;]
       [5] aload_0 v0
@@ -39247,7 +39247,7 @@ Methods (count = 4):
       [275] ireturn
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 1):
-      + Stack map table attribute (count = 20):
+      + Stack map table attribute (count = 18):
         - [21] Var: [a:org/kohaerenzstiftung/andtroin/bh][a:org/kohaerenzstiftung/andtroin/DenominationForm][a:org/kohaerenzstiftung/andtroin/DenominationForm][i][i][i][i][T][a:java/util/Iterator], Stack: 
         - [45] Var: [a:org/kohaerenzstiftung/andtroin/bh][a:org/kohaerenzstiftung/andtroin/DenominationForm][a:org/kohaerenzstiftung/andtroin/DenominationForm][i][i][i][i][a:org/kohaerenzstiftung/andtroin/FormAttribute][a:java/util/Iterator], Stack: 
         - [61] Var: ..., Stack: (empty)
@@ -39259,9 +39259,7 @@ Methods (count = 4):
         - [192] Var: [a:org/kohaerenzstiftung/andtroin/bh][a:org/kohaerenzstiftung/andtroin/DenominationForm][a:org/kohaerenzstiftung/andtroin/DenominationForm][i][i][i][i], Stack: 
         - [207] Var: ..., Stack: (empty)
         - [208] Var: ..., Stack: [i]
-        - [210] Var: ..., Stack: (empty)
         - [213] Var: ..., Stack: (empty)
-        - [216] Var: ..., Stack: (empty)
         - [219] Var: ..., Stack: (empty)
         - [231] Var: ..., Stack: (empty)
         - [242] Var: ..., Stack: (empty)
@@ -39298,7 +39296,7 @@ _____________________________________________________________________
 
 Interfaces (count = 0):
 
-Constant Pool (count = 319):
+Constant Pool (count = 321):
   + Integer [2130903043]
   + Integer [2131034149]
   + Integer [2131034150]
@@ -39410,7 +39408,7 @@ Constant Pool (count = 319):
   + Methodref [org/kohaerenzstiftung/andtroin/bl.<init> (Lorg/kohaerenzstiftung/andtroin/DenominationFormActivity;Landroid/os/Bundle;)V]
   + Methodref [org/kohaerenzstiftung/andtroin/bm.<init> (Lorg/kohaerenzstiftung/andtroin/DenominationFormActivity;)V]
   + Methodref [org/kohaerenzstiftung/andtroin/bn.<init> (Lorg/kohaerenzstiftung/andtroin/DenominationFormActivity;Lorg/kohaerenzstiftung/a;Landroid/os/Bundle;)V]
-  + Methodref [org/kohaerenzstiftung/andtroin/bo.<init> (Lorg/kohaerenzstiftung/andtroin/DenominationFormActivity;)V]
+  + Methodref [org/kohaerenzstiftung/andtroin/bo.<init> (Lorg/kohaerenzstiftung/andtroin/DenominationFormActivity;Lorg/kohaerenzstiftung/andtroin/DenominationFormActivity;)V]
   + Methodref [org/kohaerenzstiftung/andtroin/bp.<init> (Lorg/kohaerenzstiftung/andtroin/DenominationFormActivity;)V]
   + Methodref [org/kohaerenzstiftung/andtroin/bq.<init> (Lorg/kohaerenzstiftung/andtroin/DenominationFormActivity;Landroid/os/Bundle;)V]
   + Methodref [org/kohaerenzstiftung/andtroin/br.<init> (Lorg/kohaerenzstiftung/andtroin/DenominationFormActivity;)V]
@@ -39424,6 +39422,7 @@ Constant Pool (count = 319):
   + NameAndType [<init> (Lorg/kohaerenzstiftung/andtroin/DenominationFormActivity;Landroid/os/Bundle;)V]
   + NameAndType [<init> (Lorg/kohaerenzstiftung/andtroin/DenominationFormActivity;Lorg/kohaerenzstiftung/a;IZLorg/kohaerenzstiftung/andtroin/bu;)V]
   + NameAndType [<init> (Lorg/kohaerenzstiftung/andtroin/DenominationFormActivity;Lorg/kohaerenzstiftung/a;Landroid/os/Bundle;)V]
+  + NameAndType [<init> (Lorg/kohaerenzstiftung/andtroin/DenominationFormActivity;Lorg/kohaerenzstiftung/andtroin/DenominationFormActivity;)V]
   + NameAndType [a (ILorg/kohaerenzstiftung/ac;)V]
   + NameAndType [a (ILorg/kohaerenzstiftung/andtroin/a;)V]
   + NameAndType [a (ILorg/kohaerenzstiftung/k;)V]
@@ -39521,6 +39520,7 @@ Constant Pool (count = 319):
   + Utf8 [(Lorg/kohaerenzstiftung/andtroin/DenominationFormActivity;Landroid/os/Bundle;)V]
   + Utf8 [(Lorg/kohaerenzstiftung/andtroin/DenominationFormActivity;Lorg/kohaerenzstiftung/a;IZLorg/kohaerenzstiftung/andtroin/bu;)V]
   + Utf8 [(Lorg/kohaerenzstiftung/andtroin/DenominationFormActivity;Lorg/kohaerenzstiftung/a;Landroid/os/Bundle;)V]
+  + Utf8 [(Lorg/kohaerenzstiftung/andtroin/DenominationFormActivity;Lorg/kohaerenzstiftung/andtroin/DenominationFormActivity;)V]
   + Utf8 [(Lorg/kohaerenzstiftung/andtroin/FormAttribute;)V]
   + Utf8 [(Lorg/kohaerenzstiftung/o;)V]
   + Utf8 [(Z)V]
@@ -39767,7 +39767,7 @@ Methods (count = 33):
     Access flags: 0x4
       = protected void p()
     Class member attributes (count = 1):
-    + Code attribute instructions (code length = 30, locals = 1, stack = 10):
+    + Code attribute instructions (code length = 31, locals = 1, stack = 11):
       [0] aload_0 v0
       [1] new #47
         + Class [org/kohaerenzstiftung/andtroin/bw]
@@ -39784,13 +39784,14 @@ Methods (count = 33):
         + Class [org/kohaerenzstiftung/andtroin/bo]
       [18] dup
       [19] aload_0 v0
-      [20] invokespecial #112
-        + Methodref [org/kohaerenzstiftung/andtroin/bo.<init> (Lorg/kohaerenzstiftung/andtroin/DenominationFormActivity;)V]
-      [23] invokespecial #119
+      [20] aload_0 v0
+      [21] invokespecial #112
+        + Methodref [org/kohaerenzstiftung/andtroin/bo.<init> (Lorg/kohaerenzstiftung/andtroin/DenominationFormActivity;Lorg/kohaerenzstiftung/andtroin/DenominationFormActivity;)V]
+      [24] invokespecial #119
         + Methodref [org/kohaerenzstiftung/andtroin/bw.<init> (Lorg/kohaerenzstiftung/andtroin/DenominationFormActivity;Lorg/kohaerenzstiftung/a;IZLorg/kohaerenzstiftung/andtroin/bu;)V]
-      [26] invokevirtual #87
+      [27] invokevirtual #87
         + Methodref [org/kohaerenzstiftung/andtroin/DenominationFormActivity.a (Lorg/kohaerenzstiftung/o;)V]
-      [29] return
+      [30] return
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 0):
   + Method:       a(Lorg/kohaerenzstiftung/andtroin/FormAttribute;)V
@@ -41059,7 +41060,7 @@ _____________________________________________________________________
 
 Interfaces (count = 0):
 
-Constant Pool (count = 19):
+Constant Pool (count = 20):
   + Class [org/kohaerenzstiftung/andtroin/DenominationFormActivity]
   + Class [org/kohaerenzstiftung/andtroin/bo]
   + Class [org/kohaerenzstiftung/andtroin/bu]
@@ -41070,6 +41071,7 @@ Constant Pool (count = 19):
   + NameAndType [a (Lorg/kohaerenzstiftung/andtroin/FormAttribute;)V]
   + NameAndType [a Lorg/kohaerenzstiftung/andtroin/DenominationFormActivity;]
   + Utf8 [(Lorg/kohaerenzstiftung/andtroin/DenominationFormActivity;)V]
+  + Utf8 [(Lorg/kohaerenzstiftung/andtroin/DenominationFormActivity;Lorg/kohaerenzstiftung/andtroin/DenominationFormActivity;)V]
   + Utf8 [(Lorg/kohaerenzstiftung/andtroin/FormAttribute;)V]
   + Utf8 [<init>]
   + Utf8 [Code]
@@ -41085,13 +41087,13 @@ Fields (count = 1):
       = final synthetic org.kohaerenzstiftung.andtroin.DenominationFormActivity a
 
 Methods (count = 2):
-  - Method:       <init>(Lorg/kohaerenzstiftung/andtroin/DenominationFormActivity;)V
+  - Method:       <init>(Lorg/kohaerenzstiftung/andtroin/DenominationFormActivity;Lorg/kohaerenzstiftung/andtroin/DenominationFormActivity;)V
     Access flags: 0x0
-      = bo(org.kohaerenzstiftung.andtroin.DenominationFormActivity)
+      = bo(org.kohaerenzstiftung.andtroin.DenominationFormActivity,org.kohaerenzstiftung.andtroin.DenominationFormActivity)
     Class member attributes (count = 1):
-    + Code attribute instructions (code length = 11, locals = 2, stack = 2):
+    + Code attribute instructions (code length = 11, locals = 3, stack = 2):
       [0] aload_0 v0
-      [1] aload_1 v1
+      [1] aload_2 v2
       [2] putfield #4
         + Fieldref [org/kohaerenzstiftung/andtroin/bo.a Lorg/kohaerenzstiftung/andtroin/DenominationFormActivity;]
       [5] aload_0 v0
@@ -42903,7 +42905,7 @@ _____________________________________________________________________
 
 Interfaces (count = 0):
 
-Constant Pool (count = 306):
+Constant Pool (count = 308):
   + Integer [-16777216]
   + Integer [2130903044]
   + Integer [2131034149]
@@ -43001,7 +43003,7 @@ Constant Pool (count = 306):
   + Methodref [org/kohaerenzstiftung/andtroin/a.onCreateContextMenu (Landroid/view/ContextMenu;Landroid/view/View;Landroid/view/ContextMenu$ContextMenuInfo;)V]
   + Methodref [org/kohaerenzstiftung/andtroin/a.onKeyDown (ILandroid/view/KeyEvent;)Z]
   + Methodref [org/kohaerenzstiftung/andtroin/ca.<init> (Lorg/kohaerenzstiftung/andtroin/DetailsKeyActivity;)V]
-  + Methodref [org/kohaerenzstiftung/andtroin/cb.<init> (Lorg/kohaerenzstiftung/andtroin/DetailsKeyActivity;)V]
+  + Methodref [org/kohaerenzstiftung/andtroin/cb.<init> (Lorg/kohaerenzstiftung/andtroin/DetailsKeyActivity;Lorg/kohaerenzstiftung/andtroin/DetailsKeyActivity;)V]
   + Methodref [org/kohaerenzstiftung/andtroin/cc.<init> (Lorg/kohaerenzstiftung/andtroin/DetailsKeyActivity;Landroid/os/Bundle;)V]
   + Methodref [org/kohaerenzstiftung/andtroin/cd.<init> (Lorg/kohaerenzstiftung/andtroin/DetailsKeyActivity;)V]
   + Methodref [org/kohaerenzstiftung/andtroin/ce.<init> (Lorg/kohaerenzstiftung/andtroin/DetailsKeyActivity;)V]
@@ -43026,6 +43028,7 @@ Constant Pool (count = 306):
   + NameAndType [<init> (Lorg/kohaerenzstiftung/andtroin/DetailsKeyActivity;Landroid/content/Context;Ljava/util/LinkedList;)V]
   + NameAndType [<init> (Lorg/kohaerenzstiftung/andtroin/DetailsKeyActivity;Landroid/os/Bundle;)V]
   + NameAndType [<init> (Lorg/kohaerenzstiftung/andtroin/DetailsKeyActivity;Lorg/kohaerenzstiftung/a;Lorg/kohaerenzstiftung/andtroin/DetailsKeyValue;Lorg/kohaerenzstiftung/andtroin/co;)V]
+  + NameAndType [<init> (Lorg/kohaerenzstiftung/andtroin/DetailsKeyActivity;Lorg/kohaerenzstiftung/andtroin/DetailsKeyActivity;)V]
   + NameAndType [a (ILjava/lang/String;)V]
   + NameAndType [a (ILorg/kohaerenzstiftung/ac;)V]
   + NameAndType [a (ILorg/kohaerenzstiftung/k;)V]
@@ -43117,6 +43120,7 @@ Constant Pool (count = 306):
   + Utf8 [(Lorg/kohaerenzstiftung/andtroin/DetailsKeyActivity;Landroid/content/Context;Ljava/util/LinkedList;)V]
   + Utf8 [(Lorg/kohaerenzstiftung/andtroin/DetailsKeyActivity;Landroid/os/Bundle;)V]
   + Utf8 [(Lorg/kohaerenzstiftung/andtroin/DetailsKeyActivity;Lorg/kohaerenzstiftung/a;Lorg/kohaerenzstiftung/andtroin/DetailsKeyValue;Lorg/kohaerenzstiftung/andtroin/co;)V]
+  + Utf8 [(Lorg/kohaerenzstiftung/andtroin/DetailsKeyActivity;Lorg/kohaerenzstiftung/andtroin/DetailsKeyActivity;)V]
   + Utf8 [(Lorg/kohaerenzstiftung/andtroin/DetailsKeyValue;)V]
   + Utf8 [(Lorg/kohaerenzstiftung/o;)V]
   + Utf8 [(Z)Landroid/view/MenuItem;]
@@ -43839,7 +43843,7 @@ Methods (count = 35):
     Access flags: 0x2
       = private void b(org.kohaerenzstiftung.andtroin.DetailsKeyValue)
     Class member attributes (count = 1):
-    + Code attribute instructions (code length = 23, locals = 2, stack = 9):
+    + Code attribute instructions (code length = 24, locals = 2, stack = 10):
       [0] aload_0 v0
       [1] new #45
         + Class [org/kohaerenzstiftung/andtroin/cl]
@@ -43851,13 +43855,14 @@ Methods (count = 35):
         + Class [org/kohaerenzstiftung/andtroin/cb]
       [11] dup
       [12] aload_0 v0
-      [13] invokespecial #98
-        + Methodref [org/kohaerenzstiftung/andtroin/cb.<init> (Lorg/kohaerenzstiftung/andtroin/DetailsKeyActivity;)V]
-      [16] invokespecial #108
+      [13] aload_0 v0
+      [14] invokespecial #98
+        + Methodref [org/kohaerenzstiftung/andtroin/cb.<init> (Lorg/kohaerenzstiftung/andtroin/DetailsKeyActivity;Lorg/kohaerenzstiftung/andtroin/DetailsKeyActivity;)V]
+      [17] invokespecial #108
         + Methodref [org/kohaerenzstiftung/andtroin/cl.<init> (Lorg/kohaerenzstiftung/andtroin/DetailsKeyActivity;Lorg/kohaerenzstiftung/a;Lorg/kohaerenzstiftung/andtroin/DetailsKeyValue;Lorg/kohaerenzstiftung/andtroin/co;)V]
-      [19] invokevirtual #80
+      [20] invokevirtual #80
         + Methodref [org/kohaerenzstiftung/andtroin/DetailsKeyActivity.a (Lorg/kohaerenzstiftung/o;)V]
-      [22] return
+      [23] return
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 0):
   + Method:       onKeyDown(ILandroid/view/KeyEvent;)Z
@@ -44199,7 +44204,7 @@ _____________________________________________________________________
 
 Interfaces (count = 0):
 
-Constant Pool (count = 19):
+Constant Pool (count = 20):
   + Class [org/kohaerenzstiftung/andtroin/DetailsKeyActivity]
   + Class [org/kohaerenzstiftung/andtroin/cb]
   + Class [org/kohaerenzstiftung/andtroin/co]
@@ -44210,6 +44215,7 @@ Constant Pool (count = 19):
   + NameAndType [a (Lorg/kohaerenzstiftung/andtroin/DetailsKeyValue;)V]
   + NameAndType [a Lorg/kohaerenzstiftung/andtroin/DetailsKeyActivity;]
   + Utf8 [(Lorg/kohaerenzstiftung/andtroin/DetailsKeyActivity;)V]
+  + Utf8 [(Lorg/kohaerenzstiftung/andtroin/DetailsKeyActivity;Lorg/kohaerenzstiftung/andtroin/DetailsKeyActivity;)V]
   + Utf8 [(Lorg/kohaerenzstiftung/andtroin/DetailsKeyValue;)V]
   + Utf8 [<init>]
   + Utf8 [Code]
@@ -44225,13 +44231,13 @@ Fields (count = 1):
       = final synthetic org.kohaerenzstiftung.andtroin.DetailsKeyActivity a
 
 Methods (count = 2):
-  - Method:       <init>(Lorg/kohaerenzstiftung/andtroin/DetailsKeyActivity;)V
+  - Method:       <init>(Lorg/kohaerenzstiftung/andtroin/DetailsKeyActivity;Lorg/kohaerenzstiftung/andtroin/DetailsKeyActivity;)V
     Access flags: 0x0
-      = cb(org.kohaerenzstiftung.andtroin.DetailsKeyActivity)
+      = cb(org.kohaerenzstiftung.andtroin.DetailsKeyActivity,org.kohaerenzstiftung.andtroin.DetailsKeyActivity)
     Class member attributes (count = 1):
-    + Code attribute instructions (code length = 11, locals = 2, stack = 2):
+    + Code attribute instructions (code length = 11, locals = 3, stack = 2):
       [0] aload_0 v0
-      [1] aload_1 v1
+      [1] aload_2 v2
       [2] putfield #4
         + Fieldref [org/kohaerenzstiftung/andtroin/cb.a Lorg/kohaerenzstiftung/andtroin/DetailsKeyActivity;]
       [5] aload_0 v0
@@ -46564,10 +46570,9 @@ Methods (count = 7):
       [100] return
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 1):
-      + Stack map table attribute (count = 6):
+      + Stack map table attribute (count = 5):
         - [19] Var: [a:org/kohaerenzstiftung/andtroin/cr][a:java/util/ArrayList][a:org/kohaerenzstiftung/andtroin/Entry][i][T][a:java/util/Iterator], Stack: 
-        - [58] Var: [a:org/kohaerenzstiftung/andtroin/cr][a:java/util/ArrayList][a:org/kohaerenzstiftung/andtroin/Entry][i][a:org/kohaerenzstiftung/andtroin/Entry][a:java/util/Iterator], Stack: 
-        - [61] Var: ..., Stack: (empty)
+        - [61] Var: [a:org/kohaerenzstiftung/andtroin/cr][a:java/util/ArrayList][a:org/kohaerenzstiftung/andtroin/Entry][i][a:org/kohaerenzstiftung/andtroin/Entry][a:java/util/Iterator], Stack: 
         - [64] Var: [a:org/kohaerenzstiftung/andtroin/cr][a:java/util/ArrayList][a:org/kohaerenzstiftung/andtroin/Entry][i][T][a:java/util/Iterator], Stack: 
         - [74] Var: [a:org/kohaerenzstiftung/andtroin/cr][a:java/util/ArrayList][a:org/kohaerenzstiftung/andtroin/Entry], Stack: 
         - [100] Var: ..., Stack: (empty)
@@ -48401,7 +48406,7 @@ _____________________________________________________________________
 
 Interfaces (count = 0):
 
-Constant Pool (count = 366):
+Constant Pool (count = 368):
   + Integer [-16777216]
   + Integer [2130903045]
   + Integer [2131034149]
@@ -48533,7 +48538,7 @@ Constant Pool (count = 366):
   + Methodref [org/kohaerenzstiftung/andtroin/cx.<init> (Lorg/kohaerenzstiftung/andtroin/EntryActivity;)V]
   + Methodref [org/kohaerenzstiftung/andtroin/cy.<init> (Lorg/kohaerenzstiftung/andtroin/EntryActivity;)V]
   + Methodref [org/kohaerenzstiftung/andtroin/cz.<init> (Lorg/kohaerenzstiftung/andtroin/EntryActivity;)V]
-  + Methodref [org/kohaerenzstiftung/andtroin/da.<init> (Lorg/kohaerenzstiftung/andtroin/EntryActivity;)V]
+  + Methodref [org/kohaerenzstiftung/andtroin/da.<init> (Lorg/kohaerenzstiftung/andtroin/EntryActivity;Lorg/kohaerenzstiftung/andtroin/EntryActivity;)V]
   + Methodref [org/kohaerenzstiftung/andtroin/db.<init> (Lorg/kohaerenzstiftung/andtroin/EntryActivity;)V]
   + Methodref [org/kohaerenzstiftung/andtroin/dc.<init> (Lorg/kohaerenzstiftung/andtroin/EntryActivity;)V]
   + Methodref [org/kohaerenzstiftung/andtroin/dd.<init> (Lorg/kohaerenzstiftung/andtroin/EntryActivity;Lorg/kohaerenzstiftung/andtroin/cr;)V]
@@ -48563,6 +48568,7 @@ Constant Pool (count = 366):
   + NameAndType [<init> (Lorg/kohaerenzstiftung/andtroin/EntryActivity;Lorg/kohaerenzstiftung/a;ILorg/kohaerenzstiftung/andtroin/ds;)V]
   + NameAndType [<init> (Lorg/kohaerenzstiftung/andtroin/EntryActivity;Lorg/kohaerenzstiftung/a;Landroid/os/Bundle;)V]
   + NameAndType [<init> (Lorg/kohaerenzstiftung/andtroin/EntryActivity;Lorg/kohaerenzstiftung/a;Ljava/util/LinkedList;)V]
+  + NameAndType [<init> (Lorg/kohaerenzstiftung/andtroin/EntryActivity;Lorg/kohaerenzstiftung/andtroin/EntryActivity;)V]
   + NameAndType [<init> (Lorg/kohaerenzstiftung/andtroin/EntryActivity;Lorg/kohaerenzstiftung/andtroin/cr;)V]
   + NameAndType [a ()Ljava/lang/String;]
   + NameAndType [a (ILjava/lang/String;)V]
@@ -48670,6 +48676,7 @@ Constant Pool (count = 366):
   + Utf8 [(Lorg/kohaerenzstiftung/andtroin/EntryActivity;Lorg/kohaerenzstiftung/a;ILorg/kohaerenzstiftung/andtroin/ds;)V]
   + Utf8 [(Lorg/kohaerenzstiftung/andtroin/EntryActivity;Lorg/kohaerenzstiftung/a;Landroid/os/Bundle;)V]
   + Utf8 [(Lorg/kohaerenzstiftung/andtroin/EntryActivity;Lorg/kohaerenzstiftung/a;Ljava/util/LinkedList;)V]
+  + Utf8 [(Lorg/kohaerenzstiftung/andtroin/EntryActivity;Lorg/kohaerenzstiftung/andtroin/EntryActivity;)V]
   + Utf8 [(Lorg/kohaerenzstiftung/andtroin/EntryActivity;Lorg/kohaerenzstiftung/andtroin/cr;)V]
   + Utf8 [(Lorg/kohaerenzstiftung/o;)V]
   + Utf8 [(Z)V]
@@ -49275,7 +49282,7 @@ Methods (count = 37):
     Access flags: 0x4
       = protected void p()
     Class member attributes (count = 1):
-    + Code attribute instructions (code length = 29, locals = 1, stack = 9):
+    + Code attribute instructions (code length = 30, locals = 1, stack = 10):
       [0] aload_0 v0
       [1] new #61
         + Class [org/kohaerenzstiftung/andtroin/dp]
@@ -49291,13 +49298,14 @@ Methods (count = 37):
         + Class [org/kohaerenzstiftung/andtroin/da]
       [17] dup
       [18] aload_0 v0
-      [19] invokespecial #132
-        + Methodref [org/kohaerenzstiftung/andtroin/da.<init> (Lorg/kohaerenzstiftung/andtroin/EntryActivity;)V]
-      [22] invokespecial #146
+      [19] aload_0 v0
+      [20] invokespecial #132
+        + Methodref [org/kohaerenzstiftung/andtroin/da.<init> (Lorg/kohaerenzstiftung/andtroin/EntryActivity;Lorg/kohaerenzstiftung/andtroin/EntryActivity;)V]
+      [23] invokespecial #146
         + Methodref [org/kohaerenzstiftung/andtroin/dp.<init> (Lorg/kohaerenzstiftung/andtroin/EntryActivity;Lorg/kohaerenzstiftung/a;ILorg/kohaerenzstiftung/andtroin/ds;)V]
-      [25] invokevirtual #114
+      [26] invokevirtual #114
         + Methodref [org/kohaerenzstiftung/andtroin/EntryActivity.a (Lorg/kohaerenzstiftung/o;)V]
-      [28] return
+      [29] return
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 0):
   + Method:       b(Z)V
@@ -50417,7 +50425,7 @@ _____________________________________________________________________
 
 Interfaces (count = 0):
 
-Constant Pool (count = 19):
+Constant Pool (count = 20):
   + Class [org/kohaerenzstiftung/andtroin/EntryActivity]
   + Class [org/kohaerenzstiftung/andtroin/da]
   + Class [org/kohaerenzstiftung/andtroin/ds]
@@ -50429,6 +50437,7 @@ Constant Pool (count = 19):
   + NameAndType [a Lorg/kohaerenzstiftung/andtroin/EntryActivity;]
   + Utf8 [(Lorg/kohaerenzstiftung/andtroin/Category;)V]
   + Utf8 [(Lorg/kohaerenzstiftung/andtroin/EntryActivity;)V]
+  + Utf8 [(Lorg/kohaerenzstiftung/andtroin/EntryActivity;Lorg/kohaerenzstiftung/andtroin/EntryActivity;)V]
   + Utf8 [<init>]
   + Utf8 [Code]
   + Utf8 [Lorg/kohaerenzstiftung/andtroin/EntryActivity;]
@@ -50443,13 +50452,13 @@ Fields (count = 1):
       = final synthetic org.kohaerenzstiftung.andtroin.EntryActivity a
 
 Methods (count = 2):
-  - Method:       <init>(Lorg/kohaerenzstiftung/andtroin/EntryActivity;)V
+  - Method:       <init>(Lorg/kohaerenzstiftung/andtroin/EntryActivity;Lorg/kohaerenzstiftung/andtroin/EntryActivity;)V
     Access flags: 0x0
-      = da(org.kohaerenzstiftung.andtroin.EntryActivity)
+      = da(org.kohaerenzstiftung.andtroin.EntryActivity,org.kohaerenzstiftung.andtroin.EntryActivity)
     Class member attributes (count = 1):
-    + Code attribute instructions (code length = 11, locals = 2, stack = 2):
+    + Code attribute instructions (code length = 11, locals = 3, stack = 2):
       [0] aload_0 v0
-      [1] aload_1 v1
+      [1] aload_2 v2
       [2] putfield #4
         + Fieldref [org/kohaerenzstiftung/andtroin/da.a Lorg/kohaerenzstiftung/andtroin/EntryActivity;]
       [5] aload_0 v0
@@ -58189,7 +58198,7 @@ Constant Pool (count = 570):
   + Methodref [org/kohaerenzstiftung/andtroin/ev.<init> (Lorg/kohaerenzstiftung/andtroin/ListActivity;)V]
   + Methodref [org/kohaerenzstiftung/andtroin/ew.<init> (Lorg/kohaerenzstiftung/andtroin/ListActivity;Landroid/os/Bundle;)V]
   + Methodref [org/kohaerenzstiftung/andtroin/ex.<init> (Lorg/kohaerenzstiftung/andtroin/ListActivity;Landroid/os/Bundle;)V]
-  + Methodref [org/kohaerenzstiftung/andtroin/ey.<init> (Lorg/kohaerenzstiftung/andtroin/ListActivity;)V]
+  + Methodref [org/kohaerenzstiftung/andtroin/ey.<init> (Lorg/kohaerenzstiftung/andtroin/ListActivity;Lorg/kohaerenzstiftung/andtroin/ListActivity;)V]
   + Methodref [org/kohaerenzstiftung/andtroin/ez.<init> (Lorg/kohaerenzstiftung/andtroin/ListActivity;)V]
   + Methodref [org/kohaerenzstiftung/andtroin/fa.<init> (Lorg/kohaerenzstiftung/andtroin/ListActivity;Landroid/os/Bundle;)V]
   + Methodref [org/kohaerenzstiftung/andtroin/fb.<init> (Lorg/kohaerenzstiftung/andtroin/ListActivity;Landroid/os/Bundle;)V]
@@ -58206,12 +58215,12 @@ Constant Pool (count = 570):
   + Methodref [org/kohaerenzstiftung/andtroin/fm.<init> (Lorg/kohaerenzstiftung/andtroin/ListActivity;)V]
   + Methodref [org/kohaerenzstiftung/andtroin/fn.<init> (Lorg/kohaerenzstiftung/andtroin/ListActivity;)V]
   + Methodref [org/kohaerenzstiftung/andtroin/fo.<init> (Lorg/kohaerenzstiftung/andtroin/ListActivity;)V]
-  + Methodref [org/kohaerenzstiftung/andtroin/fp.<init> (Lorg/kohaerenzstiftung/andtroin/ListActivity;)V]
-  + Methodref [org/kohaerenzstiftung/andtroin/fq.<init> (Lorg/kohaerenzstiftung/andtroin/ListActivity;)V]
+  + Methodref [org/kohaerenzstiftung/andtroin/fp.<init> (Lorg/kohaerenzstiftung/andtroin/ListActivity;Lorg/kohaerenzstiftung/andtroin/ListActivity;)V]
+  + Methodref [org/kohaerenzstiftung/andtroin/fq.<init> (Lorg/kohaerenzstiftung/andtroin/ListActivity;Lorg/kohaerenzstiftung/andtroin/ListActivity;)V]
   + Methodref [org/kohaerenzstiftung/andtroin/fr.<init> (Lorg/kohaerenzstiftung/andtroin/ListActivity;Landroid/os/Bundle;)V]
-  + Methodref [org/kohaerenzstiftung/andtroin/fs.<init> (Lorg/kohaerenzstiftung/andtroin/ListActivity;)V]
+  + Methodref [org/kohaerenzstiftung/andtroin/fs.<init> (Lorg/kohaerenzstiftung/andtroin/ListActivity;Lorg/kohaerenzstiftung/andtroin/ListActivity;)V]
   + Methodref [org/kohaerenzstiftung/andtroin/ft.<init> (Lorg/kohaerenzstiftung/andtroin/ListActivity;Landroid/os/Bundle;)V]
-  + Methodref [org/kohaerenzstiftung/andtroin/fu.<init> (Lorg/kohaerenzstiftung/andtroin/ListActivity;)V]
+  + Methodref [org/kohaerenzstiftung/andtroin/fu.<init> (Lorg/kohaerenzstiftung/andtroin/ListActivity;Lorg/kohaerenzstiftung/andtroin/ListActivity;)V]
   + Methodref [org/kohaerenzstiftung/andtroin/fv.<init> (Lorg/kohaerenzstiftung/andtroin/ListActivity;)V]
   + Methodref [org/kohaerenzstiftung/andtroin/fw.<init> (Lorg/kohaerenzstiftung/andtroin/ListActivity;)V]
   + Methodref [org/kohaerenzstiftung/andtroin/fx.<init> (Lorg/kohaerenzstiftung/andtroin/ListActivity;Lorg/kohaerenzstiftung/andtroin/cr;)V]
@@ -59156,7 +59165,7 @@ Methods (count = 71):
     Access flags: 0x4
       = protected void i(int)
     Class member attributes (count = 1):
-    + Code attribute instructions (code length = 37, locals = 2, stack = 9):
+    + Code attribute instructions (code length = 38, locals = 2, stack = 10):
       [0] aload_0 v0
       [1] new #111
         + Class [org/kohaerenzstiftung/andtroin/gk]
@@ -59178,13 +59187,14 @@ Methods (count = 71):
         + Class [org/kohaerenzstiftung/andtroin/ey]
       [25] dup
       [26] aload_0 v0
-      [27] invokespecial #217
-        + Methodref [org/kohaerenzstiftung/andtroin/ey.<init> (Lorg/kohaerenzstiftung/andtroin/ListActivity;)V]
-      [30] invokespecial #253
+      [27] aload_0 v0
+      [28] invokespecial #217
+        + Methodref [org/kohaerenzstiftung/andtroin/ey.<init> (Lorg/kohaerenzstiftung/andtroin/ListActivity;Lorg/kohaerenzstiftung/andtroin/ListActivity;)V]
+      [31] invokespecial #253
         + Methodref [org/kohaerenzstiftung/andtroin/gk.<init> (Lorg/kohaerenzstiftung/andtroin/ListActivity;Lorg/kohaerenzstiftung/a;Lorg/kohaerenzstiftung/andtroin/Category;Lorg/kohaerenzstiftung/andtroin/he;)V]
-      [33] invokevirtual #189
+      [34] invokevirtual #189
         + Methodref [org/kohaerenzstiftung/andtroin/ListActivity.a (Lorg/kohaerenzstiftung/o;)V]
-      [36] return
+      [37] return
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 0):
   + Method:       j(I)V
@@ -59637,7 +59647,7 @@ Methods (count = 71):
     Access flags: 0x2
       = private void b(org.kohaerenzstiftung.andtroin.FormAttribute)
     Class member attributes (count = 1):
-    + Code attribute instructions (code length = 23, locals = 2, stack = 9):
+    + Code attribute instructions (code length = 24, locals = 2, stack = 10):
       [0] aload_0 v0
       [1] new #112
         + Class [org/kohaerenzstiftung/andtroin/go]
@@ -59649,13 +59659,14 @@ Methods (count = 71):
         + Class [org/kohaerenzstiftung/andtroin/fp]
       [11] dup
       [12] aload_0 v0
-      [13] invokespecial #234
-        + Methodref [org/kohaerenzstiftung/andtroin/fp.<init> (Lorg/kohaerenzstiftung/andtroin/ListActivity;)V]
-      [16] invokespecial #254
+      [13] aload_0 v0
+      [14] invokespecial #234
+        + Methodref [org/kohaerenzstiftung/andtroin/fp.<init> (Lorg/kohaerenzstiftung/andtroin/ListActivity;Lorg/kohaerenzstiftung/andtroin/ListActivity;)V]
+      [17] invokespecial #254
         + Methodref [org/kohaerenzstiftung/andtroin/go.<init> (Lorg/kohaerenzstiftung/andtroin/ListActivity;Lorg/kohaerenzstiftung/a;Lorg/kohaerenzstiftung/andtroin/FormAttribute;Lorg/kohaerenzstiftung/andtroin/hf;)V]
-      [19] invokevirtual #189
+      [20] invokevirtual #189
         + Methodref [org/kohaerenzstiftung/andtroin/ListActivity.a (Lorg/kohaerenzstiftung/o;)V]
-      [22] return
+      [23] return
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 0):
   + Method:       a(Lorg/kohaerenzstiftung/andtroin/FormAttribute;)V
@@ -59697,7 +59708,7 @@ Methods (count = 71):
     Access flags: 0x4
       = protected void u()
     Class member attributes (count = 1):
-    + Code attribute instructions (code length = 41, locals = 1, stack = 11):
+    + Code attribute instructions (code length = 42, locals = 1, stack = 11):
       [0] aload_0 v0
       [1] new #111
         + Class [org/kohaerenzstiftung/andtroin/gk]
@@ -59723,13 +59734,14 @@ Methods (count = 71):
         + Class [org/kohaerenzstiftung/andtroin/fq]
       [29] dup
       [30] aload_0 v0
-      [31] invokespecial #235
-        + Methodref [org/kohaerenzstiftung/andtroin/fq.<init> (Lorg/kohaerenzstiftung/andtroin/ListActivity;)V]
-      [34] invokespecial #253
+      [31] aload_0 v0
+      [32] invokespecial #235
+        + Methodref [org/kohaerenzstiftung/andtroin/fq.<init> (Lorg/kohaerenzstiftung/andtroin/ListActivity;Lorg/kohaerenzstiftung/andtroin/ListActivity;)V]
+      [35] invokespecial #253
         + Methodref [org/kohaerenzstiftung/andtroin/gk.<init> (Lorg/kohaerenzstiftung/andtroin/ListActivity;Lorg/kohaerenzstiftung/a;Lorg/kohaerenzstiftung/andtroin/Category;Lorg/kohaerenzstiftung/andtroin/he;)V]
-      [37] invokevirtual #189
+      [38] invokevirtual #189
         + Methodref [org/kohaerenzstiftung/andtroin/ListActivity.a (Lorg/kohaerenzstiftung/o;)V]
-      [40] return
+      [41] return
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 0):
   + Method:       n(I)V
@@ -59779,7 +59791,7 @@ Methods (count = 71):
     Access flags: 0x4
       = protected void v()
     Class member attributes (count = 1):
-    + Code attribute instructions (code length = 31, locals = 2, stack = 8):
+    + Code attribute instructions (code length = 32, locals = 2, stack = 9):
       [0] new #116
         + Class [org/kohaerenzstiftung/andtroin/hg]
       [3] dup
@@ -59794,16 +59806,17 @@ Methods (count = 71):
         + Class [org/kohaerenzstiftung/andtroin/fs]
       [16] dup
       [17] aload_0 v0
-      [18] invokespecial #237
-        + Methodref [org/kohaerenzstiftung/andtroin/fs.<init> (Lorg/kohaerenzstiftung/andtroin/ListActivity;)V]
-      [21] invokespecial #258
+      [18] aload_0 v0
+      [19] invokespecial #237
+        + Methodref [org/kohaerenzstiftung/andtroin/fs.<init> (Lorg/kohaerenzstiftung/andtroin/ListActivity;Lorg/kohaerenzstiftung/andtroin/ListActivity;)V]
+      [22] invokespecial #258
         + Methodref [org/kohaerenzstiftung/andtroin/hg.<init> (Lorg/kohaerenzstiftung/andtroin/ListActivity;Lorg/kohaerenzstiftung/a;ILorg/kohaerenzstiftung/andtroin/hd;)V]
-      [24] astore_1 v1
-      [25] aload_0 v0
-      [26] aload_1 v1
-      [27] invokevirtual #189
+      [25] astore_1 v1
+      [26] aload_0 v0
+      [27] aload_1 v1
+      [28] invokevirtual #189
         + Methodref [org/kohaerenzstiftung/andtroin/ListActivity.a (Lorg/kohaerenzstiftung/o;)V]
-      [30] return
+      [31] return
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 0):
   + Method:       x()V
@@ -59960,7 +59973,7 @@ Methods (count = 71):
     Access flags: 0x4
       = protected void a(java.lang.String,java.lang.String)
     Class member attributes (count = 1):
-    + Code attribute instructions (code length = 31, locals = 3, stack = 9):
+    + Code attribute instructions (code length = 32, locals = 3, stack = 10):
       [0] aload_0 v0
       [1] new #115
         + Class [org/kohaerenzstiftung/andtroin/gw]
@@ -59976,15 +59989,16 @@ Methods (count = 71):
         + Class [org/kohaerenzstiftung/andtroin/fu]
       [17] dup
       [18] aload_0 v0
-      [19] invokespecial #239
-        + Methodref [org/kohaerenzstiftung/andtroin/fu.<init> (Lorg/kohaerenzstiftung/andtroin/ListActivity;)V]
-      [22] aload_1 v1
-      [23] aload_2 v2
-      [24] invokespecial #257
+      [19] aload_0 v0
+      [20] invokespecial #239
+        + Methodref [org/kohaerenzstiftung/andtroin/fu.<init> (Lorg/kohaerenzstiftung/andtroin/ListActivity;Lorg/kohaerenzstiftung/andtroin/ListActivity;)V]
+      [23] aload_1 v1
+      [24] aload_2 v2
+      [25] invokespecial #257
         + Methodref [org/kohaerenzstiftung/andtroin/gw.<init> (Lorg/kohaerenzstiftung/andtroin/ListActivity;Lorg/kohaerenzstiftung/a;ILorg/kohaerenzstiftung/andtroin/hc;Ljava/lang/String;Ljava/lang/String;)V]
-      [27] invokevirtual #189
+      [28] invokevirtual #189
         + Methodref [org/kohaerenzstiftung/andtroin/ListActivity.a (Lorg/kohaerenzstiftung/o;)V]
-      [30] return
+      [31] return
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 0):
   + Method:       e()V
@@ -61955,7 +61969,7 @@ _____________________________________________________________________
 
 Interfaces (count = 0):
 
-Constant Pool (count = 20):
+Constant Pool (count = 21):
   + Class [org/kohaerenzstiftung/andtroin/ListActivity]
   + Class [org/kohaerenzstiftung/andtroin/ey]
   + Class [org/kohaerenzstiftung/andtroin/he]
@@ -61967,6 +61981,7 @@ Constant Pool (count = 20):
   + NameAndType [b (Lorg/kohaerenzstiftung/andtroin/Category;)V]
   + Utf8 [(Lorg/kohaerenzstiftung/andtroin/Category;)V]
   + Utf8 [(Lorg/kohaerenzstiftung/andtroin/ListActivity;)V]
+  + Utf8 [(Lorg/kohaerenzstiftung/andtroin/ListActivity;Lorg/kohaerenzstiftung/andtroin/ListActivity;)V]
   + Utf8 [<init>]
   + Utf8 [Code]
   + Utf8 [Lorg/kohaerenzstiftung/andtroin/ListActivity;]
@@ -61982,13 +61997,13 @@ Fields (count = 1):
       = final synthetic org.kohaerenzstiftung.andtroin.ListActivity a
 
 Methods (count = 2):
-  - Method:       <init>(Lorg/kohaerenzstiftung/andtroin/ListActivity;)V
+  - Method:       <init>(Lorg/kohaerenzstiftung/andtroin/ListActivity;Lorg/kohaerenzstiftung/andtroin/ListActivity;)V
     Access flags: 0x0
-      = ey(org.kohaerenzstiftung.andtroin.ListActivity)
+      = ey(org.kohaerenzstiftung.andtroin.ListActivity,org.kohaerenzstiftung.andtroin.ListActivity)
     Class member attributes (count = 1):
-    + Code attribute instructions (code length = 11, locals = 2, stack = 2):
+    + Code attribute instructions (code length = 11, locals = 3, stack = 2):
       [0] aload_0 v0
-      [1] aload_1 v1
+      [1] aload_2 v2
       [2] putfield #4
         + Fieldref [org/kohaerenzstiftung/andtroin/ey.a Lorg/kohaerenzstiftung/andtroin/ListActivity;]
       [5] aload_0 v0
@@ -63401,7 +63416,7 @@ _____________________________________________________________________
 
 Interfaces (count = 0):
 
-Constant Pool (count = 19):
+Constant Pool (count = 20):
   + Class [org/kohaerenzstiftung/andtroin/ListActivity]
   + Class [org/kohaerenzstiftung/andtroin/fp]
   + Class [org/kohaerenzstiftung/andtroin/hf]
@@ -63413,6 +63428,7 @@ Constant Pool (count = 19):
   + NameAndType [a Lorg/kohaerenzstiftung/andtroin/ListActivity;]
   + Utf8 [(Lorg/kohaerenzstiftung/andtroin/FormAttribute;)V]
   + Utf8 [(Lorg/kohaerenzstiftung/andtroin/ListActivity;)V]
+  + Utf8 [(Lorg/kohaerenzstiftung/andtroin/ListActivity;Lorg/kohaerenzstiftung/andtroin/ListActivity;)V]
   + Utf8 [<init>]
   + Utf8 [Code]
   + Utf8 [Lorg/kohaerenzstiftung/andtroin/ListActivity;]
@@ -63427,13 +63443,13 @@ Fields (count = 1):
       = final synthetic org.kohaerenzstiftung.andtroin.ListActivity a
 
 Methods (count = 2):
-  - Method:       <init>(Lorg/kohaerenzstiftung/andtroin/ListActivity;)V
+  - Method:       <init>(Lorg/kohaerenzstiftung/andtroin/ListActivity;Lorg/kohaerenzstiftung/andtroin/ListActivity;)V
     Access flags: 0x0
-      = fp(org.kohaerenzstiftung.andtroin.ListActivity)
+      = fp(org.kohaerenzstiftung.andtroin.ListActivity,org.kohaerenzstiftung.andtroin.ListActivity)
     Class member attributes (count = 1):
-    + Code attribute instructions (code length = 11, locals = 2, stack = 2):
+    + Code attribute instructions (code length = 11, locals = 3, stack = 2):
       [0] aload_0 v0
-      [1] aload_1 v1
+      [1] aload_2 v2
       [2] putfield #4
         + Fieldref [org/kohaerenzstiftung/andtroin/fp.a Lorg/kohaerenzstiftung/andtroin/ListActivity;]
       [5] aload_0 v0
@@ -63470,7 +63486,7 @@ _____________________________________________________________________
 
 Interfaces (count = 0):
 
-Constant Pool (count = 20):
+Constant Pool (count = 21):
   + Class [org/kohaerenzstiftung/andtroin/ListActivity]
   + Class [org/kohaerenzstiftung/andtroin/fq]
   + Class [org/kohaerenzstiftung/andtroin/he]
@@ -63482,6 +63498,7 @@ Constant Pool (count = 20):
   + NameAndType [b (Lorg/kohaerenzstiftung/andtroin/Category;)V]
   + Utf8 [(Lorg/kohaerenzstiftung/andtroin/Category;)V]
   + Utf8 [(Lorg/kohaerenzstiftung/andtroin/ListActivity;)V]
+  + Utf8 [(Lorg/kohaerenzstiftung/andtroin/ListActivity;Lorg/kohaerenzstiftung/andtroin/ListActivity;)V]
   + Utf8 [<init>]
   + Utf8 [Code]
   + Utf8 [Lorg/kohaerenzstiftung/andtroin/ListActivity;]
@@ -63497,13 +63514,13 @@ Fields (count = 1):
       = final synthetic org.kohaerenzstiftung.andtroin.ListActivity a
 
 Methods (count = 2):
-  - Method:       <init>(Lorg/kohaerenzstiftung/andtroin/ListActivity;)V
+  - Method:       <init>(Lorg/kohaerenzstiftung/andtroin/ListActivity;Lorg/kohaerenzstiftung/andtroin/ListActivity;)V
     Access flags: 0x0
-      = fq(org.kohaerenzstiftung.andtroin.ListActivity)
+      = fq(org.kohaerenzstiftung.andtroin.ListActivity,org.kohaerenzstiftung.andtroin.ListActivity)
     Class member attributes (count = 1):
-    + Code attribute instructions (code length = 11, locals = 2, stack = 2):
+    + Code attribute instructions (code length = 11, locals = 3, stack = 2):
       [0] aload_0 v0
-      [1] aload_1 v1
+      [1] aload_2 v2
       [2] putfield #4
         + Fieldref [org/kohaerenzstiftung/andtroin/fq.a Lorg/kohaerenzstiftung/andtroin/ListActivity;]
       [5] aload_0 v0
@@ -63642,7 +63659,7 @@ _____________________________________________________________________
 
 Interfaces (count = 0):
 
-Constant Pool (count = 25):
+Constant Pool (count = 26):
   + Class [org/kohaerenzstiftung/andtroin/AndtroinService]
   + Class [org/kohaerenzstiftung/andtroin/ListActivity]
   + Class [org/kohaerenzstiftung/andtroin/fs]
@@ -63656,6 +63673,7 @@ Constant Pool (count = 25):
   + NameAndType [a Lorg/kohaerenzstiftung/andtroin/ListActivity;]
   + NameAndType [d Lorg/kohaerenzstiftung/andtroin/AndtroinService;]
   + Utf8 [(Lorg/kohaerenzstiftung/andtroin/ListActivity;)V]
+  + Utf8 [(Lorg/kohaerenzstiftung/andtroin/ListActivity;Lorg/kohaerenzstiftung/andtroin/ListActivity;)V]
   + Utf8 [(Lorg/kohaerenzstiftung/andtroin/kx;)V]
   + Utf8 [<init>]
   + Utf8 [Code]
@@ -63674,13 +63692,13 @@ Fields (count = 1):
       = final synthetic org.kohaerenzstiftung.andtroin.ListActivity a
 
 Methods (count = 2):
-  - Method:       <init>(Lorg/kohaerenzstiftung/andtroin/ListActivity;)V
+  - Method:       <init>(Lorg/kohaerenzstiftung/andtroin/ListActivity;Lorg/kohaerenzstiftung/andtroin/ListActivity;)V
     Access flags: 0x0
-      = fs(org.kohaerenzstiftung.andtroin.ListActivity)
+      = fs(org.kohaerenzstiftung.andtroin.ListActivity,org.kohaerenzstiftung.andtroin.ListActivity)
     Class member attributes (count = 1):
-    + Code attribute instructions (code length = 11, locals = 2, stack = 2):
+    + Code attribute instructions (code length = 11, locals = 3, stack = 2):
       [0] aload_0 v0
-      [1] aload_1 v1
+      [1] aload_2 v2
       [2] putfield #6
         + Fieldref [org/kohaerenzstiftung/andtroin/fs.a Lorg/kohaerenzstiftung/andtroin/ListActivity;]
       [5] aload_0 v0
@@ -63799,7 +63817,7 @@ _____________________________________________________________________
 
 Interfaces (count = 0):
 
-Constant Pool (count = 19):
+Constant Pool (count = 20):
   + Class [org/kohaerenzstiftung/andtroin/ListActivity]
   + Class [org/kohaerenzstiftung/andtroin/fu]
   + Class [org/kohaerenzstiftung/andtroin/hc]
@@ -63811,6 +63829,7 @@ Constant Pool (count = 19):
   + NameAndType [a Lorg/kohaerenzstiftung/andtroin/ListActivity;]
   + Utf8 [(Lorg/kohaerenzstiftung/andtroin/Entry;)V]
   + Utf8 [(Lorg/kohaerenzstiftung/andtroin/ListActivity;)V]
+  + Utf8 [(Lorg/kohaerenzstiftung/andtroin/ListActivity;Lorg/kohaerenzstiftung/andtroin/ListActivity;)V]
   + Utf8 [<init>]
   + Utf8 [Code]
   + Utf8 [Lorg/kohaerenzstiftung/andtroin/ListActivity;]
@@ -63825,13 +63844,13 @@ Fields (count = 1):
       = final synthetic org.kohaerenzstiftung.andtroin.ListActivity a
 
 Methods (count = 2):
-  - Method:       <init>(Lorg/kohaerenzstiftung/andtroin/ListActivity;)V
+  - Method:       <init>(Lorg/kohaerenzstiftung/andtroin/ListActivity;Lorg/kohaerenzstiftung/andtroin/ListActivity;)V
     Access flags: 0x0
-      = fu(org.kohaerenzstiftung.andtroin.ListActivity)
+      = fu(org.kohaerenzstiftung.andtroin.ListActivity,org.kohaerenzstiftung.andtroin.ListActivity)
     Class member attributes (count = 1):
-    + Code attribute instructions (code length = 11, locals = 2, stack = 2):
+    + Code attribute instructions (code length = 11, locals = 3, stack = 2):
       [0] aload_0 v0
-      [1] aload_1 v1
+      [1] aload_2 v2
       [2] putfield #4
         + Fieldref [org/kohaerenzstiftung/andtroin/fu.a Lorg/kohaerenzstiftung/andtroin/ListActivity;]
       [5] aload_0 v0
@@ -77618,7 +77637,7 @@ Methods (count = 13):
       - ExceptionInfo (347 -> 352: 355):
       + Class [java/io/IOException]
       Code attribute attributes (attribute count = 1):
-      + Stack map table attribute (count = 19):
+      + Stack map table attribute (count = 17):
         - [93] Var: [a:org/kohaerenzstiftung/andtroin/iw][a:org/kohaerenzstiftung/andtroin/ij][a:java/lang/String][a:java/lang/String][a:java/lang/String][a:org/kohaerenzstiftung/Language][a:org/kohaerenzstiftung/Language][a:org/kohaerenzstiftung/andtroin/List][a:java/io/BufferedReader][a:java/io/DataInputStream][a:java/io/File], Stack: [a:java/io/FileNotFoundException]
         - [112] Var: ..., Stack: (empty)
         - [133] Var: ..., Stack: [a:java/io/FileNotFoundException]
@@ -77630,11 +77649,9 @@ Methods (count = 13):
         - [241] Var: ..., Stack: (empty)
         - [252] Var: ..., Stack: (empty)
         - [285] Var: ..., Stack: [a:java/lang/Exception]
-        - [295] Var: -2, Stack: (empty)
-        - [298] Var: ..., Stack: (empty)
+        - [298] Var: -2, Stack: (empty)
         - [320] Var: ..., Stack: (empty)
         - [337] Var: ..., Stack: [a:java/io/IOException]
-        - [344] Var: ..., Stack: (empty)
         - [347] Var: ..., Stack: (empty)
         - [355] Var: ..., Stack: [a:java/io/IOException]
         - [362] Var: ..., Stack: (empty)
@@ -80894,7 +80911,7 @@ _____________________________________________________________________
 
 Interfaces (count = 0):
 
-Constant Pool (count = 586):
+Constant Pool (count = 588):
   + Integer [100000]
   + Integer [131072]
   + Integer [2130903049]
@@ -81104,7 +81121,7 @@ Constant Pool (count = 586):
   + Methodref [org/kohaerenzstiftung/andtroin/cr.onStop ()V]
   + Methodref [org/kohaerenzstiftung/andtroin/jp.<init> (Lorg/kohaerenzstiftung/andtroin/PromptActivity;)V]
   + Methodref [org/kohaerenzstiftung/andtroin/jq.<init> (Lorg/kohaerenzstiftung/andtroin/PromptActivity;Lorg/kohaerenzstiftung/andtroin/cr;)V]
-  + Methodref [org/kohaerenzstiftung/andtroin/jr.<init> (Lorg/kohaerenzstiftung/andtroin/PromptActivity;)V]
+  + Methodref [org/kohaerenzstiftung/andtroin/jr.<init> (Lorg/kohaerenzstiftung/andtroin/PromptActivity;Lorg/kohaerenzstiftung/andtroin/PromptActivity;)V]
   + Methodref [org/kohaerenzstiftung/andtroin/jt.<init> (Lorg/kohaerenzstiftung/andtroin/PromptActivity;)V]
   + Methodref [org/kohaerenzstiftung/andtroin/ju.<init> (Lorg/kohaerenzstiftung/andtroin/PromptActivity;)V]
   + Methodref [org/kohaerenzstiftung/andtroin/jv.<init> (Lorg/kohaerenzstiftung/andtroin/PromptActivity;)V]
@@ -81137,6 +81154,7 @@ Constant Pool (count = 586):
   + NameAndType [<init> (Lorg/kohaerenzstiftung/andtroin/PromptActivity;Lorg/kohaerenzstiftung/a;Ljava/util/LinkedList;Z)V]
   + NameAndType [<init> (Lorg/kohaerenzstiftung/andtroin/PromptActivity;Lorg/kohaerenzstiftung/andtroin/Denomination;Ljava/util/LinkedList;Lorg/kohaerenzstiftung/andtroin/ko;)V]
   + NameAndType [<init> (Lorg/kohaerenzstiftung/andtroin/PromptActivity;Lorg/kohaerenzstiftung/andtroin/Denomination;Lorg/kohaerenzstiftung/andtroin/DetailsKey;Lorg/kohaerenzstiftung/andtroin/ko;)V]
+  + NameAndType [<init> (Lorg/kohaerenzstiftung/andtroin/PromptActivity;Lorg/kohaerenzstiftung/andtroin/PromptActivity;)V]
   + NameAndType [<init> (Lorg/kohaerenzstiftung/andtroin/PromptActivity;Lorg/kohaerenzstiftung/andtroin/cr;)V]
   + NameAndType [A ()I]
   + NameAndType [A Landroid/widget/Button;]
@@ -81324,6 +81342,7 @@ Constant Pool (count = 586):
   + Utf8 [(Lorg/kohaerenzstiftung/andtroin/PromptActivity;Lorg/kohaerenzstiftung/a;Ljava/util/LinkedList;Z)V]
   + Utf8 [(Lorg/kohaerenzstiftung/andtroin/PromptActivity;Lorg/kohaerenzstiftung/andtroin/Denomination;Ljava/util/LinkedList;Lorg/kohaerenzstiftung/andtroin/ko;)V]
   + Utf8 [(Lorg/kohaerenzstiftung/andtroin/PromptActivity;Lorg/kohaerenzstiftung/andtroin/Denomination;Lorg/kohaerenzstiftung/andtroin/DetailsKey;Lorg/kohaerenzstiftung/andtroin/ko;)V]
+  + Utf8 [(Lorg/kohaerenzstiftung/andtroin/PromptActivity;Lorg/kohaerenzstiftung/andtroin/PromptActivity;)V]
   + Utf8 [(Lorg/kohaerenzstiftung/andtroin/PromptActivity;Lorg/kohaerenzstiftung/andtroin/cr;)V]
   + Utf8 [(Lorg/kohaerenzstiftung/andtroin/PromptActivity;Lorg/kohaerenzstiftung/andtroin/ko;)V]
   + Utf8 [(Lorg/kohaerenzstiftung/andtroin/PromptActivity;Z)V]
@@ -82011,17 +82030,18 @@ Methods (count = 56):
     Access flags: 0x2
       = private void u()
     Class member attributes (count = 1):
-    + Code attribute instructions (code length = 13, locals = 1, stack = 4):
+    + Code attribute instructions (code length = 14, locals = 1, stack = 5):
       [0] aload_0 v0
       [1] new #59
         + Class [org/kohaerenzstiftung/andtroin/jr]
       [4] dup
       [5] aload_0 v0
-      [6] invokespecial #210
-        + Methodref [org/kohaerenzstiftung/andtroin/jr.<init> (Lorg/kohaerenzstiftung/andtroin/PromptActivity;)V]
-      [9] invokespecial #171
+      [6] aload_0 v0
+      [7] invokespecial #210
+        + Methodref [org/kohaerenzstiftung/andtroin/jr.<init> (Lorg/kohaerenzstiftung/andtroin/PromptActivity;Lorg/kohaerenzstiftung/andtroin/PromptActivity;)V]
+      [10] invokespecial #171
         + Methodref [org/kohaerenzstiftung/andtroin/PromptActivity.b (Lorg/kohaerenzstiftung/andtroin/ko;)V]
-      [12] return
+      [13] return
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 0):
   + Method:       a(Lorg/kohaerenzstiftung/andtroin/ko;)V
@@ -82082,12 +82102,11 @@ Methods (count = 56):
       [81] return
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 1):
-      + Stack map table attribute (count = 6):
+      + Stack map table attribute (count = 5):
         - [22] Var: ...[i], Stack: (empty)
         - [29] Var: ..., Stack: [a:java/util/LinkedList]
         - [70] Var: ...[a:java/util/LinkedList][a:org/kohaerenzstiftung/andtroin/Denomination][a:org/kohaerenzstiftung/andtroin/DetailsKey], Stack: (empty)
-        - [74] Var: -1, Stack: (empty)
-        - [77] Var: ..., Stack: (empty)
+        - [77] Var: -1, Stack: (empty)
         - [81] Var: ..., Stack: (empty)
   + Method:       a(Lorg/kohaerenzstiftung/andtroin/Denomination;Lorg/kohaerenzstiftung/andtroin/DetailsKey;Lorg/kohaerenzstiftung/andtroin/ko;)V
     Access flags: 0x2
@@ -82274,12 +82293,11 @@ Methods (count = 56):
       [84] return
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 1):
-      + Stack map table attribute (count = 6):
+      + Stack map table attribute (count = 5):
         - [22] Var: ...[i], Stack: (empty)
         - [29] Var: ..., Stack: [a:java/util/LinkedList]
         - [73] Var: ...[a:java/util/LinkedList][a:org/kohaerenzstiftung/andtroin/Denomination][a:org/kohaerenzstiftung/andtroin/DenominationForm], Stack: (empty)
-        - [77] Var: -1, Stack: (empty)
-        - [80] Var: ..., Stack: (empty)
+        - [80] Var: -1, Stack: (empty)
         - [84] Var: ..., Stack: (empty)
   + Method:       c(Ljava/util/LinkedList;)Lorg/kohaerenzstiftung/andtroin/Denomination;
     Access flags: 0x2
@@ -82540,12 +82558,11 @@ Methods (count = 56):
       [217] return
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 1):
-      + Stack map table attribute (count = 9):
+      + Stack map table attribute (count = 8):
         - [20] Var: ..., Stack: (empty)
         - [57] Var: ..., Stack: (empty)
         - [101] Var: [a:org/kohaerenzstiftung/andtroin/PromptActivity][i][i][a:java/lang/String][i][T][a:java/util/Iterator], Stack: 
-        - [131] Var: [a:org/kohaerenzstiftung/andtroin/PromptActivity][i][i][a:java/lang/String][i][a:org/kohaerenzstiftung/andtroin/Denomination][a:java/util/Iterator], Stack: 
-        - [134] Var: ..., Stack: (empty)
+        - [134] Var: [a:org/kohaerenzstiftung/andtroin/PromptActivity][i][i][a:java/lang/String][i][a:org/kohaerenzstiftung/andtroin/Denomination][a:java/util/Iterator], Stack: 
         - [150] Var: ..., Stack: (empty)
         - [174] Var: [a:org/kohaerenzstiftung/andtroin/PromptActivity][i][i][a:java/lang/String][i][T][a:java/util/Iterator], Stack: 
         - [203] Var: [a:org/kohaerenzstiftung/andtroin/PromptActivity][i][i][a:java/lang/String][i], Stack: 
@@ -82939,11 +82956,10 @@ Methods (count = 56):
       [264] return
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 1):
-      + Stack map table attribute (count = 12):
+      + Stack map table attribute (count = 11):
         - [32] Var: ..., Stack: (empty)
         - [53] Var: ..., Stack: (empty)
         - [128] Var: ...[a:java/lang/String][a:java/lang/String], Stack: (empty)
-        - [136] Var: ..., Stack: (empty)
         - [139] Var: ..., Stack: (empty)
         - [147] Var: ..., Stack: (empty)
         - [178] Var: [a:org/kohaerenzstiftung/andtroin/PromptActivity][a:java/lang/String][a:java/lang/String][a:java/lang/String], Stack: [a:android/widget/TextView]
@@ -83721,8 +83737,7 @@ Methods (count = 56):
       [31] return
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 1):
-      + Stack map table attribute (count = 3):
-        - [23] Var: ..., Stack: (empty)
+      + Stack map table attribute (count = 2):
         - [26] Var: ..., Stack: (empty)
         - [31] Var: ..., Stack: (empty)
   + Method:       j()I
@@ -84021,7 +84036,7 @@ _____________________________________________________________________
 
 Interfaces (count = 0):
 
-Constant Pool (count = 33):
+Constant Pool (count = 34):
   + Class [org/kohaerenzstiftung/andtroin/PromptActivity]
   + Class [org/kohaerenzstiftung/andtroin/jr]
   + Class [org/kohaerenzstiftung/andtroin/js]
@@ -84040,6 +84055,7 @@ Constant Pool (count = 33):
   + NameAndType [c (Lorg/kohaerenzstiftung/andtroin/PromptActivity;Z)V]
   + Utf8 [()V]
   + Utf8 [(Lorg/kohaerenzstiftung/andtroin/PromptActivity;)V]
+  + Utf8 [(Lorg/kohaerenzstiftung/andtroin/PromptActivity;Lorg/kohaerenzstiftung/andtroin/PromptActivity;)V]
   + Utf8 [(Lorg/kohaerenzstiftung/andtroin/PromptActivity;Lorg/kohaerenzstiftung/andtroin/ko;)V]
   + Utf8 [(Lorg/kohaerenzstiftung/andtroin/PromptActivity;Z)V]
   + Utf8 [(Lorg/kohaerenzstiftung/andtroin/jr;)Lorg/kohaerenzstiftung/andtroin/PromptActivity;]
@@ -84061,13 +84077,13 @@ Fields (count = 1):
       = final synthetic org.kohaerenzstiftung.andtroin.PromptActivity a
 
 Methods (count = 4):
-  - Method:       <init>(Lorg/kohaerenzstiftung/andtroin/PromptActivity;)V
+  - Method:       <init>(Lorg/kohaerenzstiftung/andtroin/PromptActivity;Lorg/kohaerenzstiftung/andtroin/PromptActivity;)V
     Access flags: 0x0
-      = jr(org.kohaerenzstiftung.andtroin.PromptActivity)
+      = jr(org.kohaerenzstiftung.andtroin.PromptActivity,org.kohaerenzstiftung.andtroin.PromptActivity)
     Class member attributes (count = 1):
-    + Code attribute instructions (code length = 11, locals = 2, stack = 2):
+    + Code attribute instructions (code length = 11, locals = 3, stack = 2):
       [0] aload_0 v0
-      [1] aload_1 v1
+      [1] aload_2 v2
       [2] putfield #5
         + Fieldref [org/kohaerenzstiftung/andtroin/jr.a Lorg/kohaerenzstiftung/andtroin/PromptActivity;]
       [5] aload_0 v0
@@ -85809,12 +85825,11 @@ Methods (count = 7):
       [157] return
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 1):
-      + Stack map table attribute (count = 6):
+      + Stack map table attribute (count = 5):
         - [54] Var: ...[a:org/kohaerenzstiftung/andtroin/DetailsKeyValue], Stack: (empty)
         - [77] Var: [a:org/kohaerenzstiftung/andtroin/kf][a:org/kohaerenzstiftung/andtroin/DetailsKeyValue][a:java/util/LinkedList][T][a:java/util/Iterator], Stack: 
         - [108] Var: ..., Stack: (empty)
-        - [143] Var: [a:org/kohaerenzstiftung/andtroin/kf], Stack: 
-        - [146] Var: ..., Stack: (empty)
+        - [146] Var: [a:org/kohaerenzstiftung/andtroin/kf], Stack: 
         - [157] Var: ..., Stack: (empty)
 
 Class file attributes (count = 0):
@@ -86349,7 +86364,7 @@ _____________________________________________________________________
 
 Interfaces (count = 0):
 
-Constant Pool (count = 174):
+Constant Pool (count = 170):
   + Integer [2130903062]
   + Integer [2131230737]
   + Integer [2131230767]
@@ -86393,7 +86408,6 @@ Constant Pool (count = 174):
   + Methodref [java/util/LinkedList.add (Ljava/lang/Object;)Z]
   + Methodref [java/util/LinkedList.contains (Ljava/lang/Object;)Z]
   + Methodref [java/util/LinkedList.iterator ()Ljava/util/Iterator;]
-  + Methodref [java/util/LinkedList.size ()I]
   + Methodref [org/kohaerenzstiftung/EditText.addTextChangedListener (Landroid/text/TextWatcher;)V]
   + Methodref [org/kohaerenzstiftung/andtroin/Denomination.a ()Ljava/util/LinkedList;]
   + Methodref [org/kohaerenzstiftung/andtroin/Denomination.b ()Ljava/lang/String;]
@@ -86443,8 +86457,6 @@ Constant Pool (count = 174):
   + NameAndType [setOnClickListener (Landroid/view/View$OnClickListener;)V]
   + NameAndType [setText (Ljava/lang/CharSequence;)V]
   + NameAndType [setTextColor (I)V]
-  + NameAndType [size ()I]
-  + Utf8 [()I]
   + Utf8 [()Ljava/lang/Object;]
   + Utf8 [()Ljava/lang/String;]
   + Utf8 [()Ljava/util/Iterator;]
@@ -86522,7 +86534,6 @@ Constant Pool (count = 174):
   + Utf8 [setOnClickListener]
   + Utf8 [setText]
   + Utf8 [setTextColor]
-  + Utf8 [size]
 
 Fields (count = 12):
   + Field:        b Landroid/widget/TextView;
@@ -86577,7 +86588,7 @@ Methods (count = 17):
       [7] ldc #1
         + Integer [2130903062]
       [9] iconst_0
-      [10] invokespecial #57
+      [10] invokespecial #56
         + Methodref [org/kohaerenzstiftung/m.<init> (Lorg/kohaerenzstiftung/a;IZ)V]
       [13] aload_0 v0
       [14] iconst_0
@@ -86600,14 +86611,14 @@ Methods (count = 17):
       [37] aload_0 v0
       [38] getfield #30
         + Fieldref [org/kohaerenzstiftung/andtroin/kj.g Lorg/kohaerenzstiftung/andtroin/Denomination;]
-      [41] invokevirtual #46
+      [41] invokevirtual #45
         + Methodref [org/kohaerenzstiftung/andtroin/Denomination.a ()Ljava/util/LinkedList;]
       [44] invokevirtual #43
         + Methodref [java/util/LinkedList.iterator ()Ljava/util/Iterator;]
       [47] astore v7
       [49] goto +33 (target=82)
       [52] aload v7
-      [54] invokeinterface #59
+      [54] invokeinterface #58
         + InterfaceMethodref [java/util/Iterator.next ()Ljava/lang/Object;]
       [59] checkcast #15
         + Class [org/kohaerenzstiftung/andtroin/DenominationForm]
@@ -86615,7 +86626,7 @@ Methods (count = 17):
       [64] aload_0 v0
       [65] aload v6
       [67] aload_3 v3
-      [68] invokespecial #49
+      [68] invokespecial #48
         + Methodref [org/kohaerenzstiftung/andtroin/kj.a (Lorg/kohaerenzstiftung/andtroin/DenominationForm;Ljava/util/LinkedList;)Z]
       [71] ifeq +11 (target=82)
       [74] aload v5
@@ -86624,7 +86635,7 @@ Methods (count = 17):
         + Methodref [java/util/LinkedList.add (Ljava/lang/Object;)Z]
       [81] pop
       [82] aload v7
-      [84] invokeinterface #58
+      [84] invokeinterface #57
         + InterfaceMethodref [java/util/Iterator.hasNext ()Z]
       [89] ifne -37 (target=52)
       [92] aload_0 v0
@@ -86645,50 +86656,40 @@ Methods (count = 17):
     Access flags: 0x2
       = private boolean a(org.kohaerenzstiftung.andtroin.DenominationForm,java.util.LinkedList)
     Class member attributes (count = 1):
-    + Code attribute instructions (code length = 62, locals = 6, stack = 2):
+    + Code attribute instructions (code length = 49, locals = 6, stack = 2):
       [0] aload_1 v1
-      [1] invokevirtual #48
+      [1] invokevirtual #47
         + Methodref [org/kohaerenzstiftung/andtroin/DenominationForm.c ()Ljava/util/LinkedList;]
       [4] astore_3 v3
-      [5] aload_3 v3
-      [6] invokevirtual #44
-        + Methodref [java/util/LinkedList.size ()I]
-      [9] aload_2 v2
-      [10] invokevirtual #44
-        + Methodref [java/util/LinkedList.size ()I]
-      [13] ificmpeq +5 (target=18)
-      [16] iconst_0
-      [17] ireturn
-      [18] aload_2 v2
-      [19] invokevirtual #43
+      [5] aload_2 v2
+      [6] invokevirtual #43
         + Methodref [java/util/LinkedList.iterator ()Ljava/util/Iterator;]
-      [22] astore v5
-      [24] goto +26 (target=50)
-      [27] aload v5
-      [29] invokeinterface #59
+      [9] astore v5
+      [11] goto +26 (target=37)
+      [14] aload v5
+      [16] invokeinterface #58
         + InterfaceMethodref [java/util/Iterator.next ()Ljava/lang/Object;]
-      [34] checkcast #16
+      [21] checkcast #16
         + Class [org/kohaerenzstiftung/andtroin/FormAttribute]
-      [37] astore v4
-      [39] aload_3 v3
-      [40] aload v4
-      [42] invokevirtual #42
+      [24] astore v4
+      [26] aload_3 v3
+      [27] aload v4
+      [29] invokevirtual #42
         + Methodref [java/util/LinkedList.contains (Ljava/lang/Object;)Z]
-      [45] ifne +5 (target=50)
-      [48] iconst_0
-      [49] ireturn
-      [50] aload v5
-      [52] invokeinterface #58
+      [32] ifne +5 (target=37)
+      [35] iconst_0
+      [36] ireturn
+      [37] aload v5
+      [39] invokeinterface #57
         + InterfaceMethodref [java/util/Iterator.hasNext ()Z]
-      [57] ifne -30 (target=27)
-      [60] iconst_1
-      [61] ireturn
+      [44] ifne -30 (target=14)
+      [47] iconst_1
+      [48] ireturn
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 1):
-      + Stack map table attribute (count = 3):
-        - [18] Var: ...[a:java/util/LinkedList], Stack: (empty)
-        - [27] Var: [a:org/kohaerenzstiftung/andtroin/kj][a:org/kohaerenzstiftung/andtroin/DenominationForm][a:java/util/LinkedList][a:java/util/LinkedList][T][a:java/util/Iterator], Stack: 
-        - [50] Var: ..., Stack: (empty)
+      + Stack map table attribute (count = 2):
+        - [14] Var: [a:org/kohaerenzstiftung/andtroin/kj][a:org/kohaerenzstiftung/andtroin/DenominationForm][a:java/util/LinkedList][a:java/util/LinkedList][T][a:java/util/Iterator], Stack: 
+        - [37] Var: ..., Stack: (empty)
   + Method:       d()V
     Access flags: 0x4
       = protected void d()
@@ -86700,7 +86701,7 @@ Methods (count = 17):
       [4] aload_0 v0
       [5] getfield #30
         + Fieldref [org/kohaerenzstiftung/andtroin/kj.g Lorg/kohaerenzstiftung/andtroin/Denomination;]
-      [8] invokevirtual #47
+      [8] invokevirtual #46
         + Methodref [org/kohaerenzstiftung/andtroin/Denomination.b ()Ljava/lang/String;]
       [11] invokevirtual #38
         + Methodref [android/widget/TextView.setText (Ljava/lang/CharSequence;)V]
@@ -86719,7 +86720,7 @@ Methods (count = 17):
       [30] aload_0 v0
       [31] getfield #31
         + Fieldref [org/kohaerenzstiftung/andtroin/kj.h Ljava/util/LinkedList;]
-      [34] invokespecial #54
+      [34] invokespecial #53
         + Methodref [org/kohaerenzstiftung/andtroin/km.<init> (Lorg/kohaerenzstiftung/andtroin/PromptActivity;Landroid/content/Context;Ljava/util/LinkedList;)V]
       [37] invokevirtual #37
         + Methodref [android/widget/ListView.setAdapter (Landroid/widget/ListAdapter;)V]
@@ -86751,7 +86752,7 @@ Methods (count = 17):
       [1] aload_0 v0
       [2] ldc #6
         + Integer [2131230797]
-      [4] invokevirtual #51
+      [4] invokevirtual #50
         + Methodref [org/kohaerenzstiftung/andtroin/kj.findViewById (I)Landroid/view/View;]
       [7] checkcast #10
         + Class [android/widget/TextView]
@@ -86761,7 +86762,7 @@ Methods (count = 17):
       [14] aload_0 v0
       [15] ldc #2
         + Integer [2131230737]
-      [17] invokevirtual #51
+      [17] invokevirtual #50
         + Methodref [org/kohaerenzstiftung/andtroin/kj.findViewById (I)Landroid/view/View;]
       [20] checkcast #9
         + Class [android/widget/ListView]
@@ -86771,7 +86772,7 @@ Methods (count = 17):
       [27] aload_0 v0
       [28] ldc #3
         + Integer [2131230767]
-      [30] invokevirtual #51
+      [30] invokevirtual #50
         + Methodref [org/kohaerenzstiftung/andtroin/kj.findViewById (I)Landroid/view/View;]
       [33] checkcast #13
         + Class [org/kohaerenzstiftung/EditText]
@@ -86781,7 +86782,7 @@ Methods (count = 17):
       [40] aload_0 v0
       [41] ldc #4
         + Integer [2131230773]
-      [43] invokevirtual #51
+      [43] invokevirtual #50
         + Methodref [org/kohaerenzstiftung/andtroin/kj.findViewById (I)Landroid/view/View;]
       [46] checkcast #9
         + Class [android/widget/ListView]
@@ -86791,7 +86792,7 @@ Methods (count = 17):
       [53] aload_0 v0
       [54] ldc #7
         + Integer [2131230798]
-      [56] invokevirtual #51
+      [56] invokevirtual #50
         + Methodref [org/kohaerenzstiftung/andtroin/kj.findViewById (I)Landroid/view/View;]
       [59] checkcast #9
         + Class [android/widget/ListView]
@@ -86801,7 +86802,7 @@ Methods (count = 17):
       [66] aload_0 v0
       [67] ldc #5
         + Integer [2131230781]
-      [69] invokevirtual #51
+      [69] invokevirtual #50
         + Methodref [org/kohaerenzstiftung/andtroin/kj.findViewById (I)Landroid/view/View;]
       [72] checkcast #8
         + Class [android/widget/Button]
@@ -86828,9 +86829,9 @@ Methods (count = 17):
         + Class [org/kohaerenzstiftung/andtroin/kk]
       [7] dup
       [8] aload_0 v0
-      [9] invokespecial #52
+      [9] invokespecial #51
         + Methodref [org/kohaerenzstiftung/andtroin/kk.<init> (Lorg/kohaerenzstiftung/andtroin/kj;)V]
-      [12] invokevirtual #45
+      [12] invokevirtual #44
         + Methodref [org/kohaerenzstiftung/EditText.addTextChangedListener (Landroid/text/TextWatcher;)V]
       [15] aload_0 v0
       [16] getfield #28
@@ -86839,7 +86840,7 @@ Methods (count = 17):
         + Class [org/kohaerenzstiftung/andtroin/kl]
       [22] dup
       [23] aload_0 v0
-      [24] invokespecial #53
+      [24] invokespecial #52
         + Methodref [org/kohaerenzstiftung/andtroin/kl.<init> (Lorg/kohaerenzstiftung/andtroin/kj;)V]
       [27] invokevirtual #36
         + Methodref [android/widget/Button.setOnClickListener (Landroid/view/View$OnClickListener;)V]
@@ -86854,10 +86855,10 @@ Methods (count = 17):
       [0] aload_0 v0
       [1] getfield #35
         + Fieldref [org/kohaerenzstiftung/andtroin/kj.l Lorg/kohaerenzstiftung/andtroin/ko;]
-      [4] invokevirtual #56
+      [4] invokevirtual #55
         + Methodref [org/kohaerenzstiftung/andtroin/ko.b ()V]
       [7] aload_0 v0
-      [8] invokevirtual #50
+      [8] invokevirtual #49
         + Methodref [org/kohaerenzstiftung/andtroin/kj.dismiss ()V]
       [11] return
       Code attribute exceptions (count = 0):
@@ -86870,10 +86871,10 @@ Methods (count = 17):
       [0] aload_0 v0
       [1] getfield #35
         + Fieldref [org/kohaerenzstiftung/andtroin/kj.l Lorg/kohaerenzstiftung/andtroin/ko;]
-      [4] invokevirtual #55
+      [4] invokevirtual #54
         + Methodref [org/kohaerenzstiftung/andtroin/ko.a ()V]
       [7] aload_0 v0
-      [8] invokevirtual #50
+      [8] invokevirtual #49
         + Methodref [org/kohaerenzstiftung/andtroin/kj.dismiss ()V]
       [11] return
       Code attribute exceptions (count = 0):

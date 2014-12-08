@@ -160,7 +160,7 @@ org.kohaerenzstiftung.andtroin.MenuActivity:
     protected abstract void releaseResources()
     protected abstract void updateViews()
 org.kohaerenzstiftung.andtroin.PromptActivity:
-    642:643:protected void putEntries(java.util.ArrayList)
+    639:640:protected void putEntries(java.util.ArrayList)
 org.kohaerenzstiftung.andtroin.PurchaseActivity:
     166:167:protected void purchaseList(int)
 org.kohaerenzstiftung.andtroin.PurchaseActivity$PurchasebleList:
