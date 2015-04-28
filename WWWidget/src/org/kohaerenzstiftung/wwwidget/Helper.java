@@ -44,7 +44,7 @@ public class Helper {
 	public static final int STANDARD_PORT = 8080;
 
 	static void configure(Context context, String url, int appWidgetId,
-			int displayWidth, int displayHeight, int startX,
+			boolean openOnTouch, int displayWidth, int displayHeight, int startX,
 			int endX, int startY, int endY) throws Throwable  {
 		Throwable throwable = null;
 		BufferedWriter bufferedWriter = null;
@@ -71,6 +71,10 @@ public class Helper {
 			bufferedWriter.write("" + endX);
 			bufferedWriter.newLine();
 			bufferedWriter.write("" + endY);
+			bufferedWriter.newLine();
+			int onTouch = openOnTouch ? PeriodicParameters.ONTOUCH_OPEN :
+				PeriodicParameters.ONTOUCH_REFRESH;
+			bufferedWriter.write("" + onTouch);
 
 			setLastUpdate(dirFile, -1);
 
@@ -522,8 +526,15 @@ public class Helper {
 				int endY = Integer.parseInt(bufferedReader.readLine());
 				width = endX - x;
 				height = endY - y;
+				String line = bufferedReader.readLine();
+				int onTouch;
+				if (line == null) {
+					onTouch = PeriodicParameters.ONTOUCH_OPEN;
+				} else {
+					onTouch = Integer.parseInt(line);
+				}
 				result = new PeriodicParameters(url,
-						displayWidth, displayHeight, x, y, width, height);
+						displayWidth, displayHeight, x, y, width, height, onTouch);
 			}	
 		} catch (Throwable t) {
 			throwable = t;
@@ -577,9 +588,19 @@ public class Helper {
 				AppWidgetManager appWidgetManager = AppWidgetManager.getInstance(context);
 				RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.widget);
 
-				Intent intent = new Intent(Intent.ACTION_VIEW);
-				intent.setData(Uri.parse(periodicParameters.mUrl));
-				PendingIntent pendingIntent = PendingIntent.getActivity(context, 0, intent, 0);
+				Intent intent = null;
+				PendingIntent pendingIntent = null;
+
+				if (periodicParameters.mOnTouch == PeriodicParameters.ONTOUCH_OPEN) {
+					intent = new Intent(Intent.ACTION_VIEW);
+					intent.setData(Uri.parse(periodicParameters.mUrl));
+					pendingIntent = PendingIntent.getActivity(context, 0, intent, 0);
+				} else {
+					intent = new Intent(context, Service.class);
+					intent.putExtra("id", widgetId);
+					pendingIntent = PendingIntent.getService(context, 0, intent, 0/*PendingIntent.FLAG_ONE_SHOT*/);
+				}
+				
 				views.setOnClickPendingIntent(R.id.imageView, pendingIntent);
 
 				views.setImageViewBitmap(R.id.imageView, bitmap);
@@ -650,7 +671,7 @@ public class Helper {
 			String serverString = preferences.getString("server", "");
 
 			String server = getServer(serverString);
-			int port = getPort(server, serverString);
+			int port = getPort(serverString);
 
 			LinkedList<BasicNameValuePair> parameters =
 					getKohaerenzstiftungParameters(url,
@@ -672,7 +693,7 @@ public class Helper {
 		return result;
 	}
 
-	private static int getPort(String server, String serverString) {
+	private static int getPortNotv6(String serverString) {
 		int result = 0;
 		int colonIndex = serverString.indexOf(':');
 		if (colonIndex == -1) {
@@ -688,7 +709,29 @@ public class Helper {
 		return result;
 	}
 
-	private static String getServer(String serverString) {
+	private static int getPort(String serverString) {
+		int result = 0;
+		int bracketIndex = serverString.indexOf(']');
+		if (bracketIndex == -1) {
+			result = getPortNotv6(serverString);
+		} else {
+			String substring = serverString.substring(bracketIndex + 1);
+			int colonIndex;
+			if ((colonIndex = substring.indexOf(':')) == -1) {
+				result = STANDARD_PORT;
+			} else {
+				String portPart = substring.substring(colonIndex + 1);
+				try {
+					result = Integer.parseInt(portPart);
+				} catch (Throwable t) {
+					result = STANDARD_PORT;
+				}
+			}
+		}
+		return result;
+	}
+
+	private static String getServerNotv6(String serverString) {
 		String result = null;
 		int colonIndex = serverString.indexOf(':');
 		if (colonIndex != -1) {
@@ -696,6 +739,18 @@ public class Helper {
 		} else {
 			result = serverString;
 		}	
+		return result;
+	}
+
+	private static String getServer(String serverString) {
+		int openBracketIndex = serverString.indexOf('[');
+		int closeBracketIndex = serverString.indexOf(']');
+		String result = null;
+		if ((openBracketIndex == -1)||(closeBracketIndex == -1)) {
+			result = getServerNotv6(serverString);
+		} else {
+			result = serverString.substring(openBracketIndex + 1, closeBracketIndex);
+		}
 		return result;
 	}
 

@@ -1300,11 +1300,19 @@ org.kohaerenzstiftung.Activity$Result -> org.kohaerenzstiftung.f:
     org.kohaerenzstiftung.Activity this$0 -> a
     android.content.Intent getmData() -> a
     boolean hasSucceeded() -> b
-org.kohaerenzstiftung.ContextItemExecutor -> org.kohaerenzstiftung.g:
+org.kohaerenzstiftung.AsyncTaskResult -> org.kohaerenzstiftung.g:
+    java.lang.Throwable mThrowable -> a
+    java.lang.String mFingerprint -> b
+    boolean isSuccess() -> a
+    java.lang.String getFingerprint() -> b
+    java.lang.Throwable getThrowable() -> c
+    void setThrowable(java.lang.Throwable) -> a
+    void setFingerprint(java.lang.String) -> a
+org.kohaerenzstiftung.ContextItemExecutor -> org.kohaerenzstiftung.h:
     void execute(android.view.MenuItem) -> a
-org.kohaerenzstiftung.ContextMenuCreator -> org.kohaerenzstiftung.h:
+org.kohaerenzstiftung.ContextMenuCreator -> org.kohaerenzstiftung.i:
     int createContextMenu(android.view.ContextMenu$ContextMenuInfo) -> a
-org.kohaerenzstiftung.Dialog -> org.kohaerenzstiftung.i:
+org.kohaerenzstiftung.Dialog -> org.kohaerenzstiftung.j:
     int mDialogId -> a
     java.util.HashMap mContextMenuCreators -> b
     java.util.HashMap mContextItemExecutors -> c
@@ -1322,19 +1330,56 @@ org.kohaerenzstiftung.Dialog -> org.kohaerenzstiftung.i:
     boolean onContextItemSelected(android.view.MenuItem) -> onContextItemSelected
     boolean onMenuItemSelected(int,android.view.MenuItem) -> onMenuItemSelected
     void assignHandlers() -> h
-org.kohaerenzstiftung.Dialog$1 -> org.kohaerenzstiftung.j:
+org.kohaerenzstiftung.Dialog$1 -> org.kohaerenzstiftung.k:
     org.kohaerenzstiftung.Dialog this$0 -> a
     void onShow(android.content.DialogInterface) -> onShow
-org.kohaerenzstiftung.Dialogable -> org.kohaerenzstiftung.k:
+org.kohaerenzstiftung.Dialogable -> org.kohaerenzstiftung.l:
     void setDialogId(int) -> a
     void onDismiss() -> c
     int getDialogId() -> a
-org.kohaerenzstiftung.HTTP -> org.kohaerenzstiftung.l:
+org.kohaerenzstiftung.FingerprintTrustChecker -> org.kohaerenzstiftung.m:
+    java.util.ArrayList mFingerprints -> a
+    java.lang.String mFingerprint -> b
+    void checkServerTrusted(java.security.cert.X509Certificate[],java.lang.String) -> a
+    java.lang.String getFingerprint() -> a
+    java.lang.String hexify(byte[]) -> a
+org.kohaerenzstiftung.HTTP -> org.kohaerenzstiftung.n:
     org.kohaerenzstiftung.SocketFactory socketFactory -> a
-    org.apache.http.HttpResponse doHttps(java.lang.String,int,java.lang.String,java.lang.String,java.lang.String,java.util.List,java.util.List,org.kohaerenzstiftung.TrustChecker,int) -> a
-    org.apache.http.HttpResponse doHttp(java.lang.String,int,java.lang.String,java.lang.String,java.lang.String,java.util.List,java.util.List,int) -> a
-    org.apache.http.HttpResponse doHttp(org.apache.http.impl.client.DefaultHttpClient,java.lang.String,java.lang.String,android.net.Uri$Builder,java.util.List,java.util.List,int) -> a
+    org.apache.http.HttpResponse doHttps(java.lang.String,int,java.lang.String,java.lang.String,java.lang.String,java.util.List,java.util.List,org.kohaerenzstiftung.TrustChecker,org.apache.http.entity.AbstractHttpEntity,int) -> a
+    org.apache.http.HttpResponse doHttp(java.lang.String,int,java.lang.String,java.lang.String,java.lang.String,java.util.List,java.util.List,org.apache.http.entity.AbstractHttpEntity,int) -> a
+    org.apache.http.HttpResponse doHttp(org.apache.http.impl.client.DefaultHttpClient,java.lang.String,java.lang.String,android.net.Uri$Builder,java.util.List,java.util.List,org.apache.http.entity.AbstractHttpEntity,int) -> a
     org.apache.http.impl.client.DefaultHttpClient getHttpClient(int,org.kohaerenzstiftung.TrustChecker) -> a
+org.kohaerenzstiftung.HTTPServerRequest -> org.kohaerenzstiftung.o:
+    java.lang.Runnable mSuccessRunnable -> a
+    java.lang.Runnable mCancelledRunnable -> b
+    org.kohaerenzstiftung.HTTPServerRequest$ThrowableRunnable mThrowableRunnable -> c
+    org.kohaerenzstiftung.StandardActivity mStandardActivity -> d
+    java.lang.String mPathToFingerprints -> e
+    int mOkStringId -> f
+    int mCancelStringId -> g
+    int mServerCertificateStringId -> h
+    org.kohaerenzstiftung.HTTPServerRequest$Worker mWorker -> i
+    void execute() -> a
+org.kohaerenzstiftung.HTTPServerRequest$AsyncTask -> org.kohaerenzstiftung.p:
+    org.kohaerenzstiftung.ProgressDialog mProgressDialog -> b
+    org.kohaerenzstiftung.HTTPServerRequest this$0 -> a
+    void onCancelled() -> onCancelled
+    void askIfServerTrusted(java.lang.String,org.kohaerenzstiftung.YesNoable) -> a
+    void onPostExecute(org.kohaerenzstiftung.AsyncTaskResult) -> a
+    void onPreExecute() -> onPreExecute
+    org.kohaerenzstiftung.AsyncTaskResult doInBackground(java.lang.Void[]) -> a
+    void onPostExecute(java.lang.Object) -> onPostExecute
+    java.lang.Object doInBackground(java.lang.Object[]) -> doInBackground
+org.kohaerenzstiftung.HTTPServerRequest$ThrowableRunnable -> org.kohaerenzstiftung.q:
+    void setThrowable(java.lang.Throwable) -> a
+org.kohaerenzstiftung.HTTPServerRequest$Worker -> org.kohaerenzstiftung.r:
+    org.kohaerenzstiftung.AsyncTaskResult work() -> a
+org.kohaerenzstiftung.HTTPServerRequest$YesNoable -> org.kohaerenzstiftung.s:
+    java.lang.String mFingerprint -> b
+    org.kohaerenzstiftung.HTTPServerRequest this$0 -> a
+    void trustServer(java.lang.String) -> a
+    void yes(int) -> a
+    void no(int) -> b
 org.kohaerenzstiftung.Language -> org.kohaerenzstiftung.Language:
     android.os.Parcelable$Creator CREATOR -> CREATOR
     java.lang.String mIso3Language -> a
@@ -1347,25 +1392,30 @@ org.kohaerenzstiftung.Language -> org.kohaerenzstiftung.Language:
     java.lang.String toString() -> toString
     int describeContents() -> describeContents
     void writeToParcel(android.os.Parcel,int) -> writeToParcel
-org.kohaerenzstiftung.Language$1 -> org.kohaerenzstiftung.m:
+org.kohaerenzstiftung.Language$1 -> org.kohaerenzstiftung.t:
     org.kohaerenzstiftung.Language createFromParcel(android.os.Parcel) -> a
     org.kohaerenzstiftung.Language[] newArray(int) -> a
     java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
     java.lang.Object[] newArray(int) -> newArray
-org.kohaerenzstiftung.Service -> org.kohaerenzstiftung.n:
+org.kohaerenzstiftung.ProgressDialog -> org.kohaerenzstiftung.u:
+    int mDialogId -> a
+    void setDialogId(int) -> a
+    void onDismiss() -> c
+    int getDialogId() -> a
+org.kohaerenzstiftung.Service -> org.kohaerenzstiftung.v:
     android.os.IBinder mBinder -> a
     android.os.IBinder onBind(android.content.Intent) -> onBind
     int onStartCommand(android.content.Intent,int,int) -> onStartCommand
     void handleStartCommand() -> a
     org.kohaerenzstiftung.Service$ServiceHandler getFreeServiceHandler() -> b
     void fillMessage(android.content.Intent,int,int,android.os.Message) -> a
-org.kohaerenzstiftung.Service$Binder -> org.kohaerenzstiftung.o:
+org.kohaerenzstiftung.Service$Binder -> org.kohaerenzstiftung.w:
     org.kohaerenzstiftung.Service this$0 -> a
     org.kohaerenzstiftung.Service getService() -> a
-org.kohaerenzstiftung.Service$ServiceHandler -> org.kohaerenzstiftung.p:
+org.kohaerenzstiftung.Service$ServiceHandler -> org.kohaerenzstiftung.x:
     void handleMessage(android.os.Message) -> handleMessage
     void doHandleMessage(android.os.Message) -> a
-org.kohaerenzstiftung.SocketFactory -> org.kohaerenzstiftung.q:
+org.kohaerenzstiftung.SocketFactory -> org.kohaerenzstiftung.y:
     javax.net.ssl.SSLContext mSslContext -> a
     org.kohaerenzstiftung.TrustChecker mTrustChecker -> b
     void setmTrustChecker(org.kohaerenzstiftung.TrustChecker) -> a
@@ -1374,12 +1424,12 @@ org.kohaerenzstiftung.SocketFactory -> org.kohaerenzstiftung.q:
     boolean isSecure(java.net.Socket) -> isSecure
     java.net.Socket createSocket(java.net.Socket,java.lang.String,int,boolean) -> createSocket
     org.kohaerenzstiftung.TrustChecker access$0(org.kohaerenzstiftung.SocketFactory) -> a
-org.kohaerenzstiftung.SocketFactory$1 -> org.kohaerenzstiftung.r:
+org.kohaerenzstiftung.SocketFactory$1 -> org.kohaerenzstiftung.z:
     org.kohaerenzstiftung.SocketFactory this$0 -> a
     java.security.cert.X509Certificate[] getAcceptedIssuers() -> getAcceptedIssuers
     void checkServerTrusted(java.security.cert.X509Certificate[],java.lang.String) -> checkServerTrusted
     void checkClientTrusted(java.security.cert.X509Certificate[],java.lang.String) -> checkClientTrusted
-org.kohaerenzstiftung.StandardActivity -> org.kohaerenzstiftung.s:
+org.kohaerenzstiftung.StandardActivity -> org.kohaerenzstiftung.aa:
     android.app.Dialog mDialog -> d
     java.util.LinkedList mDialogRegistry -> e
     void onPause() -> onPause
@@ -1393,12 +1443,12 @@ org.kohaerenzstiftung.StandardActivity -> org.kohaerenzstiftung.s:
     void askYesNo(java.lang.String,java.lang.String,java.lang.String,java.lang.String,org.kohaerenzstiftung.YesNoable) -> a
     void showDialog(org.kohaerenzstiftung.Dialogable) -> a
     void hideSoftKeyboard(android.view.View) -> hideSoftKeyboard
-org.kohaerenzstiftung.StandardActivity$1 -> org.kohaerenzstiftung.t:
+org.kohaerenzstiftung.StandardActivity$1 -> org.kohaerenzstiftung.ab:
     org.kohaerenzstiftung.StandardActivity this$0 -> a
     void onDismiss(android.content.DialogInterface) -> onDismiss
-org.kohaerenzstiftung.TrustChecker -> org.kohaerenzstiftung.u:
+org.kohaerenzstiftung.TrustChecker -> org.kohaerenzstiftung.ac:
     void checkServerTrusted(java.security.cert.X509Certificate[],java.lang.String) -> a
-org.kohaerenzstiftung.YesNoDialog -> org.kohaerenzstiftung.v:
+org.kohaerenzstiftung.YesNoDialog -> org.kohaerenzstiftung.ad:
     org.kohaerenzstiftung.YesNoable mYesNoable -> a
     int mDialogId -> b
     void yesNo(boolean) -> a
@@ -1408,13 +1458,13 @@ org.kohaerenzstiftung.YesNoDialog -> org.kohaerenzstiftung.v:
     void onDismiss() -> c
     int getDialogId() -> a
     void access$0(org.kohaerenzstiftung.YesNoDialog,boolean) -> a
-org.kohaerenzstiftung.YesNoDialog$1 -> org.kohaerenzstiftung.w:
+org.kohaerenzstiftung.YesNoDialog$1 -> org.kohaerenzstiftung.ae:
     org.kohaerenzstiftung.YesNoDialog this$0 -> a
     void onClick(android.content.DialogInterface,int) -> onClick
-org.kohaerenzstiftung.YesNoDialog$2 -> org.kohaerenzstiftung.x:
+org.kohaerenzstiftung.YesNoDialog$2 -> org.kohaerenzstiftung.af:
     org.kohaerenzstiftung.YesNoDialog this$0 -> a
     void onClick(android.content.DialogInterface,int) -> onClick
-org.kohaerenzstiftung.YesNoable -> org.kohaerenzstiftung.y:
+org.kohaerenzstiftung.YesNoable -> org.kohaerenzstiftung.ag:
     android.os.Bundle mExtras -> a
     void yes(int) -> a
     void no(int) -> b
@@ -1740,14 +1790,19 @@ org.kohaerenzstiftung.wwwidget.Service$1 -> org.kohaerenzstiftung.wwwidget.h:
     org.kohaerenzstiftung.wwwidget.Service this$0 -> a
     void run() -> run
 org.kohaerenzstiftung.wwwidget.SetupActivity -> org.kohaerenzstiftung.wwwidget.SetupActivity:
+    org.kohaerenzstiftung.HTTPServerRequest mHttpServerRequest -> g
+    java.lang.Runnable mGetScreenshotSuccessfulRunnable -> h
+    java.lang.Runnable mGetScreenshotCancelledRunnable -> i
+    org.kohaerenzstiftung.HTTPServerRequest$Worker mGetScreenshotWorker -> j
+    org.kohaerenzstiftung.HTTPServerRequest$ThrowableRunnable mGetScreenshotFailedRunnable -> k
     java.lang.String mInfo -> d
     int mDisplayWidth -> e
     int mDisplayHeight -> f
-    android.widget.EditText mUrlEditText -> g
-    android.widget.Button mOkButton -> h
-    int mAppWidgetId -> i
-    java.lang.String mDirectory -> j
-    java.lang.String mUrl -> k
+    android.widget.EditText mUrlEditText -> l
+    android.widget.Button mOkButton -> m
+    int mAppWidgetId -> n
+    java.lang.String mDirectory -> o
+    java.lang.String mUrl -> p
     void recoverResources() -> b
     void startMainActivity(java.lang.String) -> a
     void doStartMainActivity() -> m
@@ -1769,56 +1824,48 @@ org.kohaerenzstiftung.wwwidget.SetupActivity -> org.kohaerenzstiftung.wwwidget.S
     void onServiceBound() -> f
     java.lang.Class getServiceToBind() -> h
     void onServiceUnbound() -> e
-    void access$0(org.kohaerenzstiftung.wwwidget.SetupActivity,android.widget.Button) -> a
-    android.widget.Button access$1(org.kohaerenzstiftung.wwwidget.SetupActivity) -> a
-    java.lang.String access$2(org.kohaerenzstiftung.wwwidget.SetupActivity) -> b
-    void access$3(org.kohaerenzstiftung.wwwidget.SetupActivity,org.kohaerenzstiftung.Dialogable) -> a
-    void access$4(org.kohaerenzstiftung.wwwidget.SetupActivity,java.lang.String) -> a
+    java.lang.String access$0(org.kohaerenzstiftung.wwwidget.SetupActivity) -> a
+    void access$1(org.kohaerenzstiftung.wwwidget.SetupActivity,android.widget.Button) -> a
+    android.widget.Button access$2(org.kohaerenzstiftung.wwwidget.SetupActivity) -> b
 org.kohaerenzstiftung.wwwidget.SetupActivity$1 -> org.kohaerenzstiftung.wwwidget.i:
     org.kohaerenzstiftung.wwwidget.SetupActivity this$0 -> a
+    void run() -> run
+org.kohaerenzstiftung.wwwidget.SetupActivity$10 -> org.kohaerenzstiftung.wwwidget.j:
+    org.kohaerenzstiftung.wwwidget.SetupActivity this$0 -> a
     void execute() -> a
-org.kohaerenzstiftung.wwwidget.SetupActivity$2 -> org.kohaerenzstiftung.wwwidget.j:
+org.kohaerenzstiftung.wwwidget.SetupActivity$2 -> org.kohaerenzstiftung.wwwidget.k:
+    org.kohaerenzstiftung.wwwidget.SetupActivity this$0 -> a
+    void run() -> run
+org.kohaerenzstiftung.wwwidget.SetupActivity$3 -> org.kohaerenzstiftung.wwwidget.l:
+    org.kohaerenzstiftung.wwwidget.SetupActivity this$0 -> a
+    org.kohaerenzstiftung.AsyncTaskResult work() -> a
+org.kohaerenzstiftung.wwwidget.SetupActivity$4 -> org.kohaerenzstiftung.wwwidget.m:
+    java.lang.Throwable mThrowable -> b
+    org.kohaerenzstiftung.wwwidget.SetupActivity this$0 -> a
+    void run() -> run
+    void setThrowable(java.lang.Throwable) -> a
+org.kohaerenzstiftung.wwwidget.SetupActivity$5 -> org.kohaerenzstiftung.wwwidget.n:
+    org.kohaerenzstiftung.wwwidget.SetupActivity this$0 -> a
+    void execute() -> a
+org.kohaerenzstiftung.wwwidget.SetupActivity$6 -> org.kohaerenzstiftung.wwwidget.o:
     org.kohaerenzstiftung.wwwidget.SetupActivity this$0 -> c
     void handleResult(android.os.Bundle) -> a
     void handleError(java.lang.String) -> a
-org.kohaerenzstiftung.wwwidget.SetupActivity$3 -> org.kohaerenzstiftung.wwwidget.k:
+org.kohaerenzstiftung.wwwidget.SetupActivity$7 -> org.kohaerenzstiftung.wwwidget.p:
     org.kohaerenzstiftung.wwwidget.SetupActivity this$0 -> a
     void onClick(android.view.View) -> onClick
-org.kohaerenzstiftung.wwwidget.SetupActivity$4 -> org.kohaerenzstiftung.wwwidget.l:
+org.kohaerenzstiftung.wwwidget.SetupActivity$8 -> org.kohaerenzstiftung.wwwidget.q:
     org.kohaerenzstiftung.wwwidget.SetupActivity this$0 -> a
     void onTextChanged(java.lang.CharSequence,int,int,int) -> onTextChanged
     void beforeTextChanged(java.lang.CharSequence,int,int,int) -> beforeTextChanged
     void afterTextChanged(android.text.Editable) -> afterTextChanged
-org.kohaerenzstiftung.wwwidget.SetupActivity$5 -> org.kohaerenzstiftung.wwwidget.m:
+org.kohaerenzstiftung.wwwidget.SetupActivity$9 -> org.kohaerenzstiftung.wwwidget.r:
     org.kohaerenzstiftung.wwwidget.SetupActivity this$0 -> a
     void execute() -> a
-org.kohaerenzstiftung.wwwidget.SetupActivity$6 -> org.kohaerenzstiftung.wwwidget.n:
-    org.kohaerenzstiftung.wwwidget.SetupActivity this$0 -> a
-    void execute() -> a
-org.kohaerenzstiftung.wwwidget.SetupActivity$Executor -> org.kohaerenzstiftung.wwwidget.o:
+org.kohaerenzstiftung.wwwidget.SetupActivity$Executor -> org.kohaerenzstiftung.wwwidget.s:
     org.kohaerenzstiftung.wwwidget.SetupActivity this$0 -> b
     void execute() -> a
-org.kohaerenzstiftung.wwwidget.SetupActivity$GetInitialAsyncTask -> org.kohaerenzstiftung.wwwidget.p:
-    org.kohaerenzstiftung.wwwidget.SetupActivity$ProgressDialog mProgressDialog -> b
-    org.kohaerenzstiftung.wwwidget.SetupActivity this$0 -> a
-    void onCancelled() -> onCancelled
-    void askIfServerTrusted(java.lang.String,org.kohaerenzstiftung.YesNoable) -> a
-    void onPostExecute(org.kohaerenzstiftung.wwwidget.SetupActivity$GetInitialAsyncTaskResult) -> a
-    void onPreExecute() -> onPreExecute
-    org.kohaerenzstiftung.wwwidget.SetupActivity$GetInitialAsyncTaskResult doInBackground(java.lang.String[]) -> a
-    void onPostExecute(java.lang.Object) -> onPostExecute
-    java.lang.Object doInBackground(java.lang.Object[]) -> doInBackground
-org.kohaerenzstiftung.wwwidget.SetupActivity$GetInitialAsyncTaskResult -> org.kohaerenzstiftung.wwwidget.q:
-    java.lang.Throwable mThrowable -> a
-    java.lang.String mFingerprint -> b
-    org.kohaerenzstiftung.wwwidget.SetupActivity this$0 -> c
-org.kohaerenzstiftung.wwwidget.SetupActivity$ProgressDialog -> org.kohaerenzstiftung.wwwidget.r:
-    int mDialogId -> b
-    org.kohaerenzstiftung.wwwidget.SetupActivity this$0 -> a
-    void setDialogId(int) -> a
-    void onDismiss() -> c
-    int getDialogId() -> a
-org.kohaerenzstiftung.wwwidget.SetupActivity$TextInfoDialog -> org.kohaerenzstiftung.wwwidget.s:
+org.kohaerenzstiftung.wwwidget.SetupActivity$TextInfoDialog -> org.kohaerenzstiftung.wwwidget.t:
     android.widget.TextView mInfoTextView -> b
     org.kohaerenzstiftung.wwwidget.SetupActivity$Executor mExecutor -> c
     org.kohaerenzstiftung.wwwidget.SetupActivity this$0 -> a
@@ -1828,18 +1875,6 @@ org.kohaerenzstiftung.wwwidget.SetupActivity$TextInfoDialog -> org.kohaerenzstif
     void findElements() -> g
     void assignHandlers() -> h
     void handleOk() -> i
-org.kohaerenzstiftung.wwwidget.SetupActivity$TextInfoDialog$1 -> org.kohaerenzstiftung.wwwidget.t:
+org.kohaerenzstiftung.wwwidget.SetupActivity$TextInfoDialog$1 -> org.kohaerenzstiftung.wwwidget.u:
     org.kohaerenzstiftung.wwwidget.SetupActivity$TextInfoDialog this$1 -> a
     void onClick(android.view.View) -> onClick
-org.kohaerenzstiftung.wwwidget.SetupActivity$YesNoable -> org.kohaerenzstiftung.wwwidget.u:
-    java.lang.String mFingerprint -> b
-    java.lang.String mUrl -> c
-    org.kohaerenzstiftung.wwwidget.SetupActivity this$0 -> a
-    void trustServer(java.lang.String) -> a
-    void yes(int) -> a
-    void no(int) -> b
-org.kohaerenzstiftung.wwwidget.TrustChecker -> org.kohaerenzstiftung.wwwidget.v:
-    java.util.ArrayList mFingerprints -> b
-    java.lang.String mFingerprint -> a
-    void checkServerTrusted(java.security.cert.X509Certificate[],java.lang.String) -> a
-    java.lang.String hexify(byte[]) -> a

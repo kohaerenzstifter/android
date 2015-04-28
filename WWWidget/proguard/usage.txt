@@ -883,7 +883,7 @@ org.kohaerenzstiftung.HTTP:
     public static final int HTTP_PUT
     public static final int HTTP_POST
     public static final int HTTP_DEL
-    27:27:public HTTP()
+    28:28:public HTTP()
 org.kohaerenzstiftung.Language:
     40:43:public Language(java.lang.String,java.lang.String)
     49:61:public static java.util.ArrayList getLanguages()
@@ -985,7 +985,7 @@ org.kohaerenzstiftung.wwwidget.BuildConfig
 org.kohaerenzstiftung.wwwidget.Helper:
     public static final int STANDARD_LENGTH
     public static final int STANDARD_PORT
-    40:40:public Helper()
+    41:41:public Helper()
 org.kohaerenzstiftung.wwwidget.MainActivity:
     private static final long MAX_IDLE_MILLIS
 org.kohaerenzstiftung.wwwidget.PictureListener

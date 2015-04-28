@@ -1,13 +1,37 @@
 package org.kohaerenzstiftung.wwwidget;
 
 import java.io.File;
+
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.os.HandlerThread;
+import android.os.Looper;
 import android.os.Message;
 import android.preference.PreferenceManager;
 
 
 public class Service extends org.kohaerenzstiftung.Service {
+
+	public class ServiceHandler extends
+	org.kohaerenzstiftung.Service.ServiceHandler {
+
+		public ServiceHandler(Looper serviceLooper) {
+			super(serviceLooper);
+		}
+
+		@Override
+		protected void doHandleMessage(Message msg) {
+			int widgetId = msg.arg1;
+			try {
+				Helper.updateWidgetDirectly(Service.this, widgetId);
+			} catch (Throwable e) {
+				e.printStackTrace();
+			}
+		}
+
+	}
+
+
 
 	protected boolean mStopping = false;
 	private Thread mThread = null;
@@ -123,8 +147,11 @@ public class Service extends org.kohaerenzstiftung.Service {
 
 
 	@Override
-	protected ServiceHandler getFreeServiceHandler() {
-		return null;
+	protected org.kohaerenzstiftung.Service.ServiceHandler
+		getFreeServiceHandler() {
+		HandlerThread handlerThread = new HandlerThread("Brigitte");
+		handlerThread.start();
+		return new ServiceHandler(handlerThread.getLooper());
 	}
 
 
@@ -132,5 +159,13 @@ public class Service extends org.kohaerenzstiftung.Service {
 	@Override
 	protected void fillMessage(Intent intent, int flags, int startId,
 			Message msg) {
+		msg.arg1 = intent.getIntExtra("id", 0);
+	}
+
+
+
+	@Override
+	protected boolean needsHandling(Intent intent) {
+		return intent.hasExtra("id");
 	}
 }

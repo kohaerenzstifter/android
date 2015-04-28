@@ -22,5 +22,8 @@
     <string name="password">Password</string>
     <string name="password2">The password used for authentication with the server.</string>
     <string name="advisory">Server and Password must be set first!</string>
+    <string name="open">Open on Touch</string>
+    <string name="refresh">Refresh on Touch</string>
+    <string name="HTTP">http://</string>
 
 </resources>

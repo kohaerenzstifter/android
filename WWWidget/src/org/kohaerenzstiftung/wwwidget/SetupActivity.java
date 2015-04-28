@@ -19,6 +19,7 @@ import android.view.View;
 import android.webkit.URLUtil;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -151,6 +152,8 @@ public class SetupActivity  extends StandardActivity {
 	private int mAppWidgetId = AppWidgetManager.INVALID_APPWIDGET_ID;
 	private String mDirectory;
 	private String mUrl;
+	private RadioButton mOpenOnTouchRadioButton;
+	private boolean mOpenOnTouch;
 
 	@Override
 	protected void recoverResources() {
@@ -217,6 +220,8 @@ public class SetupActivity  extends StandardActivity {
 		mUrlEditText = (EditText) findViewById(R.id.edittext_url);
 		mOkButton = (Button) findViewById(R.id.button_ok);
 		checkOkEnabled(mUrlEditText.getText().toString().trim());
+		mOpenOnTouchRadioButton =
+				(RadioButton) findViewById(R.id.radio_openontouch);
 	}
 
 	@Override
@@ -277,6 +282,7 @@ public class SetupActivity  extends StandardActivity {
 			showDialog(dialog);
 		} else {
 			mUrl = mUrlEditText.getText().toString().trim();
+			mOpenOnTouch = mOpenOnTouchRadioButton.isChecked();
 			String info = resources.getString(R.string.info);
 			Dialog dialog = new TextInfoDialog(this, info, new Executor() {
 
@@ -310,7 +316,7 @@ public class SetupActivity  extends StandardActivity {
 			int endX = (int) bundle.getFloat("endX");
 			int endY = (int) bundle.getFloat("endY");
 
-			Helper.configure(this, mUrl, mAppWidgetId, mDisplayWidth,
+			Helper.configure(this, mUrl, mAppWidgetId, mOpenOnTouch, mDisplayWidth,
 					mDisplayHeight, startX, endX, startY, endY);
 			mResultBundle.putInt(AppWidgetManager.EXTRA_APPWIDGET_ID, mAppWidgetId);
 			ok = true;
