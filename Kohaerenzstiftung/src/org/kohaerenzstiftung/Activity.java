@@ -133,7 +133,7 @@ public abstract class Activity extends android.app.Activity {
 		}
 	}
 
-	protected void startActivityForResult(Class<?> cls, ActivityReturner returner) {
+	public void startActivityForResult(Class<?> cls, ActivityReturner returner) {
 		startActivityForResult(cls, returner, null);
 	}
 
@@ -146,11 +146,11 @@ public abstract class Activity extends android.app.Activity {
 		startActivityForResult(intent, 0);
 	}
 	
-	protected void startActivity(Class<?> cls) {
+	public void startActivity(Class<?> cls) {
 		startActivity(cls, null);
 	}
 	
-	protected void startActivity(Class<?> cls, Bundle bundle) {
+	public void startActivity(Class<?> cls, Bundle bundle) {
     	Intent intent = new Intent(this, cls);
     	if (bundle != null) {
     		intent.putExtras(bundle);
@@ -158,7 +158,7 @@ public abstract class Activity extends android.app.Activity {
     	this.startActivity(intent);
 	}
 
-	protected void startActivity(Class<?> cls, int flags,
+	public void startActivity(Class<?> cls, int flags,
 			Bundle bundle) {
     	Intent intent = new Intent(this, cls);
     	if (bundle != null) {

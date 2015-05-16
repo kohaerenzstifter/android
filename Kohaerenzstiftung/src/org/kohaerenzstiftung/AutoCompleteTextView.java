@@ -37,6 +37,7 @@ public abstract class AutoCompleteTextView extends android.widget.AutoCompleteTe
 
 	Context mContext = null;
 	private boolean mMultiline = false;
+	private Adapter mAdapter;
 	public AutoCompleteTextView(Context context, AttributeSet attrs, int defStyle) {
 		super(context, attrs, defStyle);
 		this.setMultiline(this.mMultiline);
@@ -86,13 +87,23 @@ public abstract class AutoCompleteTextView extends android.widget.AutoCompleteTe
 
 	public void setAdapter() {
 		String string = this.getText().toString().trim();
-		Adapter adapter = new Adapter(this.getCursor(string));
-		this.setAdapter(adapter);
+		Adapter oldAdapter = mAdapter;
+		mAdapter = new Adapter(this.getCursor(string));
+		this.setAdapter(mAdapter);
+		if (oldAdapter != null) {
+			oldAdapter.notifyDataSetInvalidated();
+		}
 	}
 
 	protected abstract Cursor getCursor(String string);
 	
 	public abstract String getColumnName();
+
+	public void refresh() {
+		if (mAdapter != null) {
+			setAdapter();
+		}
+	}
 	
 	@Override
 	public boolean onTouchEvent(MotionEvent event) {

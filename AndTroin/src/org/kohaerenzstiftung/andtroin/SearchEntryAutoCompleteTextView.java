@@ -14,8 +14,6 @@ import android.util.AttributeSet;
 
 public class SearchEntryAutoCompleteTextView extends AutoCompleteTextView {
 
-	private Cursor mOldCursor = null;
-	private Cursor mCursor = null;
 	private boolean mBySource;
 	private AndtroinActivity mActivity;
 	private int mListId;
@@ -35,21 +33,21 @@ public class SearchEntryAutoCompleteTextView extends AutoCompleteTextView {
 	
 	@Override
 	protected synchronized Cursor getCursor(String string) {
-		closeOldCursor();
 		int listId = this.mListId;
+		Cursor result = null;
 		boolean bySource = isBySource();
-		this.mOldCursor = this.mCursor;
 		if (mCheckWholeEntries) {
-			this.mCursor = this.mActivity.mAndtroinService.searchDenomination(listId, string, bySource);
+			result = this.mActivity.mAndtroinService.searchDenomination(listId, string, bySource);
 			int length;
-			if ((this.mCursor.getCount() > 0)||((length = string.length()) < 1)||
+			if ((result.getCount() > 0)||((length = string.length()) < 1)||
 					Character.isWhitespace(string.charAt(length - 1))) {
-				return this.mCursor;
+				return result;
 			} else {
-				this.mCursor.close();
+				result.close();
 			}	
 		}
-		MatrixCursor cursor = new MatrixCursor(new String[]{"_id", "entry"});
+		MatrixCursor matrixCursor = new MatrixCursor(new String[]{"_id", "entry"});
+		result = matrixCursor;
 		String[] tokens = string.split("\\s+");
 		String word = tokens[tokens.length - 1];
 		LinkedList<String> words =
@@ -58,10 +56,9 @@ public class SearchEntryAutoCompleteTextView extends AutoCompleteTextView {
 		String substring = string.substring(0, lastIndex);
 		for (String w : words) {
 			String combined = substring + w;
-			cursor.addRow(new Object[]{42, combined});
+			matrixCursor.addRow(new Object[]{42, combined});
 		}
-		this.mCursor = cursor;
-		return cursor;
+		return result;
 	}
 
 	public SearchEntryAutoCompleteTextView(Context context,
@@ -74,23 +71,9 @@ public class SearchEntryAutoCompleteTextView extends AutoCompleteTextView {
 		super(context, attrs);
 	}
 
-	private void closeOldCursor() {
-		if (this.mOldCursor != null) {
-			this.mOldCursor.close();
-			this.mOldCursor = null;
-		}
-	}
-
 	@Override
 	public String getColumnName() {
 		return "entry";
-	}
-
-	public void closeCursors() {
-		closeOldCursor();
-		if (this.mCursor != null) {
-			this.mCursor.close();
-		}
 	}
 
 	public void setListAndActivity(int listId, AndtroinActivity activity) {

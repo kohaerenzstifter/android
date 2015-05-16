@@ -9,10 +9,8 @@ import android.util.AttributeSet;
 public class FormAttributeAutoCompleteTextView extends AutoCompleteTextView {
 	
 	private AndtroinService mAntroinService = null;
-	private Cursor mCursor = null;
 	private int mListId;
 	private boolean mSource;
-	private Cursor mOldCursor;
 
 	public FormAttributeAutoCompleteTextView(Context context,
 			AttributeSet attrs, int defStyle) {
@@ -26,18 +24,8 @@ public class FormAttributeAutoCompleteTextView extends AutoCompleteTextView {
 
 	@Override
 	protected synchronized Cursor getCursor(String string) {
-		closeOldCursor();
-		mOldCursor = mCursor;
 		Cursor result = mAntroinService.getFormAttributes(mListId, mSource, string);
-		mCursor = result;
 		return result;
-	}
-
-	private void closeOldCursor() {
-		if (mOldCursor != null) {
-			mOldCursor.close();
-			mOldCursor = null;
-		}
 	}
 
 	@Override
@@ -50,12 +38,5 @@ public class FormAttributeAutoCompleteTextView extends AutoCompleteTextView {
 		mListId = listId;
 		mSource = source;
 		setAdapter();
-	}
-
-	public void closeCursors() {
-		closeOldCursor();
-		if (this.mCursor != null) {
-			this.mCursor.close();
-		}
 	}
 }

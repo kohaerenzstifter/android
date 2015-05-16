@@ -842,7 +842,6 @@ public class DenominationActivity extends AndtroinActivity {
 
 	@Override
 	protected void releaseResources() {
-		this.mValueEditText.closeCursors();
 	}
 
 	@Override

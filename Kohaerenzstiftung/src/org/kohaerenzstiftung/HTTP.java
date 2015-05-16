@@ -43,7 +43,9 @@ public class HTTP {
 
 		try {
 			DefaultHttpClient httpClient = getHttpClient(port, trustChecker);
-
+			if ((server.indexOf(':')) != -1) {
+				server = "[" + server + "]";
+			}
 			Builder uriBuilder =
 					Uri.parse("https://" + server + ":" + port + "/" + url).buildUpon();
 
@@ -71,7 +73,9 @@ public class HTTP {
 
 		try {
 			DefaultHttpClient httpClient = getHttpClient(port, null);
-
+			if ((server.indexOf(':')) != -1) {
+				server = "[" + server + "]";
+			}
 			Builder uriBuilder =
 					Uri.parse("http://" + server + ":" + port + "/" + url).buildUpon();
 

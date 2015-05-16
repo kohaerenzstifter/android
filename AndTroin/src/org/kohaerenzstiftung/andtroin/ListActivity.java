@@ -612,7 +612,6 @@ public class ListActivity extends EditEntryStarterActivity {
 
 		@Override
 		public void onDismiss() {
-			this.mAutoCompleteTextView.closeCursors();
 			super.onDismiss();
 		}
 
@@ -743,7 +742,6 @@ public class ListActivity extends EditEntryStarterActivity {
 
 		@Override
 		public void onDismiss() {
-			this.mSourceDenominationEditText.closeCursors();
 			this.mTargetDenominationEditText.clearAnimation();
 			super.onDismiss();
 		}

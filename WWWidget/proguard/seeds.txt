@@ -11,6 +11,14 @@ android.support.v4.app.FragmentTabHost$SavedState
 android.support.v4.app.FragmentTabHost$SavedState: android.os.Parcelable$Creator CREATOR
 android.support.v4.content.ModernAsyncTask$Status: android.support.v4.content.ModernAsyncTask$Status[] values()
 android.support.v4.content.ModernAsyncTask$Status: android.support.v4.content.ModernAsyncTask$Status valueOf(java.lang.String)
+android.support.v4.media.MediaMetadataCompat
+android.support.v4.media.MediaMetadataCompat: android.os.Parcelable$Creator CREATOR
+android.support.v4.media.RatingCompat
+android.support.v4.media.RatingCompat: android.os.Parcelable$Creator CREATOR
+android.support.v4.media.session.MediaSessionCompat$Token
+android.support.v4.media.session.MediaSessionCompat$Token: android.os.Parcelable$Creator CREATOR
+android.support.v4.media.session.PlaybackStateCompat
+android.support.v4.media.session.PlaybackStateCompat: android.os.Parcelable$Creator CREATOR
 android.support.v4.view.PagerTabStrip: void setTabIndicatorColor(int)
 android.support.v4.view.PagerTabStrip: void setTabIndicatorColorResource(int)
 android.support.v4.view.PagerTabStrip: int getTabIndicatorColor()
@@ -49,6 +57,9 @@ android.support.v4.view.ViewPager$SavedState: android.os.Parcelable$Creator CREA
 android.support.v4.widget.DrawerLayout: void setScrimColor(int)
 android.support.v4.widget.DrawerLayout: void setDrawerListener(android.support.v4.widget.DrawerLayout$DrawerListener)
 android.support.v4.widget.DrawerLayout: void setDrawerLockMode(int)
+android.support.v4.widget.DrawerLayout: void setStatusBarBackground(android.graphics.drawable.Drawable)
+android.support.v4.widget.DrawerLayout: void setStatusBarBackground(int)
+android.support.v4.widget.DrawerLayout: void setStatusBarBackgroundColor(int)
 android.support.v4.widget.DrawerLayout$SavedState
 android.support.v4.widget.DrawerLayout$SavedState: android.os.Parcelable$Creator CREATOR
 android.support.v4.widget.SlidingPaneLayout: void setParallaxDistance(int)
@@ -59,9 +70,23 @@ android.support.v4.widget.SlidingPaneLayout: void setCoveredFadeColor(int)
 android.support.v4.widget.SlidingPaneLayout: int getCoveredFadeColor()
 android.support.v4.widget.SlidingPaneLayout: void setPanelSlideListener(android.support.v4.widget.SlidingPaneLayout$PanelSlideListener)
 android.support.v4.widget.SlidingPaneLayout: void setShadowDrawable(android.graphics.drawable.Drawable)
+android.support.v4.widget.SlidingPaneLayout: void setShadowDrawableLeft(android.graphics.drawable.Drawable)
+android.support.v4.widget.SlidingPaneLayout: void setShadowDrawableRight(android.graphics.drawable.Drawable)
 android.support.v4.widget.SlidingPaneLayout: void setShadowResource(int)
+android.support.v4.widget.SlidingPaneLayout: void setShadowResourceLeft(int)
+android.support.v4.widget.SlidingPaneLayout: void setShadowResourceRight(int)
 android.support.v4.widget.SlidingPaneLayout$SavedState
 android.support.v4.widget.SlidingPaneLayout$SavedState: android.os.Parcelable$Creator CREATOR
+android.support.v4.widget.SwipeRefreshLayout: void setColorViewAlpha(int)
+android.support.v4.widget.SwipeRefreshLayout: void setSize(int)
+android.support.v4.widget.SwipeRefreshLayout: void setOnRefreshListener(android.support.v4.widget.SwipeRefreshLayout$OnRefreshListener)
+android.support.v4.widget.SwipeRefreshLayout: void setRefreshing(boolean)
+android.support.v4.widget.SwipeRefreshLayout: void setAnimationProgress(float)
+android.support.v4.widget.SwipeRefreshLayout: void setProgressBackgroundColor(int)
+android.support.v4.widget.SwipeRefreshLayout: void setColorScheme(int[])
+android.support.v4.widget.SwipeRefreshLayout: void setColorSchemeResources(int[])
+android.support.v4.widget.SwipeRefreshLayout: void setColorSchemeColors(int[])
+android.support.v4.widget.SwipeRefreshLayout: void setDistanceToTriggerSync(int)
 org.kohaerenzstiftung.Activity: Activity()
 org.kohaerenzstiftung.AutoCompleteTextView: void setMultiline(boolean)
 org.kohaerenzstiftung.AutoCompleteTextView: java.lang.String getColumnName()
@@ -100,11 +125,15 @@ org.kohaerenzstiftung.wwwidget.R$id: int button_ok
 org.kohaerenzstiftung.wwwidget.R$id: int edittext_url
 org.kohaerenzstiftung.wwwidget.R$id: int imageView
 org.kohaerenzstiftung.wwwidget.R$id: int linearlayout1
+org.kohaerenzstiftung.wwwidget.R$id: int radioGroup1
+org.kohaerenzstiftung.wwwidget.R$id: int radio_openontouch
+org.kohaerenzstiftung.wwwidget.R$id: int radio_refreshontouch
 org.kohaerenzstiftung.wwwidget.R$id: int textview_info
 org.kohaerenzstiftung.wwwidget.R$layout: int activity_setup
 org.kohaerenzstiftung.wwwidget.R$layout: int dialog_textinfo
 org.kohaerenzstiftung.wwwidget.R$layout: int widget
 org.kohaerenzstiftung.wwwidget.R$menu: int setup
+org.kohaerenzstiftung.wwwidget.R$string: int HTTP
 org.kohaerenzstiftung.wwwidget.R$string: int action_settings
 org.kohaerenzstiftung.wwwidget.R$string: int advisory
 org.kohaerenzstiftung.wwwidget.R$string: int app_name
@@ -117,8 +146,10 @@ org.kohaerenzstiftung.wwwidget.R$string: int hello_world
 org.kohaerenzstiftung.wwwidget.R$string: int info
 org.kohaerenzstiftung.wwwidget.R$string: int info2
 org.kohaerenzstiftung.wwwidget.R$string: int ok
+org.kohaerenzstiftung.wwwidget.R$string: int open
 org.kohaerenzstiftung.wwwidget.R$string: int password
 org.kohaerenzstiftung.wwwidget.R$string: int password2
+org.kohaerenzstiftung.wwwidget.R$string: int refresh
 org.kohaerenzstiftung.wwwidget.R$string: int server
 org.kohaerenzstiftung.wwwidget.R$string: int server2
 org.kohaerenzstiftung.wwwidget.R$string: int server_certificate

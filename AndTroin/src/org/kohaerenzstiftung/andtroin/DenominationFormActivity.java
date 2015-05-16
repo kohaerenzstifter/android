@@ -121,8 +121,6 @@ public class DenominationFormActivity extends AndtroinActivity {
 
 		@Override
 		protected void releaseResources() {
-			//this.mAttributesSpinner.setAdapter(null);
-			mAttributesEditText.closeCursors();
 		}
 
 		@Override
@@ -429,7 +427,6 @@ public class DenominationFormActivity extends AndtroinActivity {
 
 	@Override
 	protected void releaseResources() {
-		this.mValueEditText.closeCursors();
 	}
 
 	@Override

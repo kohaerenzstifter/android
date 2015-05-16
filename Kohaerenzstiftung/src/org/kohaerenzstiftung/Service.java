@@ -43,7 +43,7 @@ public abstract class Service extends android.app.Service {
 	@Override
 	public int onStartCommand(Intent intent, int flags, int startId) {
 		handleStartCommand();
-		if (intent != null) {
+		if ((intent != null)&&(needsHandling(intent))) {
 			ServiceHandler serviceHandler = getFreeServiceHandler();
 			if (serviceHandler != null) {
 				Message msg = serviceHandler.obtainMessage();
@@ -53,6 +53,8 @@ public abstract class Service extends android.app.Service {
 		}
 		return START_STICKY;
 	}
+
+	protected abstract boolean needsHandling(Intent intent);
 
 	protected abstract void handleStartCommand();
 
